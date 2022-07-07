@@ -1,0 +1,99 @@
+/* ==========================================================================
+   Blog List widget style - begin
+   ========================================================================== */
+
+.widget.eltd-blog-list-widget {
+    margin: 0 0 20px;
+
+    &.eltd-blog-list-holder{
+        .eltd-bl-wrapper{
+            margin: 0;
+        }
+    }
+
+    .eltd-blog-list{
+        margin-top: -18px;
+        padding: 0 18px;
+        box-sizing: border-box;
+
+        .eltd-post-image{
+            img{
+                max-width: 75px;
+                max-height: 75px;
+            }
+        }
+
+        .eltd-bl-item{
+            padding: 18px 0 0;
+
+            &:last-child{
+                border: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+
+                .eltd-post-info-author{
+                    margin-bottom: 3px;
+                }
+            }
+
+            .eltd-bli-content{
+                vertical-align: top;
+            }
+
+            .eltd-post-title{
+                margin-bottom: 10px;
+                font-family: $default-text-font;
+
+                a{
+                    line-height: 1em;
+                    font-weight: 400;
+                }
+            }
+
+            .eltd-post-info-date,
+            .eltd-post-info-comments-holder{
+                display: inline-block;
+
+                a{
+                    color: $default-text-color;
+                    font-size: 12px;
+
+                    &:hover{
+                        color: $first-main-color;
+                    }
+
+                    i{
+                        color: $default-text-color;
+                    }
+                }
+            }
+
+            .eltd-post-info-date{
+                margin-right: 5px;
+
+                a{
+                    color: $grey-color;
+                }
+            }
+
+            .eltd-post-excerpt{
+                line-height: 25px;
+            }
+        }
+    }
+
+    > h4 {
+        margin: 0 0 15px;
+    }
+
+    footer .eltd-footer-top &,
+    .eltd-top-bar & {
+
+        > h2 {
+            margin: 0 0 8px;
+        }
+    }
+}
+/* ==========================================================================
+   Blog List widget style - end
+   ========================================================================== */

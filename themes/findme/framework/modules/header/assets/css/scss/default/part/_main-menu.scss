@@ -1,0 +1,560 @@
+/* ==========================================================================
+   Header main menu style - begin
+   ========================================================================== */
+
+.eltd-main-menu {
+    @include eltdRelativeHolderLayout();
+    height: 100%;
+    width: auto;
+    margin-left: 12px;
+
+    ul {
+        list-style: none outside none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+
+        li {
+            position: relative;
+            display: inline-block;
+            float: left;
+            padding: 0;
+            margin: 0;
+
+            a {
+                font-size: 16px;
+                line-height: 24px;
+                color: $default-text-color;
+                font-family: $default-text-font;
+                font-weight: 500;
+
+                &:hover {
+                    color: $first-main-color;
+                }
+
+                i:before {
+                    margin: 0 7px 0 0;
+                    color: $first-main-color;
+                }
+
+                .menu_icon_wrapper {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .eltd-menu-featured-icon {
+                    position: relative;
+                    top: -4px;
+                    left: 5px;
+                    color: currentColor;
+                    font-size: 10px;
+                    margin: 0;
+
+                    &:before {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    > ul {
+        @include eltdRelativeHolderLayout();
+        height: 100%;
+
+        > li {
+            float: left;
+            height: 100%;
+            box-sizing: border-box;
+            margin: 0 1px;
+            
+            &:hover > a{
+                color: $first-main-color;
+            }
+
+            > a {
+                @include eltdRelativeHolderLayout();
+                height: 100%;
+                padding: 28px 13px;
+                color: $default-heading-color;
+                font-size: 16px;
+                line-height: 23px;
+                box-sizing: border-box;
+                border-radius: 2px;
+                font-family: $default-text-font;
+
+                > span.item_outer {
+                    position: relative;
+
+                    .item_text {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: top;
+                    }
+                }
+            }
+
+            &.eltd-active-item > a {
+                color: $first-main-color;
+            }
+
+            &.has_sub {
+
+                > a .eltd-menu-arrow {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.eltd-light-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) {
+
+    .eltd-main-menu > ul > li {
+
+        > a {
+            color: $header-light-color;
+
+            &:hover {
+                color: $header-light-hover-color;
+            }
+        }
+
+        &.eltd-active-item > a {
+            color: $header-light-hover-color;
+        }
+    }
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) {
+
+    .eltd-main-menu > ul > li {
+
+        > a {
+            color: $header-dark-color;
+
+            &:hover {
+                color: $header-dark-color;
+            }
+        }
+
+        &.eltd-active-item > a {
+            color: $header-dark-color;
+        }
+    }
+}
+
+/* Narrow drop down styles
+   ========================================================================== */
+.eltd-drop-down {
+
+    .second {
+        position: absolute;
+        display: block;
+        left: -16px;
+        top: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        opacity: 0;
+        z-index: 10;
+        @include eltdTransition(all .2s);
+
+
+        &.eltd-drop-down-start {
+            visibility: visible;
+            overflow: visible;
+            opacity: 1;
+            @include eltdTransition(opacity .2s);
+        }
+
+        &.right {
+            right: 0;
+            left: auto;
+        }
+    
+        .inner {
+            position: relative;
+            display: block;
+            padding: 0;
+            margin: 0;
+            z-index: 997;
+            box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+    
+            ul {
+        
+                li {
+                    display: block;
+                    float: none;
+                    height: auto;
+            
+                    .widget {
+                        width: 100%;
+                        margin: 0 !important;
+                    }
+            
+                    a {
+                        display: block;
+                        float: none;
+                        margin: 0;
+                        padding: 6px 30px;
+                        font-size: 14px;
+                        font-weight: 300;
+                
+                        .item_outer {
+                            position: relative;
+                            display: block;
+                            overflow: hidden;
+                            padding: 0 30px 0 0;
+                            box-sizing: border-box;
+                            @include eltdTransition(padding .15s ease-in-out);
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                top: calc(50% - 3px);
+                                left: 0;
+                                background-color: currentColor;
+                                height: 4px;
+                                width: 4px;
+                                border-radius: 50%;
+                                @include eltdTransform(scale(0));
+                                opacity:0;
+                                @include eltdTransition(.3s);
+                            }
+                        }
+                    }
+
+                    &:hover > a {
+                        .item_outer {
+                            padding: 0 5px 0 10px;
+
+                            &:before {
+                                @include eltdTransform(scale(1));
+                                opacity:1;
+                            }
+                        }
+                    }
+            
+                    &.current-menu-ancestor > a,
+                    &.current-menu-item > a {
+                        color: $first-main-color;
+                
+                        .item_outer {
+                            padding: 0 10px 0 12px;
+                    
+                            &:before {
+                                @include eltdTransform(scale(1));
+                                opacity:1;
+                            }
+                        }
+                    }
+            
+                    &.sub {
+                
+                        > a {
+                    
+                            .item_outer {
+                        
+                                &:after {
+                                    position: absolute;
+                                    display: inline-block;
+                                    vertical-align: middle;
+                                    top: -2px;
+                                    right: -2px;
+                                    content: '\e04b';
+                                    font-family: 'linea-arrows-10';
+                                    font-size: 17px;
+                                    font-weight: normal;
+                                    font-style: normal;
+                                    text-rendering: auto;
+                                    -webkit-font-smoothing: antialiased;
+                                    -moz-osx-font-smoothing: grayscale;
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                &.right {
+            
+                    li {
+                
+                        a {
+                    
+                            .item_outer {
+                                padding: 0 0 0 30px;
+                        
+                                &:before {
+                                    content: '\f3d5';
+                                    left: auto;
+                                    right: -20px;
+                                    @include eltdTransition(right .2s ease-in-out);
+                                }
+                            }
+                    
+                            &:hover {
+                        
+                                .item_outer {
+                                    padding: 0 20px 0 10px;
+                            
+                                    &:before {
+                                        left: auto;
+                                        right: 0;
+                                    }
+                                }
+                            }
+                        }
+                
+                        &.current-menu-ancestor > a,
+                        &.current-menu-item > a {
+                    
+                            .item_outer {
+                                padding: 0 20px 0 10px;
+                        
+                                &:before {
+                                    left: auto;
+                                    right: 0;
+                                }
+                            }
+                        }
+                
+                        &.sub {
+                    
+                            > a {
+                        
+                                .item_outer {
+                            
+                                    &:after {
+                                        right: auto;
+                                        left: -2px;
+                                        content: "\e03f";
+                                    }
+                                }
+                            }
+                        }
+                
+                        a {
+                            text-align: right;
+                        }
+                
+                        ul {
+                            left: -100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    li {
+        
+        &.left_position {
+            
+            .second {
+                left: 0;
+            }
+        }
+        
+        &.right_position {
+            
+            .second {
+                left: auto;
+                right: 0;
+            }
+        }
+
+        &.wide{
+            .second{
+                left: 0;
+            }
+        }
+    }
+
+    > ul > li {
+        &:hover > .second {
+            z-index: 20;
+        }
+    }
+
+    .narrow .second .inner {
+
+        ul {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #fff;
+            padding: 17px 0;
+
+            li {
+                width: 230px;
+                overflow: hidden;
+
+                ul {
+                    position: absolute;
+                    left: 100%;
+                    top: -17px;
+                    height: auto;
+                    opacity: 0;
+                    overflow: hidden;
+                    border:1px solid #f2f2f2;
+                    z-index: 10;
+                    @include eltdTransform(translate3d(0,20px,0));
+                    -webkit-transition: -webkit-transform .0s .15s, opacity .15s;
+                    transition: transform .0s .15s, opacity .15s;
+                }
+
+                &:hover {
+                    overflow: visible;
+
+                    ul {
+                        z-index: 20;
+                        opacity: 1;
+                        @include eltdTransform(translate3d(0,0,0));
+                        @include eltdTransition(all .2s cubic-bezier(.15,.7,.54,.99));
+                    }
+                }
+            }
+
+            &.right li ul {
+                left: -101%;
+            }
+        }
+    }
+}
+
+/* Wide drop down styles
+   ========================================================================== */
+.eltd-drop-down .wide {
+
+    .second {
+
+        .inner {
+            background-color: #fff;
+            text-align: center;
+
+            ul {
+
+                li {
+
+                    a {
+                        padding: 7px 0;
+                        font-size: 14px;
+                        color: $default-text-color;
+
+                        &:hover{
+                            color: $first-main-color;
+                        }
+                    }
+
+                    ul {
+                        position: relative;
+                        display: block;
+                        top: 0;
+                        left: 0;
+                        visibility: visible;
+
+                        li {
+
+                            &:last-child {
+
+                                a {
+                                    padding-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    &.current_page_item a {
+                        color: $first-main-color;
+                    }
+                }
+            }
+
+            > ul {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                width: 1100px;
+                padding: 35px 0;
+                box-sizing: border-box;
+
+                .eltd-grid-1300 &{
+                    width: $grid-width-1300;
+                }
+
+                .eltd-grid-1200 &{
+                    width: $grid-width-1200;
+                }
+
+                .eltd-grid-1000 &{
+                    width: $grid-width-1000;
+                }
+
+                .eltd-grid-800 &{
+                    width: $grid-width-800;
+                }
+
+                > li {
+                    float: left;
+                    width: 25%;
+                    margin: 0;
+                    padding: 0 26px;
+                    box-sizing: border-box;
+
+                    &:nth-child(4n+1) {
+                        clear: both;
+                    }
+
+                    > a {
+                        padding: 0 0 13px;
+                        color: $default-heading-color;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 1.1em;
+
+                        &.no_link {
+                            cursor: default;
+                        }
+
+                        .item_outer {
+                            padding: 0;
+                            overflow: inherit;
+
+                            &:before,
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.left_position,
+    &.right_position {
+
+        .second .inner > ul {
+            width: auto;
+            white-space: nowrap;
+
+            > li {
+                float: none;
+                display: inline-block;
+                vertical-align: top;
+
+                &:nth-child(4n+1) {
+                    border-left: none;
+                }
+            }
+        }
+
+        .second ul li {
+            width: 200px;
+        }
+    }
+}
+/* ==========================================================================
+   Header main menu style - end
+   ========================================================================== */

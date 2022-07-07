@@ -1,0 +1,425 @@
+/* ==========================================================================
+   WooCommerce Select 2 Script styles - begin
+   ========================================================================== */
+/*
+	Version: 4.0.3 Timestamp: Monday Mart 27 2:59:00pm EDT 2017
+*/
+.select2-container--default {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    text-align: initial;
+    box-sizing: border-box;
+    width: auto;
+
+    &[dir="rtl"] {
+
+        .select2-selection--single {
+
+            .select2-selection__clear {
+                float: left;
+            }
+
+            .select2-selection__rendered {
+                padding: 0 20px 0 30px;
+            }
+
+            .select2-selection__arrow {
+                left: 20px;
+                right: auto;
+            }
+        }
+
+        .select2-selection--multiple {
+
+            .select2-selection__choice,
+            .select2-selection__placeholder,
+            .select2-search--inline {
+                float: right;
+            }
+
+            .select2-selection__rendered {
+                padding: 0 20px 0 30px;
+            }
+
+            .select2-selection__choice {
+                margin: 7px auto 0 5px;
+            }
+
+            .select2-selection__choice__remove {
+                margin: 0 auto 0 3px;
+            }
+        }
+    }
+
+    &.select2-container--disabled {
+
+        .select2-selection--single {
+            background-color: #eee;
+            cursor: default;
+
+            .select2-selection__clear {
+                display: none;
+            }
+        }
+
+        .select2-selection--multiple {
+            background-color: #eee;
+            cursor: default;
+        }
+
+        .select2-selection__choice__remove {
+            display: none;
+        }
+    }
+
+    &.select2-container--open {
+
+        .select2-selection--single {
+            color: $default-heading-color;
+        }
+
+        .select2-dropdown {
+            left: 0;
+
+            &.select2-dropdown--above {
+                border-bottom-color: transparent;
+            }
+
+            &.select2-dropdown--below {
+                border-top-color: transparent;
+            }
+        }
+    }
+
+    .eltd-woocommerce-page .cart-collaterals .woocommerce-shipping-calculator & {
+        width: 100% !important;
+        margin: 0 0 14px;
+    }
+
+    .select2-selection--single {
+        display: block !important;
+        height: 66px !important;
+        line-height: 66px !important;
+        font-family: inherit !important;
+        font-size: 15px !important;
+        font-weight: 400 !important;
+        color: $gray-color !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: $default-background-color !important;
+        border: 1px solid $light-grey-color !important;
+        box-sizing: border-box !important;
+        cursor: pointer !important;
+        border-radius: 0!important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+
+        .select2-selection__rendered {
+            display: block !important;
+            padding: 0 30px 0 23px !important;
+            color: inherit !important;
+            line-height: 66px !important;
+            white-space: nowrap !important;
+            text-overflow: ellipsis !important;
+            overflow: hidden !important;
+            box-sizing: border-box !important;
+        }
+
+        .select2-selection__clear {
+            position: relative !important;
+            cursor: pointer !important;
+            float: right !important;
+            margin: 0 !important;
+            font-weight: inherit !important;
+        }
+
+        .select2-selection__placeholder {
+            color: inherit !important;
+        }
+
+        .select2-selection__arrow {
+            position: absolute !important;
+            width: auto !important;
+            height: 100% !important;
+            top: 0 !important;
+            right: 20px !important;
+            color: $gray-color !important;
+            line-height: inherit !important;
+            text-align: center !important;
+
+            b {
+                display: none !important;
+            }
+
+            &:before {
+                font-family: 'FontAwesome';
+                content: '\f107';
+            }
+        }
+    }
+
+    .select2-selection--multiple {
+        display: block !important;
+        height: 50px !important;
+        line-height: 42px !important;
+        padding: 0 !important;
+        font-family: inherit !important;
+        font-size: inherit!important;
+        color: inherit !important;
+        background-color: transparent!important;
+        border: 1px solid $default-border-color!important;
+        border-radius: 0!important;
+        outline: 0!important;
+        box-sizing: border-box!important;
+        cursor: pointer!important;
+        user-select: none!important;
+        -webkit-user-select: none!important;
+
+        .select2-selection__rendered {
+            display: block !important;
+            list-style: none !important;
+            padding: 0 30px 0 20px !important;
+            margin: 0!important;
+            color: inherit !important;
+            line-height: inherit !important;
+            white-space: nowrap!important;
+            text-overflow: ellipsis!important;
+            overflow: hidden!important;
+            box-sizing: border-box!important;
+
+            li {
+                list-style: none!important;
+            }
+
+            .select2-selection__placeholder {
+                float: left!important;
+                margin: 0!important;
+                color: inherit!important;
+            }
+
+            .select2-selection__clear {
+                position: relative!important;
+                cursor: pointer!important;
+                float: right!important;
+                margin: 0!important;
+                font-weight: inherit!important;
+            }
+
+            .select2-selection__choice {
+                float: left!important;
+                margin: 7px 5px 0 0!important;
+                padding: 0 10px!important;
+                line-height: 30px!important;
+                color: #fff!important;
+                background-color: $default-heading-color!important;
+                border: 0!important;
+                border-radius: 0!important;
+                cursor: default!important;
+            }
+
+            .select2-selection__choice__remove {
+                display: inline-block!important;
+                margin: 0 3px 0 0!important;
+                color: inherit!important;
+                font-weight: 700!important;
+                cursor: pointer!important;
+                @include eltdTransition(opacity .2s ease-out);
+
+                &:hover {
+                    color: inherit!important;
+                    opacity: 0.8!important;
+                }
+            }
+        }
+    }
+
+    .select2-search--inline {
+        float: left;
+
+        .select2-search__field {
+            margin: 0;
+            padding: 0;
+            font-size: 100%;
+            background: transparent;
+            border: none;
+            outline: 0;
+            box-shadow: none;
+            -webkit-appearance: textfield;
+            box-sizing: border-box;
+
+            &::-webkit-search-cancel-button {
+                -webkit-appearance: none;
+            }
+        }
+    }
+
+    .select2-dropdown {
+        position: absolute;
+        top: 0;
+        left: -100000px;
+        width: 100%;
+        display: block;
+        background-color: #fff;
+        border: 1px solid $light-grey-color;
+        border-radius: 0;
+        z-index: 1051;
+        box-sizing: border-box;
+    }
+
+    .select2-search--dropdown {
+        display: block;
+        padding: 14px 15px 7px;
+
+        &.select2-search--hide {
+            display: none;
+        }
+
+        .select2-search__field {
+            padding: 4px 8px;
+            width: 100%;
+            color: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            font-family: inherit;
+            font-weight: inherit;
+            border: 1px solid $default-border-color;
+            outline: none;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+
+            &:focus {
+                border-color: $default-heading-color;
+            }
+
+            &::-webkit-search-cancel-button {
+                -webkit-appearance: none;
+            }
+        }
+    }
+
+    .select2-results {
+        display: block;
+        font-size: 15px;
+
+        > .select2-results__options {
+            max-height: 200px;
+            overflow-y: auto;
+            color: $gray-color;
+        }
+    }
+
+    .select2-results__options {
+        position: relative;
+        padding: 2px 15px;
+        margin: 5px 0;
+        list-style: none;
+    }
+
+    .select2-results__option {
+        padding: 7px;
+        user-select: none;
+        -webkit-user-select: none;
+        @include eltdTransition(color .2s ease-out);
+
+        &[aria-selected] {
+            cursor: pointer;
+        }
+
+        &[role=group] {
+            padding: 0!important;
+        }
+
+        &[aria-disabled=true] {
+            color: $default-heading-color!important;
+        }
+
+        &[aria-selected=true] {
+            color: $default-heading-color !important;
+            background: none!important;
+        }
+
+        .select2-results__option {
+            padding-left: 1em!important;
+
+            .select2-results__group {
+                padding-left: 0!important;
+            }
+
+            .select2-results__option {
+                margin-left: -1em!important;
+                padding-left: 2em!important;
+
+                .select2-results__option {
+                    margin-left: -2em!important;
+                    padding-left: 3em!important;
+
+                    .select2-results__option {
+                        margin-left: -3em!important;
+                        padding-left: 4em!important;
+
+                        .select2-results__option {
+                            margin-left: -4em!important;
+                            padding-left: 5em!important;
+
+                            .select2-results__option {
+                                margin-left: -5em!important;
+                                padding-left: 6em!important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .select2-results__option--highlighted {
+
+        &[aria-selected] {
+            color: $default-heading-color !important;
+            background: none !important;
+        }
+    }
+
+    .select2-results__group {
+        display: block;
+        padding: 7px 0;
+        cursor: default;
+    }
+}
+
+.select2-close-mask {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    z-index: 99;
+    background-color: #fff;
+    filter: alpha(opacity=0);
+}
+
+.select2-hidden-accessible {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+}
+
+/* ==========================================================================
+   WooCommerce Select 2 Script styles - end
+   ========================================================================== */

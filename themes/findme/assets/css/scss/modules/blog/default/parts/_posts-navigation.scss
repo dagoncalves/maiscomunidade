@@ -1,0 +1,131 @@
+/* Single posts navigation styles - begin
+    ====================================================================== */
+
+.eltd-blog-single-navigation {
+    position: relative;
+    display: table;
+    vertical-align: middle;
+    padding: 0;
+    margin-top: 5px;
+    clear: both;
+    box-sizing: border-box;
+
+    .eltd-blog-single-navigation-inner {
+        padding: 35px 23px;
+        margin-bottom: 62px;
+    }
+    
+    .eltd-blog-single-nav-prev,
+    .eltd-blog-single-nav-next{
+        width:50%;
+        color: $default-text-color;
+        
+        span,h4{
+            display: block;
+        }
+
+        .eltd-blog-single-nav-thumbnail{
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+
+            &:hover{
+                &:after{
+                    background-color: rgba(0, 0, 0, 0.1);
+                    border-radius: 50%;
+                    content: "";
+                    height: 90px;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 90px;
+                }
+            }
+        }
+    }
+    
+    .eltd-blog-single-nav-prev{
+        float: left;
+        text-align: left;
+        
+        &.eltd-with-image{
+            span,
+            .eltd-blog-single-nav-label{
+                padding-left: 110px;
+                color: $default-text-color;
+            }
+            .eltd-blog-single-nav-label{
+                padding-top: 10px;
+
+                &:hover{
+                    color: $first-main-color;
+                }
+            }
+        }
+        
+        .eltd-blog-single-nav-thumbnail{
+            float: left;
+        }
+    }
+    
+    .eltd-blog-single-nav-next{
+        float: right;
+        text-align: right;
+        
+        &.eltd-with-image{
+            span,
+            .eltd-blog-single-nav-label{
+                padding-right: 110px;
+                color: $default-text-color;
+            }
+            .eltd-blog-single-nav-label{
+                padding-top: 10px;
+
+                &:hover{
+                    color: $first-main-color;
+                }
+            }
+        }
+        
+        .eltd-blog-single-nav-thumbnail{
+            float: right;
+        }
+    }
+    
+    .eltd-blog-single-nav-label{
+        margin: 5px 0;
+        font-weight: 300;
+
+        &:hover{
+            color: $first-main-color;
+        }
+    }
+    
+    .eltd-blog-single-nav-date {
+        font-size: 14px;
+        color: $gray-color;
+        font-weight: 300;
+    }
+}
+
+.eltd-single-links-pages {
+    clear: both;
+    margin: 20px 0 5px;
+
+    .eltd-single-links-pages-inner {
+
+        > a,
+        > span {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 15px 5px 0;
+        }
+    }
+}
+/* Single posts navigation styles - end
+    ====================================================================== */

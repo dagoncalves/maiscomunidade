@@ -1,0 +1,14 @@
+.widget.woocommerce {
+    &.widget_price_filter {
+        .price_slider_amount {
+            .button{
+                @include laptop-landscape-medium{
+                    float: left;
+                }
+                @include ipad-landscape{
+                    float: right;
+                }
+            }
+        }
+    }
+}

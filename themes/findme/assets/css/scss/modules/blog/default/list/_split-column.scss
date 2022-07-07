@@ -1,0 +1,132 @@
+/* ==========================================================================
+   Blog List - Split Columns style - begin
+   ========================================================================== */
+
+.eltd-blog-holder {
+    
+    &.eltd-blog-split-column {
+        
+        article {
+            margin: 0 0 50px;
+            padding: 0;
+
+            .eltd-post-content {
+                @include eltdTableLayout();
+            }
+
+            .eltd-post-heading,
+            .eltd-post-text {
+                display: table-cell;
+                position: relative;
+                width: 50%;
+                vertical-align: top;
+            }
+
+            &.eltd-post-no-media {
+                .eltd-post-heading {
+                    display: none;
+                }
+                .eltd-post-text {
+                    display: inline-block;
+                    width: 100%;
+                    .eltd-post-text-inner {
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            .eltd-post-image{
+                line-height: 0;
+	            
+                > a {
+	                position: relative;
+	                display: inline-block;
+	                vertical-align: middle;
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        background-color: rgba(255, 255, 255, .15);
+                        opacity: 0;
+                        @include eltdTransition(opacity .4s);
+                    }
+
+                    &:hover {
+	                    
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            .eltd-post-text-inner {
+                padding-left: 20px;
+            }
+
+            &.format-audio {
+                .eltd-blog-audio-holder {
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+                &.eltd-post-no-media.has-post-thumbnail {
+                    .eltd-post-heading {
+                        display: table-cell;
+                    }
+                    .eltd-post-text {
+                        display: table-cell;
+                        width: 50%;
+                        .eltd-post-text-inner {
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+
+            &.format-quote {
+	            
+                .eltd-post-text {
+	                display: inline-block;
+	                width: 100%;
+	                padding: 50px 70px 50px 55px;
+	                background-color: #efefef;
+                }
+
+                .eltd-post-mark {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                    font-size: 60px;
+                    color: #fff;
+                }
+            }
+
+            &.format-link {
+	            
+                .eltd-post-text {
+	                display: inline-block;
+	                width: 100%;
+	                padding: 50px 90px 50px 55px;
+	                background-color: #efefef;
+                }
+
+                .eltd-post-mark {
+                    position: absolute;
+                    bottom: 30px;
+                    right: 36px;
+                    font-size: 40px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Blog List - Split Columns style - end
+   ========================================================================== */

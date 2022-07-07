@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Header Divided style - begin
+   ========================================================================== */
+
+.eltd-header-divided {
+	
+	.eltd-page-header {
+		
+		.eltd-logo-wrapper {
+			
+			a {
+				
+				img {
+					margin: 0 auto;
+				}
+			}
+		}
+		
+		.eltd-menu-area {
+			opacity: 0;
+			background-color: #fff;
+			box-sizing: border-box;
+			
+			.eltd-grid {
+				height: 100%;
+			}
+		}
+		
+		.eltd-main-menu {
+			width: auto;
+			margin: 0;
+			
+			& > ul > li > a span.item_inner {
+				padding: 0 28px;
+			}
+		}
+		
+		.eltd-vertical-align-containers {
+			padding: 0;
+			
+			.eltd-position-left {
+				text-align: right;
+				
+				.eltd-position-left-inner {
+					height: 100%;
+					text-align: left;
+					padding-right: 50px;
+				}
+			}
+			
+			.eltd-position-right {
+				text-align: left;
+				
+				.eltd-position-right-inner {
+					height: 100%;
+					padding-left: 50px;
+				}
+			}
+			
+			.eltd-position-center {
+				position: absolute;
+				width: 100%;
+			}
+		}
+		
+		.eltd-sticky-header .eltd-position-center-inner {
+			height: auto;
+		}
+	}
+}
+/* ==========================================================================
+   Header Divided style - end
+   ========================================================================== */

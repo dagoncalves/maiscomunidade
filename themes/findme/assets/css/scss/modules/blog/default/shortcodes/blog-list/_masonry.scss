@@ -1,0 +1,171 @@
+.eltd-blog-list-holder {
+    &.eltd-bl-masonry {
+
+        transition: none !important;
+        overflow: visible !important;
+
+        .eltd-blog-list {
+            opacity: 0;
+            @include eltdTransition(opacity .2s ease-out);
+        }
+
+        .eltd-bl-item {
+            vertical-align: top;
+            z-index: 100;
+        }
+
+        .eltd-bl-item,
+        .eltd-bl-grid-sizer {
+            width: 100%;
+        }
+
+        .eltd-bl-grid-gutter {
+            width: 0;
+        }
+
+        $masonry_columns_number: ('one','two', 'three', 'four', 'five');
+
+        @for $i from 0 to length($masonry_columns_number) {
+            &.eltd-bl-#{nth($masonry_columns_number,$i+1)}-columns {
+                $column_width: 100%/($i+1);
+
+                .eltd-bl-item,
+                .eltd-bl-grid-sizer {
+                    width: $column_width;
+                }
+            }
+        }
+
+        .eltd-post-info-category{
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            >a{
+                color: $light-color;
+                padding: 5px 19px 7px;
+                border-radius: 40px;
+                background-color: $first-main-color;
+                position: relative;
+                top: 20px;
+                left: 20px;
+                font-size: 14px;
+            }
+        }
+
+        .eltd-bli-content{
+            background-color: $light-color;
+            border: 1px solid $light-grey-color;
+            padding: 25px 28px 22px;
+        }
+
+        .eltd-blog-like{
+
+            i{
+                padding-right: 5px;
+            }
+
+            *{
+                color: $first-main-color;
+            }
+        }
+
+        .eltd-post-title {
+            margin: 0 0 6px;
+            line-height: 33px;
+        }
+
+        .eltd-bli-info {
+            @include eltdRelativeHolderLayout();
+            margin: 0;
+            clear: both;
+
+            > div {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                float: left;
+                padding: 0 13px 5px 0;
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    right: 4px;
+                    content: '/';
+                }
+
+                &:last-child {
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .eltd-bli-content {
+            background-color: #f6f6f6;
+
+            .eltd-post-info-category{
+                &, a{
+                    color: $blue-color;
+                    font-size: 14px;
+                }
+                .icon-basic-bookmark{
+                    vertical-align: bottom;
+                    font-size: 15px;
+                }
+            }
+
+            div{
+                box-sizing: border-box;
+            }
+        }
+
+        .eltd-bli-excerpt{
+            .eltd-blog-list-button{
+                margin: 0;
+            }
+        }
+
+        .eltd-post-info-bottom {
+            box-sizing: border-box;
+            padding: 12px 0 8px;
+
+            & div{
+                display: inline-block;
+            }
+
+            & a {
+                color: $gray-color;
+                font-size: 14px;
+
+                &:hover{
+                    color: $first-main-color;
+                }
+            }
+
+            .eltd-post-info-bottom-left{
+                float: left;
+                font-weight: 300;
+
+                .eltd-post-info-comments-holder{
+                    margin-left: 7px;
+
+                    i{
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+
+                i{
+                    color: $first-main-color;
+                    padding-right: 3px;
+                }
+            }
+            .eltd-post-info-bottom-right{
+                float: right;
+            }
+        }
+    }
+}

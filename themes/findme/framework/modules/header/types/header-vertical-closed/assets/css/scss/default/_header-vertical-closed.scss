@@ -1,0 +1,184 @@
+/* ==========================================================================
+   Header Vertical - Closed style - begin
+   ========================================================================== */
+
+$vertical-menu-width: 312px;
+$closed-vertical-menu-width: 70px;
+
+@import 'blocks/header-vertical-closed-navigation.scss';
+@import 'blocks/header-vertical-closed-widgets.scss';
+
+.eltd-header-vertical-closed {
+	
+    .eltd-content,
+    footer{
+        padding-left: $closed-vertical-menu-width;
+        box-sizing: border-box;
+    }
+
+	.eltd-vertical-menu-area {
+        position: fixed;
+		top: 0;
+		left: calc(#{$closed-vertical-menu-width} - #{$vertical-menu-width});
+		height: 100%;
+		width: $vertical-menu-width;
+		padding: 20px 40px;
+		background-color: #fff;
+	    box-sizing: border-box;
+		outline: none;
+		z-index: 101;
+		-webkit-backface-visibility: hidden;
+		@include eltdTransition(left .15s ease-out);
+		
+		&.eltd-with-scroll {
+			overflow: hidden;
+		}
+
+		.eltd-vertical-area-opener {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: $closed-vertical-menu-width;
+			height: $closed-vertical-menu-width;
+			z-index: 1000;
+
+			.eltd-vertical-area-opener-line {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				display: block;
+				width: 20px;
+				height: 3px;
+				margin-left: -10px;
+				background-color: $first-main-color;
+				@include eltdTransition(all .3s cubic-bezier(0.585,-0.600,0.430,1.650));
+
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: -6px;
+					width: 100%;
+					height: 3px;
+					background-color: $first-main-color;
+					@include eltdTransition(all .3s cubic-bezier(0.585,-0.600,0.430,1.650));
+				}
+				
+				&:after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: -6px;
+					width: 100%;
+					height: 3px;
+					background-color: $first-main-color;
+					@include eltdTransition(all .3s cubic-bezier(0.585,-0.600,0.430,1.650));
+				}
+			}
+		}
+
+		.eltd-vertical-menu {
+			opacity: 0;
+			@include eltdTransition(opacity .15s ease-out);
+		}
+
+	    &.active {
+		    left: 0;
+		    
+		    .eltd-vertical-area-opener {
+			    
+			    .eltd-vertical-area-opener-line {
+				    background-color: transparent;
+
+				    &:before {
+					    @include eltdTransform(rotate(45deg) translate(3px,8px));
+					    top: -8px;
+				    }
+				    
+				    &:after {
+					    @include eltdTransform(rotate(-45deg) translate(3px,-8px));
+					    bottom: -8px;
+				    }
+			    }
+		    }
+
+		    .eltd-vertical-menu {
+			    opacity: 1;
+		    }
+	    }
+    }
+
+    .eltd-vertical-menu-area-inner {
+        @include eltdRelativeHolderLayout();
+        height: 100%;
+    }
+
+    &.admin-bar .eltd-vertical-menu-area {
+        top: 32px;
+    }
+	
+	.eltd-logo-wrapper {
+		@include eltdRelativeHolderLayout();
+		z-index: 100;
+		
+		a {
+			display: block;
+			position: relative;
+			height: 100%;
+		}
+		
+		img {
+			display: block;
+			height: auto;
+			max-height: 100%;
+			@include eltdTransition(opacity 0.3s ease);
+		}
+	}
+
+    .eltd-vertical-area-background {
+        position: fixed;
+	    top: 0;
+	    left: calc(#{$closed-vertical-menu-width} - #{$vertical-menu-width});
+	    width: $vertical-menu-width;
+	    height: 100%;
+	    background-position: right top;
+	    background-repeat: no-repeat;
+	    background-color: #fff;
+	    background-size: cover;
+        z-index: 0;
+        opacity: 1;
+        @include eltdTransition(opacity 0.5s ease, background-color 0.5s ease, left .15s ease);
+    }
+
+	.active .eltd-vertical-area-background {
+		left: 0;
+	}
+
+	.eltd-vertical-area-bottom-logo {
+		position: fixed;
+		top: $closed-vertical-menu-width;
+		left:0;
+		bottom: 25px;
+		width: $closed-vertical-menu-width;
+		height: 100%;
+		text-align: center;
+		z-index: 1000;
+		@include eltdTransition(left .15s ease-in-out);
+
+		.eltd-vertical-area-bottom-logo-inner {
+			position: absolute;
+			bottom: 90px;
+			width: 100%;
+			padding: 0 10px;
+			text-align: center;
+			box-sizing: border-box;
+		}
+
+		&.active {
+			left: - $closed-vertical-menu-width;;
+		}
+	}
+}
+/* ==========================================================================
+   Header Vertical - Closed style - end
+   ========================================================================== */

@@ -1,0 +1,37 @@
+/* ==========================================================================
+   WooCommerce Star Rating styles - begin
+   ========================================================================== */
+
+.woocommerce {
+    .star-rating {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        font-family: "ElegantIcons";
+        font-size: 15px;
+        line-height: 1.1;
+        letter-spacing: 2px;
+        color: #d6d6d6;
+        overflow: hidden;
+        -webkit-font-smoothing: antialiased;
+
+        &:before {
+            content: "\e031\e031\e031\e031\e031";
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            color: $first-main-color;
+
+            &:before {
+                content: "\e033\e033\e033\e033\e033";
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Star Rating styles - end
+   ========================================================================== */

@@ -1,0 +1,31 @@
+# ignore these folders
+themes/*
+plugins/*
+
+# except these themes
+!themes/findme
+!themes/findme-default-child
+
+# except these plugins
+!plugins/learnpress/
+!plugins/envato-market/
+
+# ignore languages folder
+languages/
+
+# ignore composer dependency directories
+vendor/
+
+# ignore node dependency directories
+node_modules/
+
+# ignore uploads content folder
+uploads/*/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# ignore cache files
+mix-manifest.json

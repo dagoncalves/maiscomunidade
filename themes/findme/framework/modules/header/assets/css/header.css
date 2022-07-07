@@ -1,0 +1,2944 @@
+/* ==========================================================================
+   Header styles - begin
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/* ==========================================================================
+   Header styles - begin
+   ========================================================================== */
+.eltd-page-header {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  z-index: 110;
+  box-sizing: border-box;
+  /* ==========================================================================
+    #General header layout - start
+    ========================================================================== */
+  /* ==========================================================================
+    #General header layout - end
+    ========================================================================== */
+  /* ==========================================================================
+    #Logo area styles - start
+    ========================================================================== */
+  /* ==========================================================================
+    #Logo area styles - end
+    ========================================================================== */
+  /* ==========================================================================
+    #Menu area styles - start
+    ========================================================================== */
+  /* ==========================================================================
+    #Menu area styles - end
+    ========================================================================== */
+  /* ==========================================================================
+    #Specific styles - start
+    ========================================================================== */
+  /* ==========================================================================
+    #Specific styles - end
+    ========================================================================== */
+}
+
+.eltd-page-header a img {
+  display: block;
+}
+
+.eltd-page-header p {
+  margin: 0;
+}
+
+.eltd-page-header .eltd-grid {
+  height: 100%;
+}
+
+.eltd-page-header .eltd-grid .eltd-vertical-align-containers {
+  padding: 0;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.eltd-page-header .eltd-logo-area {
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.eltd-page-header .eltd-logo-area .eltd-logo-wrapper a {
+  max-height: 80px;
+}
+
+.eltd-page-header .eltd-menu-area {
+  position: relative;
+  height: 80px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.eltd-boxed .eltd-page-header .eltd-menu-area {
+  padding: 0;
+}
+
+.eltd-page-header .eltd-menu-area .eltd-logo-wrapper a {
+  max-height: 80px;
+}
+
+.eltd-page-header .eltd-menu-area .widget {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px;
+  margin: 0;
+}
+
+.eltd-logo-area-border-disable .eltd-page-header .eltd-logo-area {
+  border: none;
+}
+
+.eltd-logo-area-in-grid-border-disable .eltd-page-header .eltd-logo-area .eltd-grid .eltd-vertical-align-containers {
+  border: none;
+}
+
+.eltd-header-logo-area-in-grid-padding .eltd-page-header .eltd-logo-area .eltd-vertical-align-containers {
+  padding: 0 25px;
+}
+
+.eltd-menu-area-shadow-disable .eltd-page-header .eltd-menu-area {
+  box-shadow: none;
+}
+
+.eltd-menu-area-shadow-disable .eltd-page-header .eltd-menu-area .eltd-grid .eltd-vertical-align-containers {
+  box-shadow: none;
+}
+
+.eltd-menu-area-border-disable .eltd-page-header .eltd-menu-area {
+  border: none;
+}
+
+.eltd-menu-area-in-grid-border-disable .eltd-page-header .eltd-menu-area .eltd-grid .eltd-vertical-align-containers {
+  border: none;
+}
+
+.eltd-header-logo-area-in-grid-padding .eltd-page-header .eltd-menu-area .eltd-vertical-align-containers {
+  padding: 0 25px;
+}
+
+/* ==========================================================================
+#Light header - begin
+========================================================================== */
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-logo-wrapper .eltd-light-logo {
+  opacity: 1;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-logo-wrapper .eltd-normal-logo,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-logo-wrapper .eltd-dark-logo {
+  opacity: 0;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area {
+  color: #fff !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget {
+  color: #fff !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget p,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget a,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget span,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget i,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget .widgettitle {
+  color: #fff !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget a:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area {
+  color: #fff !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget {
+  color: #fff !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget p,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget a,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget span,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget i,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget .widgettitle {
+  color: #fff !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget a:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ==========================================================================
+#Light header - end
+========================================================================== */
+/* ==========================================================================
+#Dark header - begin
+========================================================================== */
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-logo-wrapper .eltd-dark-logo {
+  opacity: 1;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-logo-wrapper .eltd-normal-logo,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-logo-wrapper .eltd-light-logo {
+  opacity: 0;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area {
+  color: #333 !important;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget {
+  color: #333 !important;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget p,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget a,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget span,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget i,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget .widgettitle {
+  color: #333;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget a:hover {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area {
+  color: #333 !important;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget {
+  color: #333 !important;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget p,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget a,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget span,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget i,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget .widgettitle {
+  color: #000;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget a:hover {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+/* ==========================================================================
+#Dark header - end
+========================================================================== */
+/* ==========================================================================
+   Header end - end
+   ========================================================================== */
+/* ==========================================================================
+   Header styles - begin
+   ========================================================================== */
+.eltd-page-header {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  z-index: 110;
+  box-sizing: border-box;
+  /* ==========================================================================
+    #General header layout - start
+    ========================================================================== */
+  /* ==========================================================================
+    #General header layout - end
+    ========================================================================== */
+  /* ==========================================================================
+    #Logo area styles - start
+    ========================================================================== */
+  /* ==========================================================================
+    #Logo area styles - end
+    ========================================================================== */
+  /* ==========================================================================
+    #Menu area styles - start
+    ========================================================================== */
+  /* ==========================================================================
+    #Menu area styles - end
+    ========================================================================== */
+  /* ==========================================================================
+    #Specific styles - start
+    ========================================================================== */
+  /* ==========================================================================
+    #Specific styles - end
+    ========================================================================== */
+}
+
+.eltd-page-header a img {
+  display: block;
+}
+
+.eltd-page-header p {
+  margin: 0;
+}
+
+.eltd-page-header .eltd-grid {
+  height: 100%;
+}
+
+.eltd-page-header .eltd-grid .eltd-vertical-align-containers {
+  padding: 0;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.eltd-page-header .eltd-logo-area {
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.eltd-page-header .eltd-logo-area .eltd-logo-wrapper a {
+  max-height: 80px;
+}
+
+.eltd-page-header .eltd-menu-area {
+  position: relative;
+  height: 80px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.eltd-boxed .eltd-page-header .eltd-menu-area {
+  padding: 0;
+}
+
+.eltd-page-header .eltd-menu-area .eltd-logo-wrapper a {
+  max-height: 80px;
+}
+
+.eltd-page-header .eltd-menu-area .widget {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px;
+  margin: 0;
+}
+
+.eltd-logo-area-border-disable .eltd-page-header .eltd-logo-area {
+  border: none;
+}
+
+.eltd-logo-area-in-grid-border-disable .eltd-page-header .eltd-logo-area .eltd-grid .eltd-vertical-align-containers {
+  border: none;
+}
+
+.eltd-header-logo-area-in-grid-padding .eltd-page-header .eltd-logo-area .eltd-vertical-align-containers {
+  padding: 0 25px;
+}
+
+.eltd-menu-area-shadow-disable .eltd-page-header .eltd-menu-area {
+  box-shadow: none;
+}
+
+.eltd-menu-area-shadow-disable .eltd-page-header .eltd-menu-area .eltd-grid .eltd-vertical-align-containers {
+  box-shadow: none;
+}
+
+.eltd-menu-area-border-disable .eltd-page-header .eltd-menu-area {
+  border: none;
+}
+
+.eltd-menu-area-in-grid-border-disable .eltd-page-header .eltd-menu-area .eltd-grid .eltd-vertical-align-containers {
+  border: none;
+}
+
+.eltd-header-logo-area-in-grid-padding .eltd-page-header .eltd-menu-area .eltd-vertical-align-containers {
+  padding: 0 25px;
+}
+
+/* ==========================================================================
+#Light header - begin
+========================================================================== */
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-logo-wrapper .eltd-light-logo {
+  opacity: 1;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-logo-wrapper .eltd-normal-logo,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-logo-wrapper .eltd-dark-logo {
+  opacity: 0;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area {
+  color: #fff !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget {
+  color: #fff !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget p,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget a,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget span,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget i,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget .widgettitle {
+  color: #fff !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget a:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area {
+  color: #fff !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget {
+  color: #fff !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget p,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget a,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget span,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget i,
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget .widgettitle {
+  color: #fff !important;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget a:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ==========================================================================
+#Light header - end
+========================================================================== */
+/* ==========================================================================
+#Dark header - begin
+========================================================================== */
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-logo-wrapper .eltd-dark-logo {
+  opacity: 1;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-logo-wrapper .eltd-normal-logo,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-logo-wrapper .eltd-light-logo {
+  opacity: 0;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area {
+  color: #333 !important;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget {
+  color: #333 !important;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget p,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget a,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget span,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget i,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget .widgettitle {
+  color: #333;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) .eltd-menu-area .widget a:hover {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area {
+  color: #333 !important;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget {
+  color: #333 !important;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget p,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget a,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget span,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget i,
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget .widgettitle {
+  color: #000;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header).eltd-menu-area .widget a:hover {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+/* ==========================================================================
+#Dark header - end
+========================================================================== */
+/* ==========================================================================
+   Header end - end
+   ========================================================================== */
+/* ==========================================================================
+   Header logo styles - begin
+   ========================================================================== */
+.eltd-logo-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.eltd-logo-wrapper a {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.eltd-logo-wrapper a img {
+  height: 100%;
+  width: auto;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+.eltd-logo-wrapper a img.eltd-normal-logo {
+  opacity: 1;
+}
+
+.eltd-logo-wrapper a img.eltd-dark-logo {
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.eltd-logo-wrapper a img.eltd-light-logo {
+  opacity: 0;
+  -webkit-transform: translateY(-200%);
+  -moz-transform: translateY(-200%);
+  transform: translateY(-200%);
+}
+
+/* ==========================================================================
+   Header logo styles - end
+   ========================================================================== */
+/* ==========================================================================
+   Header main menu style - begin
+   ========================================================================== */
+.eltd-main-menu {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  height: 100%;
+  width: auto;
+  margin-left: 12px;
+}
+
+.eltd-main-menu ul {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.eltd-main-menu ul li {
+  position: relative;
+  display: inline-block;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.eltd-main-menu ul li a {
+  font-size: 16px;
+  line-height: 24px;
+  color: #808080;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+}
+
+.eltd-main-menu ul li a:hover {
+  color: #ff4d30;
+}
+
+.eltd-main-menu ul li a i:before {
+  margin: 0 7px 0 0;
+  color: #ff4d30;
+}
+
+.eltd-main-menu ul li a .menu_icon_wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.eltd-main-menu ul li a .eltd-menu-featured-icon {
+  position: relative;
+  top: -4px;
+  left: 5px;
+  color: currentColor;
+  font-size: 10px;
+  margin: 0;
+}
+
+.eltd-main-menu ul li a .eltd-menu-featured-icon:before {
+  margin: 0;
+}
+
+.eltd-main-menu > ul {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.eltd-main-menu > ul > li {
+  float: left;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0 1px;
+}
+
+.eltd-main-menu > ul > li:hover > a {
+  color: #ff4d30;
+}
+
+.eltd-main-menu > ul > li > a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  height: 100%;
+  padding: 28px 13px;
+  color: #2a2a2a;
+  font-size: 16px;
+  line-height: 23px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.eltd-main-menu > ul > li > a > span.item_outer {
+  position: relative;
+}
+
+.eltd-main-menu > ul > li > a > span.item_outer .item_text {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.eltd-main-menu > ul > li.eltd-active-item > a {
+  color: #ff4d30;
+}
+
+.eltd-main-menu > ul > li.has_sub > a .eltd-menu-arrow {
+  display: none;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) .eltd-main-menu > ul > li > a {
+  color: #fff;
+}
+
+.eltd-light-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) .eltd-main-menu > ul > li > a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.eltd-light-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) .eltd-main-menu > ul > li.eltd-active-item > a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) .eltd-main-menu > ul > li > a {
+  color: #333;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) .eltd-main-menu > ul > li > a:hover {
+  color: #333;
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) .eltd-main-menu > ul > li.eltd-active-item > a {
+  color: #333;
+}
+
+/* Narrow drop down styles
+   ========================================================================== */
+.eltd-drop-down .second {
+  position: absolute;
+  display: block;
+  left: -16px;
+  top: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 10;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.eltd-drop-down .second.eltd-drop-down-start {
+  visibility: visible;
+  overflow: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.eltd-drop-down .second.right {
+  right: 0;
+  left: auto;
+}
+
+.eltd-drop-down .second .inner {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0;
+  z-index: 997;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+}
+
+.eltd-drop-down .second .inner ul li {
+  display: block;
+  float: none;
+  height: auto;
+}
+
+.eltd-drop-down .second .inner ul li .widget {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.eltd-drop-down .second .inner ul li a {
+  display: block;
+  float: none;
+  margin: 0;
+  padding: 6px 30px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.eltd-drop-down .second .inner ul li a .item_outer {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 0 30px 0 0;
+  box-sizing: border-box;
+  -webkit-transition: padding 0.15s ease-in-out;
+  -moz-transition: padding 0.15s ease-in-out;
+  transition: padding 0.15s ease-in-out;
+}
+
+.eltd-drop-down .second .inner ul li a .item_outer:before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 3px);
+  left: 0;
+  background-color: currentColor;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.eltd-drop-down .second .inner ul li:hover > a .item_outer {
+  padding: 0 5px 0 10px;
+}
+
+.eltd-drop-down .second .inner ul li:hover > a .item_outer:before {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.eltd-drop-down .second .inner ul li.current-menu-ancestor > a,
+.eltd-drop-down .second .inner ul li.current-menu-item > a {
+  color: #ff4d30;
+}
+
+.eltd-drop-down .second .inner ul li.current-menu-ancestor > a .item_outer,
+.eltd-drop-down .second .inner ul li.current-menu-item > a .item_outer {
+  padding: 0 10px 0 12px;
+}
+
+.eltd-drop-down .second .inner ul li.current-menu-ancestor > a .item_outer:before,
+.eltd-drop-down .second .inner ul li.current-menu-item > a .item_outer:before {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.eltd-drop-down .second .inner ul li.sub > a .item_outer:after {
+  position: absolute;
+  display: inline-block;
+  vertical-align: middle;
+  top: -2px;
+  right: -2px;
+  content: '\e04b';
+  font-family: 'linea-arrows-10';
+  font-size: 17px;
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.eltd-drop-down .second .inner ul.right li a .item_outer {
+  padding: 0 0 0 30px;
+}
+
+.eltd-drop-down .second .inner ul.right li a .item_outer:before {
+  content: '\f3d5';
+  left: auto;
+  right: -20px;
+  -webkit-transition: right 0.2s ease-in-out;
+  -moz-transition: right 0.2s ease-in-out;
+  transition: right 0.2s ease-in-out;
+}
+
+.eltd-drop-down .second .inner ul.right li a:hover .item_outer {
+  padding: 0 20px 0 10px;
+}
+
+.eltd-drop-down .second .inner ul.right li a:hover .item_outer:before {
+  left: auto;
+  right: 0;
+}
+
+.eltd-drop-down .second .inner ul.right li.current-menu-ancestor > a .item_outer,
+.eltd-drop-down .second .inner ul.right li.current-menu-item > a .item_outer {
+  padding: 0 20px 0 10px;
+}
+
+.eltd-drop-down .second .inner ul.right li.current-menu-ancestor > a .item_outer:before,
+.eltd-drop-down .second .inner ul.right li.current-menu-item > a .item_outer:before {
+  left: auto;
+  right: 0;
+}
+
+.eltd-drop-down .second .inner ul.right li.sub > a .item_outer:after {
+  right: auto;
+  left: -2px;
+  content: "\e03f";
+}
+
+.eltd-drop-down .second .inner ul.right li a {
+  text-align: right;
+}
+
+.eltd-drop-down .second .inner ul.right li ul {
+  left: -100%;
+}
+
+.eltd-drop-down li.left_position .second {
+  left: 0;
+}
+
+.eltd-drop-down li.right_position .second {
+  left: auto;
+  right: 0;
+}
+
+.eltd-drop-down li.wide .second {
+  left: 0;
+}
+
+.eltd-drop-down > ul > li:hover > .second {
+  z-index: 20;
+}
+
+.eltd-drop-down .narrow .second .inner ul {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #fff;
+  padding: 17px 0;
+}
+
+.eltd-drop-down .narrow .second .inner ul li {
+  width: 230px;
+  overflow: hidden;
+}
+
+.eltd-drop-down .narrow .second .inner ul li ul {
+  position: absolute;
+  left: 100%;
+  top: -17px;
+  height: auto;
+  opacity: 0;
+  overflow: hidden;
+  border: 1px solid #f2f2f2;
+  z-index: 10;
+  -webkit-transform: translate3d(0, 20px, 0);
+  -moz-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
+  -webkit-transition: -webkit-transform .0s .15s, opacity .15s;
+  transition: transform .0s .15s, opacity .15s;
+}
+
+.eltd-drop-down .narrow .second .inner ul li:hover {
+  overflow: visible;
+}
+
+.eltd-drop-down .narrow .second .inner ul li:hover ul {
+  z-index: 20;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: all 0.2s cubic-bezier(0.15, 0.7, 0.54, 0.99);
+  -moz-transition: all 0.2s cubic-bezier(0.15, 0.7, 0.54, 0.99);
+  transition: all 0.2s cubic-bezier(0.15, 0.7, 0.54, 0.99);
+}
+
+.eltd-drop-down .narrow .second .inner ul.right li ul {
+  left: -101%;
+}
+
+/* Wide drop down styles
+   ========================================================================== */
+.eltd-drop-down .wide .second .inner {
+  background-color: #fff;
+  text-align: center;
+}
+
+.eltd-drop-down .wide .second .inner ul li a {
+  padding: 7px 0;
+  font-size: 14px;
+  color: #808080;
+}
+
+.eltd-drop-down .wide .second .inner ul li a:hover {
+  color: #ff4d30;
+}
+
+.eltd-drop-down .wide .second .inner ul li ul {
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  visibility: visible;
+}
+
+.eltd-drop-down .wide .second .inner ul li ul li:last-child a {
+  padding-bottom: 0;
+}
+
+.eltd-drop-down .wide .second .inner ul li.current_page_item a {
+  color: #ff4d30;
+}
+
+.eltd-drop-down .wide .second .inner > ul {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 1100px;
+  padding: 35px 0;
+  box-sizing: border-box;
+}
+
+.eltd-grid-1300 .eltd-drop-down .wide .second .inner > ul {
+  width: 1300px;
+}
+
+.eltd-grid-1200 .eltd-drop-down .wide .second .inner > ul {
+  width: 1200px;
+}
+
+.eltd-grid-1000 .eltd-drop-down .wide .second .inner > ul {
+  width: 1000px;
+}
+
+.eltd-grid-800 .eltd-drop-down .wide .second .inner > ul {
+  width: 800px;
+}
+
+.eltd-drop-down .wide .second .inner > ul > li {
+  float: left;
+  width: 25%;
+  margin: 0;
+  padding: 0 26px;
+  box-sizing: border-box;
+}
+
+.eltd-drop-down .wide .second .inner > ul > li:nth-child(4n+1) {
+  clear: both;
+}
+
+.eltd-drop-down .wide .second .inner > ul > li > a {
+  padding: 0 0 13px;
+  color: #2a2a2a;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.1em;
+}
+
+.eltd-drop-down .wide .second .inner > ul > li > a.no_link {
+  cursor: default;
+}
+
+.eltd-drop-down .wide .second .inner > ul > li > a .item_outer {
+  padding: 0;
+  overflow: inherit;
+}
+
+.eltd-drop-down .wide .second .inner > ul > li > a .item_outer:before, .eltd-drop-down .wide .second .inner > ul > li > a .item_outer:after {
+  display: none;
+}
+
+.eltd-drop-down .wide.left_position .second .inner > ul, .eltd-drop-down .wide.right_position .second .inner > ul {
+  width: auto;
+  white-space: nowrap;
+}
+
+.eltd-drop-down .wide.left_position .second .inner > ul > li, .eltd-drop-down .wide.right_position .second .inner > ul > li {
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.eltd-drop-down .wide.left_position .second .inner > ul > li:nth-child(4n+1), .eltd-drop-down .wide.right_position .second .inner > ul > li:nth-child(4n+1) {
+  border-left: none;
+}
+
+.eltd-drop-down .wide.left_position .second ul li, .eltd-drop-down .wide.right_position .second ul li {
+  width: 200px;
+}
+
+/* ==========================================================================
+   Header main menu style - end
+   ========================================================================== */
+/* ==========================================================================
+   Fixed header style - begin
+   ========================================================================== */
+.eltd-page-header .eltd-fixed-wrapper.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+}
+
+.admin-bar .eltd-page-header .eltd-fixed-wrapper.fixed {
+  margin-top: 32px;
+}
+
+/* ==========================================================================
+   Fixed header style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Box style - begin
+   ========================================================================== */
+.eltd-header-box .eltd-top-bar {
+  height: 55px;
+  background-color: transparent;
+}
+
+.eltd-header-box .eltd-page-header .eltd-menu-area {
+  height: 90px;
+  box-sizing: border-box;
+}
+
+.eltd-header-box .eltd-page-header .eltd-menu-area .eltd-logo-wrapper a {
+  max-height: 90px;
+}
+
+.eltd-header-box .eltd-page-header .eltd-menu-area .eltd-grid .eltd-vertical-align-containers {
+  box-sizing: initial;
+  margin: 0 -35px;
+  padding: 0 35px !important;
+}
+
+.eltd-header-box .eltd-page-header .eltd-menu-area .eltd-position-right-inner {
+  height: 100%;
+}
+
+.eltd-header-box .eltd-drop-down .wide .second > .inner > ul {
+  width: 1170px;
+}
+
+.eltd-header-box.eltd-grid-1000 .eltd-drop-down .wide .second > .inner > ul {
+  width: 1070px;
+}
+
+.eltd-header-box.eltd-grid-800 .eltd-drop-down .wide .second > .inner > ul {
+  width: 870px;
+}
+
+@media only screen and (min-width: 1400px) {
+  .eltd-header-box.eltd-grid-1300 .eltd-drop-down .wide .second > .inner > ul {
+    width: 1370px;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .eltd-header-box.eltd-grid-1200 .eltd-drop-down .wide .second > .inner > ul {
+    width: 1270px;
+  }
+}
+
+/* ==========================================================================
+   Header Box style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Centered style - begin
+   ========================================================================== */
+.eltd-header-centered .eltd-page-header .eltd-logo-area {
+  height: 110px;
+  overflow: visible;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.eltd-header-centered .eltd-page-header .eltd-logo-area .eltd-logo-wrapper a {
+  max-height: 110px;
+}
+
+.eltd-header-centered .eltd-page-header .eltd-menu-area {
+  height: 60px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.eltd-header-centered .eltd-page-header .eltd-menu-area .eltd-vertical-align-containers .eltd-position-center-inner {
+  height: 100%;
+}
+
+.eltd-header-centered .eltd-page-header .eltd-sticky-header .eltd-position-left-inner {
+  height: auto;
+}
+
+.eltd-header-centered .eltd-page-header .eltd-sticky-header .eltd-position-right-inner {
+  height: 100%;
+}
+
+/* ==========================================================================
+   Header Centered style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Divided style - begin
+   ========================================================================== */
+.eltd-header-divided .eltd-page-header .eltd-logo-wrapper a img {
+  margin: 0 auto;
+}
+
+.eltd-header-divided .eltd-page-header .eltd-menu-area {
+  opacity: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.eltd-header-divided .eltd-page-header .eltd-menu-area .eltd-grid {
+  height: 100%;
+}
+
+.eltd-header-divided .eltd-page-header .eltd-main-menu {
+  width: auto;
+  margin: 0;
+}
+
+.eltd-header-divided .eltd-page-header .eltd-main-menu > ul > li > a span.item_inner {
+  padding: 0 28px;
+}
+
+.eltd-header-divided .eltd-page-header .eltd-vertical-align-containers {
+  padding: 0;
+}
+
+.eltd-header-divided .eltd-page-header .eltd-vertical-align-containers .eltd-position-left {
+  text-align: right;
+}
+
+.eltd-header-divided .eltd-page-header .eltd-vertical-align-containers .eltd-position-left .eltd-position-left-inner {
+  height: 100%;
+  text-align: left;
+  padding-right: 50px;
+}
+
+.eltd-header-divided .eltd-page-header .eltd-vertical-align-containers .eltd-position-right {
+  text-align: left;
+}
+
+.eltd-header-divided .eltd-page-header .eltd-vertical-align-containers .eltd-position-right .eltd-position-right-inner {
+  height: 100%;
+  padding-left: 50px;
+}
+
+.eltd-header-divided .eltd-page-header .eltd-vertical-align-containers .eltd-position-center {
+  position: absolute;
+  width: 100%;
+}
+
+.eltd-header-divided .eltd-page-header .eltd-sticky-header .eltd-position-center-inner {
+  height: auto;
+}
+
+/* ==========================================================================
+   Header Divided style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Minimal style - begin
+   ========================================================================== */
+.eltd-header-minimal .eltd-page-header .eltd-menu-area {
+  box-sizing: border-box;
+}
+
+.eltd-header-minimal .eltd-page-header .eltd-menu-area .eltd-position-right-inner {
+  height: auto;
+}
+
+.eltd-header-minimal .eltd-page-header .eltd-position-left:before,
+.eltd-header-minimal .eltd-page-header .eltd-position-right:before {
+  content: "";
+}
+
+.eltd-header-minimal .eltd-page-header .eltd-sticky-header .eltd-position-left-inner {
+  height: auto;
+}
+
+.eltd-header-minimal .eltd-page-header .eltd-sticky-header .eltd-vertical-align-containers .eltd-position-right .eltd-position-right-inner {
+  height: auto;
+}
+
+.eltd-fullscreen-menu-opened {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+.eltd-fullscreen-menu-opened.admin-bar {
+  top: 32px;
+  height: calc(100% - 32px);
+}
+
+/* ==========================================================================
+   Header Minimal style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Standard Extended style - begin
+   ========================================================================== */
+.eltd-header-standard-extended .eltd-page-header .eltd-logo-area {
+  height: 90px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.eltd-header-standard-extended .eltd-page-header .eltd-logo-area .eltd-logo-wrapper a {
+  max-height: 90px;
+}
+
+.eltd-header-standard-extended .eltd-page-header .eltd-logo-area .eltd-vertical-align-containers .eltd-position-right-inner {
+  height: auto;
+}
+
+.eltd-header-standard-extended .eltd-page-header .eltd-logo-area .eltd-logo-widget-area {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.eltd-header-standard-extended .eltd-page-header .eltd-logo-area .eltd-right-from-logo-widget {
+  position: relative;
+  padding: 0 20px 0 0;
+  float: left;
+}
+
+.eltd-header-standard-extended .eltd-page-header .eltd-logo-area .eltd-right-from-logo-widget:last-child {
+  padding-right: 0;
+}
+
+.eltd-header-standard-extended .eltd-page-header .eltd-menu-area {
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.eltd-header-standard-extended .eltd-page-header .eltd-menu-area .eltd-main-menu {
+  margin-left: 0;
+}
+
+.eltd-header-standard-extended .eltd-page-header .eltd-menu-area .eltd-main-menu > ul > li:first-child > a {
+  padding-left: 0;
+}
+
+.eltd-header-standard-extended .eltd-page-header .eltd-menu-area .eltd-vertical-align-containers .eltd-position-left-inner {
+  height: 100%;
+}
+
+.eltd-header-standard-extended .eltd-page-header .eltd-menu-area .eltd-vertical-align-containers .eltd-position-right-inner {
+  height: auto;
+}
+
+/* ==========================================================================
+   Header Standard Extended style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Standard style - begin
+   ========================================================================== */
+.eltd-header-standard .eltd-menu-area {
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.eltd-header-standard .eltd-menu-area .eltd-position-right-inner {
+  height: 100%;
+}
+
+.eltd-header-standard .eltd-menu-area .eltd-position-right-inner > div:last-child {
+  padding-right: 0;
+}
+
+.eltd-header-standard .eltd-menu-area .eltd-logo-wrapper a {
+  top: -4px;
+}
+
+/* ==========================================================================
+   Header Standard Extended style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Tabbed style - begin
+   ========================================================================== */
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area {
+  height: 70px;
+  box-sizing: border-box;
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-position-left-inner {
+  padding-right: 20px;
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-position-center {
+  position: relative;
+  float: left;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-position-center:before {
+  content: normal;
+  margin: 0;
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-position-right:before {
+  content: normal;
+  margin: 0;
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-position-right .eltd-position-right-inner {
+  height: 100%;
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-vertical-align-containers .eltd-position-center-inner {
+  height: 100%;
+  width: 100%;
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-vertical-align-containers .eltd-position-center-inner .eltd-main-menu {
+  width: 100%;
+  margin: 0;
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-vertical-align-containers .eltd-position-center-inner .eltd-main-menu > ul {
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-vertical-align-containers .eltd-position-center-inner .eltd-main-menu > ul:before, .eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-vertical-align-containers .eltd-position-center-inner .eltd-main-menu > ul:after {
+  content: normal;
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-vertical-align-containers .eltd-position-center-inner .eltd-main-menu > ul > li {
+  display: table-cell;
+  height: 100%;
+  float: none;
+  text-align: center;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-vertical-align-containers .eltd-position-center-inner .eltd-main-menu > ul > li:last-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-header-widget-menu-area {
+  position: relative;
+  display: table;
+  height: 100%;
+  float: left;
+  padding: 0 20px;
+  vertical-align: middle;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-header-widget-menu-area:last-child {
+  padding-right: 0;
+  border: 0;
+}
+
+.eltd-header-tabbed .eltd-page-header .eltd-menu-area .eltd-header-widget-menu-area > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   Header Tabbed style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Top Menu style - begin
+   ========================================================================== */
+.eltd-header-top-menu .eltd-page-header .eltd-logo-area {
+  height: 80px;
+  margin-top: 70px;
+  overflow: visible;
+  z-index: 99;
+  box-sizing: border-box;
+}
+
+.eltd-header-top-menu .eltd-page-header .eltd-logo-area .eltd-logo-wrapper a {
+  max-height: 80px;
+}
+
+.eltd-header-top-menu .eltd-page-header .eltd-menu-area {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.eltd-header-top-menu .eltd-page-header .eltd-menu-area .eltd-vertical-align-containers .eltd-position-left-inner {
+  height: 100%;
+}
+
+.eltd-header-top-menu .eltd-page-header .eltd-sticky-header .eltd-position-left-inner {
+  height: auto;
+}
+
+.eltd-header-top-menu .eltd-page-header .eltd-sticky-header .eltd-position-right-inner {
+  height: 100%;
+}
+
+.eltd-header-top-menu.admin-bar .eltd-page-header .eltd-menu-area {
+  top: 32px;
+}
+
+/* ==========================================================================
+   Header Top Menu style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Vertical - Closed style - begin
+   ========================================================================== */
+/* ==========================================================================
+   Header Vertical - Closed navigation style - begin
+   ========================================================================== */
+.eltd-header-vertical-closed .eltd-vertical-alignment-center .eltd-vertical-menu-outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: table;
+  padding: 100px 0 150px;
+  box-sizing: border-box;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-alignment-center .eltd-vertical-menu {
+  display: table-cell;
+  height: auto;
+  min-height: 0;
+  vertical-align: middle;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 58px 0 31px;
+  padding: 0;
+  z-index: 100;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li a {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 5px 0;
+  color: #808080;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li a:hover {
+  color: #ff4d30;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li a:hover .eltd-menu-arrow {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li a .item_outer {
+  position: relative;
+  display: block;
+  padding: 0 15px 0 0;
+  box-sizing: border-box;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li a .eltd-menu-arrow {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  -moz-transition: -moz-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li a .eltd-menu-featured-icon {
+  position: relative;
+  top: -4px;
+  left: 3px;
+  color: #2a2a2a;
+  font-size: 12px;
+  margin: 0;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li a .menu_icon:not(.blank):not(.null) {
+  padding: 0 5px 0 0;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li.eltd-active-item > a,
+.eltd-header-vertical-closed .eltd-vertical-menu ul li.current_page_item > a,
+.eltd-header-vertical-closed .eltd-vertical-menu ul li.current-menu-item > a,
+.eltd-header-vertical-closed .eltd-vertical-menu ul li.current-menu-ancestor > a {
+  color: #ff4d30;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li.eltd-active-item > a .eltd-menu-arrow,
+.eltd-header-vertical-closed .eltd-vertical-menu ul li.current_page_item > a .eltd-menu-arrow,
+.eltd-header-vertical-closed .eltd-vertical-menu ul li.current-menu-item > a .eltd-menu-arrow,
+.eltd-header-vertical-closed .eltd-vertical-menu ul li.current-menu-ancestor > a .eltd-menu-arrow {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li ul {
+  padding: 3px 0;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li ul li.sub > a .item_outer {
+  position: relative;
+  display: block;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li ul li.sub > a .item_outer:after {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  margin: 0;
+  font-family: 'FontAwesome';
+  font-size: inherit;
+  line-height: inherit;
+  content: "\f105";
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li ul li.sub.current_page_item > a .item_outer:after,
+.eltd-header-vertical-closed .eltd-vertical-menu ul li ul li.sub.current-menu-ancestor > a .item_outer:after {
+  content: "\f107";
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li .second {
+  display: none;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu ul li .second .inner {
+  position: relative;
+  display: block;
+  padding: 0;
+  z-index: 997;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu > ul > li > a {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu > ul > li > a span.item_text {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.eltd-light-header.eltd-header-vertical-closed .eltd-vertical-menu ul li a {
+  color: #fff !important;
+}
+
+.eltd-light-header.eltd-header-vertical-closed .eltd-vertical-menu ul li a:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.eltd-light-header.eltd-header-vertical-closed .eltd-vertical-menu ul li ul li.current_page_item > a,
+.eltd-light-header.eltd-header-vertical-closed .eltd-vertical-menu ul li ul li.current-menu-item > a,
+.eltd-light-header.eltd-header-vertical-closed .eltd-vertical-menu ul li ul li.current-menu-ancestor > a {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.eltd-light-header.eltd-header-vertical-closed .eltd-vertical-menu > ul > li.eltd-active-item > a,
+.eltd-light-header.eltd-header-vertical-closed .eltd-vertical-menu > ul > li.current-menu-ancestor > a {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.eltd-dark-header.eltd-header-vertical-closed .eltd-vertical-menu ul li a {
+  color: #333 !important;
+}
+
+.eltd-dark-header.eltd-header-vertical-closed .eltd-vertical-menu ul li a:hover {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+.eltd-dark-header.eltd-header-vertical-closed .eltd-vertical-menu ul li ul li.current_page_item > a,
+.eltd-dark-header.eltd-header-vertical-closed .eltd-vertical-menu ul li ul li.current-menu-item > a,
+.eltd-dark-header.eltd-header-vertical-closed .eltd-vertical-menu ul li ul li.current-menu-ancestor > a {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+.eltd-dark-header.eltd-header-vertical-closed .eltd-vertical-menu > ul > li.eltd-active-item > a,
+.eltd-dark-header.eltd-header-vertical-closed .eltd-vertical-menu > ul > li.current-menu-ancestor > a {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+/* ==========================================================================
+   Header Vertical - Closed navigation style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Vertical - Closed widget style - begin
+   ========================================================================== */
+.eltd-header-vertical-closed .eltd-vertical-area-widget-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 10px 0 0;
+  z-index: 100;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-alignment-center .eltd-vertical-area-widget-holder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* ==========================================================================
+   Header Vertical - Closed widget style - end
+   ========================================================================== */
+.eltd-header-vertical-closed .eltd-content,
+.eltd-header-vertical-closed footer {
+  padding-left: 70px;
+  box-sizing: border-box;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu-area {
+  position: fixed;
+  top: 0;
+  left: calc(70px - 312px);
+  height: 100%;
+  width: 312px;
+  padding: 20px 40px;
+  background-color: #fff;
+  box-sizing: border-box;
+  outline: none;
+  z-index: 101;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu-area.eltd-with-scroll {
+  overflow: hidden;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu-area .eltd-vertical-area-opener {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 70px;
+  height: 70px;
+  z-index: 1000;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu-area .eltd-vertical-area-opener .eltd-vertical-area-opener-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 20px;
+  height: 3px;
+  margin-left: -10px;
+  background-color: #ff4d30;
+  -webkit-transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+  -moz-transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+  transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu-area .eltd-vertical-area-opener .eltd-vertical-area-opener-line:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -6px;
+  width: 100%;
+  height: 3px;
+  background-color: #ff4d30;
+  -webkit-transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+  -moz-transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+  transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu-area .eltd-vertical-area-opener .eltd-vertical-area-opener-line:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background-color: #ff4d30;
+  -webkit-transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+  -moz-transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+  transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu-area .eltd-vertical-menu {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s ease-out;
+  -moz-transition: opacity 0.15s ease-out;
+  transition: opacity 0.15s ease-out;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu-area.active {
+  left: 0;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu-area.active .eltd-vertical-area-opener .eltd-vertical-area-opener-line {
+  background-color: transparent;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu-area.active .eltd-vertical-area-opener .eltd-vertical-area-opener-line:before {
+  -webkit-transform: rotate(45deg) translate(3px, 8px);
+  -moz-transform: rotate(45deg) translate(3px, 8px);
+  transform: rotate(45deg) translate(3px, 8px);
+  top: -8px;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu-area.active .eltd-vertical-area-opener .eltd-vertical-area-opener-line:after {
+  -webkit-transform: rotate(-45deg) translate(3px, -8px);
+  -moz-transform: rotate(-45deg) translate(3px, -8px);
+  transform: rotate(-45deg) translate(3px, -8px);
+  bottom: -8px;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu-area.active .eltd-vertical-menu {
+  opacity: 1;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-menu-area-inner {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.eltd-header-vertical-closed.admin-bar .eltd-vertical-menu-area {
+  top: 32px;
+}
+
+.eltd-header-vertical-closed .eltd-logo-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  z-index: 100;
+}
+
+.eltd-header-vertical-closed .eltd-logo-wrapper a {
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+.eltd-header-vertical-closed .eltd-logo-wrapper img {
+  display: block;
+  height: auto;
+  max-height: 100%;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-area-background {
+  position: fixed;
+  top: 0;
+  left: calc(70px - 312px);
+  width: 312px;
+  height: 100%;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-size: cover;
+  z-index: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease, background-color 0.5s ease, left 0.15s ease;
+  -moz-transition: opacity 0.5s ease, background-color 0.5s ease, left 0.15s ease;
+  transition: opacity 0.5s ease, background-color 0.5s ease, left 0.15s ease;
+}
+
+.eltd-header-vertical-closed .active .eltd-vertical-area-background {
+  left: 0;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-area-bottom-logo {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  bottom: 25px;
+  width: 70px;
+  height: 100%;
+  text-align: center;
+  z-index: 1000;
+  -webkit-transition: left 0.15s ease-in-out;
+  -moz-transition: left 0.15s ease-in-out;
+  transition: left 0.15s ease-in-out;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-area-bottom-logo .eltd-vertical-area-bottom-logo-inner {
+  position: absolute;
+  bottom: 90px;
+  width: 100%;
+  padding: 0 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.eltd-header-vertical-closed .eltd-vertical-area-bottom-logo.active {
+  left: -70px;
+}
+
+/* ==========================================================================
+   Header Vertical - Closed style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Vertical - Compact style - begin
+   ========================================================================== */
+/* ==========================================================================
+   Header Vertical - Compact navigation style - begin
+   ========================================================================== */
+.eltd-header-vertical-compact .eltd-vertical-menu-outer {
+  position: relative;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  text-align: inherit;
+  box-sizing: border-box;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu {
+  position: relative;
+  min-height: 0;
+  vertical-align: middle;
+  margin: 0;
+  text-align: left;
+  z-index: 101;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu ul {
+  position: relative;
+  list-style-type: none;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu ul li {
+  position: relative;
+  -webkit-transition: background-color 0.15s ease;
+  -moz-transition: background-color 0.15s ease;
+  transition: background-color 0.15s ease;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu > ul > li > a {
+  position: relative;
+  display: block;
+  height: 75px;
+  color: inherit;
+  font-size: 26px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-transition: color 0.15s ease, background-color 0.15s ease;
+  -moz-transition: color 0.15s ease, background-color 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu > ul > li > a .item_outer {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu > ul > li > a .item_outer .item_inner {
+  position: relative;
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu > ul > li:last-child > a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu > ul > li:hover {
+  background: #ff4d30;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu > ul > li:hover a {
+  color: #fff;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu > ul > li:hover .second {
+  top: -10px;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu .eltd_menu_arrow {
+  display: none;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu .menu_icon_wrapper {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu .eltd-menu-featured-icon {
+  position: relative;
+  top: -3px;
+  display: inline-block !important;
+  margin-left: 5px;
+  color: #ff4d30;
+  font-size: 10px;
+}
+
+/* ==========================================================================
+   Header Vertical - Compact navigation style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Vertical - Compact navigation float type style - begin
+   ========================================================================== */
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float ul li {
+  overflow: hidden;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float ul li:hover {
+  overflow: visible;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 50px;
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: margin 0.25s cubic-bezier(0, 0.57, 0.58, 1);
+  -moz-transition: margin 0.25s cubic-bezier(0, 0.57, 0.58, 1);
+  transition: margin 0.25s cubic-bezier(0, 0.57, 0.58, 1);
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second.eltd-float-open {
+  margin-left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second.eltd-float-open * {
+  visibility: visible;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second.vertical_menu_start ul li ul {
+  visibility: hidden;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second.vertical_menu_start ul li ul * {
+  visibility: hidden;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second.vertical_menu_start ul li ul.eltd-float-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second.vertical_menu_start ul li ul.eltd-float-open * {
+  opacity: 1;
+  visibility: visible;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second * {
+  visibility: hidden;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second .inner {
+  position: relative;
+  display: block;
+  padding: 0;
+  z-index: 997;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second .inner ul {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second .inner ul li {
+  position: relative;
+  display: block;
+  width: 220px;
+  height: auto;
+  padding: 0;
+  float: none;
+  overflow: hidden;
+  background: transparent;
+  -webkit-transition: background-color 0.15s ease-out;
+  -moz-transition: background-color 0.15s ease-out;
+  transition: background-color 0.15s ease-out;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second .inner ul li a {
+  position: relative;
+  display: block;
+  height: auto;
+  padding: 6px 27px;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second .inner ul li a .plus {
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second .inner ul li:hover,
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second .inner ul li.sub ul li:hover {
+  overflow: visible;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second .inner ul ul {
+  position: absolute;
+  top: -11px;
+  left: 100%;
+  width: 100%;
+  height: auto;
+  margin-left: 50px;
+  background-color: #fff;
+  border: 1px solid #f5f5f5;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 10;
+  -webkit-transition: all 0.25s cubic-bezier(0, 0.57, 0.58, 1);
+  -moz-transition: all 0.25s cubic-bezier(0, 0.57, 0.58, 1);
+  transition: all 0.25s cubic-bezier(0, 0.57, 0.58, 1);
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .menu-item .second .inner ul ul.eltd-float-open {
+  margin-left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-dropdown-float .second .inner > ul > li > a .menu_icon {
+  -webkit-transition: color 0.25s ease-out;
+  -moz-transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
+}
+
+/* ==========================================================================
+   Header Vertical - Compact navigation float type style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Vertical - Compact widgets style - begin
+   ========================================================================== */
+.eltd-header-vertical-compact .eltd-vertical-area-widget-holder {
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  z-index: 100;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-area-widget-holder > div {
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+  height: 75px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.eltd-header-vertical-compact .eltd-vertical-area-widget-holder > div > div {
+  position: relative;
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   Header Vertical - Compact widgets style - end
+   ========================================================================== */
+.eltd-header-vertical-compact .eltd-content,
+.eltd-header-vertical-compact footer {
+  padding-left: 75px;
+  box-sizing: border-box;
+}
+
+.eltd-header-vertical-compact .eltd-logo-wrapper {
+  position: relative;
+  display: table-cell;
+  height: 75px;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.eltd-header-vertical-compact .eltd-logo-wrapper a {
+  display: block;
+  position: relative;
+  height: 100%;
+  max-height: 75px;
+}
+
+.eltd-header-vertical-compact .eltd-logo-wrapper img {
+  display: block;
+  height: auto;
+  max-height: 100%;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 100%;
+  background-color: transparent;
+  z-index: 101;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu-area.eltd-with-scroll {
+  overflow: hidden;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-menu-area .eltd-vertical-menu-area-inner {
+  position: relative;
+  height: 100%;
+}
+
+.eltd-header-vertical-compact.admin-bar .eltd-vertical-menu-area {
+  top: 32px;
+}
+
+.eltd-header-vertical-compact .eltd-vertical-area-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 100%;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-size: cover;
+  z-index: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease, background-color 0.5s ease;
+  -moz-transition: opacity 0.5s ease, background-color 0.5s ease;
+  transition: opacity 0.5s ease, background-color 0.5s ease;
+}
+
+.eltd-header-vertical-compact.eltd-header-vertical-compact-shadow-disable .eltd-vertical-area-background {
+  box-shadow: none;
+}
+
+.eltd-header-vertical-compact.eltd-header-vertical-compact-border-disable .eltd-vertical-area-background {
+  border: none;
+}
+
+/* ==========================================================================
+   Header Vertical - Compact style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header Vertical style - begin
+   ========================================================================== */
+/* ==========================================================================
+   Header Vertical navigation style - begin
+   ========================================================================== */
+.eltd-header-vertical .eltd-vertical-alignment-center .eltd-vertical-menu-outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: table;
+  padding: 100px 0 150px;
+  box-sizing: border-box;
+}
+
+.eltd-header-vertical .eltd-vertical-alignment-center .eltd-vertical-menu {
+  display: table-cell;
+  height: auto;
+  min-height: 0;
+  vertical-align: middle;
+}
+
+.eltd-header-vertical .eltd-vertical-menu {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 58px 0 31px;
+  padding: 0;
+  z-index: 100;
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li a {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 5px 0;
+  color: #808080;
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li a:hover {
+  color: #ff4d30;
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li a:hover .eltd-menu-arrow {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li a .item_outer {
+  position: relative;
+  display: block;
+  padding: 0 15px 0 0;
+  box-sizing: border-box;
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li a .eltd-menu-arrow {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  -moz-transition: -moz-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li a .eltd-menu-featured-icon {
+  position: relative;
+  top: -4px;
+  left: 3px;
+  color: #2a2a2a;
+  font-size: 12px;
+  margin: 0;
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li a .menu_icon:not(.blank):not(.null) {
+  padding: 0 5px 0 0;
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li.eltd-active-item > a,
+.eltd-header-vertical .eltd-vertical-menu ul li.current_page_item > a,
+.eltd-header-vertical .eltd-vertical-menu ul li.current-menu-item > a,
+.eltd-header-vertical .eltd-vertical-menu ul li.current-menu-ancestor > a {
+  color: #ff4d30;
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li.eltd-active-item > a .eltd-menu-arrow,
+.eltd-header-vertical .eltd-vertical-menu ul li.current_page_item > a .eltd-menu-arrow,
+.eltd-header-vertical .eltd-vertical-menu ul li.current-menu-item > a .eltd-menu-arrow,
+.eltd-header-vertical .eltd-vertical-menu ul li.current-menu-ancestor > a .eltd-menu-arrow {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li ul {
+  padding: 3px 0;
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li ul li.sub > a .item_outer {
+  position: relative;
+  display: block;
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li ul li.sub > a .item_outer:after {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  margin: 0;
+  font-family: 'FontAwesome';
+  font-size: inherit;
+  line-height: inherit;
+  content: "\f105";
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li ul li.sub.current_page_item > a .item_outer:after,
+.eltd-header-vertical .eltd-vertical-menu ul li ul li.sub.current-menu-ancestor > a .item_outer:after {
+  content: "\f107";
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li .second {
+  display: none;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.eltd-header-vertical .eltd-vertical-menu ul li .second .inner {
+  position: relative;
+  display: block;
+  padding: 0;
+  z-index: 997;
+}
+
+.eltd-header-vertical .eltd-vertical-menu > ul > li > a {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.eltd-header-vertical .eltd-vertical-menu > ul > li > a span.item_text {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.eltd-light-header.eltd-header-vertical .eltd-vertical-menu ul li a {
+  color: #fff !important;
+}
+
+.eltd-light-header.eltd-header-vertical .eltd-vertical-menu ul li a:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.eltd-light-header.eltd-header-vertical .eltd-vertical-menu ul li ul li.current_page_item > a,
+.eltd-light-header.eltd-header-vertical .eltd-vertical-menu ul li ul li.current-menu-item > a,
+.eltd-light-header.eltd-header-vertical .eltd-vertical-menu ul li ul li.current-menu-ancestor > a {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.eltd-light-header.eltd-header-vertical .eltd-vertical-menu > ul > li.eltd-active-item > a,
+.eltd-light-header.eltd-header-vertical .eltd-vertical-menu > ul > li.current-menu-ancestor > a {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.eltd-dark-header.eltd-header-vertical .eltd-vertical-menu ul li a {
+  color: #333 !important;
+}
+
+.eltd-dark-header.eltd-header-vertical .eltd-vertical-menu ul li a:hover {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+.eltd-dark-header.eltd-header-vertical .eltd-vertical-menu ul li ul li.current_page_item > a,
+.eltd-dark-header.eltd-header-vertical .eltd-vertical-menu ul li ul li.current-menu-item > a,
+.eltd-dark-header.eltd-header-vertical .eltd-vertical-menu ul li ul li.current-menu-ancestor > a {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+.eltd-dark-header.eltd-header-vertical .eltd-vertical-menu > ul > li.eltd-active-item > a,
+.eltd-dark-header.eltd-header-vertical .eltd-vertical-menu > ul > li.current-menu-ancestor > a {
+  color: rgba(51, 51, 51, 0.8) !important;
+}
+
+/* ==========================================================================
+   Header Vertical navigation style - end
+   ========================================================================== */
+.eltd-header-vertical .eltd-vertical-area-widget-holder {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  margin: 10px 0 0;
+  z-index: 100;
+}
+
+.eltd-header-vertical .eltd-vertical-alignment-center .eltd-vertical-area-widget-holder {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+}
+
+.eltd-header-vertical .eltd-content,
+.eltd-header-vertical footer {
+  padding-left: 312px;
+  box-sizing: border-box;
+}
+
+.eltd-header-vertical .eltd-vertical-menu-area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 312px;
+  height: 100%;
+  padding: 60px 45px 10px;
+  background-color: transparent;
+  outline: none;
+  z-index: 101;
+  -webkit-backface-visibility: hidden;
+  box-sizing: border-box;
+}
+
+.eltd-header-vertical .eltd-vertical-menu-area.eltd-with-scroll {
+  overflow: hidden;
+}
+
+.eltd-header-vertical .eltd-vertical-menu-area-inner {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.eltd-header-vertical .eltd-vertical-menu-area-inner.eltd-vertical-align-left {
+  text-align: left;
+}
+
+.eltd-header-vertical .eltd-vertical-menu-area-inner.eltd-vertical-align-center {
+  text-align: center;
+}
+
+.eltd-header-vertical .eltd-vertical-menu-area-inner.eltd-vertical-align-center .eltd-logo-wrapper img {
+  margin: 0 auto;
+}
+
+.eltd-header-vertical .eltd-logo-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  z-index: 100;
+}
+
+.eltd-header-vertical .eltd-logo-wrapper a {
+  display: block;
+  position: relative;
+  height: 100%;
+}
+
+.eltd-header-vertical .eltd-logo-wrapper img {
+  display: block;
+  height: auto;
+  max-height: 100%;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.eltd-header-vertical .eltd-vertical-area-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 312px;
+  height: 100%;
+  background-color: #fff;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease, background-color 0.5s ease;
+  -moz-transition: opacity 0.5s ease, background-color 0.5s ease;
+  transition: opacity 0.5s ease, background-color 0.5s ease;
+}
+
+.eltd-header-vertical.eltd-header-vertical-shadow-disable .eltd-vertical-area-background {
+  box-shadow: none;
+}
+
+.eltd-header-vertical.eltd-header-vertical-border-disable .eltd-vertical-area-background {
+  border: none;
+}
+
+.eltd-light-header .eltd-vertical-menu-area .eltd-logo-wrapper .eltd-light-logo {
+  opacity: 1;
+}
+
+.eltd-light-header .eltd-vertical-menu-area .eltd-logo-wrapper .eltd-normal-logo,
+.eltd-light-header .eltd-vertical-menu-area .eltd-logo-wrapper .eltd-dark-logo {
+  opacity: 0;
+}
+
+.eltd-dark-header .eltd-vertical-menu-area .eltd-logo-wrapper .eltd-dark-logo {
+  opacity: 1;
+}
+
+.eltd-dark-header .eltd-vertical-menu-area .eltd-logo-wrapper .eltd-normal-logo,
+.eltd-dark-header .eltd-vertical-menu-area .eltd-logo-wrapper .eltd-light-logo {
+  opacity: 0;
+}
+
+/* ==========================================================================
+   Header Vertical style - end
+   ========================================================================== */
+/* ==========================================================================
+   Mobile header style - begin
+   ========================================================================== */
+.eltd-mobile-header {
+  position: relative;
+  display: none;
+  z-index: 101;
+  /* #General mobile header styles
+    ========================================================================== */
+  /* #End of general mobile header styles
+   ========================================================================== */
+  /* #Mobile logo styles
+    ========================================================================== */
+  /* #End of mobile logo styles
+    ========================================================================== */
+  /* #Mobile menu opener styles
+    ========================================================================== */
+  /* #End of mobile menu opener styles
+    ========================================================================== */
+  /* #Mobile menu navigation styles
+    ========================================================================== */
+  /* #End of mobile menu navigation styles
+	========================================================================== */
+}
+
+.eltd-mobile-header .eltd-mobile-header-inner {
+  position: relative;
+  height: 100px;
+  background-color: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  box-sizing: border-box;
+}
+
+.eltd-mobile-header .eltd-mobile-header-inner .eltd-mobile-header-holder {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.eltd-mobile-header .eltd-grid {
+  height: 100%;
+}
+
+.eltd-mobile-header .eltd-vertical-align-containers {
+  padding: 0;
+}
+
+.eltd-mobile-header .eltd-mobile-logo-wrapper a {
+  display: block;
+}
+
+.eltd-mobile-header .eltd-mobile-logo-wrapper img {
+  height: 100%;
+  width: auto;
+}
+
+.eltd-mobile-header .eltd-mobile-menu-opener {
+  position: relative;
+  height: 100%;
+  float: left;
+  z-index: 2;
+}
+
+.eltd-mobile-header .eltd-mobile-menu-opener a {
+  display: table;
+  height: 100%;
+  padding-right: 10px;
+}
+
+.eltd-mobile-header .eltd-mobile-menu-opener a > * {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 1em;
+}
+
+.eltd-mobile-header .eltd-mobile-menu-opener a .eltd-mobile-menu-icon {
+  font-size: 21px;
+}
+
+.eltd-mobile-header .eltd-mobile-menu-opener a .eltd-mobile-menu-text {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  padding-left: 5px;
+}
+
+.eltd-mobile-header .eltd-mobile-nav {
+  display: none;
+  background-color: #fff;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.eltd-mobile-header .eltd-mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.eltd-mobile-header .eltd-mobile-nav ul li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.eltd-mobile-header .eltd-mobile-nav ul li a, .eltd-mobile-header .eltd-mobile-nav ul li h5, .eltd-mobile-header .eltd-mobile-nav ul li h6 {
+  position: relative;
+  display: block;
+  padding: 9px 0;
+  margin: 0;
+  color: #808080;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.eltd-mobile-header .eltd-mobile-nav ul li a:hover, .eltd-mobile-header .eltd-mobile-nav ul li h5:hover, .eltd-mobile-header .eltd-mobile-nav ul li h6:hover {
+  color: #ff4d30;
+}
+
+.eltd-mobile-header .eltd-mobile-nav ul ul {
+  display: none;
+  margin-left: 15px;
+}
+
+.eltd-mobile-header .eltd-mobile-nav ul ul li.current-menu-ancestor > a,
+.eltd-mobile-header .eltd-mobile-nav ul ul li.current-menu-item > a {
+  color: #ff4d30;
+}
+
+.eltd-mobile-header .eltd-mobile-nav ul ul li a, .eltd-mobile-header .eltd-mobile-nav ul ul li h5, .eltd-mobile-header .eltd-mobile-nav ul ul li h6 {
+  color: #808080;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.eltd-mobile-header .eltd-mobile-nav .eltd-grid > ul > li > a,
+.eltd-mobile-header .eltd-mobile-nav .eltd-grid > ul > li > h5,
+.eltd-mobile-header .eltd-mobile-nav .eltd-grid > ul > li > h6 {
+  padding-left: 4px;
+  font-size: 16px;
+  color: #2a2a2a;
+  font-weight: 300;
+}
+
+.eltd-mobile-header .eltd-mobile-nav .eltd-grid > ul > li.eltd-active-item > a {
+  color: #ff4d30;
+}
+
+.eltd-mobile-header .eltd-mobile-nav .eltd-grid > ul > li.eltd-active-item > .mobile_arrow > .eltd-sub-arrow {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.eltd-mobile-header .eltd-mobile-nav .mobile_arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 45px;
+  padding-right: 12px;
+  line-height: 45px;
+  font-size: 15px;
+  text-align: right;
+}
+
+.eltd-mobile-header .eltd-mobile-nav .mobile_arrow:hover {
+  cursor: pointer;
+}
+
+.eltd-mobile-header .eltd-mobile-nav .mobile_arrow .eltd-sub-arrow {
+  -webkit-transition: transform 0.2s ease-in-out;
+  -moz-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+.eltd-mobile-header .eltd-mobile-nav .mobile_arrow .fa-angle-down {
+  display: none;
+}
+
+.eltd-mobile-header .eltd-mobile-nav li.eltd-opened > .mobile_arrow > .eltd-sub-arrow {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.eltd-mobile-header .eltd-mobile-nav > ul > li:last-child > a,
+.eltd-mobile-header .eltd-mobile-nav > .eltd-grid > ul > li:last-child > a {
+  border-bottom: none;
+}
+
+/* ==========================================================================
+   Mobile header style - end
+   ========================================================================== */
+/* ==========================================================================
+   Sticky Mobile header style - begin
+   ========================================================================== */
+.eltd-sticky-up-mobile-header .eltd-animate-mobile-header .eltd-mobile-header-inner {
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease;
+  -moz-transition: -moz-transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease;
+  transition: transform 0.4s ease-in-out, left 0.2s ease, right 0.2s ease;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.eltd-sticky-up-mobile-header .mobile-header-appear .eltd-mobile-header-inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.eltd-sticky-up-mobile-header.admin-bar .mobile-header-appear .eltd-mobile-header-inner {
+  -webkit-transform: translateY(32px);
+  -moz-transform: translateY(32px);
+  transform: translateY(32px);
+}
+
+/* ==========================================================================
+   Sticky Mobile header style - end
+   ========================================================================== */
+/* ==========================================================================
+   Sticky header style - begin
+   ========================================================================== */
+.eltd-sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 100;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  -moz-transition: -moz-transform 0.6s ease;
+  transition: transform .6s ease;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.eltd-sticky-header .eltd-grid {
+  height: 100% !important;
+}
+
+.eltd-sticky-header.header-appear {
+  transform: translateY(0%);
+}
+
+.eltd-sticky-header .eltd-sticky-holder {
+  position: relative;
+  height: 100%;
+  z-index: 2;
+  background-color: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  box-sizing: border-box;
+}
+
+.eltd-sticky-header .eltd-sticky-holder .eltd-vertical-align-containers {
+  padding: 0 35px;
+}
+
+.eltd-sticky-header .eltd-sticky-holder .eltd-logo-wrapper a {
+  max-height: 70px;
+}
+
+.admin-bar .eltd-sticky-header.header-appear {
+  top: 32px;
+}
+
+.eltd-sticky-header .eltd-position-center-inner,
+.eltd-sticky-header .eltd-position-right-inner {
+  height: 100%;
+}
+
+.eltd-sticky-header .eltd-sticky-right {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.eltd-sticky-header .widget {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px;
+  margin: 0;
+}
+
+.eltd-sticky-header .widget:last-child {
+  padding-right: 0;
+}
+
+/* ==========================================================================
+   Sticky header style - end
+   ========================================================================== */
+/* ==========================================================================
+   Top header style - begin
+   ========================================================================== */
+.eltd-top-bar-background {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #2a2a2a;
+  z-index: 101;
+}
+
+.eltd-top-bar {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: middle;
+  height: 46px;
+  color: #fff;
+  font-size: 11px;
+  background-color: #2a2a2a;
+  z-index: 111;
+}
+
+.eltd-top-bar .eltd-grid {
+  height: 100%;
+}
+
+.eltd-top-bar .eltd-grid .eltd-vertical-align-containers {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.eltd-top-bar-in-grid-padding .eltd-top-bar .eltd-grid .eltd-vertical-align-containers {
+  padding: 0 25px;
+}
+
+.eltd-top-bar .eltd-vertical-align-containers .eltd-position-left:before,
+.eltd-top-bar .eltd-vertical-align-containers .eltd-position-right:before {
+  margin-right: 0px;
+}
+
+.eltd-top-bar .eltd-top-bar-widget-area,
+.eltd-top-bar .eltd-top-bar-widget-area-inner {
+  height: 100%;
+}
+
+.eltd-top-bar .eltd-top-bar-widget {
+  display: table;
+  height: 100%;
+  padding-right: 24px;
+  border: none;
+  background-color: transparent;
+  margin: auto;
+  font-size: 14px;
+}
+
+.eltd-top-bar .eltd-top-bar-widget:last-child {
+  padding-right: 0;
+}
+
+.eltd-top-bar .eltd-top-bar-widget-inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.eltd-top-bar .widget {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   Top header style - end
+   ========================================================================== */
+/* ==========================================================================
+   Header styles - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../css/header.css.map */

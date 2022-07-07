@@ -1,0 +1,71 @@
+@include phone-landscape{
+    .eltd-comment-holder{
+        .eltd-comment-image-holder{
+            float: none;
+        }
+        .eltd-comment-text{
+            padding: 10px 0;
+            margin: 0;
+        }
+    }
+}
+
+@include laptop-landscape-medium{
+    #eltd-back-to-top{
+        bottom: 70px;
+    }
+
+    #respond textarea,
+    #respond input[type='text'],
+    textarea,
+    input[type='text'],
+    input[type='email'],
+    input[type='password']{
+        padding: 16px 24px;
+        margin-bottom: 10px;
+    }
+}
+
+@include ipad-landscape{
+    .eltd-form-custom-style{
+        .eltd-grid-col-7{
+            width: 58.33%;
+            float: left;
+        }
+        .eltd-grid-col-5{
+            width: 41.66%;
+            float: left;
+            left: -2px;
+        }
+        
+        input.wpcf7-form-control.wpcf7-submit{
+            padding: 21px 30px;
+            width: 100%;
+        }
+    }
+
+    .eltd-newsletter-form{
+        .eltd-newsletter-button{
+            margin-top: 30px;
+        }
+    }
+}
+
+@include phone-landscape{
+    .eltd-form-custom-style{
+        .eltd-grid-col-7{
+            width: 100%;
+        }
+        .eltd-grid-col-5{
+            width: 100%;
+            left: 0;
+
+            .wpcf7-submit{
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Product Info shortcode styles - begin
+   ========================================================================== */
+
+.eltd-product-info {
+    position: relative;
+	display: inline-block;
+	vertical-align: middle;
+
+	> div {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		
+		p {
+			margin: 0;
+		}
+
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			margin: 0 9px 0 0;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+
+	.eltd-pi-title,
+	.eltd-pi-image,
+	.eltd-pi-rating {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+	}
+	
+	.eltd-pi-image {
+		
+		img {
+			display: block;
+		}
+	}
+	
+	.eltd-pi-category {
+		
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0;
+			
+			a {
+				vertical-align: top;
+			}
+		}
+	}
+	
+	.eltd-pi-rating {
+		font-family: "ElegantIcons";
+		font-size: 12px;
+		line-height: 1;
+		letter-spacing: 2px;
+		color: $default-text-color;
+		overflow: hidden;
+		-webkit-font-smoothing: antialiased;
+		
+		&:before {
+			content: "\e031\e031\e031\e031\e031";
+		}
+		
+		span {
+			position: absolute;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			
+			&:before {
+				content: "\e033\e033\e033\e033\e033";
+			}
+		}
+	}
+	
+	.eltd-pi-add-to-cart {
+		
+		.eltd-btn.eltd-btn-solid {
+			
+			&.eltd-white-skin {
+				color: $default-heading-color;
+				background-color: #fff;
+				border-color: #fff;
+				
+				&:hover {
+					color: #fff;
+					background-color: $default-heading-color;
+					border-color: $default-heading-color;
+				}
+			}
+			
+			&.eltd-dark-skin {
+				color: #fff;
+				background-color: $default-heading-color;
+				border-color: $default-heading-color;
+				
+				&:hover {
+					color: $default-heading-color;
+					background-color: #fff;
+					border-color: #fff;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Product Info shortcode styles - end
+   ========================================================================== */

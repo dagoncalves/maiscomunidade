@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Product List - Simple shortcode styles - begin
+   ========================================================================== */
+
+.eltd-pls-holder {
+	@include eltdRelativeHolderLayout();
+
+	> ul {
+		@include eltdRelativeHolderLayout();
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		> li {
+			@include eltdRelativeHolderLayout();
+			padding: 0;
+			margin: 0 0 20px;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+	
+	.eltd-pls-image {
+		display: table-cell;
+		vertical-align: top;
+		width: 84px;
+
+		a, img {
+			display: block;
+		}
+
+		a {
+			position: relative;
+
+			&:after {
+				content:'';
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background-color: rgba(0,0,0, .4);
+				opacity: 0;
+				@include eltdTransition(opacity .6s)
+			}
+
+			&:hover {
+				
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	
+	.eltd-pls-text {
+		display: table-cell;
+		vertical-align: top;
+		padding: 0 0 0 20px;
+		
+		.eltd-pls-title {
+			margin: 0 0 4px;
+		}
+		
+		.eltd-pls-rating-holder {
+			@include eltdRelativeHolderLayout();
+			line-height: 1;
+			margin: 5px 0 3px;
+		}
+		
+		.eltd-pls-rating {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			font-family: "ElegantIcons";
+			font-size: 12px;
+			line-height: 1;
+			letter-spacing: 2px;
+			color: $default-text-color;
+			overflow: hidden;
+			-webkit-font-smoothing: antialiased;
+			
+			&:before {
+				content: "\e031\e031\e031\e031\e031";
+			}
+			
+			span {
+				position: absolute;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+				
+				&:before {
+					content: "\e033\e033\e033\e033\e033";
+				}
+			}
+		}
+		
+		.eltd-pls-price {
+			line-height: 1;
+			margin: 14px 0 0;
+			color: $default-heading-color;
+			
+			* {
+				font-size: inherit;
+				line-height: inherit;
+			}
+			
+			del {
+				margin: 0 8px 0 0;
+			}
+			
+			ins {
+				text-decoration: none;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Product List - Simple shortcode styles - end
+   ========================================================================== */

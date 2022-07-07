@@ -1,0 +1,326 @@
+/* ==========================================================================
+   Blog List - Masonry style - begin
+   ========================================================================== */
+
+.eltd-blog-holder {
+	
+    &.eltd-blog-masonry {
+
+        article {
+            margin: 0 0 20px;
+            padding: 0 0 30px;
+
+            .eltd-post-info-category{
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                >a{
+                    color: $light-color;
+                    padding: 5px 19px 7px;
+                    border-radius: 40px;
+                    background-color: $first-main-color;
+                    position: relative;
+                    top: 20px;
+                    left: 20px;
+                    font-size: 14px;
+                }
+            }
+
+            .eltd-post-text{
+                background-color: $light-color;
+                border: 1px solid $light-grey-color;
+                padding: 25px 28px 22px;
+            }
+
+            .eltd-post-title {
+                margin: 0 0 6px;
+                line-height: 33px;
+            }
+
+            .eltd-bli-info {
+                @include eltdRelativeHolderLayout();
+                margin: 0;
+                clear: both;
+                padding: 30px 30px 0;
+
+                > div {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: top;
+                    float: left;
+                    padding: 0 13px 5px 0;
+
+                    &:after {
+                        position: absolute;
+                        top: 0;
+                        right: 4px;
+                        content: '/';
+                    }
+
+                    &:last-child {
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .eltd-bli-content {
+                background-color: #f6f6f6;
+
+                .eltd-post-info-category{
+                    &, a{
+                        color: $blue-color;
+                        font-size: 14px;
+                    }
+                    .icon-basic-bookmark{
+                        vertical-align: bottom;
+                        font-size: 15px;
+                    }
+                }
+
+                div{
+                    box-sizing: border-box;
+                }
+            }
+
+            .eltd-bli-excerpt{
+                .eltd-blog-list-button{
+                    margin: 0;
+                }
+            }
+
+            .eltd-post-info-bottom {
+                box-sizing: border-box;
+                padding: 12px 0 8px;
+
+                & div{
+                    display: inline-block;
+                }
+
+                & a {
+                    color: $gray-color;
+                    font-size: 14px;
+
+                    &:hover{
+                        color: $first-main-color;
+                    }
+                }
+
+                .eltd-post-info-bottom-left{
+                    float: left;
+                    font-weight: 300;
+
+                    .eltd-post-info-comments-holder{
+                        margin-left: 7px;
+
+                        i{
+                            position: relative;
+                            top: 1px;
+                        }
+                    }
+
+                    i{
+                        color: $first-main-color;
+                        padding-right: 3px;
+                    }
+                }
+                .eltd-post-info-bottom-right{
+                    float: right;
+                }
+            }
+            
+            &.format-gallery{
+                .owl-nav{
+                    .owl-prev{
+                        left: 15px;
+                    }
+                    .owl-next{
+                        right: 15px;
+                    }
+                    
+                    .eltd-prev-icon,
+                    .eltd-next-icon{
+                        span{
+                            font-size: 36px;
+                            background-color: rgba(255,255,255,0.5);
+                            border-radius: 50%;
+                            color: $default-heading-color;
+                        }
+                    }
+                }
+            }
+
+            &.format-link {
+	            
+                .eltd-post-text {
+                    padding: 46px 58px 50px;
+                    position: relative;
+                    overflow: hidden;
+
+                    .eltd-post-image{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+
+                        .wp-post-image{
+                            width: 100%;
+                        }
+                    }
+                    
+                    > div,
+                    .eltd-post-info-top{
+                        
+                        >div{
+                            a,
+                            span{
+                                color: $default-background-color;
+                            }
+                        }
+                    }
+                    
+                    .eltd-post-info-top{
+                        padding: 25px 40px 0;
+                    }
+                    
+                    .eltd-post-info-category{
+                        font-size: 14px;
+                        position: relative;
+                        padding-bottom: 18px;
+
+                        &:before{
+                            content: "\e02b" ;
+                            font-family: "ElegantIcons";
+                            font-size: 19px;
+                            color: $first-main-color;
+                            position: relative;
+                            top: 3px;
+                        }
+
+                        >a{
+                            left: 5px;
+                            top: 0;
+                            font-weight: 300;
+                            background: none;
+                            padding: 0;
+                        }
+                    }
+                }
+	            
+                .eltd-post-text-main {
+                    @include eltdTableLayout();
+                    text-align: left;
+                    box-sizing: border-box;
+                    z-index: 5;
+                }
+	            
+                .eltd-post-title {
+                    margin-bottom: 0;
+                    color: $default-background-color;
+
+                    a:hover{
+                        color: rgba(255, 255, 255, 0.8);
+                    }
+                }
+
+                .eltd-post-info-bottom{
+                    display: none;
+                }
+            }
+	        
+            &.format-quote {
+	            
+                .eltd-post-text {
+                    padding: 44px 55px 51px;
+                    position: relative;
+                    overflow: hidden;
+
+                    .eltd-post-image{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+
+                        .wp-post-image{
+                            width: 100%;
+                        }
+                    }
+                    
+                    > div,
+                    .eltd-post-info-top{
+                        
+                        >div{
+                            a,
+                            span{
+                                color: $default-background-color;
+                            }
+                        }
+                    }
+                    
+                    .eltd-post-info-top{
+                        padding: 25px 40px 0;
+                    }
+
+                    .eltd-post-info-category{
+                        font-size: 14px;
+                        position: relative;
+                        padding-bottom: 18px;
+
+                        &:before{
+                            content: "\7b";
+                            font-family: "ElegantIcons";
+                            font-size: 25px;
+                            color: $first-main-color;
+                            position: relative;
+                            top: 5px;
+                        }
+
+                        >a{
+                            left: 5px;
+                            top: 0;
+                            font-weight: 300;
+                            background: none;
+                            padding: 0;
+                        }
+                    }
+                }
+	            
+                .eltd-post-text-main {
+                    @include eltdTableLayout();
+                    text-align: left;
+                    box-sizing: border-box;
+                    z-index: 5;
+                }
+	            
+                .eltd-post-title {
+                    margin-bottom: 0;
+                    color: $default-background-color;
+
+                    a:hover{
+                        color: rgba(255, 255, 255, 0.8);
+                    }
+                }
+	            
+                .eltd-post-author {
+	                display: inline-block;
+	                margin-bottom: 23px;
+	                font-size: 13px;
+	                line-height: 20px;
+                }
+
+                .eltd-post-info-bottom{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Blog List - Masonry style - end
+   ========================================================================== */

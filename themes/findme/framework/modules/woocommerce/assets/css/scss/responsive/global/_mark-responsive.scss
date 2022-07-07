@@ -1,0 +1,25 @@
+/* ==========================================================================
+   WooCommerce Onsale and Out of Stock responsive styles - begin
+   ========================================================================== */
+
+.eltd-woo-single-page .eltd-single-product-content .eltd-out-of-stock,
+.eltd-woo-single-page.eltd-woo-single-thumb-on-left-side .eltd-single-product-content .eltd-onsale{
+	@include laptop-landscape-medium{
+		left: 49.6%;
+	}
+	@include ipad-landscape{
+		left: 90%;
+	}
+	@include ipad-portrait{
+		left: 87.5%;
+	}
+	@include phone-landscape{
+		left: 82.5%;
+	}
+	@include phone-portrait{
+		left: 74.5%;
+	}
+}
+/* ==========================================================================
+   WooCommerce Onsale and Out of Stock responsive styles - end
+   ========================================================================== */

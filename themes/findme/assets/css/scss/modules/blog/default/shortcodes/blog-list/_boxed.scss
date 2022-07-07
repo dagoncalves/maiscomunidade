@@ -1,0 +1,82 @@
+.eltd-blog-list-holder {
+    &.eltd-bl-boxed {
+
+        &:not(.eltd-bl-one-column) {
+
+            .eltd-bl-item {
+                float: left;
+            }
+        }
+
+        $columns_number: ('two', 'three', 'four', 'five');
+
+        @for $i from 0 to length($columns_number) {
+            &.eltd-bl-#{nth($columns_number,$i+1)}-columns {
+
+                .eltd-bl-item {
+                    width: 100% / ($i+2);
+                }
+
+                @if ($i > 1) { // set different break point for four and five columns
+                    @media only screen and (min-width: $laptop-landscape-plus-pixel) {
+
+                        .eltd-bl-item {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                } @else {
+                    @media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+                        .eltd-bl-item {
+
+                            &:nth-child(#{$i+2}n+1) {
+                                clear: both;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .eltd-post-title {
+            margin: 0;
+        }
+
+        .eltd-bli-info {
+            @include eltdRelativeHolderLayout();
+            margin: 0;
+            clear: both;
+
+            > div {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                float: left;
+                padding: 0 13px 5px 0;
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    right: 4px;
+                    content: '/';
+                }
+
+                &:last-child {
+                    padding: 0 0 5px;
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .eltd-bli-content {
+            padding: 40px 30px;
+            background-color: #f6f6f6;
+        }
+    }
+}

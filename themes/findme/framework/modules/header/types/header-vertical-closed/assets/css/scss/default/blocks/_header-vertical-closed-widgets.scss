@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Header Vertical - Closed widget style - begin
+   ========================================================================== */
+
+.eltd-header-vertical-closed {
+
+    .eltd-vertical-area-widget-holder {
+        @include eltdRelativeHolderLayout();
+        margin: 10px 0 0;
+        z-index: 100;
+    }
+
+    .eltd-vertical-alignment-center{
+
+        .eltd-vertical-area-widget-holder {
+            position: absolute;
+	        bottom: 0;
+	        left: 0;
+	        width: 100%;
+        }
+    }
+}
+/* ==========================================================================
+   Header Vertical - Closed widget style - end
+   ========================================================================== */

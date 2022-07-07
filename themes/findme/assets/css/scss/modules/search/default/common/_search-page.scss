@@ -1,0 +1,155 @@
+/* ==========================================================================
+# Search template style - begin
+========================================================================== */
+
+.search .eltd-content .eltd-content-inner > .eltd-container > .eltd-container-inner {
+    padding: 66px 0 0;
+}
+
+.eltd-search-page-holder {
+    @include eltdRelativeHolderLayout();
+
+    .eltd-search-page-form {
+        @include eltdRelativeHolderLayout();
+        margin: 0 0 60px;
+
+        .eltd-search-title {
+            margin: 0 0 34px;
+        }
+
+        .eltd-search-label {
+            display: block;
+            font-size: 12px;
+        }
+
+        .eltd-form-holder {
+            @include eltdRelativeHolderLayout();
+            margin: 0 0 17px;
+            clear: both;
+            border-bottom: 1px solid $default-border-color;
+
+            .eltd-column-left {
+                display: table-cell;
+                vertical-align: top;
+            }
+
+            .eltd-column-right {
+                display: table-cell;
+                width: 1%;
+                text-align: left;
+                vertical-align: top;
+            }
+
+            .eltd-search-field {
+                position: relative;
+                width: 100%;
+                height: 36px;
+                line-height: 36px;
+                margin: 0;
+                padding: 0 20px 0 3px;
+                font-family: inherit;
+                font-size: 14px;
+                color: $default-text-color;
+                background-color: transparent;
+                border: none;
+                outline: 0;
+                vertical-align: middle;
+                -webkit-appearance: none;
+                box-sizing: border-box;
+
+                &:focus {
+                    border-color: $default-heading-color;
+                }
+
+            }
+
+            .eltd-search-submit {
+                position: relative;
+                display: inline-block;
+                width: auto;
+                height: 36px;
+                line-height: 36px;
+                padding: 0;
+                font-family: inherit;
+                font-size: 15px;
+                color: $default-text-color;
+                background-color: transparent;
+                border: 0;
+                outline: 0;
+                cursor: pointer;
+                vertical-align: middle;
+                @include eltdTransition(color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out);
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+
+    article {
+        @include eltdRelativeHolderLayout();
+        padding: 0;
+        margin: 0 0 31px;
+
+        &.sticky {
+            .eltd-post-title-area h3 a {
+                color: $first-main-color;
+            }
+        }
+
+        &.page {
+            .eltd-post-title-area .eltd-post-info > div.eltd-post-info-category {
+                display: none;
+            }
+        }
+
+        .eltd-post-content {
+            @include eltdRelativeHolderLayout();
+        }
+
+        .eltd-post-image {
+            display: block;
+            float: left;
+            width: 130px;
+            margin: 8px 0 0;
+
+            a, img {
+                display: block;
+            }
+        }
+
+        .eltd-post-title-area {
+            height: 138px;
+            padding: 0 0 0 159px;
+
+            &.eltd-no-thumbnail{
+                padding: 0;
+            }
+
+            .eltd-post-title-area-inner {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                border-bottom: 1px solid $default-border-color;
+                box-sizing: border-box;
+    
+                .eltd-post-title {
+                    margin: 0 0 14px;
+                }
+
+                .eltd-post-excerpt {
+                    margin: 0;
+
+                    &:after {
+                        content: '...';
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+# Search template style - end
+========================================================================== */

@@ -1,0 +1,288 @@
+/* ==========================================================================
+   Header styles - begin
+   ========================================================================== */
+
+$logo-area-height: 80px;
+$menu-area-height: 80px;
+
+.eltd-page-header {
+    @include eltdRelativeHolderLayout();
+    margin: 0;
+    padding: 0;
+    z-index: 110;
+    box-sizing: border-box;
+
+    /* ==========================================================================
+    #General header layout - start
+    ========================================================================== */
+    a img {
+        display: block;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .eltd-grid {
+        height: 100%;
+
+        .eltd-vertical-align-containers {
+            padding: 0;
+            @include eltdTransition(background-color 0.3s ease);
+        }
+    }
+
+    /* ==========================================================================
+    #General header layout - end
+    ========================================================================== */
+
+    /* ==========================================================================
+    #Logo area styles - start
+    ========================================================================== */
+    .eltd-logo-area {
+        position: relative;
+        height: $logo-area-height;
+        overflow: hidden;
+        background-color: #fff;
+
+        .eltd-logo-wrapper a {
+            max-height: $logo-area-height;
+        }
+    }
+    /* ==========================================================================
+    #Logo area styles - end
+    ========================================================================== */
+
+    /* ==========================================================================
+    #Menu area styles - start
+    ========================================================================== */
+    .eltd-menu-area {
+        position: relative;
+        height: $menu-area-height;
+        box-sizing: border-box;
+        background-color: #fff;
+
+        .eltd-boxed & {
+            padding: 0;
+        }
+
+        .eltd-logo-wrapper a {
+            max-height: $menu-area-height;
+        }
+
+        .widget {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 10px;
+            margin: 0;
+        }
+    }
+    /* ==========================================================================
+    #Menu area styles - end
+    ========================================================================== */
+
+    /* ==========================================================================
+    #Specific styles - start
+    ========================================================================== */
+
+    .eltd-logo-area {
+
+        .eltd-logo-area-border-disable & {
+            border: none;
+        }
+
+        .eltd-logo-area-in-grid-border-disable & {
+
+            .eltd-grid {
+
+                .eltd-vertical-align-containers {
+                    border: none;
+                }
+            }
+        }
+
+        .eltd-header-logo-area-in-grid-padding & {
+
+            .eltd-vertical-align-containers {
+                padding: 0 25px;
+            }
+        }
+    }
+
+    .eltd-menu-area {
+
+        .eltd-menu-area-shadow-disable & {
+            box-shadow: none;
+
+            .eltd-grid {
+
+                .eltd-vertical-align-containers {
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .eltd-menu-area-border-disable & {
+            border: none;
+        }
+
+        .eltd-menu-area-in-grid-border-disable & {
+
+            .eltd-grid {
+
+                .eltd-vertical-align-containers {
+                    border: none;
+                }
+            }
+        }
+
+        .eltd-header-logo-area-in-grid-padding & {
+
+            .eltd-vertical-align-containers {
+                padding: 0 25px;
+            }
+        }
+    }
+    /* ==========================================================================
+    #Specific styles - end
+    ========================================================================== */
+}
+
+/* ==========================================================================
+#Light header - begin
+========================================================================== */
+
+.eltd-light-header {
+
+    .eltd-page-header > div:not(.fixed):not(.eltd-sticky-header) {
+
+        .eltd-logo-wrapper {
+
+            .eltd-light-logo {
+                opacity: 1;
+            }
+
+            .eltd-normal-logo,
+            .eltd-dark-logo {
+                opacity: 0;
+            }
+        }
+
+        .eltd-menu-area {
+            color: $header-light-color !important; //Beacause of inline color styles
+
+            .widget {
+                color: $header-light-color !important; //Beacause of inline color styles
+
+                p,
+                a,
+                span,
+                i,
+                .widgettitle {
+                    color: $header-light-color !important; //Beacause of inline color styles
+                }
+
+                a:hover {
+                    color: $header-light-hover-color !important; //Beacause of inline color styles
+                }
+            }
+        }
+
+        &.eltd-menu-area {
+            color: $header-light-color !important; //Beacause of inline color styles
+
+            .widget {
+                color: $header-light-color !important; //Beacause of inline color styles
+
+                p,
+                a,
+                span,
+                i,
+                .widgettitle {
+                    color: $header-light-color !important; //Beacause of inline color styles
+                }
+
+                a:hover {
+                    color: $header-light-hover-color !important; //Beacause of inline color styles
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+#Light header - end
+========================================================================== */
+
+/* ==========================================================================
+#Dark header - begin
+========================================================================== */
+
+.eltd-dark-header {
+
+    .eltd-page-header {
+
+        > div:not(.fixed):not(.eltd-sticky-header) {
+
+            .eltd-logo-wrapper {
+
+                .eltd-dark-logo {
+                    opacity: 1;
+                }
+
+                .eltd-normal-logo,
+                .eltd-light-logo {
+                    opacity: 0;
+                }
+            }
+
+            .eltd-menu-area {
+                color: $header-dark-color !important; //Because of inline color styles
+
+                .widget {
+                    color: $header-dark-color !important; //Beacause of inline color styles
+
+                    p,
+                    a,
+                    span,
+                    i,
+                    .widgettitle {
+                        color: $header-dark-color; //Beacause of inline color styles
+                    }
+
+                    a:hover {
+                        color: $header-dark-hover-color !important; //Beacause of inline color styles
+                    }
+                }
+            }
+
+            &.eltd-menu-area {
+                color: $header-dark-color !important; //Because of inline color styles
+
+                .widget {
+                    color: $header-dark-color !important; //Beacause of inline color styles
+
+                    p,
+                    a,
+                    span,
+                    i,
+                    .widgettitle {
+                        color: $dark-color; //Beacause of inline color styles
+                    }
+
+                    a:hover {
+                        color: $header-dark-hover-color !important; //Beacause of inline color styles
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+#Dark header - end
+========================================================================== */
+
+/* ==========================================================================
+   Header end - end
+   ========================================================================== */

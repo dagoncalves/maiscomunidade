@@ -1,0 +1,407 @@
+/* ==========================================================================
+   Product List shortcode styles - begin
+   ========================================================================== */
+
+.eltd-pl-holder {
+    @include eltdRelativeHolderLayout();
+
+    .eltd-pli {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 100%;
+        padding: 0;
+        z-index: 100;
+        box-sizing: border-box;
+
+	    .eltd-pli-title {
+		    margin: 0 0 4px;
+	    }
+	
+	    .eltd-pli-category {
+		    margin: 11px 0 3px;
+	    }
+
+        .eltd-pli-excerpt {
+            color: $default-heading-color;
+	        line-height: 1.3em;
+            margin: 11px 0 3px;
+        }
+
+	    .eltd-pli-rating-holder {
+		    @include eltdRelativeHolderLayout();
+		    line-height: 1;
+		    margin: 10px 0 3px;
+	    }
+
+	    .eltd-pli-rating {
+		    position: relative;
+		    display: inline-block;
+		    vertical-align: middle;
+		    font-family: "ElegantIcons";
+		    font-size: 12px;
+		    line-height: 1;
+		    letter-spacing: 2px;
+		    color: $default-text-color;
+		    overflow: hidden;
+		    -webkit-font-smoothing: antialiased;
+
+		    &:before {
+			    content: "\e031\e031\e031\e031\e031";
+		    }
+
+		    span {
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    overflow: hidden;
+
+			    &:before {
+				    content: "\e033\e033\e033\e033\e033";
+			    }
+		    }
+	    }
+
+        .eltd-pli-price {
+            line-height: 1;
+            margin: 14px 0 0;
+            color: $default-heading-color;
+
+            * {
+                font-size: inherit;
+                line-height: inherit;
+            }
+
+            del {
+	            margin: 0 8px 0 0;
+            }
+
+            ins {                
+                text-decoration: none;
+            }
+        }
+    }
+
+    .eltd-pli-inner {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+
+        &:hover {
+
+            .eltd-pli-text {
+                opacity: 1;
+            }
+        }
+
+        .touch & {
+            cursor: pointer;
+        }
+
+        .eltd-pli-image {
+            @include eltdRelativeHolderLayout();
+
+            img {
+                display: block;
+                width: 100%;
+            }
+
+            .eltd-pli-onsale,
+            .eltd-pli-out-of-stock {
+                position: absolute;
+                display: block;
+                top: 0;
+                width: auto;
+                height: 24px;
+                color: #fff;
+                font-size: 8px;
+                line-height: 24px;
+                letter-spacing: 1px;
+                padding: 0 16px;
+                margin: 0;
+                text-align: center;
+                z-index: 100;
+                @include eltdTransform(translateZ(0));
+                box-sizing: border-box;
+            }
+
+            .eltd-pli-onsale {
+                left: 0;
+	            background-color: rgba($default-heading-color, .5);
+            }
+
+            .eltd-pli-out-of-stock {
+	            right: 0;
+	            background-color: rgba($default-heading-color, .5);
+            }
+        }
+            
+        .eltd-pli-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            opacity: 0;
+            background-color: rgba($default-heading-color, 0.6);
+            box-sizing: border-box;
+            @include eltdTransition(all .3s);
+        }
+
+        .eltd-pli-text-outer {
+            position: relative;
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+
+        .eltd-pli-text-inner {
+            position: relative;
+            display: table-cell;
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+
+            .eltd-pli-title,
+            .eltd-pli-category,
+            .eltd-pli-excerpt,
+            .eltd-pli-rating {
+                color: #fff;
+            }
+
+            .eltd-pli-price {
+                color: #fff;
+
+                del {
+                    color: #ccc;
+                }
+            }
+
+	        .eltd-pli-add-to-cart {
+		        margin: 20px 0 0;
+
+		        &.eltd-default-skin {
+
+			        .button,
+			        .added_to_cart {
+				        @include eltdButtonSolidColor();
+
+				        &:hover {
+				            @include eltdButtonSolidHoverColor();
+				        }
+			        }
+		        }
+
+		        &.eltd-light-skin {
+
+			        .button,
+			        .added_to_cart {
+				        color: $default-heading-color;
+				        background-color: #fff;
+
+				        &:hover {
+					        color: #fff;
+					        background-color: $first-main-color;
+				        }
+			        }
+		        }
+		
+		        &.eltd-dark-skin {
+			
+			        .button,
+			        .added_to_cart {
+				        color: #fff;
+				        background-color: $default-heading-color;
+				
+				        &:hover {
+					        color: #fff;
+					        background-color: $first-main-color;
+				        }
+			        }
+		        }
+	        }
+
+            .button,
+            .added_to_cart {
+	            @include eltdButtonDefaultStyle();
+	            @include eltdButtonMediumParams();
+	            white-space: nowrap;
+	            z-index: 3;
+            }
+
+            .button.added {
+                display: none;
+            }
+        }
+
+	    .eltd-pli-link {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    display: inline-block;
+		    width: 100%;
+		    height: 100%;
+	    }
+    }
+
+    .eltd-pli-text-wrapper {
+        @include eltdRelativeHolderLayout();
+        margin: 22px 0 38px;
+        text-align: left;
+    }
+	
+	&.eltd-product-info-light {
+		
+		.eltd-pli-inner {
+			
+			.eltd-pli-text-inner {
+				
+				.eltd-pli-title,
+				.eltd-pli-category,
+				.eltd-pli-excerpt,
+				.eltd-pli-rating {
+					color: #fff;
+				}
+				
+				.eltd-pli-price {
+					color: #fff;
+					
+					del {
+						color: #ccc;
+					}
+				}
+			}
+		}
+	}
+	
+	&.eltd-product-info-dark {
+		
+		.eltd-pli-inner {
+			
+			.eltd-pli-text-inner {
+				
+				.eltd-pli-title,
+				.eltd-pli-category,
+				.eltd-pli-excerpt,
+				.eltd-pli-rating {
+					color: $default-heading-color;
+				}
+				
+				.eltd-pli-price {
+					color: $default-heading-color;
+				}
+			}
+		}
+	}
+	
+	$columns_space_label: ('no', 'tiny', 'small', 'normal');
+	$columns_space_width: (0, 5, 10, 15);
+	
+	@for $i from 0 to length($columns_space_label) {
+		&.eltd-#{nth($columns_space_label,$i+1)}-space {
+			$column_width: nth($columns_space_width,$i+1);
+			$column_width_margin: $column_width * 2;
+			
+			.eltd-pl-outer {
+				@if($column_width == 0) {
+					margin: 0;
+				} @else {
+					margin: 0 -#{$column_width}px;
+				}
+				
+				.eltd-pli {
+					padding: 0 #{$column_width}px;
+					margin: 0 0 #{$column_width_margin}px;
+				}
+			}
+		}
+	}
+	
+	/*************** Standard Layout - begin ***************/
+	
+	&.eltd-standard-layout {
+		
+		.eltd-pli {
+			float: left;
+		}
+		
+		&.eltd-normal-space {
+			margin: 0 0 -30px;
+		}
+		
+		&.eltd-small-space {
+			margin: 0 0 -20px;
+		}
+		
+		&.eltd-tiny-space {
+			margin: 0 0 -10px;
+		}
+		
+		$standard_list_columns: ('two', 'three', 'four', 'five', 'six');
+		
+		@for $i from 0 to length($standard_list_columns) {
+			&.eltd-#{nth($standard_list_columns,$i+1)}-columns {
+				$column_width: 100%/($i+2);
+				
+				.eltd-pli {
+					width: $column_width;
+					
+					@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+						
+						&:nth-child(#{$i+2}n+1) {
+							clear: both;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/*************** Standard Layout - end ***************/
+	
+	/*************** Masonry Layout - begin ***************/
+	
+	&.eltd-masonry-layout {
+		
+		.eltd-pl-outer {
+			opacity: 0;
+		}
+		
+		.eltd-pl-sizer {
+			width: 100%;
+		}
+		
+		.eltd-pl-gutter {
+			width: 0;
+		}
+		
+		.eltd-pli-inner {
+			width: 100%;
+		}
+		
+		$masonry_list_columns: ('two', 'three', 'four', 'five', 'six');
+		
+		@for $i from 0 to length($masonry_list_columns) {
+			&.eltd-#{nth($masonry_list_columns,$i+1)}-columns {
+				$column_width: 100%/($i+2);
+				
+				.eltd-pli,
+				.eltd-pl-sizer {
+					width: $column_width;
+				}
+				
+				.eltd-pli.eltd-woo-image-large-width {
+					width: $column_width*2;
+				}
+			}
+		}
+	}
+	
+	/*************** Masonry Layout - end ***************/
+}
+/* ==========================================================================
+   Product List shortcode styles - end
+   ========================================================================== */

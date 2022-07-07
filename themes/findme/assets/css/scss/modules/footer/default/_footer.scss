@@ -1,0 +1,227 @@
+/* ==========================================================================
+   Footer style - begin
+   ========================================================================== */
+/* ==========================================================================
+   #Content bottom styles - start
+   ========================================================================== */
+.eltd-content-bottom {
+
+    .eltd-content-bottom-inner{
+        box-sizing: border-box;
+        
+        &.eltd-grid{
+            padding: 20px 0;
+        }
+        
+        &.eltd-full-width{
+            padding: 20px 50px;
+        }
+    }
+
+    .widget{
+        border:none;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+.eltd-page-footer {
+    @include eltdRelativeHolderLayout();
+    z-index: 100;
+    box-sizing: border-box;
+
+    .eltd-footer-top-holder {
+        @include eltdRelativeHolderLayout();
+        box-sizing: border-box;
+        background-color: $default-heading-color;
+
+        .eltd-footer-top-alignment-center{
+            text-align: center;
+        }
+	    
+        .eltd-footer-top-alignment-left{
+            text-align: left;
+        }
+	    
+        .eltd-footer-top-alignment-right{
+            text-align: right;
+        }
+
+        .eltd-footer-top-inner{
+            box-sizing: border-box;
+	        
+            &.eltd-grid{
+                padding: 55px 0 30px;
+            }
+	        
+            &.eltd-full-width{
+                padding: 45px 60px;
+            }
+        }
+        
+        .widget{
+            background: transparent;
+            border: none;
+            &.widget_nav_menu{
+                ul{
+                    li{
+                        display: inline-block;
+                    }
+                }
+            }
+            ul{
+                li,
+                & ul {
+                    border: none;
+                }
+                
+                li{
+                    padding: 5px 16px 15px;
+                    line-height: 15px;
+                    margin: 0;
+                    a{
+                        font-size: 16px;
+                    }
+                    
+                    .sub-menu{
+                        margin-top: 15px;
+                        
+                        li:last-child{
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+            
+            .eltd-widget-title-holder{
+                border-bottom: none;
+                margin-bottom: 20px;
+            }
+            
+            .eltd-widget-title{
+                color: $default-background-color;
+                margin-bottom: 0;
+                letter-spacing: 0;
+            }
+            
+            .eltd-post-title{
+                line-height: 1em;
+            }
+
+            &.widget_nav_menu{
+                ul{
+                    li{
+                        a{
+                            font-weight: 500;
+                            color: $default-text-color;
+
+                            &:hover{
+                                color: $light-color;
+                            }
+                        }
+
+                        &.current_page_item{
+                            a{
+                                color: $light-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .eltd-footer-contact-form{
+            input.wpcf7-text,
+            textarea.wpcf7-textarea{
+                padding: 0 25px;
+                font-weight: 400;
+                letter-spacing: 0;
+
+                @include eltdPlaceholder {
+                    color: $default-background-color;
+                }
+            }
+            input.wpcf7-text{
+                height: 55px;
+            }
+
+            p{
+                margin-bottom: 4px;
+            }
+
+            input.wpcf7-submit{
+                padding: 10px 21px;
+                height: 47px;
+            }
+
+        }
+
+    }
+
+    .eltd-footer-bottom-holder {
+        @include eltdRelativeHolderLayout();
+        background-color: #292929;
+        box-sizing: border-box;
+        padding: 10px 0;
+
+        .eltd-footer-bottom-inner {
+            box-sizing: border-box;
+	        
+            &.eltd-grid {
+                padding: 7px 0;
+            }
+	        
+            &.eltd-full-width {
+                padding: 19px 50px;
+            }
+        }
+        
+        .widget{
+            background-color: transparent;
+            border: none;
+            margin: 0;
+            color: $default-text-color;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 300;
+            
+            a{
+                color: $default-text-color;
+                
+                &:hover{
+                    color: $first-main-color;
+                }
+            }
+
+            &.eltd-image-widget{
+                padding-top: 8px;
+            }
+        }
+
+        .menu{
+            display: table;
+
+            .menu-item{
+                display: table-cell;
+                border: none;
+                
+                a{
+                    font-family: $first-main-font;
+                    font-size: 16px;
+                    padding: 10px 20px;
+
+                    &:after{
+                        display: none;
+                    }
+
+                    &:hover{
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Footer style - end
+   ========================================================================== */

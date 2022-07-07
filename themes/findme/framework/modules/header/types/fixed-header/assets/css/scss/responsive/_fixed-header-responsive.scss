@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Fixed header responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape {
+    
+    .eltd-boxed .eltd-page-header .eltd-fixed-wrapper.fixed {
+        width: $grid-width-laptop-landscape-boxed;
+    }
+}
+/* ==========================================================================
+   Fixed header responsive style - end
+   ========================================================================== */

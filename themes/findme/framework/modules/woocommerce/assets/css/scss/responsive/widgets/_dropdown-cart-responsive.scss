@@ -1,0 +1,53 @@
+/* ==========================================================================
+   WooCommerce Dropdown Cart Responsive styles - begin
+   ========================================================================== */
+
+@media only screen and (max-width: $ipad-portrait) {
+
+    .eltd-shopping-cart-dropdown {
+
+        ul {
+            margin: 20px;
+        }
+    }
+}
+
+@include laptop-landscape-medium{
+
+    .widget_price_filter{
+        .price_slider_amount{
+            position: relative;
+
+            .price_label{
+                position: absolute;
+                top: -40px;
+                left: 0;
+            }
+
+            .button{
+                float: left;
+            }
+        }
+    }
+}
+
+@include ipad-landscape{
+
+    .widget_price_filter{
+        .price_slider_amount{
+            position: relative;
+
+            .price_label{
+                position: relative;
+                top: unset;
+                right: unset;
+            }
+            .button{
+                float: right;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Dropdown Cart Responsive styles - end
+   ========================================================================== */

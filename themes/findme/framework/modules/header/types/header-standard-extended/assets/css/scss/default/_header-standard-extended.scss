@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Header Standard Extended style - begin
+   ========================================================================== */
+
+.eltd-header-standard-extended {
+
+    .eltd-page-header {
+	    
+        .eltd-logo-area {
+	        height: 90px;
+            z-index: 1; //to be above menu area in order to cover shadow
+	        box-sizing: border-box;
+
+            .eltd-logo-wrapper a {
+                max-height: 90px;
+            }
+
+            .eltd-vertical-align-containers {
+	            
+                .eltd-position-right-inner {
+                    height: auto;
+                }
+            }
+
+            .eltd-logo-widget-area {
+	            position: relative;
+	            display: inline-block;
+	            vertical-align: middle;
+	            margin-left: 8px;
+            }
+
+            .eltd-right-from-logo-widget {
+	            position: relative;
+	            padding: 0 20px 0 0;
+	            float: left;
+	            
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .eltd-menu-area {
+	        height: 70px;
+	        box-sizing: border-box;
+
+            .eltd-main-menu {
+                margin-left: 0;
+
+                & > ul > li:first-child > a {
+                    padding-left: 0;
+                }
+            }
+
+            .eltd-vertical-align-containers {
+	            
+                .eltd-position-left-inner {
+                    height: 100%;
+                }
+
+                .eltd-position-right-inner {
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Header Standard Extended style - end
+   ========================================================================== */

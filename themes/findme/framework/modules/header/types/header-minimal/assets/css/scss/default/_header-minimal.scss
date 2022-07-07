@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Header Minimal style - begin
+   ========================================================================== */
+
+.eltd-header-minimal {
+	
+    .eltd-page-header {
+	    
+	    .eltd-menu-area {
+		    box-sizing: border-box;
+		
+		    .eltd-position-right-inner {
+			    height: auto;
+		    }
+	    }
+	
+	    .eltd-position-left:before,
+	    .eltd-position-right:before {
+		    content: "";
+	    }
+	
+	    .eltd-sticky-header {
+		
+		    .eltd-position-left-inner {
+			    height: auto;
+		    }
+		
+		    .eltd-vertical-align-containers .eltd-position-right .eltd-position-right-inner {
+			    height: auto;
+		    }
+	    }
+    }
+}
+
+.eltd-fullscreen-menu-opened {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	overflow-y: hidden;
+	
+	&.admin-bar {
+		top: 32px;
+		height: calc(100% - 32px);
+        	}
+}
+
+/* ==========================================================================
+   Header Minimal style - end
+   ========================================================================== */

@@ -1,0 +1,130 @@
+@media only screen and (min-width: $ipad-landscape-plus-pixel) and (max-width: $laptop-landscape) {
+
+  .eltd-woo-single-page {
+
+    .woocommerce-tabs {
+
+      ul.tabs {
+
+        > li {
+          a {
+            padding: 12px 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include ipad-landscape {
+
+  .eltd-woo-single-page {
+
+    .eltd-single-product-content {
+
+      .images,
+      .eltd-single-product-summary {
+        float: none;
+        width: 100%;
+        padding: 0;
+      }
+
+      .images {
+
+        .woocommerce-product-gallery__trigger {
+          right: 10px;
+        }
+      }
+
+      .eltd-single-product-summary {
+        margin: 30px 0 0;
+      }
+    }
+
+    .woocommerce-tabs {
+
+      ul.tabs {
+
+        > li {
+          a {
+            padding: 13px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include ipad-portrait {
+
+  @include phone-landscape {
+
+    .eltd-woo-single-page {
+
+      &.eltd-woo-single-thumb-on-left-side {
+
+        .eltd-single-product-content {
+
+          .images {
+
+            &.woocommerce-product-gallery--columns-4 {
+
+              .woocommerce-product-gallery__image {
+
+                &:not(:first-child) {
+                  width: 50%;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .eltd-single-product-summary{
+        .product_meta{
+          .eltd-woo-single-meta-item{
+            &.category-item a:first-child{
+              margin-left: 5px;
+            }
+            .product-meta-wrapper{
+              margin-left: 37px;
+            }
+            &.tag-item a:first-child{
+              margin-left: 39px;
+            }
+          }
+        }
+      }
+
+      .eltd-single-product-content {
+
+        .images {
+
+          &.woocommerce-product-gallery--columns-4 {
+
+            .woocommerce-product-gallery__image {
+
+              &:not(:first-child) {
+                width: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include phone-portrait{
+  .eltd-woo-single-page {
+    .woocommerce-tabs {
+      ul.tabs {
+        > li {
+          &.description_tab a {
+            padding-left: 7px;
+          }
+        }
+      }
+    }
+  }
+}

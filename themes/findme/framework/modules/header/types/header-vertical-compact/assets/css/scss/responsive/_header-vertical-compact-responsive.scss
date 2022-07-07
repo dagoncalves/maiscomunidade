@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Header Vertical - Compact responsive style - begin
+   ========================================================================== */
+
+@include ipad-landscape {
+	
+	.eltd-header-vertical-compact {
+		
+		.eltd-vertical-menu-area {
+			display: none;
+		}
+		
+		.eltd-content,
+		footer {
+			padding-left: 0;
+		}
+	}
+}
+/* ==========================================================================
+   Header Vertical - Compact responsive style - end
+   ========================================================================== */

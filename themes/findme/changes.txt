@@ -1,0 +1,124 @@
+1.9
+- Added WordPress 5.5 compatibility
+- Added WooCommerce 4.6.0 compatibility
+- Updated Elated Core to 1.4.2
+- Updated Elated Listing to 1.4.2
+- Updated Elated Membership to 1.1.1
+- Updated Elated Instagram Feed to 2.0
+- Updated Elated Twitter Feed to 1.0.1
+- Updated Revolution Slider to 6.2.23
+- Updated WPBakery Visual Composer to 6.4.1
+- Fixed escaping labels in Elated Listing plugin
+- Adapted select input styling in Elated Listing plugin
+- Removed unused file instagram-redirect.php from Elated Instagram Feed plugin
+- Removed unused file twitter-redirect.php from Elated Twitter Feed plugin
+
+1.8
+- Added WooCommerce 3.7.0 compatibility
+- Updated WPBakery Page Builder to 6.0.5
+- Updated Revolution Slider to 6.1.0
+- Updated Child Theme to 1.0.1
+- Updated Elated Listing to 1.4.1
+- Fixed Portfolio Image single upload
+- Fixed back button with Page Transitions
+- Fixed scroll while Minimal header is active
+
+1.7.1
+- Added WooCommerce 3.6.1 compatibility
+- Updated Elated Core to 1.4.1
+- Improved import functionality
+- Improved theme security
+
+1.7
+- Added WooCommerce 3.5.7 compatibility
+- Updated Elated Core to 1.4
+
+1.6
+- Added WooCommerce 3.5.6 compatibility
+- Added compatibility with Gutenberg plugin
+- Updated WPBakery Page Builder to 5.7
+- Updated Revolution Slider to 5.4.8.3
+- Updated Elated Core to 1.3
+- Updated Elated Booking to 1.1
+- Updated Elated Listing to 1.4
+- Updated Elated Membership to 1.1
+- Updated pot file
+- Improved framework files
+
+1.5
+- Added WooCommerce 3.5.3 compatibility
+- Added compatibility with PHP 7.2
+- Added compatibility with WordPress 5 and Gutenberg plugin
+- Added Envato Market plugin as required
+- Added company website field on front end submission
+- Updated WPBakery Page Builder to 5.6
+- Updated Revolution Slider to 5.4.8.1
+- Updated Elated Core to 1.2.1
+- Updated Elated Listing to 1.3
+- Fixed portfolio categories rendering on archive pages
+- Fixed https problem with links
+- Fixed product list simple featured product display
+- Fixed duplicated listing items
+
+1.4
+- Added WooCommerce 3.4.0 compatibility
+- Added option "Website Link Target" to Elated Options -> Listing -> Single
+- Improved listing average rating functionality
+- Updated Elated Listing to 1.2
+- Updated Elated Core to 1.2
+- Updated Elated Membership to 1.0.2
+- Updated Revolution Slider to 5.4.7.4
+- Updated pot file
+- Fixed Listing Search category problem
+- Fixed Listing Advanced Search selected region
+- Fixed problem with minimal header menu when only one item has children
+- Fixed problem with video on single listing
+- Fixed problem to show first featured items on archive pages
+
+1.3
+- Added WooCommerce 3.2.6 compatibility
+- Added recommended plugins (WooCommerce and Contact Form 7)
+- Updated Elated Listing plugin to 1.1.3
+- Updated Visual Composer to 5.4.5
+- Updated Revolution Slider to 5.4.6.4
+- Improved archive pages filter functionality
+- Fixed Yoast conflict with Listing Types taxonomy
+
+1.2.2
+- Added Woocommerce 3.2.3 compatability
+- Updated Visual Composer to 5.4.2
+- Updated Revolution Slider to 5.4.6.2
+- Updated Elated Listing to 1.1.2
+- Upadate Elated Core to 1.1.1
+- Fixed bug with location filter on archive pages if all locations option is selected
+- Fixed header misalignment on latest chrome version
+- Improved import functionality
+
+1.2.1
+- Updated Elated Listing to 1.1.1
+- Fixed bug with location filter on archive pages
+- Fixed bug with time of comment not working
+
+1.2
+Important - Please be sure to back up your database before applying theme 1.2 update
+- Updated Elated Listing to 1.1
+- Updated WPBakery Page Builder to 5.3
+- Updated Revolution Slider to 5.4.6
+- Updated pot file of Elated Listing
+- Fixed bug of amenities and custom fields with WPML
+- Fixed Elated Listing Package linking
+
+1.1.2
+- Updated Elated Listing to 1.0.3
+- Updated Slider Revolution to 5.4.5.1
+- Fixed "Elated Listing Advanced Search" submit button
+
+1.1.1
+- Updated Elated Listing to 1.0.2
+- Fixed warning for non-existing wishlist function
+
+1.1
+- Updated Visual Composer to 5.2.1
+- Updated Elated Listing to 1.0.1
+- Updated Elated Membership to 1.0.1
+- Improved "User Dashboard" UI

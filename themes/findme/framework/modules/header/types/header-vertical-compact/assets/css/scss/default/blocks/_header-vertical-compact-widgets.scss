@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Header Vertical - Compact widgets style - begin
+   ========================================================================== */
+
+.eltd-header-vertical-compact {
+	
+	.eltd-vertical-area-widget-holder {
+        bottom: 0;
+		left: 0;
+		text-align: center;
+		z-index: 100;
+
+        > div {
+            @include eltdTableLayout();
+            height: 75px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+            > div {
+                @include eltdTableCellLayout();
+            }
+        }
+	}
+}
+/* ==========================================================================
+   Header Vertical - Compact widgets style - end
+   ========================================================================== */

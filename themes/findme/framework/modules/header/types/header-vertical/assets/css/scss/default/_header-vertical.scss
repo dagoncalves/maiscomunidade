@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Header Vertical style - begin
+   ========================================================================== */
+
+$vertical-menu-width: 312px;
+@import 'blocks/header-vertical-navigation.scss';
+@import 'blocks/header-vertical-widgets.scss';
+
+.eltd-header-vertical {
+
+    .eltd-content,
+    footer {
+        padding-left: $vertical-menu-width;
+        box-sizing: border-box;
+    }
+
+    .eltd-vertical-menu-area {
+        position: fixed;
+	    top: 0;
+	    left: 0;
+	    width: $vertical-menu-width;
+        height: 100%;
+        padding: 60px 45px 10px;
+        background-color: transparent;
+        outline: none;
+        z-index: 101;
+        -webkit-backface-visibility: hidden;
+        box-sizing: border-box;
+	    
+	    &.eltd-with-scroll {
+		    overflow: hidden;
+	    }
+    }
+
+    .eltd-vertical-menu-area-inner {
+        @include eltdRelativeHolderLayout();
+        height: 100%;
+
+        &.eltd-vertical-align-left {
+            text-align: left;
+        }
+
+        &.eltd-vertical-align-center {
+            text-align: center;
+
+            .eltd-logo-wrapper img {
+                margin: 0 auto;
+            }
+        }
+    }
+	
+	.eltd-logo-wrapper {
+		@include eltdRelativeHolderLayout();
+		z-index: 100;
+		
+		a {
+			display: block;
+			position: relative;
+			height: 100%;
+		}
+		
+		img {
+			display: block;
+			height: auto;
+			max-height: 100%;
+			@include eltdTransition(opacity 0.3s ease);
+		}
+	}
+
+    .eltd-vertical-area-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: $vertical-menu-width;
+        height: 100%;
+        background-color: #fff;
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 0;
+        opacity: 1;
+        @include eltdTransition(opacity 0.5s ease, background-color 0.5s ease);
+    }
+    
+    &.eltd-header-vertical-shadow-disable .eltd-vertical-area-background {
+        box-shadow: none;
+    }
+    
+    &.eltd-header-vertical-border-disable .eltd-vertical-area-background {
+        border: none;
+    }
+}
+
+.eltd-light-header {
+	
+	.eltd-vertical-menu-area {
+		
+		.eltd-logo-wrapper {
+			
+			.eltd-light-logo {
+				opacity: 1;
+			}
+			
+			.eltd-normal-logo,
+			.eltd-dark-logo {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.eltd-dark-header {
+	
+	.eltd-vertical-menu-area {
+		
+		.eltd-logo-wrapper {
+			
+			.eltd-dark-logo {
+				opacity: 1;
+			}
+			
+			.eltd-normal-logo,
+			.eltd-light-logo {
+				opacity: 0;
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Header Vertical style - end
+   ========================================================================== */

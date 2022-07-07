@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Mobile header responsive style - begin
+   ========================================================================== */
+
+@include ipad-landscape {
+	
+	.eltd-mobile-header {
+		display: block;
+	}
+}
+
+@include phone-landscape{
+	.eltd-mobile-menu-icon{
+		i{
+			margin-top: 5px;
+		}
+	}
+}
+/* ==========================================================================
+   Mobile header responsive style - end
+   ========================================================================== */

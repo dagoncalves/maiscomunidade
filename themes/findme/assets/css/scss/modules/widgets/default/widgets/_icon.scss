@@ -1,0 +1,69 @@
+/* ==========================================================================
+   Icon widget styles - begin
+   ========================================================================== */
+
+.widget{
+
+    .eltd-icon-widget-holder{
+        margin-bottom: 15px;
+    }
+
+    .eltd-icon-widget{
+        font-size: 16px;
+    }
+
+    .eltd-icon-text{
+        padding-left: 5px;
+        font-size: 14px;
+    }
+    .eltd-additional-text{
+        color: $default-text-color;
+    }
+
+    .textwidget{
+        .lang_sel_sel{
+            &:before{
+                content: "\e086";
+                font-family: ElegantIcons;
+                font-size: 14px;
+                color: $light-color;
+                padding-right: 7px;
+            }
+        }
+
+        #lang_sel{
+            padding: 0 20px;
+
+            ul{
+                li{
+                    a{
+                        &:hover{
+                            color: rgba(255,255,255,.8);
+                        }
+                    }
+                    ul{
+                        display: none;
+                        background-color: rgb(53, 53, 53);
+                        padding: 5px 21px 10px;
+
+                        li{
+                            border: none;
+                        }
+                    }
+
+                    &:hover {
+                        ul{
+                            display: block;
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+   Icon widget styles - edn
+   ========================================================================== */

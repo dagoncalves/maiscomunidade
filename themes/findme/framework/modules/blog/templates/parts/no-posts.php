@@ -1,0 +1,1 @@
+<p class="eltd-blog-no-posts"><?php esc_html_e('Sorry, no posts matched your criteria.', 'findme'); ?></p>

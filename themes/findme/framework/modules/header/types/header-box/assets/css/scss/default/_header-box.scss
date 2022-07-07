@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Header Box style - begin
+   ========================================================================== */
+
+.eltd-header-box {
+	
+    .eltd-top-bar {
+        height: 55px;
+	    background-color: transparent;
+    }
+
+    .eltd-page-header {
+
+        .eltd-menu-area {
+            height: 90px;
+            box-sizing: border-box;
+
+            .eltd-logo-wrapper a {
+                max-height: 90px;
+            }
+
+            .eltd-grid .eltd-vertical-align-containers {
+                box-sizing: initial;
+                margin: 0 -35px;
+                padding: 0 35px !important;
+            }
+
+            .eltd-position-right-inner {
+                height: 100%;
+            }
+        }
+    }
+
+    .eltd-drop-down .wide .second > .inner > ul {
+        width: 1170px; //1100 + 70, 70 is 35 of padding on each side
+    }
+
+    &.eltd-grid-1000 .eltd-drop-down .wide .second > .inner > ul {
+        width: $grid-width-1000+70;
+    }
+
+    &.eltd-grid-800 .eltd-drop-down .wide .second > .inner > ul {
+        width: $grid-width-800+70;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+	.eltd-header-box.eltd-grid-1300 .eltd-drop-down .wide .second > .inner > ul {
+		width: $grid-width-1300+70;
+	}
+}
+@media only screen and (min-width: 1300px) {
+	.eltd-header-box.eltd-grid-1200 .eltd-drop-down .wide .second > .inner > ul {
+		width: $grid-width-1200+70;
+	}
+}
+/* ==========================================================================
+   Header Box style - end
+   ========================================================================== */

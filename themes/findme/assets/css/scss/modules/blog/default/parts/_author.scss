@@ -1,0 +1,100 @@
+/* Single author box styles - begin
+	====================================================================== */
+
+.eltd-author-description {
+    @include eltdRelativeHolderLayout();
+    padding: 0;
+    background-color: #fafafa;
+    text-align: center;
+    box-sizing: border-box;
+
+    .eltd-author-description-inner {
+        padding: 41px 0 39px;
+        min-height: 78px; // static height of author image -- eltd-author-description-image
+        clear: both;
+    }
+
+    .eltd-author-description-content {
+        position: relative;
+        padding: 0 30px;
+    }
+
+    .eltd-author-description-image {
+        width: 78px;
+        margin: 0 auto;
+
+        img {
+            display: block;
+            border-radius: 5em;
+        }
+    }
+
+    .eltd-author-description-text-holder {
+        position: relative;
+        padding: 4px 0;
+
+        .eltd-author-name {
+            margin: 0;
+
+            a {
+                color: $default-heading-color;
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+
+        .eltd-author-email {
+            margin: 0;
+        }
+
+        .eltd-author-text {
+            @include eltdRelativeHolderLayout();
+
+            > p {
+                margin: 17px 0 14px;
+            }
+        }
+
+        .eltd-author-social-icons {
+            @include eltdRelativeHolderLayout();
+
+            a {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0;
+                margin: 0 15px 0 0;
+                font-size: 11px;
+                color: $default-heading-color;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                &:hover {
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+
+    @include ipad-portrait {
+        .eltd-author-description-content {
+            padding: 0;
+        }
+        .eltd-author-description-image {
+            display: block;
+            width: 100%;
+        }
+        .eltd-author-description-text-holder {
+            display: block;
+            padding: 0;
+            margin-top: 30px;
+        }
+    }
+}
+
+/* Single author box styles - end
+	====================================================================== */

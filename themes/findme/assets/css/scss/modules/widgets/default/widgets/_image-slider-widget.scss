@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Image Slider widget style - begin
+   ========================================================================== */
+
+.widget.eltd-image-slider-widget {
+    @include eltdRelativeHolderLayout();
+    
+    .eltd-is-widget-inner {
+        @include eltdRelativeHolderLayout();
+    }
+    
+    .eltd-widget-title {
+        margin: 0 0 32px;
+    }
+    
+    img {
+        display: block;
+    }
+}
+/* ==========================================================================
+   Image Slider widget style - end
+   ========================================================================== */

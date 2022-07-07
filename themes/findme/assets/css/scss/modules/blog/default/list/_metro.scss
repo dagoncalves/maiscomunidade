@@ -1,0 +1,199 @@
+/* ==========================================================================
+   Blog List - Metro style - begin
+   ========================================================================== */
+
+.eltd-blog-holder {
+    
+    &.eltd-blog-metro {
+
+        article {
+            overflow: hidden;
+
+            &:not(.format-gallery) {
+	            
+                .eltd-post-image {
+                    height: 100%;
+
+                    a {
+                        display: block;
+                        height: 100%;
+                        @include eltdTransition(all .3s ease-out);
+
+                        &:before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            @include eltdTransition(all .3s ease-out);
+                            background: rgba(0, 0, 0, 0.2);
+                        }
+
+                        img {
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+
+            .eltd-post-info {
+                position: absolute;
+                left: 30px;
+                bottom: 30px;
+                width: calc(100% - 60px);
+
+                > * {
+                    display: block;
+                }
+
+                .eltd-post-info-date {
+                    color: #fff;
+                }
+
+                .eltd-post-title {
+                    color: #fff;
+	                
+                    a:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            &.format-link {
+	            
+                .eltd-post-mark {
+                    position: absolute;
+                    font-size: 30px;
+                    right: 34px;
+                    bottom: 38px;
+                    color: #fff;
+                }
+	            
+                .eltd-post-info {
+                    width: calc(100% - 100px);
+                }
+            }
+
+            &.format-quote {
+	            
+                .eltd-post-mark {
+                    position: absolute;
+                    right: 21px;
+	                bottom: 20px;
+	                font-size: 50px;
+	                color: #fff;
+	                z-index: 20;
+                }
+	            
+                .eltd-post-info {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+
+                    .eltd-post-quote-holder {
+	                    position: relative;
+	                    display: table;
+	                    width: 73%;
+	                    height: 100%;
+	                    margin: 0 auto;
+                        z-index: 20;
+                    }
+
+                    .eltd-post-quote-holder-inner {
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+
+                    .eltd-quote-title {
+                        display: block;
+                        color: #fff;
+                        font-size: 20px;
+                        line-height: 1.6em;
+                    }
+
+                    .eltd-quote-author {
+                        display: block;
+                        color: #fff;
+                        margin-top: 22px;
+                    }
+                }
+            }
+
+            &.format-video {
+	            
+                .eltd-video-post-link {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 56px;
+                    height: 56px;
+                    font-size: 56px;
+                    color: #fff;
+                    @include eltdTransform(translate(-50%, -50%));
+                }
+            }
+
+            &.format-gallery {
+	            
+                .eltd-blog-gallery,
+                .owl-wrapper-outer {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                }
+	            
+                .owl-wrapper,
+                .owl-item,
+                .eltd-blog-gallery-item {
+                    height: 100%;
+                }
+	            
+                .eltd-blog-gallery-item {
+                    background-size: cover;
+
+                    a {
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+
+                .owl-stage-outer,
+                .owl-carousel .owl-stage{
+                    height: 100% !important;
+                }
+            }
+
+            &:hover {
+	            
+                .eltd-post-image {
+	                
+                    a {
+                        @include eltdTransform(scale(1.05));
+                        @include eltdTransition(all .4s cubic-bezier(0.22, 0.61, 0.36, 1));
+	                    
+                        &:before {
+                            -webkit-transform-origin: 50% 100%;
+	                        -moz-transform-origin: 50% 100%;
+                            transform-origin: 50% 100%;
+                            @include eltdTransform(scale(1.1));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Blog List - Metro style - end
+   ========================================================================== */

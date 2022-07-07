@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Header responsive style - begin
+   ========================================================================== */
+@include laptop-landscape-medium{
+	.eltd-main-menu > ul > li > a{
+		padding: 28px 15px;
+	}
+}
+
+@include laptop-landscape {
+	
+	.eltd-drop-down .wide .second > .inner > ul {
+		width: $grid-width-laptop-landscape;
+	}
+}
+
+@include ipad-landscape {
+
+    .eltd-page-header {
+		display: none;
+	}
+	
+	.eltd-drop-down .wide .second > .inner > ul {
+		width: $grid-width-ipad-landscape;
+	}
+}
+/* ==========================================================================
+   Header responsive style - end
+   ========================================================================== */

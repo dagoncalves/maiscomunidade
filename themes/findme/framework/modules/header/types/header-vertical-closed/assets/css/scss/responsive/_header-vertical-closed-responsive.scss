@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Header Vertical - Closed responsive style - begin
+   ========================================================================== */
+
+@include ipad-landscape {
+	
+	.eltd-header-vertical-closed {
+		
+		.eltd-vertical-menu-area {
+			display: none;
+		}
+		
+		.eltd-content,
+		footer {
+			padding-left: 0;
+		}
+	}
+}
+/* ==========================================================================
+   Header Vertical - Closed responsive style - end
+   ========================================================================== */

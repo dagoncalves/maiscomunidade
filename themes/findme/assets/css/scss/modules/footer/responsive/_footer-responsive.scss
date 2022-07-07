@@ -1,0 +1,84 @@
+/* ==========================================================================
+   Footer responsive style - begin
+   ========================================================================== */
+
+@include ipad-landscape {
+    
+    .eltd-page-footer {
+        
+        .eltd-column-content {
+	        
+	        @media only screen and (min-width: $ipad-portrait-plus-pixel) {
+		
+		        &.eltd-grid-col-3 {
+			        width: 50%;
+					float: left;
+			        
+			        &:nth-child(2n+1) {
+				        clear: both;
+			        }
+		        }
+		
+		        &.eltd-grid-col-4 {
+			        width: 33.33333333333333%;
+			        float: left;
+		        }
+	        }
+        }
+    }
+}
+
+@include ipad-portrait {
+
+    .eltd-page-footer {
+
+        .eltd-column-content {
+            
+            &:not(:first-child) {
+                margin-top: 20px;
+            }
+        }
+
+		.eltd-footer-bottom-holder{
+			.menu{
+				.menu-item{
+					display: table-row;
+					line-height: 30px;
+
+					a{
+						padding: 0;
+					}
+				}
+			}
+		}
+    }
+}
+
+@include phone-landscape{
+	.eltd-page-footer{
+
+		.eltd-footer-top-holder{
+			.eltd-footer-top-inner{
+				&.eltd-grid{
+					padding: 55px 5px 30px;
+				}
+			}
+		}
+		.widget .eltd-additional-text a{
+			color: $default-background-color;
+		}
+
+		.eltd-footer-bottom-holder{
+			text-align: center;
+
+			.menu{
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+/* ==========================================================================
+   Footer responsive style - end
+   ========================================================================== */

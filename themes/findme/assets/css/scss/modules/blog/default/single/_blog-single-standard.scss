@@ -1,0 +1,346 @@
+/* ==========================================================================
+   Blog Single Standard style - begin
+   ========================================================================== */
+.eltd-blog-single-grid{
+    position: relative;
+    left: 50%;
+    @include eltdTransform(translateX(-50%));
+}
+.eltd-blog-holder.eltd-blog-single {
+
+    &.eltd-blog-single-standard {
+    
+        article {
+            padding: 0 0 30px;
+        
+            .eltd-post-title {
+                margin: 0 0 22px;
+                font-size: 31px;
+            }
+        
+            .eltd-post-text {
+                padding: 36px 0 16px;
+                border-bottom: 1px solid $light-grey-color;
+            }
+        
+            .eltd-post-info-top {
+                margin-bottom: 22px;
+                font-size: 14px;
+            
+                > div {
+                    position: relative;
+                    display: inline-block;
+                    padding-right: 8px;
+                    margin-right: 3px;
+                    color: $gray-color;
+                
+                    a {
+                        color: inherit;
+                        font-weight: 300;
+                    
+                        &:hover {
+                            color: $first-main-color;
+                        }
+                    }
+
+                    i{
+                        color: $first-main-color;
+                        position: relative;
+                        top: 1px;
+                    }
+                
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: -2px;
+                    }
+                
+                    &:last-child {
+                        padding-right: 0;
+                        margin-right: 0;
+                    
+                        &:after {
+                            content: '';
+                        }
+                    }
+                }
+            }
+        
+            .eltd-post-info-bottom {
+                @include eltdRelativeHolderLayout();
+                margin: 53px 0 0;
+            
+                .eltd-post-info-bottom-left,
+                .eltd-post-info-bottom-right {
+                    position: relative;
+                    display: inline-block;
+                    float: left;
+                }
+            
+                .eltd-post-info-bottom-left {
+                    width:65%;
+                
+                    > div {
+                        position: relative;
+                        display: inline-block;
+                        padding-right: 8px;
+                        margin-right: 3px;
+                        color: $default-text-color;
+                    
+                        a {
+                            &:hover {
+                                color: $default-heading-color;
+                            }
+                        }
+                    
+                        &:after {
+                            content: "/";
+                            position: absolute;
+                            top: 0;
+                            right: -2px;
+                        }
+                    
+                        &:last-child {
+                            padding-right: 0;
+                            margin-right: 0;
+                        
+                            &:after {
+                                content: '';
+                            }
+                        }
+                    }
+                    
+                    .eltd-tags{
+                        a{
+                            background-color: $default-background-color;
+                            padding: 4px 14px;
+                            margin: 0 4px 4px 0;
+                            border-radius: 2px;
+                            color: $gray-color;
+                            font-size: 15px;
+                            font-weight: 400;
+                            display: inline-block;
+                            border: 1px solid $light-grey-color;
+
+                            &:hover{
+                                color: $first-main-color;
+                                border-color: $first-main-color;
+                            }
+                        }
+                    }
+                }
+            
+                .eltd-post-info-bottom-right {
+                    text-align: right;
+                    padding-right:30px;
+                    box-sizing: border-box;
+                    float: right;
+                    width: 35%;
+                    line-height: 45px;
+                
+                    > div {
+                        margin-left: 17px;
+                    
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+            
+            .eltd-blog-share{
+                display: inline-block;
+                color: $gray-color;
+
+                li {
+                    a{
+                        color: #c6c6c6;
+
+                        &:hover{
+                            color:$first-main-color;
+                        }
+                    }
+                }
+
+                span{
+                    font-size: 15px;
+                }
+                >span{
+                    padding-right: 3px;
+                }
+            }
+        
+            &.format-link {
+                border-bottom: 1px solid $default-border-color;
+                padding-bottom: 18x;
+
+                .eltd-post-text{
+                    padding: 30px 65px 20px;
+                    position: relative;
+                    overflow: hidden;
+                    margin-bottom: 30px;
+
+                    .eltd-post-image{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+
+                        .wp-post-image{
+                            width: 100%;
+                        }
+                    }
+
+                    .eltd-post-text-main {
+                        @include eltdTableLayout();
+                        
+                        .eltd-post-info-top{
+                            div{
+                                color: $default-background-color;
+
+                                &:hover{
+                                    a{
+                                        color: rgba(255, 255, 255, 0.8);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .eltd-post-link-holder{
+                        padding-bottom: 20px;
+                    }
+
+                    .eltd-post-title {
+                        margin-bottom: 0;
+                        color: $default-background-color;
+                        font-size: 31px;
+
+                        &:before{
+                            content: "\e02b" ;
+                            font-family: "ElegantIcons";
+                            font-size: 33px;
+                            color: $first-main-color;
+                            position: relative;
+                            top: 1px;
+                        }
+
+                        a:hover{
+                            color: rgba(255,255,255,0.7);
+                        }
+                    }
+                    
+                    .eltd-blog-share{
+                        color: $default-background-color;
+                        
+                        li {
+                            a{
+                                color: $default-background-color;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &.format-quote {
+                border-bottom: 1px solid $default-border-color;
+                padding-bottom: 18px;
+
+                .eltd-post-text{
+                    padding: 32px 20px 18px;
+                    position: relative;
+                    overflow: hidden;
+                    margin-bottom: 30px;
+
+                    .eltd-post-image{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+
+                        .wp-post-image{
+                            width: 100%;
+                        }
+                    }
+
+                    .eltd-post-text-main{
+                        position: relative;
+                        z-index: 5;
+
+                        .eltd-post-info-top{
+                            padding-left: 55px;
+
+                            div{
+                                color: $default-background-color;
+
+                                &:hover{
+                                    a{
+                                        color: rgba(255, 255, 255, 0.8);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .eltd-post-quote-holder {
+                        padding-bottom: 20px;
+                    }
+
+                    .eltd-post-title {
+                        margin-bottom: 13px;
+                        color: $default-background-color;
+                        padding: 0 45px;
+
+                        &:before{
+                            content: "\7b";
+                            font-family: "ElegantIcons";
+                            font-size: 43px;
+                            color: $first-main-color;
+                            position: relative;
+                            top: 5px;
+                        }
+                    }
+
+                    .eltd-quote-author{
+                        color: $default-background-color;
+                        font-size: 18px;
+                        font-weight: 300;
+                        padding-left: 55px;
+                    }
+                    
+                    .eltd-blog-share{
+                        color: $default-background-color;
+                        
+                        li {
+                            a{
+                                color: $default-background-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.format-gallery{
+                .eltd-owl-slider .owl-nav {
+                    .owl-prev{
+                        left: 15px;
+                    }
+                    .owl-next{
+                        right: 15px;
+                    }
+
+                    .eltd-icon-arrow{
+                        padding: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Blog Single Standard style - end
+   ========================================================================== */

@@ -1,0 +1,173 @@
+/* ==========================================================================
+# Side area style - start
+========================================================================== */
+
+/* Side area general style - start
+========================================================================== */
+
+.eltd-light-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) .eltd-side-menu-button-opener,
+.eltd-light-header .eltd-top-bar .eltd-side-menu-button-opener {
+	color: $header-light-color !important; //Color can be set inline from widget opener;
+	
+	&.opened,
+	&:hover {
+		color: $header-light-hover-color !important; //Color can be set inline from widget opener;
+	}
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) .eltd-side-menu-button-opener,
+.eltd-dark-header .eltd-top-bar .eltd-side-menu-button-opener {
+	color: $header-dark-color !important; //Color can be set inline from widget opener;
+	
+	&.opened,
+	&:hover {
+		color: $header-dark-hover-color !important; //Color can be set inline from widget opener;
+	}
+}
+
+.eltd-side-menu-button-opener {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	
+	.eltd-side-menu-title {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 8px 0 0;
+		color: currentColor;
+	}
+	
+	.eltd-side-menu-lines {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 30px;
+		height: 20px;
+		
+		.eltd-side-menu-line {
+			position: absolute;
+			left: 0;
+			height: 4px;
+			width: 100%;
+			background-color: currentColor;
+			border-radius: 12px;
+			@include eltdTransition(background-color .2s ease-out);
+			
+			&.eltd-line-1 {
+				top: 0;
+				outline: transparent solid 1px;
+			}
+			
+			&.eltd-line-2 {
+				top: calc(50% - 2px);
+				outline: transparent solid 1px;
+			}
+			
+			&.eltd-line-3 {
+				top: calc(100% - 4px);
+				outline: transparent solid 1px;
+			}
+		}
+	}
+	
+	&.opened,
+	&:hover {
+		color: $first-main-color;
+	}
+}
+
+.eltd-side-menu {
+    position: fixed;
+    top: 0;
+	right: -405px;
+	width: 405px;
+    height: 100%;
+    min-height: 100%;
+	padding: 66px 65px 36px;
+    background-color: #fff;
+    text-align: left;
+    overflow: hidden;
+    visibility: hidden;
+    z-index: 9999;
+    -webkit-backface-visibility: hidden;
+    box-sizing: border-box;
+	box-shadow: -3px 0 3px rgba(0, 0, 0, 0.04);
+    @include eltdTransition(all .6s cubic-bezier(.77,0,.175,1));
+
+    .eltd-close-side-menu-holder {
+        position: absolute;
+	    top: 36px;
+	    right: 65px;
+        z-index: 1000;
+    }
+
+	a.eltd-close-side-menu {
+		display: block;
+		color: $default-heading-color;
+		font-size: 40px;
+		z-index: 1000;
+
+		&:hover {
+			color: $default-text-color;
+		}
+
+		span {
+			display: block;
+			line-height: inherit;
+
+			&:before {
+				display: block;
+				line-height: inherit;
+			}
+		}
+	}
+}
+
+.admin-bar .eltd-side-menu .eltd-close-side-menu-holder {
+    top: 32px;
+}
+
+/* Side area general style - end
+========================================================================== */
+
+/* Side area slides over content style - start
+========================================================================== */
+
+.eltd-side-menu-slide-from-right {
+
+    .eltd-wrapper {
+
+        .eltd-cover {
+            z-index: -1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0;
+        }
+    }
+}
+
+.eltd-side-menu-slide-from-right.eltd-right-side-menu-opened {
+
+    .eltd-wrapper {
+        .eltd-cover {
+            z-index: 3000;
+        }
+    }
+
+    .eltd-side-menu {
+        right: 0;
+        visibility: visible;
+    }
+}
+
+/* Side area slides over content style - end
+========================================================================== */
+
+/* ==========================================================================
+# Side area style - end
+========================================================================== */

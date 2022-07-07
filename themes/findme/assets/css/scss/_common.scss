@@ -1,0 +1,813 @@
+@import 'variables';
+@import 'mixins';
+
+/* ==========================================================================
+   #Comments styles - start
+   ========================================================================== */
+
+.eltd-comment-holder {
+    @include eltdRelativeHolderLayout();
+    padding: 0;
+    box-sizing: border-box;
+    
+    .eltd-comment-number{
+        padding: 45px 0 15px;
+    }
+
+	.eltd-comment {
+		
+		&.eltd-pingback-comment {
+			
+			.eltd-comment-text {
+				padding: 0;
+			}
+		}
+	}
+
+    .eltd-comment-list {
+        list-style: none;
+        position: relative;
+        z-index: 150;
+        padding: 0;
+        margin: 0;
+
+        li {
+            @include eltdRelativeHolderLayout();
+            padding: 33px 0 0;
+        }
+
+        > li:first-child {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .children {
+            padding: 0 0 0 81px;
+        }
+    }
+
+    .eltd-comments-title {
+        margin-bottom: 28px;
+
+        > * {
+            margin: 0;
+        }
+    }
+
+    .eltd-comment-image {
+        position: relative;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 90px;
+        height: 90px;
+        float: left;
+        margin-bottom: 15px;
+
+        &:after{
+            content: "\f10e";
+            font-family: "FontAwesome";
+            font-size: 10px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 0 9px;
+            background-color: $first-main-color;
+            border-radius: 50%;
+            border: 2px solid $light-color;
+            color: $light-color;
+        }
+
+        img {
+            display: block;
+            border-radius: 4em;
+        }
+    }
+    
+    .eltd-comment-image-holder{
+        float: left;
+        text-align: center;
+        width: 85px;
+    }
+
+    .eltd-comment-text {
+        margin: 0 0 0 100px;
+        min-height: 82px;
+        padding: 20px;
+        position: relative;
+        max-width: 610px;
+
+        .eltd-comment-author-nickname{
+            margin: 5px 0 15px;
+            width: auto;
+            display: inline-block;
+        }
+
+        .eltd-comment-info {
+            @include eltdRelativeHolderLayout();
+            margin: 0 0 7px;
+        }
+
+        .replay,
+        .comment-reply-link,
+        .comment-edit-link {
+            float: right;
+            margin-left: 10px;
+            font-size: 14px;
+            color: $default-text-color;
+            position: relative;
+            top: 10px;
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+
+        .eltd-comment-name {
+            float: left;
+            margin: 0;
+        }
+
+        .eltd-comment-date {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 300;
+            color: $gray-color;
+        }
+
+        .eltd-text-holder{
+            padding-bottom: 17px;
+            
+            p {
+                margin: 7px 0;
+            }
+        } 
+
+        .comment-respond {
+            margin: 20px 0;
+
+            .comment-reply-title {
+                margin: 0 0 10px;
+                font-size: 14px;
+            }
+
+            .logged-in-as {
+                margin: 0 0 8px;
+            }
+        }
+
+        #cancel-comment-reply-link {
+            margin-left: 10px;
+            font-size: 12px;
+            color: $first-main-color;
+
+            &:hover {
+                color: $default-heading-color;
+            }
+        }
+
+        li {
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+        }
+    }
+}
+
+.eltd-comment-form {
+    padding: 0;
+    clear: both;
+    box-sizing: border-box;
+    
+    .eltd-comment-form-inner {
+        padding: 20px 0 65px;
+    }
+    
+    .logged-in-as {
+        margin: 0 0 8px;
+    }
+}
+
+@include ipad-portrait {
+
+    .eltd-comment-holder {
+	    
+        .eltd-comment-list {
+	        
+            .children {
+                padding: 0 0 0 40px;
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+	
+    .eltd-comment-holder {
+	    
+        .eltd-comment-list {
+	        
+            .children {
+                padding: 0;
+            }
+        }
+
+        .eltd-comment-text {
+	        
+            .eltd-comment-date,
+            .eltd-comment-name {
+                float: none;
+            }
+
+            .eltd-text-holder{
+                padding-top: 10px;
+            }
+	        
+            .replay,
+            .comment-reply-link,
+            .comment-edit-link {
+                float: right;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+}
+
+@include phone-portrait {
+	
+    .eltd-comment-holder {
+
+        .eltd-comment-image {
+            float: none;
+        }
+
+        .eltd-comment-text {
+            padding: 20px 0 0;
+            min-height: inherit;
+        }
+    }
+}
+
+/* ==========================================================================
+   #Comments styles - end
+   ========================================================================== */
+
+%input-style {
+	width: 100%;
+	margin: 0 0 15px;
+	padding: 21px 24px;
+	font-family: inherit;
+	font-size: 15px;
+    font-weight: 300;
+	line-height: 21px;
+	color: $gray-color;
+	background-color: $default-background-color;
+	border: 1px solid $light-grey-color;
+	border-radius: 2px;
+	outline: 0;
+	-webkit-appearance: none;
+	box-sizing: border-box;
+	@include eltdTransition(border-color 0.2s ease-in-out);
+
+	&:focus {
+		color: $default-heading-color;
+	}
+
+	@include eltdPlaceholder {
+		color: $default-text-color;
+	}
+}
+
+#respond textarea,
+#respond input[type='text'],
+textarea,
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+	@extend %input-style;
+}
+
+#respond{
+    textarea {
+        display: block;
+        padding: 15px 24px;
+        margin: 5px 0 15px;
+        max-width: 100%;
+    }
+    
+    input[type='text']{
+        margin: 0 0 15px;
+    }
+}
+
+p.form-submit {
+    margin: 10px 0 0;
+}
+
+
+#submit_comment,
+.post-password-form input[type='submit'] {
+    @include eltdButtonDefaultStyle();
+    @include eltdButtonMediumParams();
+    @include eltdButtonSolidColor();
+    font-size: 14px;
+
+    &:hover {
+        @include eltdButtonSolidHoverColor();
+    }
+}
+
+%cf7-input-style {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	height: 41px;
+	line-height: 41px;
+	padding: 0 36px;
+	margin: 0;
+	font-family: inherit;
+	font-size: 10px;
+	font-weight: 700;
+	color: #fff;
+	background-color: $first-main-color;
+	border: 1px solid transparent;
+	border-radius: 0;
+	outline: 0;
+	cursor: pointer;
+	-webkit-appearance: none;
+	@include eltdTransition(color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out);
+
+	&:focus {
+		background-color: $default-heading-color;
+	}
+	
+	@include eltdPlaceholder {
+		color: $default-heading-color;
+	}
+}
+
+.wpcf7-form-control {
+    &.wpcf7-text,
+    &.wpcf7-number,
+    &.wpcf7-date,
+    &.wpcf7-textarea,
+    &.wpcf7-select,
+    &.wpcf7-quiz {
+        @extend %cf7-input-style;
+        background-color: $default-background-color;
+        height: 65px;
+        font-size: 16px;
+        color: $dark-color;
+
+        &:focus{
+            background-color: $header-light-color;
+        }
+        
+        &:hover{
+            cursor: text;
+        }
+
+        footer & {
+            margin: 0;
+        }
+    }
+}   
+
+input.wpcf7-form-control.wpcf7-submit {
+    @include eltdButtonDefaultStyle();
+    @include eltdButtonHugeParams();
+    @include eltdButtonSolidHoverColor();
+    height: 64px;
+    margin-left: 0;
+    border-color: $light-color;
+    border-width: 2px;
+
+    &:hover {
+        @include eltdButtonSolidColor();
+    }
+}
+
+.wpcf7-form {
+  p {
+    margin: 0;
+  }
+
+  .eltd-custom-contuct-us{
+    .wpcf7-form-control {
+      &.wpcf7-text,
+      &.wpcf7-number,
+      &.wpcf7-date,
+      &.wpcf7-textarea,
+      &.wpcf7-select,
+      &.wpcf7-quiz {
+        border: 1px solid $default-border-color;
+        border-radius: 2px;
+        height: auto;
+        padding: 4px 16px;
+        font-size: 14px;
+        font-weight: 400;
+        margin:5px 0 27px;
+        letter-spacing: 0;
+
+          @include eltdPlaceholder{
+              color: $light-grey-color;
+          }
+      }
+
+        &.wpcf7-textarea{
+            max-height: 140px;
+            max-width: 100%;
+        }
+
+        &.wpcf7-submit{
+            height:auto;
+            padding:12px 30px;
+        }
+    }
+  }
+
+    textarea {
+        vertical-align: middle;
+    }
+
+    .ajax-loader{
+        position: absolute;
+    }
+}
+
+.eltd-two-columns-form-without-space {
+
+    .wpcf7-form .ajax-loader {
+        display: none;
+    }
+}
+label{
+	font-size: 14px;
+	color: $default-heading-color;
+	font-weight: 400;
+	line-height: 1.25em;
+	letter-spacing: 0;
+}
+
+.eltd-newsletter-form{
+
+    .eltd-newsletter-button{
+        position: relative;
+        width: 250px;
+
+        &:after {
+            content: "\35";
+            font-family: 'ElegantIcons';
+            position: absolute;
+            right: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: $first-main-color;
+        }
+
+        &:hover{
+            &:after{
+                color: $default-background-color;
+            }
+        }
+    }
+
+    input.wpcf7-submit{
+        background-color: $light-color;
+        color: $first-main-color;
+        border: 2px solid transparent;
+        padding-right: 102px;
+
+        &:hover{
+            border-color: $light-color;
+            background-color: transparent;
+        }
+    }
+    .wpcf7-text{
+        background-color: transparent;
+        color: $light-color;
+        font-weight: 300;
+        font-size: 15px;
+        padding: 0 1px;
+
+        &:focus{
+            background-color: transparent;
+            color: $light-color;
+        }
+
+        @include eltdPlaceholder{
+            color: $light-color;
+        }
+    }
+    .wpcf7-email{
+        background-image: url("../img/bottom_line_full.png");
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        -webkit-background-size: 50%;
+        background-size: 75%;
+    }
+}
+
+.eltd-form-custom-style{
+    .icon_mail_alt{
+        position: absolute;
+        z-index: 1;
+        top: 25px;
+        left: 24px;
+        font-size: 17px;
+
+        &:before{
+            position: relative;
+            top: -4px;
+        }
+    }
+    .icon_mail_alt,
+    .wpcf7-email{
+        color: #1f1f1f;
+    }
+    .wpcf7-email{
+        padding-left: 50px;
+        letter-spacing: 0;
+        font-weight: 400;
+    }
+
+    input.wpcf7-form-control.wpcf7-submit{
+        font-size: 20px;
+    }
+}
+
+/* ==========================================================================
+   #Comments styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Global Owl Slider - begin
+   ========================================================================== */
+.eltd-owl-slider {
+	visibility: hidden;
+
+
+    .owl-stage-outer {
+        z-index: 1;
+    }
+
+    &.eltd-slider-has-both-nav {
+
+        .owl-nav {
+
+            .owl-prev,
+            .owl-next {
+                $pos: calc(-50% - 21px); // 21 is is half height of pagination control + top margin
+                @include eltdTransform(translateY($pos));
+            }
+        }
+    }
+
+	.owl-nav {
+
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			top: 50%;
+			z-index: 3;
+			@include eltdTransform(translateY(-50%));
+
+			&:hover {
+
+				.eltd-prev-icon,
+				.eltd-next-icon {
+					color: $dark-color;
+				}
+			}
+		}
+
+		.owl-prev {
+			left: 30px;
+		}
+
+		.owl-next {
+			right: 30px;
+		}
+
+		.eltd-prev-icon,
+		.eltd-next-icon {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			color: $default-heading-color;
+			line-height: 1;
+			@include eltdTransition(color .2s ease-out);
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 50%;
+
+			.eltd-icon-arrow {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 36px;
+				line-height: inherit;
+                padding: 6px;
+
+				&:before {
+					display: block;
+					line-height: inherit;
+				}
+			}
+		}
+
+        &.disabled{
+            display: none;
+        }
+	}
+
+	.owl-dots {
+		text-align: center;
+
+		.owl-dot {
+			display: inline-block;
+			vertical-align: middle;
+            margin: 30px 0 0;
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				width: 10px;
+				height: 10px;
+				margin: 0 6px;
+				border-radius: 3em;
+				background-color: #555;
+				border: #555;
+				@include eltdTransition(background-color .2s ease-out, border .2s ease-out);
+				box-sizing: border-box;
+			}
+
+			&:hover,
+			&.active {
+
+				span {
+					background-color: $header-light-color;
+					border-color: $header-light-color;
+				}
+			}
+		}
+	}
+
+	.owl-carousel .owl-item img {
+		-webkit-transform: translateZ(0); //chrome text cut off fix
+	}
+}
+/* ==========================================================================
+   #Global Owl Slider - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #404 styles - start
+   ========================================================================== */
+
+.eltd-404-page {
+
+    &.eltd-wrapper {
+        padding: 0 !important;
+    }
+
+    .eltd-content {
+        height: calc(100vh - 80px); //80px header heights
+    }
+
+    @include ipad-landscape {
+
+        .eltd-content {
+            height: calc(100vh - 100px); //80px header heights
+        }
+    }
+
+    .eltd-content-inner {
+        position: relative;
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+
+    .eltd-page-not-found {
+        position: relative;
+        display: table-cell;
+        width: 100%;
+        height: 100%;
+        vertical-align: middle;
+        padding: 0 20%;
+        text-align: center;
+
+        .eltd-page-not-found-title {
+            margin: 0;
+        }
+
+	    .eltd-page-not-found-subtitle {
+            margin: 35px 0 0;
+        }
+
+	    .eltd-page-not-found-text {
+		    margin: 10px 0 0;
+	    }
+
+        .eltd-btn {
+            margin: 30px 0 0;
+        }
+    }
+
+    @include ipad-portrait {
+
+        .eltd-page-not-found {
+            padding: 40px 30px;
+        }
+    }
+}
+
+/* ==========================================================================
+   #404 styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Back to Top styles - start
+   ========================================================================== */
+#eltd-back-to-top {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    right: 45px;
+    bottom: 45px;
+    z-index: 10000;
+    text-align: center;
+    background-color: $first-main-color;
+    border: 2px solid $first-main-color;
+    border-radius: 50%;
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    @include eltdTransform(scale(.6));
+    @include eltdTransition(all .3s);
+
+    &.off {
+        opacity: 0;
+        visibility: hidden;
+        @include eltdTransform(scale(.6));
+        border-radius: 50%;
+    }
+
+    &.on {
+        opacity: 1;
+        visibility: visible;
+        @include eltdTransform(scale(1));
+        -webkit-transition: -webkit-transform .3s cubic-bezier(.38,1.3,.57,1.3), opacity .2s, color .2s, background-color .2s;
+        transition: transform .3s cubic-bezier(.38,1.3,.57,1.3), opacity .2s, color .2s, background-color .2s;
+    }
+
+    > span {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 45px;
+        font-size: 33px;
+        margin-left: -1px;
+    }
+
+    &:hover {
+        color: $first-main-color;
+        background-color: transparent;
+        @include eltdTransform(translate3d(0,-4px,0));
+    }
+}
+/* ==========================================================================
+   #Back to Top styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Self Hosted Video styles - begin
+   ========================================================================== */
+.eltd-self-hosted-video-holder {
+    .eltd-video-wrap {
+        .mejs-container,
+        .mejs-overlay-play {
+            height: 100% !important; /*!important because of the inline style*/
+            width: 100% !important; /*!important because of the inline style*/
+        }
+    }
+}
+/* ==========================================================================
+   #Self Hosted Video styles - end
+   ========================================================================== */
+
+/* ==========================================================================
+   #Import new font - start
+   ========================================================================== */
+@font-face {
+    font-family: 'Quentin';
+    src: url(../fonts/Quentin.ttf)  format('truetype');
+}
+/* ==========================================================================
+   #Import new font - start
+   ========================================================================== */
+
+img.alignleft.size-thumbnail {
+    float: none;
+}

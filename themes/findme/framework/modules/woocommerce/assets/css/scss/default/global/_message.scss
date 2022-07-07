@@ -1,0 +1,64 @@
+/* ==========================================================================
+   WooCommerce Message styles - begin
+   ========================================================================== */
+.eltd-woocommerce-page {
+
+    .woocommerce-message,
+    .woocommerce-info,
+    .woocommerce-error {
+        position: relative;
+        display: block;
+        padding: 20px 30px;
+        margin: 0 0 30px;
+        line-height: 57px;
+        list-style: none;
+        background-color: transparent;
+        border: 1px solid $default-border-color;
+
+        > a {
+            color: $default-text-color;
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+
+        a {
+            float: right;
+        }
+    }
+    .eltd-full-width{
+        .woocommerce-message{
+            border: none;
+            margin: 0 auto;
+            line-height: 47px;
+            width: 1200px;
+
+            .button.wc-forward{
+                padding: 12px 41px;
+                background-color: $first-main-color;
+                border-color: $first-main-color;
+                color: $default-background-color;
+
+                &:hover{
+                    background-color: $default-background-color;
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+
+    .woocommerce-info {
+
+        .showcoupon {
+            color: $default-text-color;
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   WooCommerce Message styles - end
+   ========================================================================== */

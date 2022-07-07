@@ -1,0 +1,18 @@
+.eltd-header-vertical {
+
+    .eltd-vertical-area-widget-holder {
+        @include eltdRelativeHolderLayout();
+        margin: 10px 0 0;
+        z-index: 100;
+    }
+
+    .eltd-vertical-alignment-center{
+
+        .eltd-vertical-area-widget-holder {
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            left: 0px;
+        }
+    }
+}

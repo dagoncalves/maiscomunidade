@@ -1,0 +1,97 @@
+// widgets spacing
+$widget-bottom-margin: 29px;
+$widget-bottom-padding: 15px;
+$widget-inner-padding: 25px 30px 28px 35px;
+
+// widget color
+$widget-background-color: #ffffff;
+
+// list items dimensions
+$widget-list-item-height: 20px;
+$widget-list-item-padding: 5px;
+
+// list items color
+$widget-list-item-background-color: #ffffff;
+$widget-list-text-color: #545454;
+
+// list items border
+$widget-list-item-border-color: #ececec;
+$widget-list-item-border-width: 1px;
+$widget-list-item-border-style: solid;
+
+// text
+$widget-text-color: inherit;
+$widget-heading-color: $additional-heading-color;
+
+// links
+$widget-link-color: darken($default-text-color, 35%);
+$widget-link-hover-color: $first-main-color;
+
+// specific widgets
+$widget-search-form-height: 64px;
+$widget-tag-cloud-height: 30px;
+
+aside.eltd-sidebar {
+    position: relative;
+    z-index: 11;
+    margin: 0 0 60px;
+
+    .widget {
+        color: $default-text-color;
+        border: 1px solid $default-border-color;
+        border-radius: 2px;
+
+        &:last-child {
+            margin: 0 !important;
+        }
+
+        &.widget_search{
+
+            .input_holder{
+
+                input{
+                    height: 65px;
+                }
+
+                button{
+                    color: rgba(128,128,128,0.5);
+                    &:hover{
+                        background-color: $first-main-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wpb_widgetised_column {
+    position: relative;
+
+    .widget {
+
+            .eltd-sidearea-widget-title {
+            margin: 0 0 19px;
+        }
+
+        &:last-child {
+            margin: 0 !important;
+        }
+
+        &.widget_search{
+            border: none;
+            padding: 0;
+
+            button span:before{
+                color: $default-text-color;
+            }
+        }
+        &.woocommerce.widget_products ul li:last-child{
+            border: none;
+        }
+    }
+}
+
+aside.eltd-sidebar,
+.wpb_widgetised_column {
+    @import 'widgets/default-wordpress-widgets-boxed';
+}

@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Social Icon widget style - begin
+   ========================================================================== */
+
+.eltd-social-icon-widget-holder {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+
+    .eltd-social-icon-widget {
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        letter-spacing: inherit;
+    }
+}
+
+.eltd-dark-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) .eltd-social-icon-widget-holder {
+    color: $header-dark-color !important;
+
+    &:hover {
+        color: $header-dark-hover-color !important;
+    }
+}
+
+.eltd-light-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) .eltd-social-icon-widget-holder {
+    color: $header-light-color !important;
+
+    &:hover {
+        color: $header-light-hover-color !important;
+    }
+}
+/* ==========================================================================
+   Social Icon widget style - end
+   ========================================================================== */

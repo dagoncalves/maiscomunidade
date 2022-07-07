@@ -1,0 +1,103 @@
+/* ==========================================================================
+   Header Tabbed style - begin
+   ========================================================================== */
+
+.eltd-header-tabbed {
+	
+    .eltd-page-header {
+	    
+        .eltd-menu-area {
+            height: 70px;
+            box-sizing: border-box;
+
+            .eltd-position-left-inner {
+                padding-right: 20px;
+            }
+
+            .eltd-position-center {
+                position: relative;
+                float: left;
+                opacity: 0;
+                @include eltdTransition(opacity 0.3s ease);
+
+                &:before {
+                    content: normal;
+                    margin: 0;
+                }
+            }
+
+            .eltd-position-right {
+
+                &:before {
+                    content: normal;
+                    margin: 0;
+                }
+
+                .eltd-position-right-inner {
+                    height: 100%;
+                }
+            }
+
+            .eltd-vertical-align-containers {
+	            
+                .eltd-position-center-inner {
+                    height: 100%;
+                    width: 100%;
+
+                    .eltd-main-menu {
+                        width: 100%;
+                        margin: 0;
+
+                        > ul {
+                            display: table;
+                            table-layout: fixed;
+                            height: 100%;
+                            width: 100%;
+
+                            &:before,
+                            &:after {
+                                content: normal;
+                            }
+
+                            > li {
+	                            display: table-cell;
+	                            height: 100%;
+	                            float: none;
+	                            text-align: center;
+	                            border-left: 1px solid rgba(0, 0, 0, 0.1);
+	                            box-sizing: border-box;
+
+                                &:last-child {
+                                    border-right: 1px solid rgba(0, 0, 0, 0.1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .eltd-header-widget-menu-area {
+	            position: relative;
+	            display: table;
+	            height: 100%;
+	            float: left;
+	            padding: 0 20px;
+	            vertical-align: middle;
+                border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+                &:last-child {
+                    padding-right: 0;
+                    border: 0;
+                }
+
+                > div {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Header Tabbed style - end
+   ========================================================================== */

@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Header Centered style - begin
+   ========================================================================== */
+
+.eltd-header-centered {
+	
+    .eltd-page-header {
+	    
+        .eltd-logo-area {
+            height: 110px;
+	        overflow: visible;
+	        z-index: 2; //to be above menu area in order to cover shadow
+	        box-sizing: border-box;
+	        
+            .eltd-logo-wrapper a {
+                max-height: 110px;
+            }
+        }
+
+        .eltd-menu-area {
+	        height: 60px;
+	        z-index: 1;
+            box-sizing: border-box;
+
+            .eltd-vertical-align-containers {
+	            
+                .eltd-position-center-inner {
+                    height: 100%;
+                }
+            }
+        }
+
+        .eltd-sticky-header {
+	        
+            .eltd-position-left-inner {
+                height: auto;
+            }
+
+            .eltd-position-right-inner {
+                height: 100%;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Header Centered style - end
+   ========================================================================== */

@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Header Standard style - begin
+   ========================================================================== */
+
+.eltd-header-standard {
+	
+	.eltd-menu-area {
+		background-color: #fff;
+		box-sizing: border-box;
+
+	    .eltd-position-right-inner {
+		height: 100%;
+
+			>div{
+				&:last-child{
+					padding-right: 0;
+				}
+			}
+	    }
+		.eltd-logo-wrapper a{
+			top: -4px;
+		}
+	}
+}
+/* ==========================================================================
+   Header Standard Extended style - end
+   ========================================================================== */

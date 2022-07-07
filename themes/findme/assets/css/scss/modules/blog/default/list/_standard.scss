@@ -1,0 +1,367 @@
+/* ==========================================================================
+   Blog List - Standard style - begin
+   ========================================================================== */
+
+.eltd-blog-holder {
+	
+    &.eltd-blog-standard {
+	    
+        article {
+            margin: 0 0 40px;
+            padding: 0;
+            background-color: $default-background-color;
+
+            .eltd-post-title {
+                margin: 2px 0;
+                line-height: 33px;
+                font-size: 31px;
+            }
+            
+            .eltd-post-text{
+                background-color: $light-color;
+                border: 1px solid $light-grey-color;
+                padding: 29px 31px 34px;
+            }
+
+            .eltd-post-info-category{
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                background-color: $first-main-color;
+                padding: 2px 20px;
+                border-radius: 20px;
+
+                a{
+                    color: $default-background-color;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+
+                i{
+                    display: none;
+                }
+            }
+
+            .eltd-blog-list-button{
+                margin: 9px 0 21px;
+                font-size: 14px;
+                font-weight: 500;
+                width: auto;
+                text-transform: capitalize;
+                color: $first-main-color;
+
+                &:after{
+                    content: "\35";
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-family: ElegantIcons;
+                    font-size: 17px;
+                    color: currentColor;
+                    -webkit-transition: -webkit-transform .3s;
+                    transition: transform .3s;
+                }
+
+                &:hover {
+                    &:after {
+                        @include eltdTransform(translateX(7px));
+                    }
+                }
+            }
+
+            .eltd-post-excerpt-holder {
+                @include eltdRelativeHolderLayout();
+            }
+
+            .eltd-more-link-container {
+                @include eltdRelativeHolderLayout();
+                margin: 20px 0 0;
+            }
+
+            .eltd-post-info-top {
+                margin-bottom: 5px;
+	
+	            > div {
+		            position: relative;
+		            display: inline-block;
+		            padding-right: 25px;
+		            margin-left: 5px;
+		
+		            &:after {
+			            content: "";
+			            position: absolute;
+			            top: 0;
+			            right: 5px;
+		            }
+		
+		            &:first-child {
+			            margin-left: 0;
+		            }
+		
+		            &:last-child {
+			
+			            &:after {
+				            content: '';
+			            }
+		            }
+		
+		            span {
+			            color: #444;
+		            }
+	            }
+            }
+
+            .eltd-post-info-bottom {
+                box-sizing: border-box;
+                padding: 10px 0 8px;
+
+                & div{
+                    display: inline-block;
+                }
+
+                & a {
+                    color: $gray-color;
+                    font-size: 14px;
+
+                    &:hover{
+                        color: $first-main-color;
+                    }
+                }
+
+                .eltd-post-info-bottom-left{
+                    float: left;
+                    font-weight: 300;
+
+                    .eltd-post-info-comments-holder{
+                        margin-left: 7px;
+
+                        i{
+                            position: relative;
+                            top: 1px;
+                        }
+                    }
+
+                    i{
+                        color: $first-main-color;
+                        padding-right: 3px;
+                    }
+                }
+                .eltd-post-info-bottom-right{
+                    float: right;
+                }
+            }
+            
+            &.format-gallery{
+                .owl-nav{
+                    .owl-prev{
+                        left: 15px;
+                    }
+                    .owl-next{
+                        right: 15px;
+                    }
+                    
+                    .eltd-prev-icon,
+                    .eltd-next-icon{
+
+                        span{
+                            font-size: 36px;
+                            background-color: rgba(255,255,255,0.5);
+                            border-radius: 50%;
+
+                        }
+                    }
+                }
+            }
+
+            &.format-link {
+                &.has-post-thumbnail{
+                    .eltd-post-text{
+                        .eltd-post-text-main{
+                            .eltd-post-title{
+                                color: $default-background-color;
+                            }
+                        }
+                    }
+                }
+	            
+                .eltd-post-text{
+                    position: relative;
+                    overflow: hidden;
+
+
+                    .eltd-post-image{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+
+                        .wp-post-image{
+                            width: 100%;
+                        }
+                    }
+
+                    .eltd-post-link-holder-inner{
+                        text-align: center;
+                        margin: auto;
+                        max-width: 550px;
+                    }
+	            
+                    .eltd-post-text-main {
+                        @include eltdTableLayout();
+                        text-align: left;
+                        color: $default-background-color;
+                        padding: 6px 35px;
+                        box-sizing: border-box;
+                        z-index: 5;
+                        
+                        .eltd-post-title{
+                            font-size: 23px;
+
+                            &:before{
+                                content: "\e02b" ;
+                                font-family: "ElegantIcons";
+                                font-size: 22px;
+                                color: $first-main-color;
+                                position: relative;
+                                top: 2px;
+                            }
+
+                            a{
+                                &:hover{
+                                    color: rgba(255, 255, 255, 0.8);
+                                }
+                            }
+                        }
+                    }
+
+                    .eltd-post-info-bottom{
+                        border-color: rgba(255,255,255,0.2);
+                    }
+
+                    .eltd-post-info-bottom-left,
+                    .eltd-post-info-bottom-right{
+                        a{
+                            color: $default-background-color;
+
+                            &:hover {
+                                color: $default-heading-color;
+                            }
+                        }
+                    }
+                }
+                
+	            
+                .eltd-post-link-holder {
+                    @include eltdTableCellLayout();
+                    vertical-align: top;
+                    text-align: left;
+                }
+	            
+            }
+
+            &.format-quote {
+                &.has-post-thumbnail{
+                    .eltd-post-text{
+                        .eltd-post-text-main{
+                            .eltd-post-title{
+                                color: $default-background-color;
+                            }
+                        }
+                    }
+                }
+
+                .eltd-post-text {
+                    position: relative;
+                    overflow: hidden;
+
+                    .eltd-post-image{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 1;
+
+                        .wp-post-image{
+                            width: 100%;
+                        }
+                    }
+
+                    .eltd-post-quote-holder-inner{
+                        text-align: center;
+                        color: $default-background-color;
+                        margin: auto;
+                        max-width: 550px;
+                    }
+
+                    .eltd-post-text-main {
+                        @include eltdTableLayout();
+                        text-align: left;
+                        padding: 0 35px 10px;
+                        box-sizing: border-box;
+                        z-index: 5;
+                        
+                        .eltd-post-title{
+                            margin: 0;
+                            font-size: 23px;
+
+                            &:before{
+                                content: "\7b";
+                                font-family: "ElegantIcons";
+                                font-size: 43px;
+                                color: $first-main-color;
+                                position: relative;
+                                top: 10px;
+                            }
+
+                            a{
+                                &:hover{
+                                    color: rgba(255, 255, 255, 0.8);
+                                }
+                            }
+                        }
+                        
+                        .eltd-quote-author{
+                            font-size: 14px;
+                            padding-top: 22px;
+                            display: block;
+                            font-weight: 300;
+                        }
+
+                        .eltd-post-author {
+                            display: inline-block;
+                            margin-bottom: 23px;
+                            font-size: 13px;
+                            line-height: 20px;
+                        }
+                    }
+
+                    .eltd-post-info-bottom{
+                        border-color: rgba(255,255,255,0.2);
+                    }
+                    
+                    .eltd-post-info-bottom-left,
+                    .eltd-post-info-bottom-right{
+                        a{
+                            color: $default-background-color;
+
+                            &:hover {
+                                color: $default-heading-color;
+                            }
+                        }
+                    }
+
+                    .eltd-post-link-holder {
+                        @include eltdTableCellLayout();
+                        vertical-align: top;
+                        text-align: left;
+                    }
+
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Blog List - Standard style - end
+   ========================================================================== */

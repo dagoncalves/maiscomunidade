@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Button widget styles - begin
+   ========================================================================== */
+
+.widget{
+    &.eltd-button-widget{
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.eltd-light-header:not(.eltd-fixed-header-appear):not(.eltd-sticky-header-appear){
+    .widget.eltd-button-widget{
+        a{
+            border-color: $light-color;
+        }
+    }
+}
+
+.eltd-dark-header:not(.eltd-fixed-header-appear):not(.eltd-sticky-header-appear){
+    .widget.eltd-button-widget{
+        a{
+            border-color: $dark-color;
+            color: $dark-color;
+
+            &:hover{
+                background-color: $dark-color !important;
+                border-color: $dark-color !important;
+                color: $light-color;
+
+                .eltd-btn-text,
+                i{
+                    color: $light-color !important;
+                }
+            }
+        }
+    }
+}
+
+
+/* ==========================================================================
+   Button widget styles - end
+   ========================================================================== */

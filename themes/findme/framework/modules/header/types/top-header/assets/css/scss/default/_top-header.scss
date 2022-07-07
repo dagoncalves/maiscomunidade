@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Top header style - begin
+   ========================================================================== */
+
+.eltd-top-bar-background {
+	@include eltdAbsoluteHolderLayout();
+	background-color: $default-heading-color;
+	z-index: 101;
+}
+
+.eltd-top-bar {
+	@include eltdRelativeHolderLayout();
+	height: 46px;
+	color: #fff;
+	font-size: 11px;
+	background-color: $default-heading-color;
+	z-index: 111;
+
+	.eltd-grid {
+		height: 100%;
+
+		.eltd-vertical-align-containers {
+			padding-left: 0;
+			padding-right: 0;
+
+			.eltd-top-bar-in-grid-padding & {
+				padding: 0 25px;
+			}
+		}
+	}
+
+	.eltd-vertical-align-containers {
+		
+		.eltd-position-left:before,
+		.eltd-position-right:before {
+			margin-right: 0px;
+		}
+	}
+
+	.eltd-top-bar-widget-area,
+	.eltd-top-bar-widget-area-inner {
+		height: 100%;
+	}
+
+	.eltd-top-bar-widget {
+		display: table;
+		height: 100%;
+		padding-right: 24px;
+        border: none;
+        background-color: transparent;
+        margin: auto;
+        font-size: 14px;
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	.eltd-top-bar-widget-inner {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	.widget{
+		background-color: transparent;
+		border: none;
+		margin: 0;
+		display: inline-block;
+	}
+}
+/* ==========================================================================
+   Top header style - end
+   ========================================================================== */

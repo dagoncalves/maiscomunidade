@@ -1,0 +1,43 @@
+.eltd-blog-list-holder {
+    &.eltd-bl-simple {
+
+        .eltd-post-title {
+            margin: 0;
+        }
+
+        .eltd-bli-inner{
+            @include eltdTableLayout();
+        }
+
+        .eltd-post-image {
+
+            @include eltdTableCellLayout();
+            width: 73px;
+            height: 73px;
+            padding-right: 20px;
+            .eltd-post-image-inner{
+                @include eltdBckImageStyle();
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+
+        .eltd-bli-content {
+            @include eltdTableCellLayout();
+            
+            .eltd-post-info-date,
+            .eltd-post-info-comments-holder{
+                 display: inline-block;
+            }
+            
+            .eltd-post-info-comments-holder{
+                margin-left: 10px;
+            }
+        }
+        .mkg-blog-simple-overlay{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

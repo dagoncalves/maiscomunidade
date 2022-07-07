@@ -1,0 +1,526 @@
+/*==========================================================================
+# Fullscreen menu style - begin
+========================================================================== */
+
+/* Fullscreen general style - begin
+========================================================================== */
+
+.eltd-dark-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) .eltd-fullscreen-menu-opener,
+.eltd-dark-header .eltd-top-bar .eltd-fullscreen-menu-opener {
+    color: $header-dark-color !important; //Color can be set inline from widget opener
+    
+    &:hover,
+    &.eltd-fm-opened {
+        color: $header-dark-hover-color !important; //Color can be set inline from widget opener
+    }
+}
+
+.eltd-light-header .eltd-page-header > div:not(.eltd-sticky-header):not(.fixed) .eltd-fullscreen-menu-opener,
+.eltd-light-header .eltd-top-bar .eltd-fullscreen-menu-opener {
+    color: $header-light-color !important; //Color can be set inline from widget opener
+    
+    &:hover,
+    &.eltd-fm-opened {
+        color: $header-light-hover-color !important; //Color can be set inline from widget opener
+    }
+}
+
+.eltd-fullscreen-menu-opener {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    
+    .eltd-fm-lines {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 20px;
+        
+        .eltd-fm-line {
+            position: absolute;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background-color: currentColor;
+            border-radius: 12px;
+            -webkit-transition: -webkit-transform .3s ease, top .2s ease-out, background-color .2s ease-out;
+            -moz-transition: -moz-transform .3s ease, top .2s ease-out, background-color .2s ease-out;
+            transition: transform .3s ease, top .2s ease-out, background-color .2s ease-out;
+            
+            &.eltd-line-1 {
+                top: 0;
+                outline: transparent solid 1px;
+            }
+            
+            &.eltd-line-2 {
+                top: calc(50% - 2px);
+                outline: transparent solid 1px;
+            }
+            
+            &.eltd-line-3 {
+                top: calc(100% - 4px);
+                outline: transparent solid 1px;
+            }
+        }
+    }
+    
+    &:hover {
+        color: $first-main-color !important; //Color can be set inline from widget opener
+        
+        .eltd-fm-lines {
+            
+            .eltd-fm-line {
+                
+                &.eltd-line-1,
+                &.eltd-line-3 {
+                    top: calc(50% - 2px);
+                }
+                
+                &.eltd-line-2 {
+                    @include eltdTransform(rotate(90deg));
+                }
+            }
+        }
+    }
+    
+    &.eltd-fm-opened {
+        color: $first-main-color !important; //Color can be set inline from widget opener
+        
+        .eltd-fm-lines {
+            
+            .eltd-fm-line {
+                
+                &.eltd-line-1 {
+                    display: none;
+                }
+                
+                &.eltd-line-2 {
+                    top: 50%;
+                    @include eltdTransform(rotate(45deg));
+                }
+                
+                &.eltd-line-3 {
+                    top: 50%;
+                    @include eltdTransform(rotate(-45deg));
+                }
+            }
+        }
+    }
+}
+
+.eltd-fullscreen-menu-opened {
+
+    .eltd-page-header,
+    .eltd-top-bar {
+        visibility: hidden;
+    }
+
+    .eltd-fullscreen-menu-opener,
+    .eltd-logo-wrapper {
+        visibility: visible;
+    }
+
+    .eltd-fullscreen-menu-holder-outer {
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+.eltd-fullscreen-menu-holder-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden !important;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 105; /* this has to be between header z-index and content z-index */
+}
+
+.eltd-fullscreen-menu-holder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: table;
+    background-repeat: repeat;
+    background-position: 0 0;
+}
+
+.eltd-fullscreen-menu-holder-inner {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 100px 0;
+}
+
+.touch {
+
+    .eltd-fullscreen-menu-holder-outer {
+        display: none;
+    }
+
+    .eltd-fullscreen-menu-opened .eltd-fullscreen-menu-holder-outer {
+        display: block;
+    }
+}
+
+nav.eltd-fullscreen-menu {
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    text-align: left;
+
+    ul {
+        position: relative;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+
+            a {
+                position: relative;
+                display: inline-block;
+	            vertical-align: middle;
+                margin: 11px 0;
+	            font-size: 25px;
+	            line-height: 1.3em;
+
+                span {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+
+                .eltd-fullscreen-menu-arrow {
+                    position: relative;
+                    top: 0;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0 0 0 10px;
+                    font-size: 0.65em;
+                    line-height: inherit;
+                }
+            }
+
+            ul {
+                padding: 7px 0;
+
+                &.sub_menu {
+                    display: none;
+                }
+
+                li {
+
+                    &.current-menu-ancestor > a,
+                    &.current-menu-item > a {
+                        color: $first-main-color;
+                    }
+
+                    ul {
+
+                        li {
+
+                            a {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    > ul {
+        display: block;
+
+        > li {
+
+            > a {
+                font-size: 40px;
+            }
+
+            &.eltd-active-item > a {
+                color: $first-main-color;
+            }
+        }
+    }
+}
+
+.eltd-fullscreen-below-menu-widget-holder {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.eltd-fullscreen-above-menu-widget-holder {
+    text-align: center;
+}
+
+/* Fullscreen general style - end
+========================================================================== */
+
+/* Fullscreen fade animations general - begin
+========================================================================== */
+
+@-webkit-keyframes fade_out {
+    0% {
+        opacity: 1;
+        visibility: visible
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+@-moz-keyframes fade_out {
+    0% {
+        opacity: 1;
+        visibility: visible
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+@keyframes fade_out {
+    0% {
+        opacity: 1;
+        visibility: visible
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+@-webkit-keyframes fade_in {
+    0% {
+        opacity: 0;
+        visibility: hidden
+    }
+    100% {
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+@-moz-keyframes fade_in {
+    0% {
+        opacity: 0;
+        visibility: hidden
+    }
+    100% {
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+@keyframes fade_in {
+    0% {
+        opacity: 0;
+        visibility: hidden
+    }
+    100% {
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+.eltd-fade-push-text-right .eltd-fullscreen-menu-holder-outer,
+.eltd-fade-push-text-top .eltd-fullscreen-menu-holder-outer,
+.eltd-fade-text-scaledown .eltd-fullscreen-menu-holder-outer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    overflow: hidden !important;
+    z-index: 105;
+    opacity: 0;
+}
+
+.eltd-fullscreen-fade-out .eltd-fullscreen-menu-holder-outer {
+    -webkit-animation: fade_out .25s linear both;
+    -moz-animation: fade_out .25s linear both;
+    animation: fade_out .25s linear both;
+}
+
+.eltd-fullscreen-menu-opened.eltd-fullscreen-fade-in .eltd-fullscreen-menu-holder-outer {
+    -webkit-animation: fade_in .25s linear both;
+    -moz-animation: fade_in .25s linear both;
+    animation: fade_in .25s linear both;
+}
+
+/* Fullscreen fade animations general - end
+========================================================================== */
+
+/* Fullscreen animation push text right - begin
+========================================================================== */
+
+@-webkit-keyframes push_text_right {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes push_text_right {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+
+@keyframes push_text_right {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@-webkit-keyframes push_nav_right {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-moz-keyframes push_nav_right {
+    0% {
+        opacity: 0;
+        -moz-transform: translateX(-60px);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateX(0);
+    }
+}
+
+@keyframes push_nav_right {
+    0% {
+        opacity: 0;
+        transform: translateX(-60px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.eltd-fullscreen-menu-opened.eltd-fade-push-text-right .eltd-fullscreen-menu-holder-outer nav > ul > li > a,
+.eltd-fullscreen-menu-opened.eltd-fade-push-text-right .eltd-fullscreen-menu-holder-outer .eltd-fullscreen-below-menu-widget-holder > div,
+.eltd-fullscreen-menu-opened.eltd-fade-push-text-right .eltd-fullscreen-menu-holder-outer .eltd-fullscreen-above-menu-widget-holder > div {
+    @include eltdAnimation(push_text_right .4s cubic-bezier(0.175, 0.885, 0.32, 1) both);
+}
+
+.eltd-fade-push-text-right.eltd-push-nav-right .eltd-fullscreen-menu-holder-outer nav,
+.eltd-fade-push-text-right.eltd-push-nav-right .eltd-fullscreen-menu-holder-outer .eltd-fullscreen-below-menu-widget-holder,
+.eltd-fade-push-text-right.eltd-push-nav-right .eltd-fullscreen-menu-holder-outer .eltd-fullscreen-above-menu-widget-holder {
+    @include eltdTransition(all .75s ease-out);
+    @include eltdTransform(translateX(50px));
+}
+
+/* Fullscreen animation push text right - end
+========================================================================== */
+
+/* Fullscreen animation push text top - begin
+========================================================================== */
+
+@-webkit-keyframes push_text_top {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes push_text_top {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: translateY(0);
+    }
+}
+
+@keyframes push_text_top {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.eltd-fullscreen-menu-opened.eltd-fade-push-text-top .eltd-fullscreen-menu-holder-outer nav > ul > li > a,
+.eltd-fullscreen-menu-opened.eltd-fade-push-text-top .eltd-fullscreen-menu-holder-outer .eltd-fullscreen-below-menu-widget-holder > div,
+.eltd-fullscreen-menu-opened.eltd-fade-push-text-top .eltd-fullscreen-menu-holder-outer .eltd-fullscreen-above-menu-widget-holder > div {
+    @include eltdAnimation(push_text_top .4s ease-out both .5s);
+}
+
+.eltd-fade-push-text-top.eltd-push-text-top .eltd-fullscreen-menu-holder-outer nav,
+.eltd-fade-push-text-top.eltd-push-text-top .eltd-fullscreen-menu-holder-outer .eltd-fullscreen-below-menu-widget-holder,
+.eltd-fade-push-text-top.eltd-push-text-top .eltd-fullscreen-menu-holder-outer .eltd-fullscreen-above-menu-widget-holder {
+    @include eltdTransform(translateY(-30px));
+    @include eltdTransition(all .75s ease-out);
+}
+
+/* Fullscreen animation push text top - end
+========================================================================== */
+
+/* Fullscreen animation fade text scaledown - begin
+========================================================================== */
+
+.eltd-fullscreen-menu-opened.eltd-fade-text-scaledown .eltd-fullscreen-menu-holder-outer nav,
+.eltd-fullscreen-menu-opened.eltd-fade-text-scaledown .eltd-fullscreen-menu-holder-outer .eltd-fullscreen-below-menu-widget-holder,
+.eltd-fullscreen-menu-opened.eltd-fade-text-scaledown .eltd-fullscreen-menu-holder-outer .eltd-fullscreen-above-menu-widget-holder {
+    opacity: 1;
+    @include eltdTransform(scale(1));
+    @include eltdTransition(all .25s linear 0.1s);
+}
+
+.eltd-fade-text-scaledown .eltd-fullscreen-menu-holder-outer nav,
+.eltd-fade-text-scaledown .eltd-fullscreen-menu-holder-outer .eltd-fullscreen-below-menu-widget-holder,
+.eltd-fade-text-scaledown .eltd-fullscreen-menu-holder-outer .eltd-fullscreen-above-menu-widget-holder {
+    opacity: 0;
+    @include eltdTransform(scale(1.1));
+    @include eltdTransition(all .25s linear 0.1s);
+}
+
+/* Fullscreen animation fade text scaledown - end
+========================================================================== */
+
+/* ==========================================================================
+# Fullscreen menu style - end
+==========================================================================*/

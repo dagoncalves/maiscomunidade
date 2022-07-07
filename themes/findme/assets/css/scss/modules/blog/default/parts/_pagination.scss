@@ -1,0 +1,272 @@
+/* ==========================================================================
+   Blog pagination standard style - begin
+   ========================================================================== */
+
+.eltd-blog-pagination-wp {
+    display: none;
+}
+
+.eltd-blog-pagination {
+    @include eltdRelativeHolderLayout();
+    margin: 60px 0 100px;
+    clear: both;
+    
+    ul {
+        @include eltdRelativeHolderLayout();
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: left;
+        
+        li {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 5px;
+            line-height: 45px;
+			text-align: center;
+
+			&.eltd-pag-number{
+				a{
+					border: 2px solid #ebebeb;
+					border-radius: 50%;
+				}
+			}
+            
+            a {
+                position: relative;
+                display: inline-block;
+	            vertical-align: middle;
+	            margin: 0;
+	            padding: 0;
+				line-height: 48px;
+				width: 47px;
+				height: 47px;
+				@include eltdTransition(all .2s ease);
+                
+                &.eltd-pag-active,
+                &:hover{
+                    color: $first-main-color;
+					border-color: $first-main-color;
+                }
+            }
+            
+            &.eltd-pag-prev,
+            &.eltd-pag-next,
+            &.eltd-pag-first,
+            &.eltd-pag-last {
+	            top: -1px;
+	            margin: 0;
+	            
+	            a {
+		            font-size: 22px;
+		
+		            span {
+			            display: block;
+			            line-height: inherit;
+			
+			            &:before {
+				            display: block;
+				            line-height: inherit;
+			            }
+		            }
+	            }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Blog pagination standard style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Blog List shortcode pagination standard style - begin
+   ========================================================================== */
+
+.eltd-blog-list-holder {
+	
+	&.eltd-bl-pag-standard-blog-list {
+		
+		.eltd-blog-list {
+			opacity: 1;
+			@include eltdTransition(opacity .2s ease-out);
+		}
+		
+		&.eltd-bl-pag-standard-blog-list-animate {
+			
+			.eltd-blog-list {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.eltd-bl-standard-pagination {
+	@include eltdRelativeHolderLayout();
+	margin: 20px 0 0;
+	clear: both;
+	
+	ul {
+		@include eltdRelativeHolderLayout();
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		text-align: center;
+		
+		li {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 12px;
+			padding: 0;
+			
+			a {
+				position: relative;
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0;
+				padding: 0;
+			}
+			
+			&.eltd-bl-pag-active {
+				
+				a {
+					color: $first-main-color;
+				}
+			}
+			
+			&.eltd-bl-pag-prev,
+			&.eltd-bl-pag-next {
+				position: absolute;
+				top: 0;
+				
+				a {
+					font-size: 30px;
+					@include eltdTransition(color .2s ease-out, opacity .2s ease-out);
+					
+					span {
+						display: block;
+						line-height: inherit;
+						
+						&:before {
+							display: block;
+							line-height: inherit;
+						}
+					}
+				}
+			}
+			
+			&.eltd-bl-pag-prev {
+				left: 0;
+				
+				a {
+					opacity: 0;
+				}
+			}
+			
+			&.eltd-bl-pag-next {
+				right: 0;
+				
+				a {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Blog List shortcode pagination standard style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Blog pagination load more style - begin
+   ========================================================================== */
+
+.eltd-blog-pag-load-more {
+	@include eltdRelativeHolderLayout();
+	margin: 40px 0 0;
+	text-align: center;
+}
+/* ==========================================================================
+   Blog pagination load more style - end
+   ========================================================================== */
+
+/* ==========================================================================
+   Blog pagination loading element style - begin
+   ========================================================================== */
+
+.eltd-blog-pag-loading {
+	position: relative;
+	display: none;
+	width: 100%;
+	margin: 40px 0 20px;
+	color: $default-heading-color;
+	text-align: center;
+	
+	&.eltd-standard-pag-trigger {
+		position: absolute;
+		top: 50px;
+		left: 0;
+	}
+	
+	&.eltd-showing {
+		display: block;
+	}
+	
+	> div {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 14px;
+		height: 14px;
+		margin: 0 3px;
+		background-color: $default-heading-color;
+		border-radius: 100%;
+		@include eltdAnimation(bl-pag-bouncedelay 1.4s infinite ease-in-out both);
+	}
+	
+	.eltd-blog-pag-bounce1 {
+		-webkit-animation-delay: -0.32s;
+		-moz-animation-delay: -0.32s;
+		animation-delay: -0.32s;
+	}
+	
+	.eltd-blog-pag-bounce2 {
+		-webkit-animation-delay: -0.16s;
+		-moz-animation-delay: -0.16s;
+		animation-delay: -0.16s;
+	}
+}
+
+@-webkit-keyframes bl-pag-bouncedelay {
+	0%, 80%, 100% {
+		-webkit-transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1.0);
+	}
+}
+
+@-moz-keyframes bl-pag-bouncedelay {
+	0%, 80%, 100% {
+		-moz-transform: scale(0);
+	}
+	40% {
+		-moz-transform: scale(1.0);
+	}
+}
+
+@keyframes bl-pag-bouncedelay {
+	0%, 80%, 100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+}
+/* ==========================================================================
+   Blog pagination loading element style - end
+   ========================================================================== */

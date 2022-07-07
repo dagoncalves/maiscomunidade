@@ -1,0 +1,49 @@
+@include ipad-landscape{
+    blockquote{
+        .eltd-blockquote-text{
+            padding-left: 50px;
+
+            &:before{
+                left: 10px;
+            }
+        }
+    }
+    .eltd-related-posts-holder {
+
+        .eltd-related-post {
+            width: 50% !important;
+        }
+    }
+}
+
+@include ipad-portrait {
+
+    .eltd-related-posts-holder {
+
+        .eltd-related-post {
+            width: 100% !important;
+        }
+    }
+
+    .eltd-blog-single-navigation{
+        .eltd-blog-single-nav-prev,
+        .eltd-blog-single-nav-next{
+            width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@include phone-portrait {
+
+
+    blockquote{
+        .eltd-blockquote-text{
+            padding-left: 10px;
+
+            &:before{
+                left: -30px;
+            }
+        }
+    }
+}

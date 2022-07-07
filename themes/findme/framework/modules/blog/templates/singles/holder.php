@@ -1,0 +1,15 @@
+<div class="eltd-grid eltd-blog-single-grid eltd-grid-row eltd-grid <?php echo esc_attr($holder_classes); ?>">
+	<div <?php echo findme_elated_get_content_sidebar_class(); ?>>
+		<div class="eltd-blog-holder eltd-blog-single <?php echo esc_attr($blog_single_classes); ?>">
+			<?php findme_elated_get_blog_single_type($blog_single_type); ?>
+		</div>
+	</div>
+	<?php if($sidebar_layout !== 'no-sidebar') { ?>
+		<div <?php echo findme_elated_get_sidebar_holder_class(); ?>>
+			<?php get_sidebar(); ?>
+		</div>
+	<?php } ?>
+</div>
+<?php
+    findme_elated_get_module_template_part('templates/parts/single/single-navigation', 'blog');
+?>
