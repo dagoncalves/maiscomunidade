@@ -7,8 +7,9 @@ plugins/*
 !themes/findme-default-child
 
 # except these plugins
-!plugins/learnpress/
-!plugins/envato-market/
+!plugins/wp-job-manager
+!plugins/eltd-listing
+!plugins/eltd-membership
 
 # ignore languages folder
 languages/
