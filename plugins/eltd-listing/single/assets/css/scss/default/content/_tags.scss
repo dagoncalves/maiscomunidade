@@ -1,0 +1,22 @@
+.eltd-listing-single-holder{
+	article{
+		.eltd-ls-tags-wrapper{
+			a{
+				display: inline-block;
+				font-size: 15px;
+				font-weight: 300;
+				color: $default-text-color;
+				background-color: $default-background-color;
+				border-radius: 2px;
+				padding: 4px 14px;
+				margin: 0 4px 4px 0;
+				border: 1px solid #ebebeb;
+
+				&:hover{
+					border-color: $first-main-color;
+					color: $first-main-color;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,303 @@
+.eltd-ls-adv-search-holder{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    
+    &.eltd-ls-adv-with-map{
+        .eltd-ls-adv-search-map-holder{
+            position: relative;
+            margin-bottom: 100px;
+            
+            .eltd-ls-adv-search-keyword-holder{
+                position: absolute;
+                bottom: 0;
+                padding: 25px 0;
+                width: 100%;
+                background-color: #fafafa;
+                
+                .eltd-ls-adv-search-keyword-holder-inner{
+                    width: 50%;
+                    margin: auto;
+                }
+                
+                .eltd-ls-adv-search-keyword-field{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+	&.eltd-ls-adv-disabled-content{
+		.eltd-ls-adv-search-map-holder{
+			margin: 0;
+		}
+	}
+
+	.eltd-ls-adv-title-holder{
+		text-align: center;
+		padding: 35px 0 71px;
+
+		.eltd-ls-adv-title{
+			margin-bottom: 12px;
+		}
+	}
+    
+    .eltd-ls-adv-search-keyword-holder{
+        position: relative;
+        width: 70%;
+        margin: 0 auto;
+        
+        .eltd-ls-adv-search-keyword-field{
+            width: 70%;
+            float: left;
+            margin-bottom: 50px;
+            height: 4em;
+            
+            .eltd-ls-adv-search-keyword{
+                padding: 20px 20px 20px 50px;
+                height:100%;
+                border-radius: 2px;
+            }
+            
+            .eltd-ls-search-icon{
+                position: absolute;
+                padding: 20px;
+                color: rgba(128,128,128,0.5);
+                font-size: 23px;
+            }
+        }
+        
+        .eltd-ls-adv-search-submit-button{
+            float: left;
+            width: 30%;
+            height: 4em;
+			text-align: right;
+            
+            .eltd-ls-adv-search-keyword-button{
+                @include eltdButtonDefaultStyle();
+				margin-left: 10px;
+            }
+        }
+    }
+    
+	.eltd-ls-adv-search-fields-holder{
+		float: left;
+		width: 22.5%;
+        clear: left;
+
+		.eltd-ls-adv-search-banner-holder{
+
+			position: relative;
+
+			.eltd-ls-banner-image{
+				position: relative;
+				
+				img{
+					display: block;
+				}
+			}
+			.eltd-ls-banner-text{
+
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				padding: 20px 27px;
+				box-sizing: border-box;
+				color: $light-color;
+				background-color: rgba($dark-color, 0.7);
+                font-family: $default-text-font;
+                font-size: 23px;
+
+			}
+
+		}
+
+		.eltd-ls-adv-search-fields-title{
+			color: $additional-heading-color;
+			margin: 15px 0;
+		}
+		.eltd-ls-adv-search-field{
+			&:not(.checkbox){
+				margin-bottom: 14px;
+				label{
+					display: inline-block;
+					margin-bottom: 8px;
+				}
+			}
+			&.checkbox{
+				.eltd-label-text{
+					color: $default-text-color;
+					font-size: 16px;
+				}
+			}
+		}
+		.eltd-listing-field-holder-title{
+			text-transform: capitalize;
+			margin: 15px 0;
+			display: inline-block;
+			position: relative;
+			&:nth-child(1){
+				margin-top: 0;
+				top: -7px;
+			}
+		}
+
+		.eltd-adv-search-submit{
+			margin-top: 20px;
+            
+            &:hover{
+                border-color: $light-blue-color;
+            }
+		}
+
+	}
+	.eltd-ls-adv-search-items-holder{
+		float: left;
+		width: 77.5%;
+		padding-left: 35px;
+		box-sizing: border-box;
+
+		.eltd-ls-item{
+			@include eltdRelativeHolderLayout();
+			vertical-align: top;
+			box-sizing: border-box;
+
+			.eltd-ls-item-image{
+				@include eltdRelativeHolderLayout();
+				a{
+					img{
+						vertical-align: middle;
+					}
+				}
+			}
+			.eltd-listing-title{
+				margin: 1px 0 4px;
+				color: #353535;
+			}
+			.eltd-listing-cat-wrapper{
+				position: absolute;
+				top: 15px;
+				left: 15px;
+
+				.eltd-ls-cat-icon{
+					position: relative;
+					display: inline-block;
+					vertical-align: top;
+					margin-right: 6px;
+					&.eltd-custom-icon{
+						max-width: 53px;
+					}
+					&.eltd-regular-icon{
+						width: 53px;
+						height: 53px;
+						line-height: 53px;
+						font-size: 25px;
+						text-align: center;
+						background-color: $first-main-color;
+						color: $default-background-color;
+						border-radius: 50%;
+					}
+				}
+			}
+
+			.eltd-ls-item-address{
+				box-sizing: border-box;
+				background-color: $header-light-color;
+
+				.eltd-ls-adr-city{
+					color: $default-text-color;
+					font-weight: 300;
+					font-size: 15px;
+				}
+			}
+			.eltd-ls-item-inner{
+				box-sizing: border-box;
+				padding: 21px 24px 41px;
+				background-color: $header-light-color;
+				text-align: left;
+				border: 1px solid #ebebeb;
+
+				.eltd-listing-rating-holder{
+					margin-top: 8px;
+
+					.eltd-average-rating{
+						padding-right: 7px;
+						>span{
+							border: 1px solid $first-main-color;
+							border-radius: 50%;
+							width: 30px;
+							height: 30px;
+							line-height: 30px;
+							text-align: center;
+							display: inline-block;
+							color: $first-main-color;
+						}
+					}
+				}
+			}
+		}
+		/***** Listing Advanced Search Columns Space - begin *****/
+
+		.eltd-ls-adv-load-more-holder{
+			text-align: center;
+		}
+
+		$columns_space_label: ('no', 'tiny', 'small', 'normal', 'big');
+		$columns_space: (0, 5, 10, 18, 35);
+
+		@for $i from 0 to length($columns_space_label) {
+			&.eltd-ls-adr-#{nth($columns_space_label,$i+1)}-space {
+				$item_space: nth($columns_space, $i+1);
+				$item_bottom_margin: $item_space * 2;
+
+				.eltd-ls-adr-inner {
+					margin: 0 -#{$item_space}px;
+				}
+
+				article {
+					padding: 0 #{$item_space}px;
+					margin: 0 0 #{$item_bottom_margin}px;
+				}
+			}
+		}
+		/***** Listing Advanced Search Columns Space - end *****/
+
+		/***** Listing Advanced Search Columns Width - begin *****/
+
+		$columns_number: ('two', 'three', 'four', 'five');
+
+		@for $i from 0 to length($columns_number) {
+			&.eltd-ls-adr-#{nth($columns_number,$i+1)}-columns {
+
+				article {
+					width: 100% / ($i+2);
+				}
+
+				@if ($i > 1) { // set different break point for four and five columns
+					@media only screen and (min-width: $laptop-landscape-plus-pixel) {
+
+						article {
+
+							&:nth-child(#{$i+2}n+1) {
+								clear: both;
+							}
+						}
+					}
+				} @else {
+					@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+						article {
+
+							&:nth-child(#{$i+2}n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+		/***** Listing Advanced Search Columns Width - end *****/
+	}
+
+}

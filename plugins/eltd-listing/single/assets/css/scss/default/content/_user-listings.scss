@@ -1,0 +1,59 @@
+.eltd-listing-single-holder{
+	article{
+		.eltd-ls-user-listing-holder{
+			background-color: $default-background-color;
+
+			.eltd-ls-user-listing-header{
+				padding: 19px 27px;
+				box-sizing: border-box;
+				border-bottom: 1px solid #f0f0f0;
+				position: relative;
+
+				.eltd-ls-user-listing-title{
+					text-transform: uppercase;
+					margin: 0;
+				}
+				.eltd-ls-user-listing-link{
+					position: absolute;
+					font-size: 14px;
+					top: 50%;
+					@include eltdTransform(translateY(-50%));
+					right: 25px;
+					color: $first-main-color;
+				}
+			}
+
+			.eltd-ls-user-listing-item{
+				@include eltdTableLayout();
+				padding: 22px 27px;
+				box-sizing: border-box;
+				border-bottom: 1px solid #f0f0f0;
+				&:nth-child(odd){
+					background-color: #fafafa;
+				}
+			}
+			.eltd-ls-user-listing-item-image{
+				@include eltdTableCellLayout();
+				width: 39px;
+				.eltd-ls-user-listing-item-image-inner{
+					display: inline-block;
+					width: 39px;
+					height: 39px;
+					@include eltdBckImageStyle();
+				}
+			}
+			.eltd-ls-user-listing-item-text{
+				@include eltdTableCellLayout();
+				font-size: 14px;
+				padding-left: 24px;
+				box-sizing: border-box;
+				vertical-align: top;
+				line-height: 1em;
+				.eltd-ls-user-listing-date{
+					margin-top: 7px;
+					color: $default-text-color;
+				}
+			}
+		}
+	}
+}

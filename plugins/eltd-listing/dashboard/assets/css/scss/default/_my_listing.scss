@@ -1,0 +1,153 @@
+.page-template-user-dashboard{
+    .eltd-membership-dashboard-content-holder{
+        
+        #job-manager-job-dashboard{
+            margin-top: 56px;
+
+            >p{
+                margin-bottom: 18px;
+            }
+
+            .job-manager-jobs{
+
+                thead{
+                    tr{
+                        background-color: $default-background-color;
+                        
+                        th{
+                            font-family: $default-text-font;
+                            font-size: 18px;
+                            padding: 1.5em 1em;
+                            color: $default-heading-color;
+                            font-weight: 400;
+                            
+                            &.job_title{
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        border: 1px solid #e1e1e1;
+
+                        &:nth-child(2n){
+                            background-color: $default-background-color;
+                        }
+                        &:nth-child(2n-1){
+                            background-color: #fafafa;
+                        }
+                    }
+                }
+                
+                td{
+                    padding: 1em;
+                    vertical-align: middle;
+                    font-size: 14px;
+                    color: $default-text-color;
+                    
+                    &.job_title {
+                        text-align: left;
+                        padding-left: 7%;
+                    }
+
+                    .eltd-user-listing-content-holder{
+                        >a{
+                            font-size: 15px;
+                            color: $default-text-color;
+                        }
+                        ul{
+                            li{
+                                >a{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+                    
+                .eltd-user-listing-title-image{
+                background-size: cover;
+                width:55px;
+                height: 55px;
+                position: absolute;
+                left: 1%;
+                }
+
+            }
+
+            .job-manager-pagination{
+                margin: 50px 70px;
+
+                ul{
+                    border: none;
+
+                    li{
+                        border:none;
+                        margin: 0 5px;
+
+                        a,
+                        .current{
+                            background-color: transparent;
+                            border: 2px solid #ebebeb;
+                            border-radius: 50%;
+                            padding: 0;
+                            width: 47px;
+                            height: 47px;
+                            line-height: 48px;
+
+                            &:hover{
+                                border-color: $first-main-color;
+                                color: $first-main-color;
+                            }
+
+                            &.next,
+                            &.prev{
+                                border: none;
+
+                                &:hover{
+                                    border: none;
+                                }
+                            }
+                        }
+                        .current{
+                            border-color: $first-main-color;
+                            color: $first-main-color;
+                        }
+
+                        .prev,
+                        .next{
+                            &.page-numbers{
+                                visibility: hidden;
+                                position: relative;
+
+                                &:after{
+                                    font-family: ElegantIcons;
+                                    visibility: visible;
+                                    position: absolute;
+                                    left: 50%;
+                                    @include eltdTransform(translateX(-50%));
+                                    font-size: 22px;
+                                }
+                            }
+                        }
+                        .prev{
+                            &.page-numbers{
+                                &:after{
+                                    content: '\34';
+                                }
+                            }
+                        }
+                        .next{
+                            &.page-numbers{
+                                &:after{
+                                    content: '\35';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}

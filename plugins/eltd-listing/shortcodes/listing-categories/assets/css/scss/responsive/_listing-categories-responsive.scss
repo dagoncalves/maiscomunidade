@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Listing Category shortcodes responsive style - begin
+   ========================================================================== */
+.eltd-ls-categories-holder {
+
+	.eltd-ls-gallery-item{
+		&.eltd-ls-gallery-simple{
+			&.simple-layout-changed{
+				.eltd-ls-gallery-item-text{
+					top: auto;
+					@include eltdTransform(none);
+				}
+			}
+		}
+	}
+
+	@include laptop-landscape-large-plus-pixel{
+		.eltd-ls-gallery-item{
+			&.eltd-ls-gallery-simple{
+				.eltd-gallery-item-title{
+					font-size: 75px;
+					line-height: 75px;
+					&:after{
+						left: 0;
+						bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	@include laptop-landscape-medium{
+		&.eltd-ls-gallery-normal-space{
+			article{
+				padding: 12px;
+			}
+		}
+		.eltd-ls-gallery-item{
+			&.eltd-ls-gallery-simple{
+				.eltd-gallery-item-title{
+					font-size: 60px;
+					margin: 0;
+					line-height: 60px;
+				}
+				.eltd-ls-gallery-item-desc p{
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+	@include ipad-landscape {
+
+		$columns_number: ('four');
+
+		@for $i from 0 to length($columns_number) {
+			&.eltd-ls-gallery-#{nth($columns_number,$i+1)}-columns {
+				$column_width: 50%;
+				article,
+				.eltd-ls-gallery-sizer {
+					width: $column_width;
+
+					&.eltd-ls-gallery-rec-landscape,
+					&.eltd-ls-gallery-square-big {
+						width: 2*$column_width;
+					}
+
+				}
+
+				@if ($i > 1) { // set different break point for four and five columns
+					@media only screen and (min-width: $laptop-landscape-plus-pixel) {
+
+						article {
+
+							&:nth-child(#{$i+2}n+1) {
+								clear: both;
+							}
+						}
+					}
+				} @else {
+					@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+						article {
+
+							&:nth-child(#{$i+2}n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+		/***** Listing Categories Columns Width - end *****/
+	}
+
+	@media only screen and (max-width: 680px) {
+
+
+		/***** Listing Categories Columns Width - begin *****/
+
+		$columns_number: ('two', 'three', 'four');
+
+		@for $i from 0 to length($columns_number) {
+			&.eltd-ls-gallery-#{nth($columns_number,$i+1)}-columns {
+				$column_width: 100%;
+				article,
+				.eltd-ls-gallery-sizer {
+					width: $column_width;
+					clear: both;
+
+					&.eltd-ls-gallery-rec-landscape,
+					&.eltd-ls-gallery-square-big {
+						width: $column_width;
+					}
+
+				}
+
+			}
+		}
+		/***** Listing Categories Columns Width - end *****/
+	}
+}
+/* ==========================================================================
+   Listing Category shortcodes responsive style - end
+   ========================================================================== */

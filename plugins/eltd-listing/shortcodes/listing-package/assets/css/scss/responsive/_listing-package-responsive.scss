@@ -1,0 +1,78 @@
+/* ==========================================================================
+   Listing Package responsive style - begin
+   ========================================================================== */
+@media only screen and (min-width: 768px) {
+    @include ipad-landscape {
+        .eltd-ls-package-holder.eltd-ls-package-three-columns {
+            article{
+
+                width: 60%;
+                margin: 0 auto 36px;
+                float: none;
+
+                .eltd-ls-package-content {
+                    .eltd-ls-package-price-holder {
+                        margin-bottom: 32px;
+                        .eltd-ls-package-price {
+                            line-height: 0.3em;
+                            padding-top: 25px;
+                            font-size: 75px;
+                        }
+                        .eltd-ls-package-currency{
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include ipad-portrait{
+    .eltd-ls-package-holder.eltd-ls-package-three-columns{
+        .eltd-ls-package-inner {
+            margin: auto;
+            width: 80%;
+
+            article {
+                width: 100%;
+
+                .eltd-ls-package-content{
+                    .eltd-ls-package-price-holder{
+                        .eltd-ls-package-currency{
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include phone-landscape{
+    .eltd-ls-package-holder.eltd-ls-package-three-columns{
+        .eltd-ls-package-inner {
+            width: 100%;
+
+            article{
+                padding: 0;
+            }
+        }
+    }
+
+    .eltd-ls-package-holder article .eltd-ls-package-content .eltd-ls-package-price-holder .eltd-ls-package-price{
+        font-size: 60px;
+    }
+}
+
+@include phone-portrait{
+
+    .eltd-ls-package-holder{
+        article{
+            .eltd-ls-package-content{
+                padding: 23px;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Listing Package responsive style - end
+   ========================================================================== */

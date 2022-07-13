@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Listing List responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-large {
+
+	.eltd-ls-slider-holder {
+		.eltd-ls-slider-items-holder{
+			$columns_number: ('four', 'five');
+
+			@for $i from 0 to length($columns_number) {
+				&.eltd-ls-slider-#{nth($columns_number,$i+1)}-columns {
+					$item_size: 100% / 3;
+
+					article {
+						width: $item_size;
+					}
+
+					@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+						article {
+
+							&:nth-child(3n+1) {
+								clear: both;
+							}
+						}
+
+					}
+				}
+			}
+		}
+
+	}
+}
+
+@include ipad-landscape {
+
+	.eltd-ls-slider-holder {
+		.eltd-ls-slider-items-holder{
+
+			$gallery_columns_number: ('three', 'four', 'five');
+
+			@for $i from 0 to length($gallery_columns_number) {
+				&.eltd-ls-slider-#{nth($gallery_columns_number,$i+1)}-columns {
+
+					article {
+						width: 50%;
+					}
+
+					@media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+						article {
+
+							&:nth-child(2n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+	.eltd-ls-slider-holder{
+
+		.eltd-ls-slider-items-holder.eltd-ls-slider-normal-space{
+			.eltd-ls-slider-inner,
+			.eltd-owl-slider .owl-dots,
+			article{
+				margin: 0;
+			}
+		}
+	}
+	
+	.owl-nav{
+		display: none;
+	}
+}
+
+@include phone-landscape {
+
+	.eltd-ls-slider-holder {
+		.eltd-ls-slider-items-holder{
+
+			article {
+				width: 100% !important; // !important is set to override all other stronger selectors
+			}
+		}
+		.eltd-owl-slider .owl-dots{
+			display: none;
+		}
+	}
+}
+/* ==========================================================================
+   Listing List responsive style - end
+   ========================================================================== */

@@ -1,0 +1,113 @@
+.widget.eltd-login-register-widget{
+
+    background-color: transparent;
+    border-color: $header-light-color;
+    border: none;
+    padding: 0 10px;
+    
+    &:hover{
+        .eltd-login-dropdown{
+            opacity: 1;
+            visibility: visible;
+            transition: .2s 0s;
+        }
+    }
+    
+    .eltd-logged-in-user, .eltd-login-holder{
+        height: 100%;
+        
+        .icon_profile{
+            padding: 13px 14px;
+            background-color: transparent;
+            color: $first-main-color;
+            border-radius: 50%;
+            font-size: 17px;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            line-height: 1em;
+            display: inline-block;
+            border: 2px solid $first-main-color;
+            @include eltdTransition(all .2s);
+            
+            &:hover{
+                background-color: $first-main-color;
+                color: $default-background-color;
+            }
+        }
+        
+    }
+    
+    .eltd-login-dropdown{
+        background-color: $header-light-color;
+        box-shadow: 0 5px 5px 0 rgba(0,0,0,.03);
+        width: 220px;
+        padding: 17px 25px 25px;
+        transition: 0s .2s;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+        
+        li{
+            border:none;
+            line-height: 27px;
+            
+            a{
+                font-size: 14px;
+                color: #bbb;
+                font-family: $default-text-font;
+            }
+            &:hover{
+                & > a,
+                & > span{
+                    color: $first-main-color;
+                }
+            }
+            span{
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.eltd-light-header:not(.eltd-fixed-header-appear):not(.eltd-sticky-header-appear) .widget.eltd-login-register-widget{
+    .icon_profile{
+        border-color: $light-color;
+
+        &:hover{
+            border-color: $first-main-color;
+        }
+    }
+    ul.eltd-login-dropdown{
+
+        li{
+            a{
+                color: #bbb !important;
+            }
+            &:hover{
+                & > a,
+                & > span i{
+                    color: $first-main-color !important;
+                }
+            }
+            span{
+                i{
+                    color: $default-text-color !important;
+                }
+            }
+        }
+    }
+
+}
+
+.eltd-dark-header:not(.eltd-fixed-header-appear):not(.eltd-sticky-header-appear) .widget.eltd-login-register-widget{
+    .icon_profile{
+        border-color: $dark-color;
+        color: $dark-color;
+
+        &:hover{
+            background-color: $dark-color;
+            color: $light-color !important;
+        }
+    }
+}

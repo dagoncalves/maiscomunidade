@@ -316,7 +316,7 @@ if ( ! class_exists( 'LP_Question_Fill_In_Blanks' ) ) {
 				$exclude = array_flip( $exclude );
 
 				foreach ( $options as $k => $option ) {
-					$is_true             = ! isset( $exclude['is_true'] ) ? true : false;
+					$is_true             = ! isset( $exclude['is_true'] );
 					$fib_answer          = ! empty( $args['answer'] ) ? $args['answer'] : '';
 					$title               = $option['title'];
 					$option['title']     = apply_filters( 'learn-press/question/fib/regex-content', $title, $option['question_answer_id'], $is_true, $fib_answer );

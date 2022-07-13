@@ -103,6 +103,28 @@ class LP_Jwt_Users_V1_Controller extends LP_REST_Jwt_Controller {
 				),
 			)
 		);
+
+		register_rest_route(
+			$this->namespace,
+			'/' . $this->rest_base . '/delete',
+			array(
+				'methods'             => WP_REST_Server::EDITABLE,
+				'callback'            => array( $this, 'delete_account' ),
+				'permission_callback' => array( $this, 'update_item_password_permissions' ),
+				'args'                => array(
+					'id'       => array(
+						'description' => esc_html__( 'User ID', 'learnpress' ),
+						'type'        => 'integer',
+						'required'    => true,
+					),
+					'password' => array(
+						'description' => esc_html__( 'Password', 'learnpress' ),
+						'type'        => 'string',
+						'required'    => true,
+					),
+				),
+			)
+		);
 	}
 
 	public function get_items_permissions_check( $request ) {
@@ -288,6 +310,46 @@ class LP_Jwt_Users_V1_Controller extends LP_REST_Jwt_Controller {
 		}
 	}
 
+	public function delete_account( $request ) {
+		$user_id  = $request['id'];
+		$password = $request['password'];
+
+		$user = wp_get_current_user();
+
+		if ( ! $user || $user_id !== $user->ID ) {
+			return new WP_Error(
+				'rest_user_invalid_id',
+				__( 'Invalid user ID.', 'learnpress' ),
+				array( 'status' => 400 )
+			);
+		}
+
+		if ( ! wp_check_password( $password, $user->data->user_pass, $user->ID ) ) {
+			return new WP_Error(
+				'rest_user_invalid_password',
+				__( 'Invalid password.', 'learnpress' ),
+				array( 'status' => 400 )
+			);
+		}
+
+		if ( ! function_exists( 'wp_delete_user' ) ) {
+			require_once ABSPATH . 'wp-admin/includes/user.php';
+		}
+
+		$delete = wp_delete_user( $user_id );
+
+		if ( is_wp_error( $delete ) ) {
+			return $delete;
+		} else {
+			return rest_ensure_response(
+				array(
+					'code'    => 'success',
+					'message' => esc_html__( 'Your account has been deleted.', 'learnpress' ),
+				)
+			);
+		}
+	}
+
 	public function change_password( $request ) {
 		$old_password = $request['old_password'];
 		$new_password = $request['new_password'];
@@ -310,7 +372,15 @@ class LP_Jwt_Users_V1_Controller extends LP_REST_Jwt_Controller {
 			);
 		}
 
-		wp_set_password( $new_password, $user->ID );
+		if ( apply_filters( 'learnpress_rest_api_user_change_password', true, $user ) ) {
+			wp_set_password( $new_password, $user->ID );
+		} else {
+			return new WP_Error(
+				'rest_user_cannot_change_password',
+				__( 'Sorry, you are not allowed to change password.' ),
+				array( 'status' => rest_authorization_required_code() )
+			);
+		}
 
 		return rest_ensure_response(
 			array(
@@ -1037,7 +1107,8 @@ class LP_Jwt_Users_V1_Controller extends LP_REST_Jwt_Controller {
 	 * @editor tungnx
 	 * @deprecated 4.1.6
 	 */
-	/*public function get_instructor_data( $user_id ) {
+	/*
+	public function get_instructor_data( $user_id ) {
 		$profile = learn_press_get_profile( $user_id );
 
 		$output = array();
@@ -1108,7 +1179,7 @@ class LP_Jwt_Users_V1_Controller extends LP_REST_Jwt_Controller {
 		$output = array();
 
 		if ( function_exists( 'lp_get_user_custom_register_fields' ) ) {
-			$custom_fields  = LP()->settings()->get( 'register_profile_fields' );
+			$custom_fields  = LP_Settings::instance()->get( 'register_profile_fields' );
 			$custom_profile = lp_get_user_custom_register_fields( $user->ID );
 
 			if ( $custom_fields ) {

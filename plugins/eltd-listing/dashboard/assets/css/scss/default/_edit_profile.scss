@@ -1,0 +1,122 @@
+.page-template-user-dashboard{
+    
+    .eltd-membership-dashboard-content-holder{
+
+        .eltd-membership-dashboard-page-content{
+            >p{
+                font-size: 18px;
+                font-weight: 300;
+                margin-top: 10px;
+
+                span{
+                    font-weight: 300;
+                }
+
+                &.eltd-ls-not-found{
+                    margin-top: 80px;
+                }
+            }
+        }
+        
+        .eltd-membership-dashboard-page-title{
+            margin: 10px 0 0;
+            font-size: 40px;
+
+            &.eltd-main-title{
+                margin: 0 -200%;
+                padding: 55px 200%;
+                background-color: #fff;
+                font-size: 40px;
+                line-height: 45px;
+                border-bottom: 1px solid #e1e1e1;
+            }
+        }
+        
+        .eltd-membership-input-holder{
+            display: inline-block;
+            width: 48.5%;
+            
+            label{
+                display: inline-block;
+                font-family: $default-text-font;
+                font-size: 18px;
+                padding: 10px 0 15px;
+                color: $default-heading-color;
+            }
+            .eltd-membership-input{
+                margin-bottom: 25px;
+                padding: 14px 24px;
+            }
+            
+        }
+        
+        .eltd-membership-profile-input-holder{
+            display: block;
+            margin-top: 50px;
+            
+            .eltd-membership-input-holder:nth-of-type(2n){
+                float: right;
+            }
+        }
+        
+        .eltd-membership-password-input-holder{
+            margin-bottom: 50px;
+            
+            .eltd-membership-input-holder:nth-of-type(2n){
+                float: right;
+            }
+            .eltd-membership-dashboard-page-title{
+                margin: 27px 0 14px;
+                font-size: 23px;
+            }
+        }
+
+        .eltd-membership-dashboard-page{
+            display: block;
+            position: relative;
+            margin: 0 0 80px;
+
+            .eltd-membership-dashboard-image-holder{
+                text-align: center;
+
+                img{
+                    border-radius: 50%;
+                }
+
+                .eltd-image-info {
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+
+                    span {
+                        display: inline;
+                        font-size: inherit;
+                        color: $first-main-color;
+
+                    }
+                }
+            }
+        }
+
+        .eltd-membership-left{
+            width: 30%;
+            float: left;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            box-sizing: border-box;
+            padding-right: 10px;
+        }
+
+        .eltd-membership-right{
+            width: 70%;
+            float: left;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            box-sizing: border-box;
+            padding-left: 10px;
+
+            p{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

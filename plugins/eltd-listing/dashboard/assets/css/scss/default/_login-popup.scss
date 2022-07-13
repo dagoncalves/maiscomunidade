@@ -1,0 +1,184 @@
+.eltd-login-register-content{
+    width: 385px;
+
+    &.ui-tabs{
+        margin: 70px auto 20px !important;
+
+        .eltd-login-form-social-login{
+            background-color: $additional-border-color;
+        }
+    }
+
+    .eltd-social-login-holder{
+        .eltd-social-login-holder-inner,
+        .eltd-login-form-social-login{
+            background-color: $additional-border-color;
+            font-family: $default-text-font;
+            margin: 0;
+        }
+    }
+
+    .eltd-wp-register-holder,
+    .eltd-login-form-social-login{
+        background-color: $additional-border-color;
+    }
+
+    .eltd-social-register-holder{
+        .eltd-register-form-input-label{
+            text-transform: uppercase;
+            font-size: 13px;
+            display: block;
+            padding-bottom: 13px;
+
+            &:after{
+                content: '*';
+                color: #ec5542;
+                padding-left: 5px;
+                top: 5px;
+                position: relative;
+                font-size: 20px;
+            }
+
+            ~ input{
+                font-family: $default-text-font;
+                margin-bottom: 28px;
+            }
+        }
+    }
+
+    .eltd-login-button-wrapper{
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        position: absolute;
+        top: -52px;
+        margin: 0;
+
+        .eltd-login-reg-btn,
+        .eltd-login-login-btn{
+            display: inline-block;
+            padding: 13px 28px;
+            background-color: $light-color;
+            border-radius: 2px 2px 0 0;
+            float: left;
+            border-bottom: 1px solid $light-grey-color;
+
+            a{
+                font-weight: 300;
+                font-size: 15px;
+                color: $default-text-color;
+            }
+
+            &.ui-state-active{
+                background-color: $additional-border-color;
+                border-bottom-color: transparent;
+            }
+
+            &:first-child{
+                &.ui-state-active{
+                    border-right: 1px solid $light-grey-color;
+                }
+            }
+            &:last-child{
+                &.ui-state-active{
+                    border-left: 1px solid $light-grey-color;
+                }
+            }
+        }
+    }
+
+    .eltd-social-login-holder-inner{
+        .eltd-login-form{
+            input{
+                font-family: $default-text-font;
+                margin-bottom: 10px;
+                font-weight: 300;
+                padding: 22px 24px;
+            }
+        }
+
+        .eltd-lost-pass-remember-holder{
+            margin: 10px 0 19px;
+
+            .eltd-login-remember{
+                label,
+                a{
+                    font-weight: 300;
+                }
+            }
+
+
+            .eltd-login-action-btn{
+                float: right;
+                font-size: 14px;
+
+                &:hover{
+                    text-decoration: underline;
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+
+    .eltd-login-form-social-login{
+        margin: 0;
+        border: none;
+        padding: 8px 0 35px;
+
+        .eltd-login-social-title{
+            text-transform: capitalize;
+            color: $default-text-color;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .eltd-facebook-login,
+        .eltd-google-login{
+            padding: 24px 22px;
+
+            .eltd-btn-text{
+                padding: 0;
+            }
+        }
+        
+        button.eltd-btn{
+            width: 49px;
+            height: 49px;
+            border-radius: 2px;
+            line-height: 46px;
+            text-align: center;
+            padding: 0;
+
+            &:hover{
+                background-color: transparent;
+                border-color: $first-main-color;
+            }
+
+            .eltd-btn-text{
+                padding: 0;
+            }
+        }
+    }
+}
+
+.eltd-register-button-holder{
+    padding-top: 15px;
+}
+
+.eltd-register-terms-holder{
+    font-family: $default-text-font;
+    padding: 0 55px 33px;
+
+    >span{
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        color: $default-text-color;
+
+        >a{
+            text-decoration: underline;
+            color: $first-main-color;
+        }
+    }
+}

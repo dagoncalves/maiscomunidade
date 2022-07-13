@@ -1,0 +1,229 @@
+.eltd-listing-archive-filter-holder{
+
+	.eltd-archive-submit-button{
+		 margin: 8px 0 0;
+		 border-radius: 50px;
+	 }
+
+	.eltd-ls-archive-filter-item{
+		float: left;
+		width: 33.33%;
+		box-sizing: border-box;
+		padding-right: 19px;
+		position: relative;
+		margin: 0 0 20px;
+
+		&.eltd-results-holder{
+			@include eltdTableLayout();
+			background-color: #efeeed;
+			border-radius: 3px;
+			margin: 42px 0 20px;
+
+			.eltd-archive-section{
+				@include eltdTableCellLayout();
+
+				.eltd-ls-archive-item-title{
+					font-weight: 400;
+					color: $default-text-color;
+					margin: 10px 0;
+				}
+
+				&.left{
+					text-align: left;
+					padding: 0 21px;
+					width: 35%;
+				}
+				&.right{
+					width: 65%;
+					text-align: right;
+				}
+
+				.eltd-ls-archive-inner-section{
+					display: inline-block;
+					vertical-align: middle;
+					padding: 0 15px;
+
+					&.left{
+						border-right: 1px solid $default-background-color;
+					}
+					p{
+						color: $default-text-color;
+						font-size: 14px;
+						font-weight: 400;
+						padding-right: 10px;
+					}
+				}
+			}
+
+			.select2-container--default{
+				min-width: 270px;
+				.select2-selection--single{
+					height: 45px !important;
+					line-height: 45px !important;
+					background-color: #efeeed !important;
+					border: 0 !important;
+					position: relative;
+					left: -5px;
+
+					.select2-selection__rendered{
+						line-height: 45px !important;
+						color: $default-text-color !important;
+						padding: 0 0 0 10px !important;
+						font-size: 14px;
+					}
+
+					.select2-selection__arrow{
+						color: $default-text-color;
+						right: -5px;
+						padding-right: 5px;
+					}
+				}
+			}
+		}
+
+		input{
+			margin: 0;
+			padding: 22px 20px 21px 50px;
+			font-weight: 400;
+			color: $default-text-color;
+		}
+
+		&:nth-child(4n){
+			padding-right:0;
+		}
+
+		&:nth-child(4n+1){
+			clear: both;
+		}
+
+		&.eltd-full-width-item{
+			width: 100%;
+			padding: 0;
+		}
+
+		&.eltd-listing-radius-field{
+			margin: 24px 0 23px;
+		}
+
+
+		.select2-container{
+			width: 100% !important;
+
+			.select2-selection--single{
+
+				.select2-selection__rendered {
+					padding: 0 20px 0 50px !important;
+					font-weight: 400;
+					color: #a6a6a6;
+				}
+				.select2-arrow{
+					right: 22px;
+				}
+				.select2-selection__clear{
+					display: none;
+				}
+
+			}
+		}
+
+		.eltd-archive-filter-icon{
+			position: absolute;
+			left: 22px;
+			top: 50%;
+			@include eltdTransform(translateY(-50%));
+			z-index: 1;
+			font-size: 18px;
+			color: $first-main-color;
+		}
+
+	}
+	.eltd-listing-address-holder{
+
+		position: relative;
+		margin: 0 0 22px;
+
+		.eltd-archive-current-location{
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 17px;
+			cursor: pointer;
+		}
+
+		input{
+			padding: 12px 20px 11px;
+		}
+
+	}
+
+	.eltd-listing-type-amenities-holder{
+		float: left;
+		clear: both;
+		margin: 0;
+
+		&.eltd-opened{
+			margin: 0 -17px 10px;
+			padding: 0 17px;
+			box-sizing: content-box;
+		}
+
+		.eltd-listing-field-holder-title{
+			margin: 0 0 13px;
+		}
+
+		&>label{
+			margin: 0 0 21px;
+		}
+
+		.eltd-listing-amenities-wrapper{
+			border: 1px solid #ebebeb;
+			background-color: $light-color;
+			padding: 27px 23px 12px;
+
+			.eltd-listing-amenities-wrapper-inner{
+				padding: 8px 0;
+				box-sizing: border-box;
+			}
+			.eltd-listing-amenities-wrapper-inner{
+				float: left;
+			}
+			/***** Amenities Columns Width - begin *****/
+
+			$columns_number: (1, 2, 3, 4, 5, 6, 7);
+
+			@for $i from 0 to length($columns_number) {
+				&.eltd-#{nth($columns_number,$i+1)}-columns {
+
+					.eltd-listing-amenities-wrapper-inner {
+						width: 100%;
+					}
+
+					@if ($i > 1) { // set different break point for four and five columns
+						@media only screen and (min-width: $laptop-landscape-plus-pixel) {
+
+							.eltd-listing-amenities-wrapper-inner {
+
+								&:nth-child(#{$i+1}n+1) {
+									clear: both;
+								}
+							}
+						}
+					} @else {
+						@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+							.eltd-listing-amenities-wrapper-inner {
+
+								&:nth-child(#{$i+2}n+1) {
+									clear: both;
+								}
+							}
+						}
+					}
+				}
+			}
+			/***** Amenities Columns Width - end *****/
+		}
+
+	}
+	
+}

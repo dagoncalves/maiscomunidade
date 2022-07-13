@@ -1,0 +1,113 @@
+.page-template-user-dashboard.page-template {
+    .eltd-membership-dashboard-content-holder{
+        .job-manager-form {
+
+            @include ipad-portrait{
+                .eltd-form-add-new-holder {
+                    width: 100%;
+                }
+                .eltd-ls-field-holder{
+                    width: 100%;
+                    padding: 0 !important;
+                }
+            }
+        }
+
+        #job-manager-job-dashboard{
+            .job-manager-jobs{
+                td.job_title{
+                    @include ipad-landscape{
+                        padding-left: 11%;
+                    }
+                    @include phone-landscape{
+                        padding-left: 13%;
+                    }
+                }
+                @include phone-portrait{
+                    thead{
+                        display: none;
+                    }
+                    tbody{
+                        td{
+                            display: block;
+
+                            &.job_title{
+                                padding-left: 23%;
+                            }
+                        }
+                        tr{
+                            border: none;
+                        }
+                    }
+                }
+            }
+            table ul.job-dashboard-actions{
+                @include phone-landscape{
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    .eltd-membership-dashboard-nav-holder{
+
+        @include ipad-portrait {
+
+            .eltd-membership-dashboard-nav {
+                li {
+                    a {
+
+                        .eltd-dash-icon {
+                            margin-right: 0;
+                        }
+
+                        h5 {
+                            display: none;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .eltd-membership-dashboard-content-holder{
+
+        @include ipad-portrait {
+            .eltd-membership-left,
+            .eltd-membership-right {
+                text-align: left !important;
+                float: none;
+                width: 100%;
+                margin: 50px 0;
+            }
+        }
+    }
+}
+
+
+@include phone-landscape{
+
+    .eltd-login-register-holder.opened{
+
+        .eltd-social-register-holder-inner{
+            padding: 10px 28px;
+
+            .eltd-register-form{
+                input[type='text'],
+                input[type='email'],
+                input[type='password']{
+                    padding: 10px 24px;
+                    margin-bottom: 1px;
+                }
+            }
+        }
+
+        .eltd-login-form-social-login{
+            padding: 3px 0;
+        }
+
+        .eltd-register-terms-holder{
+            padding-bottom: 10px;
+        }
+    }
+}

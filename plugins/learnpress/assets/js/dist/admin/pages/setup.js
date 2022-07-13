@@ -48,31 +48,27 @@ var __webpack_exports__ = {};
     $main.replaceWith($newContent);
     $main = $newContent;
   };
+  /*const navPages = function navPages( e ) {
+  	e.preventDefault();
+  		if ( ! checkForm( $setupForm ) ) {
+  		return;
+  	}
+  		const loadUrl = $( this ).attr( 'href' );
+  		$main.addClass( 'loading' );
+  	$.post( {
+  		url: loadUrl,
+  		data: getFormData(),
+  		success( res ) {
+  			const $html = $( res );
+  			replaceMainContent( $html.contents().filter( '#main' ) );
+  				LP.setUrl( loadUrl );
+  				$( '.learn-press-dropdown-pages' ).LP( 'DropdownPages' );
+  			$( '.learn-press-tip' ).LP( 'QuickTip' );
+  			$main.removeClass( 'loading' );
+  		},
+  	} );
+  };*/
 
-  const navPages = function navPages(e) {
-    e.preventDefault();
-
-    if (!checkForm($setupForm)) {
-      return;
-    }
-
-    const loadUrl = $(this).attr('href');
-    $main.addClass('loading');
-    $.post({
-      url: loadUrl,
-      data: getFormData(),
-
-      success(res) {
-        const $html = $(res);
-        replaceMainContent($html.contents().filter('#main'));
-        LP.setUrl(loadUrl);
-        $('.learn-press-dropdown-pages').LP('DropdownPages');
-        $('.learn-press-tip').LP('QuickTip');
-        $main.removeClass('loading');
-      }
-
-    });
-  };
 
   const updateCurrency = function updateCurrency() {
     const m = $(this).children(':selected').html().match(/\((.*)\)/),
@@ -137,23 +133,6 @@ var __webpack_exports__ = {};
     });
   };
 
-  const installSampleCourse = function installSampleCourse(e) {
-    e.preventDefault();
-    const $button = $(this);
-    blockContent();
-    $.post({
-      url: $(this).attr('href'),
-      dataType: 'html',
-      data: {},
-
-      success(res) {
-        blockContent(false);
-        $button.replaceWith($(res).find('a:first').addClass('button button-primary'));
-      }
-
-    });
-  };
-
   function isEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
@@ -163,7 +142,8 @@ var __webpack_exports__ = {};
     $main = $('#main');
     $setupForm = $('#learn-press-setup-form');
     $('.learn-press-select2').select2();
-    $(document).on('click', '.buttons .button', navPages).on('change', '#currency', updateCurrency).on('change', 'input, select', updatePrice).on('click', '#create-pages', createPages).on('click', '#install-sample-course', installSampleCourse);
+    $(document). // on( 'click', '.buttons .button', navPages ).
+    on('change', '#currency', updateCurrency).on('change', 'input, select', updatePrice).on('click', '#create-pages', createPages);
   });
 })(jQuery);
 /******/ })()

@@ -1,0 +1,75 @@
+.page-template-user-dashboard.page-template{
+
+    .eltd-container, .eltd-full-width{
+        z-index: 101; //for dash menu to be over title
+    }
+
+    .eltd-content .eltd-content-inner > .eltd-container > .eltd-container-inner{
+        padding-top: 0 !important;
+    }
+
+    .eltd-membership-dashboard-nav-holder{
+        height: 67px;
+        margin-top: -67px;
+
+        .eltd-membership-dashboard-nav{
+            
+            li{
+                width: 16%;
+                box-sizing: border-box;
+                @include eltdTransition(background-color 0.3s ease, color 0.3s ease);
+                float: left;
+                
+                &.eltd-active-dash{
+                    background-color: #fff;
+                    h5{
+                        color: $first-main-color;
+                    }
+                    .eltd-dash-icon{
+                        color: $first-main-color;
+                    }
+                }
+
+                &:hover{
+                    background-color: #fff;
+                    h5 , span{
+                        color: $first-main-color;
+                    }
+                }
+                
+                a{
+                    font-family: $default-text-font;
+                    display: block;
+                    height: 100%;
+                    line-height: 67px;
+                    font-size: 15px;
+                    font-weight: 400;                  
+                    padding: 0;
+                    box-sizing: border-box;
+                    text-transform: capitalize;
+                    color: #fff;
+                    
+                    h5{
+                        font-size: 15px;
+                        margin: 0;
+                        font-weight: 300;
+                        display: inline-block;
+                        color: #fff;
+                        @include eltdTransition(color 0.3s ease);
+                    }
+                    
+                    .eltd-dash-icon{
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-size: 23px;
+                        background-color: transparent;
+                        margin-right: 7px;
+                        @include eltdTransition(color 0.3s ease);
+                    }
+                }
+
+
+            }
+        }
+    }
+}

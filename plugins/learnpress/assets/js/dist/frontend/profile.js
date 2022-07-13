@@ -1549,8 +1549,8 @@ function (_super) {
   function Cropper() {
     var _this = _super !== null && _super.apply(this, arguments) || this;
 
-    _this.imageRef = null;
-    _this.videoRef = null;
+    _this.imageRef = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createRef();
+    _this.videoRef = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createRef();
     _this.containerRef = null;
     _this.styleRef = null;
     _this.containerRect = null;
@@ -1634,13 +1634,13 @@ function (_super) {
     _this.computeSizes = function () {
       var _a, _b, _c, _d, _e, _f;
 
-      var mediaRef = _this.imageRef || _this.videoRef;
+      var mediaRef = _this.imageRef.current || _this.videoRef.current;
 
       if (mediaRef && _this.containerRef) {
         _this.containerRect = _this.containerRef.getBoundingClientRect();
         var containerAspect = _this.containerRect.width / _this.containerRect.height;
-        var naturalWidth = ((_a = _this.imageRef) === null || _a === void 0 ? void 0 : _a.naturalWidth) || ((_b = _this.videoRef) === null || _b === void 0 ? void 0 : _b.videoWidth) || 0;
-        var naturalHeight = ((_c = _this.imageRef) === null || _c === void 0 ? void 0 : _c.naturalHeight) || ((_d = _this.videoRef) === null || _d === void 0 ? void 0 : _d.videoHeight) || 0;
+        var naturalWidth = ((_a = _this.imageRef.current) === null || _a === void 0 ? void 0 : _a.naturalWidth) || ((_b = _this.videoRef.current) === null || _b === void 0 ? void 0 : _b.videoWidth) || 0;
+        var naturalHeight = ((_c = _this.imageRef.current) === null || _c === void 0 ? void 0 : _c.naturalHeight) || ((_d = _this.videoRef.current) === null || _d === void 0 ? void 0 : _d.videoHeight) || 0;
         var isMediaScaledDown = mediaRef.offsetWidth < naturalWidth || mediaRef.offsetHeight < naturalHeight;
         var mediaAspect = naturalWidth / naturalHeight; // We do not rely on the offsetWidth/offsetHeight if the media is scaled down
         // as the values they report are rounded. That will result in precision losses
@@ -1673,6 +1673,16 @@ function (_super) {
 
             case 'vertical-cover':
               renderedMediaSize = {
+                width: _this.containerRect.height * mediaAspect,
+                height: _this.containerRect.height
+              };
+              break;
+
+            case 'auto-cover':
+              renderedMediaSize = naturalWidth > naturalHeight ? {
+                width: _this.containerRect.width,
+                height: _this.containerRect.width / mediaAspect
+              } : {
                 width: _this.containerRect.height * mediaAspect,
                 height: _this.containerRect.height
               };
@@ -1932,13 +1942,27 @@ function (_super) {
     if (!this.props.disableAutomaticStylesInjection) {
       this.styleRef = document.createElement('style');
       this.styleRef.setAttribute('type', 'text/css');
+
+      if (this.props.nonce) {
+        this.styleRef.setAttribute('nonce', this.props.nonce);
+      }
+
       this.styleRef.innerHTML = css_248z;
       document.head.appendChild(this.styleRef);
     } // when rendered via SSR, the image can already be loaded and its onLoad callback will never be called
 
 
-    if (this.imageRef && this.imageRef.complete) {
+    if (this.imageRef.current && this.imageRef.current.complete) {
       this.onMediaLoad();
+    } // set image and video refs in the parent if the callbacks exist
+
+
+    if (this.props.setImageRef) {
+      this.props.setImageRef(this.imageRef);
+    }
+
+    if (this.props.setVideoRef) {
+      this.props.setVideoRef(this.videoRef);
     }
   };
 
@@ -1983,7 +2007,7 @@ function (_super) {
     }
 
     if (prevProps.video !== this.props.video) {
-      (_j = this.videoRef) === null || _j === void 0 ? void 0 : _j.load();
+      (_j = this.videoRef.current) === null || _j === void 0 ? void 0 : _j.load();
     }
   };
 
@@ -2064,12 +2088,10 @@ function (_super) {
       className: classNames('reactEasyCrop_Container', containerClassName)
     }, image ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({
       alt: "",
-      className: classNames('reactEasyCrop_Image', objectFit === 'contain' && 'reactEasyCrop_Contain', objectFit === 'horizontal-cover' && 'reactEasyCrop_Cover_Horizontal', objectFit === 'vertical-cover' && 'reactEasyCrop_Cover_Vertical', mediaClassName)
+      className: classNames('reactEasyCrop_Image', objectFit === 'contain' && 'reactEasyCrop_Contain', objectFit === 'horizontal-cover' && 'reactEasyCrop_Cover_Horizontal', objectFit === 'vertical-cover' && 'reactEasyCrop_Cover_Vertical', objectFit === 'auto-cover' && (this.mediaSize.naturalWidth > this.mediaSize.naturalHeight ? 'reactEasyCrop_Cover_Horizontal' : 'reactEasyCrop_Cover_Vertical'), mediaClassName)
     }, mediaProps, {
       src: image,
-      ref: function ref(el) {
-        return _this.imageRef = el;
-      },
+      ref: this.imageRef,
       style: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, mediaStyle), {
         transform: transform || "translate(" + x + "px, " + y + "px) rotate(" + rotation + "deg) scale(" + zoom + ")"
       }),
@@ -2078,11 +2100,9 @@ function (_super) {
       autoPlay: true,
       loop: true,
       muted: true,
-      className: classNames('reactEasyCrop_Video', objectFit === 'contain' && 'reactEasyCrop_Contain', objectFit === 'horizontal-cover' && 'reactEasyCrop_Cover_Horizontal', objectFit === 'vertical-cover' && 'reactEasyCrop_Cover_Vertical', mediaClassName)
+      className: classNames('reactEasyCrop_Video', objectFit === 'contain' && 'reactEasyCrop_Contain', objectFit === 'horizontal-cover' && 'reactEasyCrop_Cover_Horizontal', objectFit === 'vertical-cover' && 'reactEasyCrop_Cover_Vertical', objectFit === 'auto-cover' && (this.mediaSize.naturalWidth > this.mediaSize.naturalHeight ? 'reactEasyCrop_Cover_Horizontal' : 'reactEasyCrop_Cover_Vertical'), mediaClassName)
     }, mediaProps, {
-      ref: function ref(el) {
-        return _this.videoRef = el;
-      },
+      ref: this.videoRef,
       onLoadedMetadata: this.onMediaLoad,
       style: (0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)((0,tslib__WEBPACK_IMPORTED_MODULE_2__.__assign)({}, mediaStyle), {
         transform: transform || "translate(" + x + "px, " + y + "px) rotate(" + rotation + "deg) scale(" + zoom + ")"

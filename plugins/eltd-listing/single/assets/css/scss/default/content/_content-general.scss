@@ -1,0 +1,36 @@
+.eltd-listing-single-holder{
+	article{
+
+		.eltd-ls-content-part-holder{
+            margin: 31px 0 38px;
+
+
+			&.eltd-ls-content-video-holder {
+				.eltd-ls-content-part{
+					width: 100%;
+				}
+			}
+		}
+		.eltd-ls-content-part{
+
+			float: left;
+			box-sizing: border-box;
+			&.left{
+				width: 25%;
+				i{
+					color: $first-main-color;
+					margin-right: 6px;
+				}
+				.eltd-ls-content-part-title{
+					display: inline-block;
+					text-transform: uppercase;
+                    max-width: 140px;
+				}
+			}
+			&.right{
+				width: 75%;
+			}
+		}
+
+	}
+}

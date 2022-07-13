@@ -1,0 +1,28 @@
+.eltd-listing-single-holder{
+	article{
+		.eltd-ls-single-social-network-holder{
+			margin: 22px 0 18px;
+			padding: 0 23px;
+
+			.eltd-ls-single-social-net-title{
+				display: inline-block;
+				text-transform: capitalize;
+				font-size: 15px;
+				margin-right: 10px;
+			}
+			.eltd-ls-social-icon{
+				text-align: center;
+				color: $gray-color;
+				border-radius: 2px;
+
+				&:not(:last-child){
+					margin-right: 11px;
+				}
+
+				&:hover{
+					color: $first-main-color;
+				}
+			}
+		}
+	}
+}

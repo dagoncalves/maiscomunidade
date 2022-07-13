@@ -1,0 +1,595 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/* ==========================================================================
+   Shortcodes responsive styles
+   ========================================================================== */
+/* ==========================================================================
+   Listing Advanced Search responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1441px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder.eltd-ls-adr-four-columns article {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1441px) and (min-width: 1025px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder.eltd-ls-adr-four-columns article:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1441px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder.eltd-ls-adr-five-columns article {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1441px) and (min-width: 1025px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder.eltd-ls-adr-five-columns article:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1441px) {
+  .eltd-ls-adv-search-holder.eltd-ls-adv-with-map .eltd-ls-adv-search-map-holder .eltd-ls-adv-search-keyword-holder .eltd-ls-adv-search-keyword-holder-inner {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-fields-holder {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder {
+    padding-left: 0;
+  }
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder.eltd-ls-adr-three-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder.eltd-ls-adr-three-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder.eltd-ls-adr-four-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder.eltd-ls-adr-four-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder.eltd-ls-adr-five-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder.eltd-ls-adr-five-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-keyword-holder {
+    width: 100%;
+  }
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-keyword-holder .eltd-ls-adv-search-submit-button {
+    width: 40%;
+  }
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-keyword-holder .eltd-ls-adv-search-keyword-field {
+    width: 60%;
+  }
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-fields-holder .eltd-ls-adv-search-banner-holder .eltd-ls-banner-text {
+    padding: 20px 10px;
+  }
+  .eltd-ls-adv-search-holder .eltd-btn.eltd-btn-medium {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-keyword-holder .eltd-ls-adv-search-submit-button {
+    white-space: nowrap;
+  }
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-keyword-holder .eltd-ls-adv-search-submit-button .eltd-btn {
+    padding: 18px 34px 20px;
+  }
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-keyword-holder .eltd-ls-adv-search-keyword-button {
+    padding: 10px 20px;
+  }
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder .eltd-ls-adv-search-keyword-holder-inner {
+    width: 70%;
+  }
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder article {
+    width: 100% !important;
+  }
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-fields-holder {
+    margin-left: 15px;
+    width: 80%;
+    float: none;
+  }
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-keyword-holder {
+    width: 80%;
+  }
+  .vc_row {
+    background-repeat: no-repeat;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-keyword-holder .eltd-ls-adv-search-keyword-field,
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-keyword-holder .eltd-ls-adv-search-submit-button {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-keyword-holder .eltd-ls-adv-search-submit-button {
+    margin: 20px auto;
+    text-align: center;
+  }
+  .eltd-ls-adv-search-holder .eltd-ls-adv-search-items-holder.eltd-ls-adr-normal-space article {
+    margin-bottom: 20px;
+  }
+}
+
+/* ==========================================================================
+   Listing Advanced Search responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Listing Category shortcodes responsive style - begin
+   ========================================================================== */
+.eltd-ls-categories-holder .eltd-ls-gallery-item.eltd-ls-gallery-simple.simple-layout-changed .eltd-ls-gallery-item-text {
+  top: auto;
+  -webkit-transform: none;
+  -moz-transform: none;
+  transform: none;
+}
+
+@media only screen and (max-width: 1441px) {
+  .eltd-ls-categories-holder .eltd-ls-gallery-item.eltd-ls-gallery-simple .eltd-gallery-item-title {
+    font-size: 75px;
+    line-height: 75px;
+  }
+  .eltd-ls-categories-holder .eltd-ls-gallery-item.eltd-ls-gallery-simple .eltd-gallery-item-title:after {
+    left: 0;
+    bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .eltd-ls-categories-holder.eltd-ls-gallery-normal-space article {
+    padding: 12px;
+  }
+  .eltd-ls-categories-holder .eltd-ls-gallery-item.eltd-ls-gallery-simple .eltd-gallery-item-title {
+    font-size: 60px;
+    margin: 0;
+    line-height: 60px;
+  }
+  .eltd-ls-categories-holder .eltd-ls-gallery-item.eltd-ls-gallery-simple .eltd-ls-gallery-item-desc p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-ls-categories-holder {
+    /***** Listing Categories Columns Width - end *****/
+  }
+  .eltd-ls-categories-holder.eltd-ls-gallery-four-columns article,
+  .eltd-ls-categories-holder.eltd-ls-gallery-four-columns .eltd-ls-gallery-sizer {
+    width: 50%;
+  }
+  .eltd-ls-categories-holder.eltd-ls-gallery-four-columns article.eltd-ls-gallery-rec-landscape, .eltd-ls-categories-holder.eltd-ls-gallery-four-columns article.eltd-ls-gallery-square-big,
+  .eltd-ls-categories-holder.eltd-ls-gallery-four-columns .eltd-ls-gallery-sizer.eltd-ls-gallery-rec-landscape,
+  .eltd-ls-categories-holder.eltd-ls-gallery-four-columns .eltd-ls-gallery-sizer.eltd-ls-gallery-square-big {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 1025px) {
+  .eltd-ls-categories-holder.eltd-ls-gallery-four-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .eltd-ls-categories-holder {
+    /***** Listing Categories Columns Width - begin *****/
+    /***** Listing Categories Columns Width - end *****/
+  }
+  .eltd-ls-categories-holder.eltd-ls-gallery-two-columns article,
+  .eltd-ls-categories-holder.eltd-ls-gallery-two-columns .eltd-ls-gallery-sizer {
+    width: 100%;
+    clear: both;
+  }
+  .eltd-ls-categories-holder.eltd-ls-gallery-two-columns article.eltd-ls-gallery-rec-landscape, .eltd-ls-categories-holder.eltd-ls-gallery-two-columns article.eltd-ls-gallery-square-big,
+  .eltd-ls-categories-holder.eltd-ls-gallery-two-columns .eltd-ls-gallery-sizer.eltd-ls-gallery-rec-landscape,
+  .eltd-ls-categories-holder.eltd-ls-gallery-two-columns .eltd-ls-gallery-sizer.eltd-ls-gallery-square-big {
+    width: 100%;
+  }
+  .eltd-ls-categories-holder.eltd-ls-gallery-three-columns article,
+  .eltd-ls-categories-holder.eltd-ls-gallery-three-columns .eltd-ls-gallery-sizer {
+    width: 100%;
+    clear: both;
+  }
+  .eltd-ls-categories-holder.eltd-ls-gallery-three-columns article.eltd-ls-gallery-rec-landscape, .eltd-ls-categories-holder.eltd-ls-gallery-three-columns article.eltd-ls-gallery-square-big,
+  .eltd-ls-categories-holder.eltd-ls-gallery-three-columns .eltd-ls-gallery-sizer.eltd-ls-gallery-rec-landscape,
+  .eltd-ls-categories-holder.eltd-ls-gallery-three-columns .eltd-ls-gallery-sizer.eltd-ls-gallery-square-big {
+    width: 100%;
+  }
+  .eltd-ls-categories-holder.eltd-ls-gallery-four-columns article,
+  .eltd-ls-categories-holder.eltd-ls-gallery-four-columns .eltd-ls-gallery-sizer {
+    width: 100%;
+    clear: both;
+  }
+  .eltd-ls-categories-holder.eltd-ls-gallery-four-columns article.eltd-ls-gallery-rec-landscape, .eltd-ls-categories-holder.eltd-ls-gallery-four-columns article.eltd-ls-gallery-square-big,
+  .eltd-ls-categories-holder.eltd-ls-gallery-four-columns .eltd-ls-gallery-sizer.eltd-ls-gallery-rec-landscape,
+  .eltd-ls-categories-holder.eltd-ls-gallery-four-columns .eltd-ls-gallery-sizer.eltd-ls-gallery-square-big {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Listing Category shortcodes responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Listing List responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1400px) {
+  .eltd-ls-list-holder .eltd-ls-list-items-holder.eltd-ls-list-five-columns article {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1025px) {
+  .eltd-ls-list-holder .eltd-ls-list-items-holder.eltd-ls-list-five-columns article:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .eltd-ls-list-holder .eltd-ls-list-items-holder.eltd-ls-list-six-columns article {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1025px) {
+  .eltd-ls-list-holder .eltd-ls-list-items-holder.eltd-ls-list-six-columns article:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .eltd-ls-list-holder .eltd-ls-list-items-holder.eltd-ls-list-four-columns article {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-ls-list-holder .eltd-ls-list-items-holder.eltd-ls-list-four-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .eltd-ls-list-holder .eltd-ls-list-items-holder.eltd-ls-list-four-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-ls-list-holder .eltd-ls-list-items-holder.eltd-ls-list-five-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .eltd-ls-list-holder .eltd-ls-list-items-holder.eltd-ls-list-five-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-ls-list-holder .eltd-ls-list-items-holder.eltd-ls-list-three-columns article {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .eltd-ls-list-holder .eltd-ls-list-items-holder article {
+    width: 100% !important;
+  }
+}
+
+/* ==========================================================================
+   Listing List responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Listing Package responsive style - begin
+   ========================================================================== */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .eltd-ls-package-holder.eltd-ls-package-three-columns article {
+    width: 60%;
+    margin: 0 auto 36px;
+    float: none;
+  }
+  .eltd-ls-package-holder.eltd-ls-package-three-columns article .eltd-ls-package-content .eltd-ls-package-price-holder {
+    margin-bottom: 32px;
+  }
+  .eltd-ls-package-holder.eltd-ls-package-three-columns article .eltd-ls-package-content .eltd-ls-package-price-holder .eltd-ls-package-price {
+    line-height: 0.3em;
+    padding-top: 25px;
+    font-size: 75px;
+  }
+  .eltd-ls-package-holder.eltd-ls-package-three-columns article .eltd-ls-package-content .eltd-ls-package-price-holder .eltd-ls-package-currency {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .eltd-ls-package-holder.eltd-ls-package-three-columns .eltd-ls-package-inner {
+    margin: auto;
+    width: 80%;
+  }
+  .eltd-ls-package-holder.eltd-ls-package-three-columns .eltd-ls-package-inner article {
+    width: 100%;
+  }
+  .eltd-ls-package-holder.eltd-ls-package-three-columns .eltd-ls-package-inner article .eltd-ls-package-content .eltd-ls-package-price-holder .eltd-ls-package-currency {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .eltd-ls-package-holder.eltd-ls-package-three-columns .eltd-ls-package-inner {
+    width: 100%;
+  }
+  .eltd-ls-package-holder.eltd-ls-package-three-columns .eltd-ls-package-inner article {
+    padding: 0;
+  }
+  .eltd-ls-package-holder article .eltd-ls-package-content .eltd-ls-package-price-holder .eltd-ls-package-price {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .eltd-ls-package-holder article .eltd-ls-package-content {
+    padding: 23px;
+  }
+}
+
+/* ==========================================================================
+   Listing Package responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Listing Search  responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1441px) {
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part .eltd-ls-slider-wrapper .eltd-price-slider-holder {
+    left: 3px;
+    width: 80px;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part .eltd-ls-slider-wrapper .eltd-price-slider-holder .rangeslider.rangeslider--horizontal {
+    width: 110px;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-btn, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-btn {
+    white-space: nowrap;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part .eltd-ls-slider-wrapper .eltd-price-slider-holder {
+    left: 3px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-ls-main-search-wrapper .eltd-ls-search-top-cats .eltd-ls-bckg-img-holder {
+    display: none;
+  }
+  .eltd-ls-main-search-holder {
+    width: 100%;
+    display: block;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part {
+    width: 100%;
+    display: inline-block;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part .eltd-ls-slider-wrapper > span {
+    margin-left: 25px;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part input {
+    line-height: 64px;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type1 {
+    text-align: center;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type1 div.eltd-ls-input-icon {
+    width: 100%;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 {
+    display: block;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-ls-main-search-holder-inner, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-ls-main-search-holder-inner {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    height: 64px;
+    padding-right: 0;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-ls-main-search-holder-inner:nth-child(1) select,
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-ls-main-search-holder-inner:nth-child(1) .select2-container, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-ls-main-search-holder-inner:nth-child(2) select,
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-ls-main-search-holder-inner:nth-child(2) .select2-container, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-ls-main-search-holder-inner:nth-child(1) select,
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-ls-main-search-holder-inner:nth-child(1) .select2-container, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-ls-main-search-holder-inner:nth-child(2) select,
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-ls-main-search-holder-inner:nth-child(2) .select2-container {
+    border: none;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-ls-main-search-holder-inner:nth-child(3) .eltd-ls-slider-wrapper, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-ls-main-search-holder-inner:nth-child(3) .eltd-ls-slider-wrapper {
+    border-radius: 0;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-ls-main-search-holder-inner:last-child, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-ls-main-search-holder-inner:last-child {
+    border: none;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-ls-main-search-holder-inner .eltd-ls-slider-wrapper .eltd-listing-price-holder, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-ls-main-search-holder-inner .eltd-ls-slider-wrapper .eltd-listing-price-holder {
+    border-radius: 0;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-ls-main-search-holder-button, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-ls-main-search-holder-button {
+    text-align: center;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-ls-main-search-holder-button .eltd-btn, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-ls-main-search-holder-button .eltd-btn {
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 65px;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part div.eltd-ls-slider-wrapper .eltd-price-slider-response {
+    padding: 5px 15px;
+    top: -20px;
+    width: 70px;
+    height: 17px;
+    line-height: 17px;
+    border: 1px solid #ececec;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part div.eltd-ls-slider-wrapper .eltd-price-slider-response:after {
+    margin-left: 3px;
+    border-width: 6px;
+  }
+  .eltd-ls-main-search-holder .select2-dropdown-open {
+    z-index: 99;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .eltd-ls-main-search-wrapper .eltd-ls-search-top-cats {
+    margin-bottom: 0;
+  }
+  .eltd-ls-main-search-wrapper .eltd-ls-search-top-cats .eltd-ls-search-top-cat {
+    width: 33.33% !important;
+    margin-bottom: 20px;
+  }
+  .eltd-ls-main-search-wrapper .eltd-ls-search-top-cats .eltd-ls-search-top-cat .eltd-ls-search-top-cat-name {
+    display: none;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part {
+    width: 100%;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-ls-main-search-holder-inner, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-ls-main-search-holder-inner {
+    width: 100%;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-ls-main-search-holder-inner .select2-selection, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-ls-main-search-holder-inner input, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-ls-main-search-holder-inner .select2-selection, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-ls-main-search-holder-inner input {
+    border-bottom: 0;
+  }
+  .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type2 .eltd-btn, .eltd-ls-main-search-holder div.eltd-ls-main-search-holder-part.type3 .eltd-btn {
+    padding-left: 35px;
+  }
+}
+
+/* ==========================================================================
+   Listing Search responsive style - end
+   ========================================================================== */
+/* ==========================================================================
+   Listing List responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1400px) {
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder.eltd-ls-slider-four-columns article {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1025px) {
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder.eltd-ls-slider-four-columns article:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder.eltd-ls-slider-five-columns article {
+    width: 33.33333%;
+  }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1025px) {
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder.eltd-ls-slider-five-columns article:nth-child(3n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder.eltd-ls-slider-three-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder.eltd-ls-slider-three-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder.eltd-ls-slider-four-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder.eltd-ls-slider-four-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder.eltd-ls-slider-five-columns article {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 681px) {
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder.eltd-ls-slider-five-columns article:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder.eltd-ls-slider-normal-space .eltd-ls-slider-inner,
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder.eltd-ls-slider-normal-space .eltd-owl-slider .owl-dots,
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder.eltd-ls-slider-normal-space article {
+    margin: 0;
+  }
+  .owl-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .eltd-ls-slider-holder .eltd-ls-slider-items-holder article {
+    width: 100% !important;
+  }
+  .eltd-ls-slider-holder .eltd-owl-slider .owl-dots {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   Listing List responsive style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../../plugins/eltd-listing/assets/css/shortcodes-responsive.css.map */

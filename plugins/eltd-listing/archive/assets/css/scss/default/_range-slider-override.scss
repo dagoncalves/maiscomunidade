@@ -1,0 +1,55 @@
+.eltd-listing-places-dist-holder{
+
+	.rangeslider--horizontal{
+		height: 5px;
+		background-color: $default-border-color;
+		border-radius: 2px;
+		box-shadow: none;
+	}
+	.rangeslider__fill{
+		background-color: $first-main-color;
+	}
+	.rangeslider__handle{
+		background-color: $first-main-color;
+		border: 0;
+		width: 29px;
+		height: 29px;
+		background-image: none;
+		box-shadow: none;
+		color: $default-background-color;
+		font-size: 17px;
+		text-align: center;
+		top: -12px;
+		&:after{
+			display: none;
+		}
+		&:before{
+			content: ',';
+			font-family: 'ElegantIcons';
+			position: relative;
+			top: 1px;
+		}
+		&:hover{
+			background-color: #ff6850;
+		}
+	}
+
+	.eltd-rangle-slider-response-holder{
+		margin: 0 0 18px;
+		.eltd-rangle-slider-response-wrapper{
+			margin: 0;
+		}
+	}
+	.eltd-listing-places-range{
+		float: left;
+		width: 50%;
+		text-align: left;
+		font-size: 14px;
+		color: $first-main-color;
+		margin-top: 15px;
+		&.eltd-listing-places-max{
+			text-align: right;
+		}
+	}
+
+}

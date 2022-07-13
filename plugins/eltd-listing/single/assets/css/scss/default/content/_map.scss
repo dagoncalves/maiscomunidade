@@ -1,0 +1,34 @@
+.eltd-listing-single-holder{
+	.eltd-ls-single-map-holder{
+		position: relative;
+		box-sizing: border-box;
+		padding: 9px;
+		width: 100%;
+		background-color: $default-background-color;
+		.eltd-map-marker-holder .eltd-info-window{
+			display: none !important;
+		}
+	}
+	#eltd-ls-single-map-holder{
+		max-height: 323px;
+		max-width: 358px;
+	}
+	.eltd-ls-address-title{
+		text-transform: capitalize;
+		margin: 34px 0 13px;
+	}
+
+	.eltd-ls-address-info{
+		a{
+			color: $default-text-color;
+
+			&:hover{
+				color: $first-main-color;
+			}
+		}
+	}
+
+	.eltd-ls-single-map-address-info{
+		padding: 0 23px;
+	}
+}

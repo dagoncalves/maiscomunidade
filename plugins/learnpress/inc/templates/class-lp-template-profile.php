@@ -115,7 +115,7 @@ class LP_Template_Profile extends LP_Abstract_Template {
 		);
 
 		$courses_enrolled_tab_active = apply_filters( 'learnpress/profile/tab/enrolled/subtab-active', ! learn_press_user_maybe_is_a_teacher() ? 'in-progress' : '' );
-		$tab_active                  = $_GET['tab'] ?? '';
+		$tab_active                  = LP_Helper::sanitize_params_submitted( $_GET['tab'] ?? '' );
 		if ( ! $tab_active ) {
 			$tab_active = ! learn_press_user_maybe_is_a_teacher() ? 'enrolled' : 'created';
 		}
@@ -271,7 +271,7 @@ class LP_Template_Profile extends LP_Abstract_Template {
 			return;
 		}
 
-		if ( 'yes' === LP()->settings()->get( 'enable_login_profile' ) || 'yes' === LP()->settings()->get( 'enable_register_profile' ) ) {
+		if ( 'yes' === LP_Settings::instance()->get( 'enable_login_profile' ) || 'yes' === LP_Settings::instance()->get( 'enable_register_profile' ) ) {
 			return;
 		}
 
@@ -285,7 +285,7 @@ class LP_Template_Profile extends LP_Abstract_Template {
 			return;
 		}
 
-		if ( 'yes' !== LP()->settings()->get( 'enable_login_profile' ) ) {
+		if ( 'yes' !== LP_Settings::instance()->get( 'enable_login_profile' ) ) {
 			return;
 		}
 
@@ -299,7 +299,7 @@ class LP_Template_Profile extends LP_Abstract_Template {
 			return;
 		}
 
-		if ( 'yes' !== LP()->settings()->get( 'enable_register_profile' ) || ! get_option( 'users_can_register' ) ) {
+		if ( 'yes' !== LP_Settings::instance()->get( 'enable_register_profile' ) || ! get_option( 'users_can_register' ) ) {
 			return;
 		}
 

@@ -1,0 +1,223 @@
+/* Comment form rating - begin
+------------------------------------------*/
+
+.eltd-ls-single-comments {
+    padding-top: 35px;
+    
+    .eltd-comments-title{
+        
+        i{
+            color: $first-main-color;
+            margin-right: 6px;
+        }
+        
+        h4{
+            display: inline-block;
+            margin-bottom: 5px;
+			line-height: 48px;
+        }
+        
+        .select2-container{
+            width: 250px !important;
+			float: right;
+        }
+    }
+
+	.eltd-comments {
+
+		.eltd-review-rating {
+			@include eltdStarsStyle();
+			margin-left:7px;
+
+			&:before {
+				color: #c8c8c8;
+				content: '\f006\f006\f006\f006\f006';
+			}
+
+			.rating-inner {
+				position: absolute;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+				color: $first-main-color;
+
+				&:before {
+					content: '\f005\f005\f005\f005\f005';
+				}
+			}
+		}
+        
+        .eltd-comment-author{
+            float: left;
+        }
+        .eltd-comment-image{
+            top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .eltd-comment-text{
+            margin-left: 75px;
+            padding: 15px 35px;
+
+            .eltd-average-rating{
+                display: inline-block;
+				font-size: 14px;
+				margin-top: 9px;
+
+				>span{
+					border: 1px solid $first-main-color;
+					border-radius: 50%;
+					color: $first-main-color;
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+					text-align: center;
+					display: inline-block;
+				}
+            }
+            
+            .eltd-comment-bottom-info{
+                margin-top: 23px;
+                
+                .eltd-comment-date{
+                    float: none;
+                    color: $gray-color;
+					font-weight: 300;
+                }
+            }
+
+			.eltd-comment-author-name{
+				font-family: $default-text-font;
+				font-size: 23px;
+				color: $additional-heading-color;
+				line-height: 20px;
+				padding: 10px 0 7px;
+			}
+        }
+
+		.eltd-review-title {
+			font-family: $default-text-font;
+			font-size: 14px;
+			font-weight: 400;
+			text-transform: none;
+			color: $first-main-color;
+			padding: 0 0 2px;
+		}
+
+		div.eltd-text-holder {
+			margin-top: 20px;
+            font-size: 15px;
+			font-weight: 300;
+			padding-bottom: 0;
+		}
+
+	}
+
+	.eltd-comment-form {
+
+		.comment-reply-title {
+			display: none;
+		}
+
+		.eltd-rating-form-title-holder {
+			@include eltdTableLayout;
+			margin-bottom: 8px;
+
+			.eltd-rating-form-title,
+			.eltd-comment-form-rating {
+				@include eltdTableCellLayout;
+				padding: 30px 0 0;
+			}
+
+			.eltd-rating-form-title {
+				text-align: left;
+			}
+
+			.eltd-comment-form-rating {
+				text-align: right;
+
+				label {
+					font-family: $default-text-font;
+					font-size: 15px;
+					color: $gray-color;
+					display: inline-block;
+				}
+			}
+
+		}
+
+		.eltd-comment-input-title {
+
+			input {
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+			}
+
+		}
+
+        #respond{
+            textarea {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                resize: none;
+
+                & ~ input {
+                    width: 49.2%;
+
+					&#email{
+						float: right;
+					}
+                }
+            }
+            
+            .comment-respond{
+                .stars{
+                    a{
+                        &:before{
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+		&.logged-in {
+			#respond textarea {
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				border-bottom: 1px solid $default-border-color;
+			}
+		}
+
+		#email {
+			border-right: 1px solid $default-border-color !important;
+			border-bottom-right-radius: 5px;
+		}
+
+	}
+}
+
+.eltd-comment-rating-box {
+	display: inline-block;
+	float: right;
+	margin-left: 18px;
+
+	.eltd-star-rating {
+		@include eltdStarsStyle();
+		@include eltdTransition(all 0.3s ease);
+		color: #c8c8c8;
+
+		&.active {
+			color: $first-main-color;
+
+			&:before {
+				content: '\f005';
+			}
+		}
+		&:before {
+			content: '\f006';
+			cursor: pointer;
+		}
+
+	}
+}

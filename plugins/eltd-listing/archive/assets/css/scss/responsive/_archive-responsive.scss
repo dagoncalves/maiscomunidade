@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Listing Archive responsive style - start
+   ========================================================================== */
+@include laptop-landscape-large-plus-pixel{
+    .eltd-ls-archive-holder{
+        .eltd-ls-archive-map-holder,
+        .eltd-ls-archive-items-wrapper{
+            width: 50%;
+        }
+        .eltd-ls-archive-items-wrapper{
+            padding: 4px 25px;
+        }
+    }
+}
+
+@include ipad-landscape {
+    .eltd-ls-archive-holder{
+        .eltd-ls-archive-items-wrapper,
+        .eltd-ls-archive-map-holder {
+            width: 100%;
+            position: relative;
+            float: left;
+
+            #eltd-ls-multiple-map-holder {
+                height: 500px;
+            }
+        }
+    }
+}
+.eltd-listing-archive-filter-holder{
+    .eltd-ls-archive-filter-item{
+        &.eltd-results-holder{
+            .select2-container--default{
+                @include laptop-landscape-large{
+                    min-width: 200px;
+                }
+                @include laptop-landscape-medium{
+                    min-width: 150px;
+                }
+            }
+        }
+    }
+}
+
+@include phone-portrait {
+    .eltd-ls-archive-holder {
+
+        .eltd-listing-archive-filter-holder {
+            .eltd-ls-archive-filter-item {
+                width: 100%;
+                padding: 0;
+
+                &.eltd-results-holder{
+                    .eltd-archive-section{
+                        &.left,
+                        &.right{
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .eltd-listing-type-amenities-holder{
+                &.eltd-opened{
+                    margin: 0;
+                }
+
+                .eltd-listing-amenities-wrapper{
+                    .eltd-listing-amenities-wrapper-inner{
+                        padding: 0;
+                        > .eltd-listing-type-amenity-field{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .eltd-ls-archive-items.eltd-ls-archive-two-columns article {
+            width: 100%;
+        }
+    }
+}
+/* ==========================================================================
+   Listing Archive responsive style - end
+   ========================================================================== */

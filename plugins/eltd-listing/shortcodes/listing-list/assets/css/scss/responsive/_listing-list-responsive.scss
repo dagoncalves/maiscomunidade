@@ -1,0 +1,89 @@
+/* ==========================================================================
+   Listing List responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-large {
+
+	.eltd-ls-list-holder {
+		.eltd-ls-list-items-holder{
+			$columns_number: ( 'five', 'six');
+
+			@for $i from 0 to length($columns_number) {
+				&.eltd-ls-list-#{nth($columns_number,$i+1)}-columns {
+					$item_size: 100% / 3;
+
+					article {
+						width: $item_size;
+					}
+
+					@media only screen and (min-width: $ipad-landscape-plus-pixel) {
+
+						article {
+
+							&:nth-child(3n+1) {
+								clear: both;
+							}
+						}
+
+					}
+				}
+			}
+			&.eltd-ls-list-four-columns{
+				article{
+					width: 25%;
+				}
+			}
+		}
+
+	}
+}
+
+@include ipad-landscape {
+
+	.eltd-ls-list-holder {
+		.eltd-ls-list-items-holder{
+
+			$gallery_columns_number: ('four', 'five');
+
+			@for $i from 0 to length($gallery_columns_number) {
+				&.eltd-ls-list-#{nth($gallery_columns_number,$i+1)}-columns {
+
+					article {
+						width: 50%;
+					}
+
+					@media only screen and (min-width: $phone-landscape-plus-pixel) {
+
+						article {
+
+							&:nth-child(2n+1) {
+								clear: both;
+							}
+						}
+					}
+				}
+			}
+
+			&.eltd-ls-list-three-columns{
+				article{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+
+	.eltd-ls-list-holder {
+		.eltd-ls-list-items-holder{
+
+			article {
+				width: 100% !important; // !important is set to override all other stronger selectors
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Listing List responsive style - end
+   ========================================================================== */

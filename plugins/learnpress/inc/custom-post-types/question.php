@@ -31,7 +31,7 @@ if ( ! class_exists( 'LP_Question_Post_Type' ) ) {
 		 * @param $post_type
 		 * @param mixed
 		 */
-		public function __construct( $post_type, $args = '' ) {
+		public function __construct() {
 			add_action( 'wp_loaded', array( $this, 'wp_loaded' ) );
 			add_action( 'admin_head', array( $this, 'init' ) );
 			add_action( 'learn-press/admin/after-enqueue-scripts', array( $this, 'data_question_editor' ) );
@@ -41,7 +41,7 @@ if ( ! class_exists( 'LP_Question_Post_Type' ) ) {
 
 			// $this->add_map_method( 'before_delete', 'before_delete_question' );
 
-			parent::__construct( $post_type, $args );
+			parent::__construct();
 		}
 
 		/**
@@ -297,9 +297,9 @@ if ( ! class_exists( 'LP_Question_Post_Type' ) ) {
 		public function admin_editor() {
 			$question = LP_Question::get_question();
 
-			if ( $question->is_support( 'answer-options' ) ) {
-				echo learn_press_admin_view_content( 'question/editor' );
-			}
+			//if ( $question->is_support( 'answer-options' ) ) {
+			echo learn_press_admin_view_content( 'question/editor' );
+			//}
 
 			ob_start();
 			do_action( 'learn-press/question-admin-editor', $question );
@@ -359,7 +359,7 @@ if ( ! class_exists( 'LP_Question_Post_Type' ) ) {
 					$quiz = $curd->get_quiz( $post_id );
 
 					if ( $quiz ) {
-						echo '<div><a href="' . esc_url( add_query_arg( array( 'filter_quiz' => $quiz->ID ) ) ) . '">' . get_the_title( $quiz->ID ) . '</a>';
+						echo '<div><a href="' . esc_url_raw( add_query_arg( array( 'filter_quiz' => $quiz->ID ) ) ) . '">' . get_the_title( $quiz->ID ) . '</a>';
 						echo '<div class="row-actions">';
 						printf( '<a href="%s">%s</a>', admin_url( sprintf( 'post.php?post=%d&action=edit', $quiz->ID ) ), esc_html__( 'Edit', 'learnpress' ) );
 						echo '&nbsp;|&nbsp;';
@@ -517,7 +517,7 @@ if ( ! class_exists( 'LP_Question_Post_Type' ) ) {
 						'_lp_type' => 'true_or_false',
 					),
 				);*/
-				self::$_instance = new self( LP_QUESTION_CPT );
+				self::$_instance = new self();
 			}
 
 			return self::$_instance;

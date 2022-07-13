@@ -1,0 +1,21 @@
+.eltd-listing-archive-filter-holder{
+    .eltd-ls-archive-filter-item{
+        &.eltd-results-holder{
+            .eltd-archive-section{
+                .eltd-ls-archive-inner-section{
+                    @include laptop-landscape-large-plus-pixel{
+                        padding: 0 2px;
+                    }
+                    @include ipad-landscape{
+                        padding: 0 15px;
+                    }
+                    @include phone-portrait{
+                        &.left{
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

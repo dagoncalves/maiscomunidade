@@ -1,0 +1,30 @@
+.eltd-admin-notice {
+    padding: 10px 12px;
+}
+.eltd-run-db-update {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    color: white;
+    background-color: #22B2D6;
+    border: none;
+    border-radius: 2px;
+    padding: 8px 20px;
+    font-size: 13px;
+}
+
+.eltd-run-db-update:focus {
+    color: #fff;
+    outline: 0;
+    box-shadow: none;
+}
+
+.eltd-run-db-update:hover {
+    background-color: #57CEEB;
+    color: #fff;
+}

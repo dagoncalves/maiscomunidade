@@ -1,0 +1,175 @@
+/* ==========================================================================
+   Listing Search  responsive style - begin
+   ========================================================================== */
+@include laptop-landscape-large-plus-pixel {
+    .eltd-ls-main-search-holder {
+        div.eltd-ls-main-search-holder-part {
+            .eltd-ls-slider-wrapper {
+                .eltd-price-slider-holder {
+                    left: 3px;
+                    width: 80px;
+
+                    .rangeslider.rangeslider--horizontal{
+                        width: 110px;
+                    }
+                }
+            }
+            &.type2,
+            &.type3{
+                .eltd-btn{
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+@include laptop-landscape-medium{
+    .eltd-ls-main-search-holder{
+        div.eltd-ls-main-search-holder-part{
+            .eltd-ls-slider-wrapper{
+                .eltd-price-slider-holder{
+                    left: 3px;
+                }
+            }
+        }
+    }
+}
+
+@include ipad-landscape {
+    .eltd-ls-main-search-wrapper{
+        .eltd-ls-search-top-cats{
+            .eltd-ls-bckg-img-holder{
+                display: none;
+            }
+        }
+    }
+    .eltd-ls-main-search-holder{
+        width: 100%;
+        display: block;
+
+        div.eltd-ls-main-search-holder-part{
+            width: 100%;
+            display: inline-block;
+
+            .eltd-ls-slider-wrapper{
+                >span{
+                    margin-left: 25px;
+                }
+            }
+
+            input{
+                line-height: 64px;
+            }
+
+            &.type1 {
+                text-align: center;
+
+                div.eltd-ls-input-icon {
+                    width: 100%;
+                }
+            }
+
+            &.type2,
+            &.type3{
+                display: block;
+
+                .eltd-ls-main-search-holder-inner{
+                    width: 50%;
+                    display: inline-block;
+                    float: left;
+                    box-sizing: border-box;
+                    height: 64px;
+                    padding-right: 0;
+
+                    &:nth-child(1),
+                    &:nth-child(2){
+                        select,
+                        .select2-container{
+                            border: none;
+                        }
+                    }
+
+                    &:nth-child(3){
+                        .eltd-ls-slider-wrapper{
+                            border-radius: 0;
+                        }
+                    }
+
+                    &:last-child{
+                        border: none;
+                    }
+
+                    .eltd-ls-slider-wrapper .eltd-listing-price-holder{
+                        border-radius: 0;
+                    }
+
+                }
+                .eltd-ls-main-search-holder-button{
+                    text-align: center;
+
+                    .eltd-btn{
+                        margin: 0;
+                        border-radius: 0;
+                        width: 100%;
+                        height: 65px;
+                    }
+                }
+            }
+
+            div.eltd-ls-slider-wrapper .eltd-price-slider-response{
+                padding: 5px 15px;
+                top: -20px;
+                width: 70px;
+                height: 17px;
+                line-height: 17px;
+                border: 1px solid $light-grey-color;
+
+                &:after{
+                    margin-left: 3px;
+                    border-width:6px;
+                }
+            }
+
+        }
+
+        .select2-dropdown-open{
+            z-index: 99;
+        }
+    }
+}
+@include phone-landscape{
+    .eltd-ls-main-search-wrapper{
+        .eltd-ls-search-top-cats{
+            margin-bottom: 0;
+            .eltd-ls-search-top-cat{
+                width: 33.33% !important;
+                margin-bottom: 20px;
+                .eltd-ls-search-top-cat-name{
+                    display: none;
+                }
+            }
+        }
+    }
+    .eltd-ls-main-search-holder {
+        div.eltd-ls-main-search-holder-part {
+            width: 100%;
+
+            &.type2,
+            &.type3{
+                .eltd-ls-main-search-holder-inner {
+                    width: 100%;
+                    .select2-selection, input{
+                        border-bottom: 0;
+                    }
+                }
+
+                .eltd-btn{
+                    padding-left: 35px;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Listing Search responsive style - end
+   ========================================================================== */

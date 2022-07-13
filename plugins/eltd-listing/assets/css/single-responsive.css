@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/* ==========================================================================
+   Custom Post Types styles
+   ========================================================================== */
+/* ==========================================================================
+   Single Listing  responsive style - begin
+   ========================================================================== */
+@media only screen and (max-width: 1280px) {
+  .eltd-listing-single-holder article .eltd-lst-single-widget-bottom-area .textwidget {
+    width: 65%;
+  }
+  .eltd-listing-single-holder article .eltd-lst-single-widget-bottom-area .textwidget input.wpcf7-form-control.wpcf7-submit {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-listing-single-holder article .eltd-ls-single-header .eltd-listing-single-field:not(:last-child) {
+    margin-right: 30px;
+  }
+  .eltd-listing-single-holder article .eltd-ls-contact-info .eltd-ls-contact-info-inner.left {
+    margin-right: 5px;
+  }
+  .eltd-listing-single-holder article .eltd-ls-content-part.left .eltd-ls-content-part-title {
+    margin-top: 0;
+  }
+  .eltd-listing-single-holder article .eltd-lst-single-widget-bottom-area .textwidget {
+    width: 70%;
+  }
+  .eltd-listing-single-holder article .eltd-lst-single-widget-bottom-area .textwidget .eltd-grid-col-8 {
+    width: 60%;
+    float: left;
+  }
+  .eltd-listing-single-holder article .eltd-lst-single-widget-bottom-area .textwidget .eltd-grid-col-4 {
+    width: 40%;
+    float: left;
+  }
+  .eltd-listing-single-holder article .eltd-lst-single-widget-bottom-area .eltd-grid-col-4 {
+    text-align: center;
+  }
+  .eltd-listing-single-holder article .eltd-ls-single-related-posts-holder .eltd-no-slider article {
+    padding-right: 36px;
+  }
+  .eltd-listing-single-holder article .eltd-ls-contact-info-holder,
+  .eltd-listing-single-holder article .eltd-ls-single-map-address-info,
+  .eltd-listing-single-holder article .eltd-ls-single-social-network-holder {
+    padding: 0 8px;
+  }
+  .eltd-listing-single-holder article .eltd-ls-single-social-network-holder .eltd-ls-single-social-net-title {
+    display: block;
+  }
+  .eltd-listing-single-holder article button.eltd-btn.eltd-btn-medium.eltd-btn-solid.eltd-btn-icon.eltd-ls-single-enquiry-submit {
+    padding: 16px 26px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .eltd-listing-single-holder article .eltd-ls-single-header .eltd-ls-single-section-holder.top .eltd-ls-single-section-inner.left, .eltd-listing-single-holder article .eltd-ls-single-header .eltd-ls-single-section-holder.top .eltd-ls-single-section-inner.right {
+    width: 100%;
+    padding: 0;
+  }
+  .eltd-listing-single-holder article .eltd-ls-single-header .eltd-ls-single-section-holder.top .eltd-ls-single-section-inner.right {
+    position: relative;
+    top: 0;
+  }
+  .eltd-listing-single-holder article .eltd-ls-single-section-inner.left, .eltd-listing-single-holder article .eltd-ls-single-section-inner.right {
+    width: 100%;
+    padding: 0;
+  }
+  .eltd-listing-single-holder article .eltd-ls-single-section-inner.right {
+    position: relative;
+    top: 0;
+  }
+  .eltd-listing-single-holder article #eltd-ls-single-map-holder {
+    max-width: 100%;
+  }
+  .eltd-listing-single-holder article .eltd-ls-single-related-posts-holder .eltd-no-slider article {
+    width: 50%;
+    padding-bottom: 20px;
+  }
+  .eltd-listing-single-holder article .eltd-ls-contact-info-holder,
+  .eltd-listing-single-holder article .eltd-ls-single-map-address-info,
+  .eltd-listing-single-holder article .eltd-ls-single-social-network-holder {
+    padding: 0 23px;
+  }
+  .eltd-listing-single-holder article .eltd-ls-single-social-network-holder .eltd-ls-single-social-net-title {
+    display: inline-block;
+  }
+  .eltd-ls-single-comments .eltd-comment-form #respond textarea ~ input {
+    width: 100%;
+  }
+  .eltd-listing-single-holder article .eltd-ls-content-part.left, .eltd-listing-single-holder article .eltd-ls-content-part.right {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .eltd-ls-single-comments .eltd-comments-title .select2-container {
+    position: relative;
+  }
+  .eltd-listing-single-holder article .eltd-ls-single-related-posts-holder .eltd-no-slider article {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .eltd-listing-single-holder .eltd-lst-single-widget-bottom-area .textwidget {
+    width: 90%;
+  }
+  .eltd-listing-single-holder article .eltd-ls-single-header .eltd-ls-single-section-holder.top .eltd-ls-single-section-inner.left {
+    width: 100%;
+  }
+  .eltd-listing-single-holder article .eltd-ls-single-header .eltd-ls-single-section-holder.top .eltd-ls-single-section-inner.left .eltd-ls-single-part-holder.left, .eltd-listing-single-holder article .eltd-ls-single-header .eltd-ls-single-section-holder.top .eltd-ls-single-section-inner.left .eltd-ls-single-part-holder.right {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+/* ==========================================================================
+   Single Listing responsive style - end
+   ========================================================================== */
+
+/*# sourceMappingURL=../../../../plugins/eltd-listing/assets/css/single-responsive.css.map */

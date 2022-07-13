@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/* ==========================================================================
+   Custom Post Types responsive styles
+   ========================================================================== */
+/* ==========================================================================
+   Listing Archive responsive style - start
+   ========================================================================== */
+@media only screen and (max-width: 1441px) {
+  .eltd-ls-archive-holder .eltd-ls-archive-map-holder,
+  .eltd-ls-archive-holder .eltd-ls-archive-items-wrapper {
+    width: 50%;
+  }
+  .eltd-ls-archive-holder .eltd-ls-archive-items-wrapper {
+    padding: 4px 25px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-ls-archive-holder .eltd-ls-archive-items-wrapper,
+  .eltd-ls-archive-holder .eltd-ls-archive-map-holder {
+    width: 100%;
+    position: relative;
+    float: left;
+  }
+  .eltd-ls-archive-holder .eltd-ls-archive-items-wrapper #eltd-ls-multiple-map-holder,
+  .eltd-ls-archive-holder .eltd-ls-archive-map-holder #eltd-ls-multiple-map-holder {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .eltd-listing-archive-filter-holder .eltd-ls-archive-filter-item.eltd-results-holder .select2-container--default {
+    min-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .eltd-listing-archive-filter-holder .eltd-ls-archive-filter-item.eltd-results-holder .select2-container--default {
+    min-width: 150px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .eltd-ls-archive-holder .eltd-listing-archive-filter-holder .eltd-ls-archive-filter-item {
+    width: 100%;
+    padding: 0;
+  }
+  .eltd-ls-archive-holder .eltd-listing-archive-filter-holder .eltd-ls-archive-filter-item.eltd-results-holder .eltd-archive-section.left, .eltd-ls-archive-holder .eltd-listing-archive-filter-holder .eltd-ls-archive-filter-item.eltd-results-holder .eltd-archive-section.right {
+    display: block;
+    width: 100%;
+  }
+  .eltd-ls-archive-holder .eltd-listing-archive-filter-holder .eltd-listing-type-amenities-holder.eltd-opened {
+    margin: 0;
+  }
+  .eltd-ls-archive-holder .eltd-listing-archive-filter-holder .eltd-listing-type-amenities-holder .eltd-listing-amenities-wrapper .eltd-listing-amenities-wrapper-inner {
+    padding: 0;
+  }
+  .eltd-ls-archive-holder .eltd-listing-archive-filter-holder .eltd-listing-type-amenities-holder .eltd-listing-amenities-wrapper .eltd-listing-amenities-wrapper-inner > .eltd-listing-type-amenity-field {
+    width: 100%;
+  }
+  .eltd-ls-archive-holder .eltd-ls-archive-items.eltd-ls-archive-two-columns article {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Listing Archive responsive style - end
+   ========================================================================== */
+@media only screen and (max-width: 1441px) {
+  .eltd-listing-archive-filter-holder .eltd-ls-archive-filter-item.eltd-results-holder .eltd-archive-section .eltd-ls-archive-inner-section {
+    padding: 0 2px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .eltd-listing-archive-filter-holder .eltd-ls-archive-filter-item.eltd-results-holder .eltd-archive-section .eltd-ls-archive-inner-section {
+    padding: 0 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .eltd-listing-archive-filter-holder .eltd-ls-archive-filter-item.eltd-results-holder .eltd-archive-section .eltd-ls-archive-inner-section.left {
+    border: none;
+  }
+}
+
+/*# sourceMappingURL=../../../../plugins/eltd-listing/assets/css/archive-responsive.css.map */

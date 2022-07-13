@@ -1,0 +1,888 @@
+/* ==========================================================================
+   Global partials
+   ========================================================================== */
+/* Button mixins - start */
+/* Button mixins - end */
+/* ==========================================================================
+   Custom Post Types styles
+   ========================================================================== */
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-membership-dashboard-page-title {
+  margin: 10px 15px 0;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .fieldset-job_region .select2-selection--single,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .fieldset-job_region .select2-selection__rendered,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .fieldset-job_type .select2-selection--single,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .fieldset-job_type .select2-selection__rendered {
+  height: 48px;
+  line-height: 48px;
+  background-color: #fff;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .fieldset-job_region .select2-selection--single .select2-search__field,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .fieldset-job_region .select2-selection__rendered .select2-search__field,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .fieldset-job_type .select2-selection--single .select2-search__field,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .fieldset-job_type .select2-selection__rendered .select2-search__field {
+  padding: 0;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .fieldset-job_region .select2-selection--single {
+  height: 50px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form fieldset {
+  border: none;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .field.account-sign-in {
+  margin: 46px 0px -18px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .field.account-sign-in span, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .field.account-sign-in div {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .field.account-sign-in span {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .field.account-sign-in div {
+  text-align: right;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .field.account-sign-in .eltd-btn {
+  margin-left: 25px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder {
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 18px;
+  box-sizing: border-box;
+  position: relative;
+  width: 50%;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder ~ .eltd-ls-field-holder {
+  padding-left: 18px;
+  padding-right: 0px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder div.field,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder label {
+  float: none;
+  width: 100%;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder div.field .eltd-checkbox-label,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder label .eltd-checkbox-label {
+  width: auto;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder label:not(.eltd-checkbox-label) {
+  display: inline-block;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  padding: 10px 0 15px;
+  color: #2a2a2a;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder fieldset {
+  border: none;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder fieldset input {
+  padding: 14px 24px;
+  color: #808080;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder fieldset .chosen-container {
+  display: none;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-company_logo .field .job-manager-uploaded-files {
+  float: left;
+  display: inline-block;
+  margin-right: 17px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-company_logo .field .wp-job-manager-file-upload, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-company_logo .field .description {
+  width: auto;
+  display: inline-block;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-company_logo .job-manager-uploaded-file-preview {
+  position: relative;
+  display: block;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-company_logo .job-manager-uploaded-file-preview .job-manager-remove-uploaded-file {
+  visibility: hidden;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-company_logo .job-manager-uploaded-file-preview .job-manager-remove-uploaded-file:after {
+  content: "\e051";
+  font-family: ElegantIcons;
+  top: 0;
+  right: 0;
+  visibility: visible;
+  font-size: 24px;
+  font-style: normal;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-company_logo .job-manager-uploaded-file-preview img {
+  height: 140px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-company_logo .job-manager-uploaded-file-preview .job-manager-remove-uploaded-file {
+  position: absolute;
+  right: 0;
+  line-height: 1em;
+  font-size: 24px;
+  float: left;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_twitter_url .field:before, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_facebook_url .field:before, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_instagram_url .field:before, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_pinterest_url .field:before,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_soundcloud_url .field:before, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_vimeo_url .field:before, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_youtube_url .field:before, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_skype_url .field:before {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-family: FontAwesome;
+  vertical-align: middle;
+  font-size: 50px;
+  color: #ff4d30;
+  position: absolute;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_twitter_url .field input, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_facebook_url .field input, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_instagram_url .field input, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_pinterest_url .field input,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_soundcloud_url .field input, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_vimeo_url .field input, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_youtube_url .field input, .page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_skype_url .field input {
+  width: calc(100% - 55px);
+  margin-left: 55px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_twitter_url .field:before {
+  content: "\f081";
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_facebook_url .field:before {
+  content: "\f082";
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_instagram_url .field:before {
+  content: "\f16d";
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_pinterest_url .field:before {
+  content: "\f0d3";
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_soundcloud_url .field:before {
+  content: "\f1be";
+  font-size: 38px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_vimeo_url .field:before {
+  content: "\f194";
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_youtube_url .field:before {
+  content: "\f166";
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder .fieldset-listing_skype_url .field:before {
+  content: "\f17e";
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder-full-width {
+  clear: both;
+  width: 100%;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-field-holder-full-width fieldset {
+  padding: 0 18px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form .eltd-ls-full-width-field {
+  width: 100%;
+  text-align: left;
+  margin: 30px 0 -15px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form input.button {
+  position: relative;
+  display: inline-block;
+  padding: 13px 25px;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 14px;
+  background-color: #86b73b;
+  color: #fff;
+  line-height: 18px;
+  letter-spacing: 0;
+  font-weight: 400;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .job-manager-form input.button:hover {
+  background-color: #2a2a2a;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #submit-job-form p {
+  padding-left: 18px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-dashboard-page-content > p {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-dashboard-page-content > p span {
+  font-weight: 300;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-dashboard-page-content > p.eltd-ls-not-found {
+  margin-top: 80px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-dashboard-page-title {
+  margin: 10px 0 0;
+  font-size: 40px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-dashboard-page-title.eltd-main-title {
+  margin: 0 -200%;
+  padding: 55px 200%;
+  background-color: #fff;
+  font-size: 40px;
+  line-height: 45px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-input-holder {
+  display: inline-block;
+  width: 48.5%;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-input-holder label {
+  display: inline-block;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  padding: 10px 0 15px;
+  color: #2a2a2a;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-input-holder .eltd-membership-input {
+  margin-bottom: 25px;
+  padding: 14px 24px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-profile-input-holder {
+  display: block;
+  margin-top: 50px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-profile-input-holder .eltd-membership-input-holder:nth-of-type(2n) {
+  float: right;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-password-input-holder {
+  margin-bottom: 50px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-password-input-holder .eltd-membership-input-holder:nth-of-type(2n) {
+  float: right;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-password-input-holder .eltd-membership-dashboard-page-title {
+  margin: 27px 0 14px;
+  font-size: 23px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-dashboard-page {
+  display: block;
+  position: relative;
+  margin: 0 0 80px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-dashboard-page .eltd-membership-dashboard-image-holder {
+  text-align: center;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-dashboard-page .eltd-membership-dashboard-image-holder img {
+  border-radius: 50%;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-dashboard-page .eltd-membership-dashboard-image-holder .eltd-image-info {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-dashboard-page .eltd-membership-dashboard-image-holder .eltd-image-info span {
+  display: inline;
+  font-size: inherit;
+  color: #ff4d30;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-left {
+  width: 30%;
+  float: left;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  box-sizing: border-box;
+  padding-right: 10px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-right {
+  width: 70%;
+  float: left;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder .eltd-membership-right p {
+  margin-bottom: 20px;
+}
+
+.eltd-login-register-content {
+  width: 385px;
+}
+
+.eltd-login-register-content.ui-tabs {
+  margin: 70px auto 20px !important;
+}
+
+.eltd-login-register-content.ui-tabs .eltd-login-form-social-login {
+  background-color: #f4f4f4;
+}
+
+.eltd-login-register-content .eltd-social-login-holder .eltd-social-login-holder-inner,
+.eltd-login-register-content .eltd-social-login-holder .eltd-login-form-social-login {
+  background-color: #f4f4f4;
+  font-family: "Fira Sans", sans-serif;
+  margin: 0;
+}
+
+.eltd-login-register-content .eltd-wp-register-holder,
+.eltd-login-register-content .eltd-login-form-social-login {
+  background-color: #f4f4f4;
+}
+
+.eltd-login-register-content .eltd-social-register-holder .eltd-register-form-input-label {
+  text-transform: uppercase;
+  font-size: 13px;
+  display: block;
+  padding-bottom: 13px;
+}
+
+.eltd-login-register-content .eltd-social-register-holder .eltd-register-form-input-label:after {
+  content: '*';
+  color: #ec5542;
+  padding-left: 5px;
+  top: 5px;
+  position: relative;
+  font-size: 20px;
+}
+
+.eltd-login-register-content .eltd-social-register-holder .eltd-register-form-input-label ~ input {
+  font-family: "Fira Sans", sans-serif;
+  margin-bottom: 28px;
+}
+
+.eltd-login-register-content .eltd-login-button-wrapper {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  position: absolute;
+  top: -52px;
+  margin: 0;
+}
+
+.eltd-login-register-content .eltd-login-button-wrapper .eltd-login-reg-btn,
+.eltd-login-register-content .eltd-login-button-wrapper .eltd-login-login-btn {
+  display: inline-block;
+  padding: 13px 28px;
+  background-color: #fff;
+  border-radius: 2px 2px 0 0;
+  float: left;
+  border-bottom: 1px solid #ececec;
+}
+
+.eltd-login-register-content .eltd-login-button-wrapper .eltd-login-reg-btn a,
+.eltd-login-register-content .eltd-login-button-wrapper .eltd-login-login-btn a {
+  font-weight: 300;
+  font-size: 15px;
+  color: #808080;
+}
+
+.eltd-login-register-content .eltd-login-button-wrapper .eltd-login-reg-btn.ui-state-active,
+.eltd-login-register-content .eltd-login-button-wrapper .eltd-login-login-btn.ui-state-active {
+  background-color: #f4f4f4;
+  border-bottom-color: transparent;
+}
+
+.eltd-login-register-content .eltd-login-button-wrapper .eltd-login-reg-btn:first-child.ui-state-active,
+.eltd-login-register-content .eltd-login-button-wrapper .eltd-login-login-btn:first-child.ui-state-active {
+  border-right: 1px solid #ececec;
+}
+
+.eltd-login-register-content .eltd-login-button-wrapper .eltd-login-reg-btn:last-child.ui-state-active,
+.eltd-login-register-content .eltd-login-button-wrapper .eltd-login-login-btn:last-child.ui-state-active {
+  border-left: 1px solid #ececec;
+}
+
+.eltd-login-register-content .eltd-social-login-holder-inner .eltd-login-form input {
+  font-family: "Fira Sans", sans-serif;
+  margin-bottom: 10px;
+  font-weight: 300;
+  padding: 22px 24px;
+}
+
+.eltd-login-register-content .eltd-social-login-holder-inner .eltd-lost-pass-remember-holder {
+  margin: 10px 0 19px;
+}
+
+.eltd-login-register-content .eltd-social-login-holder-inner .eltd-lost-pass-remember-holder .eltd-login-remember label,
+.eltd-login-register-content .eltd-social-login-holder-inner .eltd-lost-pass-remember-holder .eltd-login-remember a {
+  font-weight: 300;
+}
+
+.eltd-login-register-content .eltd-social-login-holder-inner .eltd-lost-pass-remember-holder .eltd-login-action-btn {
+  float: right;
+  font-size: 14px;
+}
+
+.eltd-login-register-content .eltd-social-login-holder-inner .eltd-lost-pass-remember-holder .eltd-login-action-btn:hover {
+  text-decoration: underline;
+  color: #ff4d30;
+}
+
+.eltd-login-register-content .eltd-login-form-social-login {
+  margin: 0;
+  border: none;
+  padding: 8px 0 35px;
+}
+
+.eltd-login-register-content .eltd-login-form-social-login .eltd-login-social-title {
+  text-transform: capitalize;
+  color: #808080;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.eltd-login-register-content .eltd-login-form-social-login .eltd-facebook-login,
+.eltd-login-register-content .eltd-login-form-social-login .eltd-google-login {
+  padding: 24px 22px;
+}
+
+.eltd-login-register-content .eltd-login-form-social-login .eltd-facebook-login .eltd-btn-text,
+.eltd-login-register-content .eltd-login-form-social-login .eltd-google-login .eltd-btn-text {
+  padding: 0;
+}
+
+.eltd-login-register-content .eltd-login-form-social-login button.eltd-btn {
+  width: 49px;
+  height: 49px;
+  border-radius: 2px;
+  line-height: 46px;
+  text-align: center;
+  padding: 0;
+}
+
+.eltd-login-register-content .eltd-login-form-social-login button.eltd-btn:hover {
+  background-color: transparent;
+  border-color: #ff4d30;
+}
+
+.eltd-login-register-content .eltd-login-form-social-login button.eltd-btn .eltd-btn-text {
+  padding: 0;
+}
+
+.eltd-register-button-holder {
+  padding-top: 15px;
+}
+
+.eltd-register-terms-holder {
+  font-family: "Fira Sans", sans-serif;
+  padding: 0 55px 33px;
+}
+
+.eltd-register-terms-holder > span {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #808080;
+}
+
+.eltd-register-terms-holder > span > a {
+  text-decoration: underline;
+  color: #ff4d30;
+}
+
+.widget.eltd-login-register-widget {
+  background-color: transparent;
+  border-color: #fff;
+  border: none;
+  padding: 0 10px;
+}
+
+.widget.eltd-login-register-widget:hover .eltd-login-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transition: .2s 0s;
+}
+
+.widget.eltd-login-register-widget .eltd-logged-in-user, .widget.eltd-login-register-widget .eltd-login-holder {
+  height: 100%;
+}
+
+.widget.eltd-login-register-widget .eltd-logged-in-user .icon_profile, .widget.eltd-login-register-widget .eltd-login-holder .icon_profile {
+  padding: 13px 14px;
+  background-color: transparent;
+  color: #ff4d30;
+  border-radius: 50%;
+  font-size: 17px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1em;
+  display: inline-block;
+  border: 2px solid #ff4d30;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.widget.eltd-login-register-widget .eltd-logged-in-user .icon_profile:hover, .widget.eltd-login-register-widget .eltd-login-holder .icon_profile:hover {
+  background-color: #ff4d30;
+  color: #fff;
+}
+
+.widget.eltd-login-register-widget .eltd-login-dropdown {
+  background-color: #fff;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+  width: 220px;
+  padding: 17px 25px 25px;
+  transition: 0s .2s;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
+}
+
+.widget.eltd-login-register-widget .eltd-login-dropdown li {
+  border: none;
+  line-height: 27px;
+}
+
+.widget.eltd-login-register-widget .eltd-login-dropdown li a {
+  font-size: 14px;
+  color: #bbb;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.widget.eltd-login-register-widget .eltd-login-dropdown li:hover > a,
+.widget.eltd-login-register-widget .eltd-login-dropdown li:hover > span {
+  color: #ff4d30;
+}
+
+.widget.eltd-login-register-widget .eltd-login-dropdown li span {
+  margin-right: 10px;
+}
+
+.eltd-light-header:not(.eltd-fixed-header-appear):not(.eltd-sticky-header-appear) .widget.eltd-login-register-widget .icon_profile {
+  border-color: #fff;
+}
+
+.eltd-light-header:not(.eltd-fixed-header-appear):not(.eltd-sticky-header-appear) .widget.eltd-login-register-widget .icon_profile:hover {
+  border-color: #ff4d30;
+}
+
+.eltd-light-header:not(.eltd-fixed-header-appear):not(.eltd-sticky-header-appear) .widget.eltd-login-register-widget ul.eltd-login-dropdown li a {
+  color: #bbb !important;
+}
+
+.eltd-light-header:not(.eltd-fixed-header-appear):not(.eltd-sticky-header-appear) .widget.eltd-login-register-widget ul.eltd-login-dropdown li:hover > a,
+.eltd-light-header:not(.eltd-fixed-header-appear):not(.eltd-sticky-header-appear) .widget.eltd-login-register-widget ul.eltd-login-dropdown li:hover > span i {
+  color: #ff4d30 !important;
+}
+
+.eltd-light-header:not(.eltd-fixed-header-appear):not(.eltd-sticky-header-appear) .widget.eltd-login-register-widget ul.eltd-login-dropdown li span i {
+  color: #808080 !important;
+}
+
+.eltd-dark-header:not(.eltd-fixed-header-appear):not(.eltd-sticky-header-appear) .widget.eltd-login-register-widget .icon_profile {
+  border-color: #000;
+  color: #000;
+}
+
+.eltd-dark-header:not(.eltd-fixed-header-appear):not(.eltd-sticky-header-appear) .widget.eltd-login-register-widget .icon_profile:hover {
+  background-color: #000;
+  color: #fff !important;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard {
+  margin-top: 56px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard > p {
+  margin-bottom: 18px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-jobs thead tr {
+  background-color: #fff;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-jobs thead tr th {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 18px;
+  padding: 1.5em 1em;
+  color: #2a2a2a;
+  font-weight: 400;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-jobs thead tr th.job_title {
+  text-align: left;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-jobs tbody tr {
+  border: 1px solid #e1e1e1;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-jobs tbody tr:nth-child(2n) {
+  background-color: #fff;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-jobs tbody tr:nth-child(2n-1) {
+  background-color: #fafafa;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-jobs td {
+  padding: 1em;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #808080;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-jobs td.job_title {
+  text-align: left;
+  padding-left: 7%;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-jobs td .eltd-user-listing-content-holder > a {
+  font-size: 15px;
+  color: #808080;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-jobs td .eltd-user-listing-content-holder ul li > a {
+  font-size: 12px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-jobs .eltd-user-listing-title-image {
+  background-size: cover;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  left: 1%;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination {
+  margin: 50px 70px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul {
+  border: none;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li {
+  border: none;
+  margin: 0 5px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li a,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li .current {
+  background-color: transparent;
+  border: 2px solid #ebebeb;
+  border-radius: 50%;
+  padding: 0;
+  width: 47px;
+  height: 47px;
+  line-height: 48px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li a:hover,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li .current:hover {
+  border-color: #ff4d30;
+  color: #ff4d30;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li a.next, .page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li a.prev,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li .current.next,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li .current.prev {
+  border: none;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li a.next:hover, .page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li a.prev:hover,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li .current.next:hover,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li .current.prev:hover {
+  border: none;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li .current {
+  border-color: #ff4d30;
+  color: #ff4d30;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li .prev.page-numbers,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li .next.page-numbers {
+  visibility: hidden;
+  position: relative;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li .prev.page-numbers:after,
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li .next.page-numbers:after {
+  font-family: ElegantIcons;
+  visibility: visible;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-size: 22px;
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li .prev.page-numbers:after {
+  content: '\34';
+}
+
+.page-template-user-dashboard .eltd-membership-dashboard-content-holder #job-manager-job-dashboard .job-manager-pagination ul li .next.page-numbers:after {
+  content: '\35';
+}
+
+.page-template-user-dashboard.page-template .eltd-container, .page-template-user-dashboard.page-template .eltd-full-width {
+  z-index: 101;
+}
+
+.page-template-user-dashboard.page-template .eltd-content .eltd-content-inner > .eltd-container > .eltd-container-inner {
+  padding-top: 0 !important;
+}
+
+.page-template-user-dashboard.page-template .eltd-membership-dashboard-nav-holder {
+  height: 67px;
+  margin-top: -67px;
+}
+
+.page-template-user-dashboard.page-template .eltd-membership-dashboard-nav-holder .eltd-membership-dashboard-nav li {
+  width: 16%;
+  box-sizing: border-box;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  -moz-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  float: left;
+}
+
+.page-template-user-dashboard.page-template .eltd-membership-dashboard-nav-holder .eltd-membership-dashboard-nav li.eltd-active-dash {
+  background-color: #fff;
+}
+
+.page-template-user-dashboard.page-template .eltd-membership-dashboard-nav-holder .eltd-membership-dashboard-nav li.eltd-active-dash h5 {
+  color: #ff4d30;
+}
+
+.page-template-user-dashboard.page-template .eltd-membership-dashboard-nav-holder .eltd-membership-dashboard-nav li.eltd-active-dash .eltd-dash-icon {
+  color: #ff4d30;
+}
+
+.page-template-user-dashboard.page-template .eltd-membership-dashboard-nav-holder .eltd-membership-dashboard-nav li:hover {
+  background-color: #fff;
+}
+
+.page-template-user-dashboard.page-template .eltd-membership-dashboard-nav-holder .eltd-membership-dashboard-nav li:hover h5, .page-template-user-dashboard.page-template .eltd-membership-dashboard-nav-holder .eltd-membership-dashboard-nav li:hover span {
+  color: #ff4d30;
+}
+
+.page-template-user-dashboard.page-template .eltd-membership-dashboard-nav-holder .eltd-membership-dashboard-nav li a {
+  font-family: "Fira Sans", sans-serif;
+  display: block;
+  height: 100%;
+  line-height: 67px;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.page-template-user-dashboard.page-template .eltd-membership-dashboard-nav-holder .eltd-membership-dashboard-nav li a h5 {
+  font-size: 15px;
+  margin: 0;
+  font-weight: 300;
+  display: inline-block;
+  color: #fff;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.page-template-user-dashboard.page-template .eltd-membership-dashboard-nav-holder .eltd-membership-dashboard-nav li a .eltd-dash-icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 23px;
+  background-color: transparent;
+  margin-right: 7px;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.page-template-user-dashboard .eltd-user-package-holder {
+  list-style: none outside none;
+  margin: 0;
+}
+
+.page-template-user-dashboard .eltd-user-package-holder .eltd-user-package {
+  padding: 15px 25px;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  margin-bottom: 30px;
+  position: relative;
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.page-template-user-dashboard .eltd-user-package-holder .eltd-user-package:nth-child(even) {
+  background-color: #fff;
+}
+
+.page-template-user-dashboard .eltd-user-package-holder .eltd-user-package .eltd-ls-package-part {
+  position: relative;
+  display: table-cell;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.page-template-user-dashboard .eltd-user-package-holder .eltd-user-package .eltd-ls-package-text {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.page-template-user-dashboard .eltd-user-package-holder .eltd-user-package .eltd-ls-package-value {
+  padding-top: 10px;
+}
+
+/*# sourceMappingURL=../../../../plugins/eltd-listing/assets/css/dashboard.css.map */

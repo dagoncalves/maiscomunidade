@@ -1,0 +1,254 @@
+.page-template-user-dashboard{
+    .eltd-membership-dashboard-content-holder{
+        
+        .job-manager-form{
+
+            .eltd-membership-dashboard-page-title{
+                margin: 10px 15px 0;
+            }
+            
+            .fieldset-job_region,
+            .fieldset-job_type{
+                .select2-selection--single,
+                .select2-selection__rendered{
+                    height: 48px;
+                    line-height: 48px;
+                    background-color: $light-color;
+
+                    .select2-search__field{
+                        padding: 0;
+                    }
+                }
+            }
+            .fieldset-job_region{
+                .select2-selection--single{
+                    height: 50px;
+                }
+            }
+
+            fieldset{
+                border: none;
+            }
+
+            .field.account-sign-in{
+                margin: 46px 0px -18px;
+
+                span, div{
+                    vertical-align: middle;
+                    display: inline-block;
+
+                }
+                span{
+                    font-size: 18px;
+                    font-weight: 300;
+                }
+                div{
+                    text-align: right;
+                }
+                .eltd-btn{
+                    margin-left: 25px;
+                }
+            }
+            
+            .eltd-ls-field-holder {
+                float: left;
+                display: inline-block;
+                vertical-align: middle;
+                padding-right: 18px;
+                box-sizing: border-box;
+                position: relative;
+                width: 50%;
+
+                & ~ .eltd-ls-field-holder{
+                    padding-left: 18px;
+                    padding-right: 0px;
+                }
+
+                div.field,
+                label{
+
+                     float: none;
+                     width: 100%;
+                    .eltd-checkbox-label{
+                        width: auto;
+                    }
+
+                }
+                label{
+                    &:not(.eltd-checkbox-label){
+                        display: inline-block;
+                        font-family: $default-text-font;
+                        font-size: 18px;
+                        padding: 10px 0 15px;
+                        color: $default-heading-color;
+                    }
+                }
+                fieldset{
+                    border: none;
+                    margin-bottom: 25px;
+                    padding: 0;
+
+                    input{
+                        padding: 14px 24px;
+                        color: $default-text-color;
+                    }
+                    
+                    .chosen-container{
+                        display: none;
+                    }
+                }
+
+                .fieldset-company_logo{
+                    
+                    .field{
+                        .job-manager-uploaded-files{
+                            float: left;
+                            display: inline-block;
+                            margin-right: 17px;
+                        }
+                        .wp-job-manager-file-upload, .description{
+                            width: auto;
+                            display: inline-block
+                        }
+                    }
+                    .job-manager-uploaded-file-preview{
+                        position: relative;
+                        display: block;
+                        
+                        .job-manager-remove-uploaded-file{
+                            visibility: hidden;
+                            
+                            &:after{
+                                content:"\e051";
+                                font-family: ElegantIcons;
+                                top: 0;
+                                right: 0;
+                                visibility: visible;
+                                font-size: 24px;
+                                font-style: normal;
+                            }
+                        }
+
+                        img{
+                            height: 140px;
+                        }
+                        .job-manager-remove-uploaded-file{
+                            position: absolute;
+                            right: 0;
+                            line-height: 1em;
+                            font-size: 24px;
+                            float: left;
+                        }
+                    }
+                }
+                
+                .fieldset-listing_twitter_url, .fieldset-listing_facebook_url, .fieldset-listing_instagram_url, .fieldset-listing_pinterest_url,
+                .fieldset-listing_soundcloud_url, .fieldset-listing_vimeo_url, .fieldset-listing_youtube_url, .fieldset-listing_skype_url{
+                    .field{
+                        &:before{
+                            display: inline-block;
+                            width: 50px;
+                            height: 50px;
+                            line-height: 50px;
+                            font-family: FontAwesome;
+                            vertical-align: middle;
+                            font-size: 50px;
+                            color: $first-main-color;
+                            position: absolute;
+                        }
+                        
+                        input{
+                            width: calc(100% - 55px);
+                            margin-left: 55px;
+                        }
+                    }
+                }
+                .fieldset-listing_twitter_url{
+                    .field:before{
+                        content: "\f081";
+                    }
+                }
+                .fieldset-listing_facebook_url{
+                    .field:before{
+                        content: "\f082";
+                    }
+                }
+                .fieldset-listing_instagram_url{
+                    .field:before{
+                        content: "\f16d";
+                    }
+                }
+                .fieldset-listing_pinterest_url{
+                    .field:before{
+                        content: "\f0d3";
+                    }
+                }
+                .fieldset-listing_soundcloud_url{
+                    .field:before{
+                        content: "\f1be";
+                        font-size: 38px;
+                    }
+                }
+                .fieldset-listing_vimeo_url{
+                    .field:before{
+                        content: "\f194";
+                    }
+                }
+                .fieldset-listing_youtube_url{
+                    .field:before{
+                        content: "\f166";
+                    }
+                }
+                .fieldset-listing_skype_url{
+                    .field:before{
+                        content: "\f17e";
+                    }
+                }
+            }
+
+            .eltd-ls-field-holder-full-width{
+                clear: both;
+                width: 100%;
+                
+                fieldset{
+                    padding: 0 18px;
+                }
+            }
+            .eltd-ls-full-width-field{
+                width: 100%;
+                text-align: left;
+                margin: 30px 0 -15px;
+            }
+            
+            input{
+                &.button{
+                    position: relative;
+                    display: inline-block;
+                    padding: 13px 25px;
+                    font-family: $default-text-font;
+                    font-size: 14px;
+                    background-color: $light-green-color;
+                    color: $default-background-color;
+                    line-height: 18px;
+                    letter-spacing: 0;
+                    font-weight: 400;
+                    border-radius: 2px;
+                    text-align: center;
+                    cursor: pointer;
+                    border: none;
+                    box-sizing: border-box;
+                    
+                    &:hover{
+                        background-color: $default-heading-color;
+                    }
+                }
+            }
+        }
+
+        #submit-job-form{
+            p{
+                padding-left: 18px;
+            }
+        }
+    }
+}

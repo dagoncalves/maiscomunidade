@@ -1,0 +1,50 @@
+/* Booking plugin styles start */
+
+.eltd-listing-single-holder{
+    article{
+        .eltd-ls-single-section-inner.right{
+            .eltd-ls-single-booking{
+                background-color: $default-background-color;
+                padding: 25px 30px 42px;
+
+                >h5{
+                    font-size: 24px;
+                    margin-bottom: 25px;
+                }
+
+                .eltd-rf-field-holder{
+                    margin-bottom: 10px;
+                }
+
+                .eltd-rf-btn-holder{
+                    margin-top: 25px;
+                }
+
+                .select2-container--default{
+                    width: 100% !important;
+
+                    .select2-selection--single{
+                        font-size: 15px;
+                    }
+
+                }
+
+                .eltd-rf-copyright{
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: $default-text-color;
+                    display: block;
+                    margin-top: 10px;
+                }
+
+                input[type="text"]{
+                    margin-bottom: 0;
+                    border-color: $default-border-color;
+                }
+
+            }
+        }
+    }
+}
+
+/* Booking plugin styles end */

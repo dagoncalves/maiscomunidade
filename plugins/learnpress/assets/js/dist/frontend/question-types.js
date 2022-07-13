@@ -331,6 +331,10 @@ class QuestionFillInBlanks extends _question_base__WEBPACK_IMPORTED_MODULE_3__["
       } = this.props;
       const answereds = answered || {};
       [...allFIBs].map(ele => {
+        if (answered === undefined) {
+          ele.value = '';
+        }
+
         ele.addEventListener('input', e => {
           this.setAnswered(answereds, ele.dataset.id, e.target.value);
         });
@@ -392,6 +396,12 @@ class QuestionFillInBlanks extends _question_base__WEBPACK_IMPORTED_MODULE_3__["
     });
 
     (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "convertInputField", option => {
+      const {
+        answered,
+        isReviewing,
+        showCorrectReview,
+        isCheckedAnswer
+      } = this.props;
       let title = option.title;
       const answers = option === null || option === void 0 ? void 0 : option.answers;
       option.ids.map((id, index) => {
@@ -399,16 +409,19 @@ class QuestionFillInBlanks extends _question_base__WEBPACK_IMPORTED_MODULE_3__["
         let elContent = '';
         const answerID = answers ? answers === null || answers === void 0 ? void 0 : answers[id] : undefined;
 
-        if (answerID) {
+        if (answerID || isReviewing) {
           var _answerID$correct;
 
-          // If is answered,
-          elContent += `<span class="lp-fib-answered ${answerID !== null && answerID !== void 0 && answerID.isCorrect ? 'correct' : 'fail'}">`;
+          elContent += `<span class="lp-fib-answered ${(showCorrectReview || isCheckedAnswer) && answerID !== null && answerID !== void 0 && answerID.correct ? answerID !== null && answerID !== void 0 && answerID.isCorrect ? 'correct' : 'fail' : ''}">`;
 
           if (!(answerID !== null && answerID !== void 0 && answerID.isCorrect)) {
-            var _answerID$answer;
+            var _answered$id;
 
-            elContent += `<span class="lp-fib-answered__answer">${(_answerID$answer = answerID === null || answerID === void 0 ? void 0 : answerID.answer) !== null && _answerID$answer !== void 0 ? _answerID$answer : ''}</span> → `;
+            elContent += `<span class="lp-fib-answered__answer">${(_answered$id = answered === null || answered === void 0 ? void 0 : answered[id]) !== null && _answered$id !== void 0 ? _answered$id : ''}</span>`;
+          }
+
+          if (!(answerID !== null && answerID !== void 0 && answerID.isCorrect) && answerID !== null && answerID !== void 0 && answerID.correct) {
+            elContent += ' → ';
           }
 
           elContent += `<span class="lp-fib-answered__fill">${(_answerID$correct = answerID === null || answerID === void 0 ? void 0 : answerID.correct) !== null && _answerID$correct !== void 0 ? _answerID$correct : ''}</span>`;

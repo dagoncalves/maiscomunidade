@@ -1,0 +1,122 @@
+.eltd-ls-archive-items-inner{
+
+	article{
+		@include eltdRelativeHolderLayout();
+		vertical-align: top;
+		box-sizing: border-box;
+		float: left;
+		
+		.eltd-ls-item-image{
+			@include eltdRelativeHolderLayout();
+			overflow: hidden;
+
+			a{
+				img{
+					vertical-align: middle;
+					width: 100%;
+
+					&.wp-post-image {
+						-webkit-transition: -webkit-transform .4s cubic-bezier(.15,.7,.54,.99);
+						transition: transform .4s cubic-bezier(.15,.7,.54,.99);
+						-webkit-filter: blur();
+						filter: blur();
+						will-change: transform;
+					}
+				}
+
+				&:hover {
+					.wp-post-image {
+						@include eltdTransform(scale(1.06));
+					}
+				}
+			}
+		}
+		.eltd-ls-cat-icon{
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 6px;
+			&.eltd-custom-icon{
+				max-width: 53px;
+			}
+			&.eltd-regular-icon{
+				width: 53px;
+				height: 53px;
+				line-height: 53px;
+				font-size: 25px;
+				text-align: center;
+				background-color: $first-main-color;
+				color: $default-background-color;
+				border-radius: 50%;
+			}
+		}
+		.eltd-listing-title{
+			margin: 3px 0 7px;
+		}
+
+		.eltd-listing-cat-wrapper{
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			z-index: 10;
+		}
+
+		.eltd-listing-rating-holder{
+			margin-top: 8px;
+
+			.eltd-average-rating{
+				padding-right: 7px;
+				>span{
+					border: 1px solid $first-main-color;
+					border-radius: 50%;
+					width: 30px;
+					height: 30px;
+					line-height: 30px;
+					text-align: center;
+					color: $first-main-color;
+					display: inline-block;
+				}
+			}
+		}
+
+		.eltd-ls-item-address{
+			box-sizing: border-box;
+			background-color: $header-light-color;
+
+			.eltd-ls-adr-city{
+				color: $default-text-color;
+				font-weight: 300;
+				font-size: 15px;
+			}
+		}
+
+		.eltd-ls-item-inner{
+			box-sizing: border-box;
+			padding: 21px 24px 40px;
+			background-color: $header-light-color;
+			border: 1px solid #ebebeb;
+		}
+
+		.eltd-ls-price-holder{
+			line-height: 1em;
+			margin: 12px 0 4px;
+
+			.eltd-ls-price-amount{
+				font-size: 16px;
+			}
+			.eltd-ls-disc-price-amount{
+				font-size: 13px;
+				text-decoration: line-through;
+				padding-left: 9px;
+			}
+		}
+
+		&.eltd-ls-item-featured {
+			.eltd-ls-item-inner {
+				border-color: $first-main-color;
+				margin-top: -1px;
+			}
+		}
+	}
+
+}

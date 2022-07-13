@@ -3,9 +3,9 @@ Contributors: thimpress, tungnx89, nhamdv, hungkv, manhnl, tunnhn, phonglq.foobl
 Donate link:
 Tags: elearning, education, course, lms, learning management system
 Requires at least: 5.6
-Tested up to: 5.9
+Tested up to: 6.0
 Requires PHP: 7.0
-Stable tag: 4.1.6
+Stable tag: 4.1.6.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -202,6 +202,66 @@ https://www.transifex.com/projects/p/learnpress/
 8. Add-ons of LearnPress.
 
 == Changelog ==
+
+= 4.1.6.8 (2022-07-05) =
+~ Fixed: click pagination when enable 2 option Load Courses Ajax.
+~ Added: loading, error message(if it has) when start quick.
+~ Fixed: error sort by popular with theme Eduma.
+~ Fixed: Wordfence denied param: "author", convert to "user" on API.
+~ Fixed: query popular courses for app.
+~ Added: return price format for app.
+~ Added: API delete account for app.
+~ Merged: addon Offline Payment.
+~ Fixed: styles with themes: Avada, Divi, Flastsome, Bridget, Astra, The 7.
+~ Fixed: security.
+
+= 4.1.6.7 (2022-06-20) =
+~ Fixed: errors quiz when call API LP remove action 'wp_loaded'.
+~ Fixed: some minor bugs.
+~ Fixed: install tables for multiple sites.
+~ Fixed: save settings always return tab General.
+~ Fixed: layout 'select items' popup when edit course.=
+
+= 4.1.6.6 (2022-06-13) =
+~ Fixed: security.
+~ Added: option "Enable loading ajax Courses on the Archive Course page".
+~ Added: option "No Page load Courses Ajax".
+
+= 4.1.6.5 (2022-05-16) =
+~ Fixed: error with block theme 2022.
+~ Fixed: error with LP Addon Frontend Editor.
+
+= 4.1.6.4 (2022-05-05) =
+~ Modified: setup require tables for LearnPress when activate plugin.
+~ Modified: setup wizard.
+~ Optimized: code.
+~ Fixed don't scroll to item of section > config "Section Per Page".
+
+= 4.1.6.3 (2022-04-20) =
+~ Fixed: sort section of course.
+~ Fixed: sort item of course's section when edit course.
+~ Fixed: sometime call get_curriculum empty.
+~ Modified: fixed when set seconds big (about 100 hours), can't convert to format time right.
+~ Fixed: duplicate course not duplicate sections, items.
+~ Fixed: error wp.media on page Email setting.
+~ Fixed: count wrong order on the backend.
+
+= 4.1.6.2 (2022-04-04) =
+~ Fixed: go to last item of section still show button "load more items".
+~ Fixed: "Undefined" when click "load more sections" on theme Eduma.
+
+= 4.1.6.1 (2022-04-01) =
+~ Optimize.
+~ Fixed: error show input when retake Fill In Blank - off option "Show correct answer".
+~ Modified: filter query courses API.
+~ Hide load more item button which section it hide.
+~ Fixed: save course is sale when edit course.
+~ Added: hook "learn-press/user/quiz-finished".
+~ Fixed: error site use sub-folder domain will be error 301 when checkout.
+~ Fixed: error show "The item is not assigned to this course" on Page builder.
+~ Fixed: error style RTL item-actions.
+~ Fixed: case user guest buy course and not login, back to this course will not show button "purchase course".
+~ Added: hook do_action( 'login_form' ) on the page LP Checkout, form "Login".
 
 = 4.1.6 (2022-03-14) =
 ~ Compatible: with "Polylang" plugin.

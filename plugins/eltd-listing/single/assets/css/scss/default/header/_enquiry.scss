@@ -1,0 +1,39 @@
+.eltd-ls-enquiry-holder{
+}
+.eltd-ls-enquiry-inner{
+	position: relative;
+	margin: 0 auto;
+	background-color: #fff;
+    padding: 13px 30px 50px;
+    
+    .eltd-ls-enquiry-form{
+
+        input[type="text"],
+        textarea,
+        input[type="email"]{
+            margin-bottom: 10px;
+        }
+
+        label{
+            font-family: $default-text-font;
+            font-size: 13px;
+            text-transform: uppercase;
+            
+            &:after{
+                content: "*";
+                font-family: open sans;
+                color: $first-main-color;
+                margin-left: 5px;
+            }
+        }
+
+        .eltd-btn{
+            margin-top: 12px;
+            text-transform: capitalize;
+        }
+        
+        textarea{
+            max-width: 100%;
+        }
+    }
+}

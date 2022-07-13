@@ -40,7 +40,7 @@ class LP_Page_Controller {
 		add_filter( 'template_include', array( $this, 'check_pages' ), 30 );
 		add_filter( 'template_include', array( $this, 'auto_shortcode' ), 50 );
 
-		add_filter( 'the_post', array( $this, 'setup_data' ) );
+		add_filter( 'the_post', array( $this, 'setup_data_for_item_course' ) );
 		add_filter( 'request', array( $this, 'remove_course_post_format' ), 1 );
 
 		add_shortcode( 'learn_press_archive_course', array( $this, 'archive_content' ) );
@@ -52,7 +52,61 @@ class LP_Page_Controller {
 
 		// edit link item course when form search default wp
 		add_filter( 'post_type_link', array( $this, 'post_type_link' ), 10, 2 );
+		// add_action( 'the_post', array( $this, 'learn_press_setup_object_data' ) );
+
+		// Set link profile to admin menu
+		add_action( 'admin_bar_menu', array( $this, 'learn_press_edit_admin_bar' ) );
+		add_action( 'plugins_loaded', array( $this, 'lp_rest_api_called' ) );
 	}
+
+	/**
+	 * Optimize when Rest API LP called
+	 *
+	 * @return void
+	 */
+	public function lp_rest_api_called() {
+		if ( LP_Helper::isRestApiLP() ) {
+			if ( ! defined( 'SHORTINIT' ) ) {
+				define( 'SHORTINIT', true );
+			}
+
+			// Remove hook wp_loaded because query default WP run on it (it hooks 'pre_get_posts',...)
+			remove_all_actions( 'wp_loaded' );
+		}
+	}
+
+	/**
+	 * When the_post is called, put course data into a global.
+	 *
+	 * Todo: after replace code LP::course()
+	 *
+	 * @param mixed $post
+	 *
+	 * @return LP_Course
+	 */
+	/*public function learn_press_setup_object_data( $post ) {
+		$object = null;
+
+		if ( is_int( $post ) ) {
+			$post = get_post( $post );
+		}
+
+		if ( ! $post ) {
+			return $object;
+		}
+
+		if ( LP_COURSE_CPT === $post->post_type ) {
+			if ( isset( $GLOBALS['course'] ) ) {
+				unset( $GLOBALS['course'] );
+			}
+
+			$object = learn_press_get_course( $post->ID );
+
+			LP()->global['course'] = $GLOBALS['course'] = $GLOBALS['lp_course'] = $object;
+		}
+
+		return $object;
+	}*/
 
 	/**
 	 * Set link item course when form search default wp
@@ -204,7 +258,7 @@ class LP_Page_Controller {
 		global $wp_query;
 		$flag_title_course = false;
 
-		$course_archive_page_id = LP()->settings()->get( 'courses_page_id', 0 );
+		$course_archive_page_id = LP_Settings::instance()->get( 'courses_page_id', 0 );
 
 		// Set title course archive page
 		if ( ! empty( $course_archive_page_id ) && $wp_query->post &&
@@ -343,7 +397,7 @@ class LP_Page_Controller {
 	 */
 	/*
 	public function maybe_redirect_quiz( $template ) {
-		$course   = LP_Global::course();
+		$course   = learn_press_get_course();
 		$quiz     = LP_Global::course_item_quiz();
 		$user     = learn_press_get_current_user();
 		$redirect = false;
@@ -367,22 +421,24 @@ class LP_Page_Controller {
 	}*/
 
 	/**
+	 * Load data for item of course
+	 *
 	 * @param $post
 	 *
+	 * @return mixed
 	 * @editor tungnx
-	 * todo check this function, can remove or rewrite
-	 * @return false
+	 * Todo: should remove this function when load true type post's item
 	 */
-	public function setup_data( $post ) {
-		static $courses = array();
-
+	public function setup_data_for_item_course( $post ): WP_Post {
 		/**
 		 * @var WP $wp
 		 * @var WP_Query $wp_query
 		 * @var LP_Course $lp_course
 		 * @var LP_Course_Item|LP_Quiz|LP_Lesson $lp_course_item
 		 */
-		global $wp, $wp_query, $lp_course, $lp_course_item;
+		global $wp, $wp_query, $lp_course_item;
+
+		$lp_course = learn_press_get_course();
 
 		if ( LP_COURSE_CPT !== $post->post_type ) {
 			return $post;
@@ -393,16 +449,15 @@ class LP_Page_Controller {
 			return $post;
 		}
 
+		/**
+		 * @deprecated v4.1.6.1 LP()->global['course'], $GLOBALS['course']
+		 */
+		LP()->global['course'] = $GLOBALS['course'] = $GLOBALS['lp_course'] = $course;
+
 		if ( wp_verify_nonce( LP_Request::get( 'preview' ), 'preview-' . $post->ID ) ) {
 			$GLOBALS['preview_course'] = $post->ID;
 		}
 
-		/*
-		if ( ! array_key_exists( $post->ID, $courses ) ) {
-			return $post;
-		}*/
-
-		// $courses[ $post->ID ] = true;
 		$vars = $wp->query_vars;
 
 		if ( empty( $vars['course-item'] ) ) {
@@ -426,7 +481,13 @@ class LP_Page_Controller {
 				return $post;
 			}
 
-			$section_id = LP_Section_DB::getInstance()->get_section_id_by_item_id( $post_item->ID );
+			/**
+			 * Comment for reason some page-builder run wrong
+			 *
+			 * 1. Anywhere elementor
+			 * 2. WPBakery
+			 */
+			/*$section_id = LP_Section_DB::getInstance()->get_section_id_by_item_id( $post_item->ID );
 
 			if ( ! $section_id ) {
 				throw new Exception( __( 'The item is not assigned to any section', 'learnpress' ) );
@@ -440,9 +501,9 @@ class LP_Page_Controller {
 
 			if ( $course_id != $post->ID ) {
 				throw new Exception( __( 'The item is not assigned to this course', 'learnpress' ) );
-			}
+			}*/
 
-			$lp_course_item = apply_filters( 'learn-press/single-course-request-item', LP_Course_Item::get_item( $post_item->ID ) );
+			$lp_course_item = apply_filters( 'learn-press/single-course-request-item', LP_Course_Item::get_item( $post_item->ID, $course->get_id() ) );
 
 			if ( ! $lp_course_item ) {
 				return $post;
@@ -597,7 +658,7 @@ class LP_Page_Controller {
 			}
 		} elseif ( ( is_post_type_archive( LP_COURSE_CPT ) || ( ! empty( learn_press_get_page_id( 'courses' ) ) && is_page( learn_press_get_page_id( 'courses' ) ) ) ) && ! self::has_block_template( 'archive-course' ) ) {
 			$page_template = 'archive-course.php';
-		} elseif ( learn_press_is_checkout() ) {
+		} elseif ( learn_press_is_checkout() && ! self::has_block_template( 'page-lp_checkout' ) ) {
 			$page_template = 'pages/checkout.php';
 		}
 
@@ -662,51 +723,51 @@ class LP_Page_Controller {
 
 	/**
 	 * @return bool
+	 * @editor tungnx - comment 4.1.6.6
 	 */
-	protected function _maybe_redirect_courses_page() {
-		/**
-		 * If is archive course page and a static page is used for displaying courses
-		 * we need to redirect it to the right page
-		 */
-		if ( ! is_post_type_archive( LP_COURSE_CPT ) ) {
-			return false;
-		}
-
-		/**
-		 * @var WP_Query $wp_query
-		 * @var WP_Rewrite $wp_rewrite
-		 */
-		global $wp_query, $wp_rewrite;
-
-		$page_id = learn_press_get_page_id( 'courses' );
-
-		if ( $page_id && ( empty( $wp_query->queried_object_id ) || ! empty( $wp_query->queried_object_id ) && $page_id != $wp_query->queried_object_id ) ) {
-			$redirect = trailingslashit( learn_press_get_page_link( 'courses' ) );
-
-			if ( ! empty( $wp_query->query['paged'] ) ) {
-				if ( $wp_rewrite->using_permalinks() ) {
-					$redirect = $redirect . 'page/' . $wp_query->query['paged'] . '/';
-				} else {
-					$redirect = add_query_arg( 'paged', $wp_query->query['paged'], $redirect );
-				}
-			}
-
-			if ( isset( $_GET ) ) {
-				$_GET = array_map( 'stripslashes_deep', $_GET );
-				foreach ( $_GET as $k => $v ) {
-					$redirect = add_query_arg( $k, urlencode( $v ), $redirect );
-				}
-			}
-
-			if ( $page_id != get_option( 'page_on_front' ) && ! learn_press_is_current_url( $redirect ) ) {
-				wp_redirect( $redirect );
-				exit();
-			}
-		}
-
-		return false;
-	}
-
+	//  protected function _maybe_redirect_courses_page() {
+	//      /**
+	//       * If is archive course page and a static page is used for displaying courses
+	//       * we need to redirect it to the right page
+	//       */
+	//      if ( ! is_post_type_archive( LP_COURSE_CPT ) ) {
+	//          return false;
+	//      }
+	//
+	//      /**
+	//       * @var WP_Query $wp_query
+	//       * @var WP_Rewrite $wp_rewrite
+	//       */
+	//      global $wp_query, $wp_rewrite;
+	//
+	//      $page_id = learn_press_get_page_id( 'courses' );
+	//
+	//      if ( $page_id && ( empty( $wp_query->queried_object_id ) || ! empty( $wp_query->queried_object_id ) && $page_id != $wp_query->queried_object_id ) ) {
+	//          $redirect = trailingslashit( learn_press_get_page_link( 'courses' ) );
+	//
+	//          if ( ! empty( $wp_query->query['paged'] ) ) {
+	//              if ( $wp_rewrite->using_permalinks() ) {
+	//                  $redirect = $redirect . 'page/' . $wp_query->query['paged'] . '/';
+	//              } else {
+	//                  $redirect = add_query_arg( 'paged', $wp_query->query['paged'], $redirect );
+	//              }
+	//          }
+	//
+	//          if ( isset( $_GET ) ) {
+	//              $_GET = array_map( 'stripslashes_deep', $_GET );
+	//              foreach ( $_GET as $k => $v ) {
+	//                  $redirect = add_query_arg( $k, urlencode( $v ), $redirect );
+	//              }
+	//          }
+	//
+	//          if ( $page_id != get_option( 'page_on_front' ) && ! learn_press_is_current_url( $redirect ) ) {
+	//              wp_redirect( $redirect );
+	//              exit();
+	//          }
+	//      }
+	//
+	//      return false;
+	//  }
 
 	public function archive_content() {
 		ob_start();
@@ -971,7 +1032,7 @@ class LP_Page_Controller {
 		$apply_lazy_load_for_theme = apply_filters( 'lp/page/courses/query/lazy_load', false );
 
 		if ( $is_archive_course ) {
-			if ( ( lp_is_archive_course_load_via_api() && ! class_exists( 'TP' ) ) || $apply_lazy_load_for_theme ) {
+			if ( ( LP_Settings_Courses::is_ajax_load_courses() && ! LP_Settings_Courses::is_no_load_ajax_first_courses() ) ) {
 				LP()->template( 'course' )->remove_callback( 'learn-press/after-courses-loop', 'loop/course/pagination.php', 10 );
 				/**
 				 * If page is archive course - query set posts_per_page = 1
@@ -980,9 +1041,104 @@ class LP_Page_Controller {
 				 * Current, apply only for LP, not apply for theme Thimpress, because theme override
 				 */
 				$q->set( 'posts_per_page', 1 );
+				$q->set( 'posts_per_archive_page', 1 );
+				$q->set( 'nopaging', true );
 			} else {
-				$limit = LP_Settings::get_option( 'archive_course_limit', 6 );
+				$filter               = new LP_Course_Filter();
+				$filter->only_fields  = [ 'ID' ];
+				$filter->max_limit    = $filter->limit = 1000;
+				$is_need_check_in_arr = false;
+				$limit                = LP_Settings::get_option( 'archive_course_limit', 6 );
+
 				$q->set( 'posts_per_page', $limit );
+				// $q->set( 'cache_results', true ); // it default true
+
+				// Search courses by keyword
+				// $q->set( 's', $_REQUEST['c_search'] ?? '' );
+				if ( ! empty( $_REQUEST['c_search'] ) ) {
+					$filter->post_title   = LP_Helper::sanitize_params_submitted( $_REQUEST['c_search'] );
+					$is_need_check_in_arr = true;
+				}
+
+				// Meta query
+				$meta_query = [];
+				if ( isset( $_REQUEST['sort_by'] ) ) {
+					if ( 'on_paid' === $_REQUEST['sort_by'] ) {
+						$meta_query[] = array(
+							'key'     => '_lp_price',
+							'value'   => 0,
+							'compare' => '>',
+						);
+					}
+
+					if ( 'on_free' === $_REQUEST['sort_by'] ) {
+						$meta_query[] = array(
+							'key'     => '_lp_price',
+							'value'   => 0,
+							'compare' => '=',
+						);
+					}
+				}
+				$q->set( 'meta_query', $meta_query );
+				// End Meta query
+
+				// Tax query
+				$tax_query    = [];
+				$term_ids_str = LP_Helper::sanitize_params_submitted( urldecode( $_REQUEST['term_id'] ?? '' ) );
+				if ( ! empty( $term_ids_str ) ) {
+					$term_ids = explode( ',', $term_ids_str );
+
+					$tax_query[] = array(
+						'taxonomy' => 'course_category',
+						'field'    => 'term_id',
+						'terms'    => $term_ids,
+						'operator' => 'IN',
+					);
+				}
+
+				$q->set( 'tax_query', $tax_query );
+				// End Tax query
+
+				// Author query
+				if ( isset( $_REQUEST['c_author'] ) ) {
+					$author_ids = LP_Helper::sanitize_params_submitted( $_REQUEST['c_author'] );
+					$q->set( 'author__in', $author_ids );
+				}
+				// End Author query
+
+				// Order query
+				if ( isset( $_REQUEST['order_by'] ) ) {
+					$order_by = LP_Helper::sanitize_params_submitted( $_REQUEST['order_by'] );
+					$order    = 'DESC';
+
+					switch ( $order_by ) {
+						case 'post_title':
+							$order_by = 'title';
+							$order    = 'ASC';
+							break;
+						case 'popular':
+							$filter->order_by     = 'popular';
+							$order_by             = 'post__in';
+							$is_need_check_in_arr = true;
+							break;
+						default:
+							$order_by = 'date';
+							break;
+					}
+
+					$q->set( 'orderby', $order_by );
+					$q->set( 'order', $order );
+				}
+
+				if ( $is_need_check_in_arr ) {
+					$posts_in = LP_Course::get_courses( $filter );
+					if ( ! empty( $posts_in ) ) {
+						$posts_in = LP_Database::get_values_by_key( $posts_in );
+						$q->set( 'post__in', $posts_in );
+					}
+				}
+
+				$q = apply_filters( 'lp/page-courses/query/legacy', $q );
 			}
 		}
 
@@ -1115,12 +1271,38 @@ class LP_Page_Controller {
 
 		return self::$_instance;
 	}
-}
 
-if ( ! function_exists( 'lp_page_controller' ) ) {
-	function lp_page_controller() {
-		return LP_Page_Controller::instance();
+	/**
+	 * Add user profile link into admin bar
+	 *
+	 * @editor tungnx
+	 * @version 1.0.1
+	 * @since  3.0.0
+	 */
+	public function learn_press_edit_admin_bar() {
+		global $wp_admin_bar;
+
+		$current_user = wp_get_current_user();
+
+		if ( ! in_array( LP_TEACHER_ROLE, $current_user->roles ) && ! in_array( 'administrator', $current_user->roles ) ) {
+			return;
+		}
+
+		$page_profile_id = learn_press_get_page_id( 'profile' );
+
+		if ( $page_profile_id && get_post_status( $page_profile_id ) != 'trash' ) {
+			$user_id = $current_user->ID;
+
+			$wp_admin_bar->add_menu(
+				array(
+					'id'     => 'course_profile',
+					'parent' => 'user-actions',
+					'title'  => get_the_title( $page_profile_id ),
+					'href'   => learn_press_user_profile_link( $user_id, false ),
+				)
+			);
+		}
 	}
-
-	lp_page_controller();
 }
+
+return LP_Page_Controller::instance();

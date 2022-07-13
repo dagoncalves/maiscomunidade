@@ -1,0 +1,45 @@
+.eltd-listing-single-holder{
+	article{
+		.eltd-ls-single-content{
+			position: relative;
+		}
+		.eltd-ls-single-section-inner{
+			&.right{
+				position: relative;
+				right: 0;
+				top: -150px;
+
+				>div{
+					border: 1px solid $light-grey-color;
+					margin-bottom: 35px;
+				}
+			}
+
+			.eltd-listing-single-amenities{
+
+				.eltd-listing-single-field{
+					display: inline-block;
+					float: left;
+					width: 20%;
+					margin-bottom: 7px;
+
+					.eltd-listing-single-field-inner{
+						display: inline-block;
+
+						i:before,
+						span:before{
+							font-size: 15px;
+							color: $first-main-color;
+							margin-right: 2px;
+						}
+					}
+
+					.eltd-ls-text{
+						font-weight: 300;
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
+}

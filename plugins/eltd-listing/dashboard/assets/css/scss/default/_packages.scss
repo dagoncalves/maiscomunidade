@@ -1,0 +1,32 @@
+.page-template-user-dashboard{
+    .eltd-user-package-holder{
+        list-style: none outside none;
+        margin: 0;
+
+        .eltd-user-package{
+
+            padding: 15px 25px;
+            box-sizing: border-box;
+            background-color: #fafafa;
+            margin-bottom: 30px;
+            @include eltdTableLayout();
+
+            &:nth-child(even){
+                background-color: $light-color;
+            }
+
+
+            .eltd-ls-package-part{
+                @include eltdTableCellLayout();
+            }
+
+            .eltd-ls-package-text{
+                padding-bottom: 10px;
+                border-bottom: 1px solid $default-border-color;
+            }
+            .eltd-ls-package-value {
+                padding-top: 10px;
+            }
+        }
+    }
+}

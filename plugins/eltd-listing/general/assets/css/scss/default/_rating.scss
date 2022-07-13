@@ -1,0 +1,50 @@
+/* ==========================================================================
+    Listing Rating Stars - start
+========================================================================== */
+
+.eltd-listing-rating-holder{
+
+	.eltd-average-rating{
+		@include eltdRelativeHolderLayout();
+		width: auto;
+		font-size: 14px;
+		color: $additional-heading-color;
+		padding-right: 7px;
+
+		>span{
+			border: 1px solid $first-main-color;
+			border-radius: 50%;
+			color: $first-main-color;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+			display: inline-block;
+		}
+	}
+	.eltd-listing-rating-stars-holder{
+		@include eltdRelativeHolderLayout();
+		width: auto;
+		color: $grey-color;
+		&:before {
+			@include eltdStarsStyle();
+		}
+		span{
+			&:before {
+				@include eltdStarsStyle();
+				content: "\f005 \f005 \f005 \f005 \f005";
+			}
+			position: absolute;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+			color: $first-main-color;
+			max-height: 20px;
+		}
+
+	}
+
+}
+/* ==========================================================================
+    Listing Rating Stars - end
+========================================================================== */

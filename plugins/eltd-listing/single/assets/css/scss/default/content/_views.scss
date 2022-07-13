@@ -1,0 +1,17 @@
+.eltd-ls-item-view-holder {
+  display: inline-block;
+  padding: 22px 28px;
+  background-color: #fff;
+  border-radius: 2px;
+  text-align: center;
+
+
+  .eltd-ls-item-view-icon{
+    font-size: 30px;
+  }
+  .eltd-ls-item-view-text{
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: $additional-heading-color;
+  }
+}

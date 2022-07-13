@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Single Listing  responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-medium{
+    .eltd-listing-single-holder {
+        article {
+
+            .eltd-lst-single-widget-bottom-area {
+                .textwidget {
+                    width: 65%;
+
+                    input.wpcf7-form-control.wpcf7-submit{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include ipad-landscape{
+    .eltd-listing-single-holder{
+        article{
+            .eltd-ls-single-header{
+                .eltd-listing-single-field:not(:last-child){
+                    margin-right: 30px;
+                }
+            }
+
+            .eltd-ls-contact-info{
+                .eltd-ls-contact-info-inner.left{
+                    margin-right: 5px;
+                }
+            }
+
+            .eltd-ls-content-part.left{
+                .eltd-ls-content-part-title{
+                    margin-top: 0;
+                }
+            }
+
+            .eltd-lst-single-widget-bottom-area{
+                .textwidget{
+                    width: 70%;
+                    .eltd-grid-col-8{
+                        width: 60%;
+                        float: left;
+                    }
+                    .eltd-grid-col-4{
+                        width: 40%;
+                        float: left;
+                    }
+                }
+                .eltd-grid-col-4{
+                    text-align: center;
+                }
+            }
+
+            .eltd-ls-single-related-posts-holder{
+                .eltd-no-slider article{
+                    padding-right:36px;
+                }
+            }
+
+            .eltd-ls-contact-info-holder,
+            .eltd-ls-single-map-address-info,
+            .eltd-ls-single-social-network-holder{
+                padding: 0 8px;
+            }
+            .eltd-ls-single-social-network-holder{
+                .eltd-ls-single-social-net-title{
+                    display: block;
+                }
+            }
+
+            button.eltd-btn.eltd-btn-medium.eltd-btn-solid.eltd-btn-icon.eltd-ls-single-enquiry-submit{
+                padding: 16px 26px;
+            }
+        }
+    }
+}
+@include ipad-portrait {
+    .eltd-listing-single-holder{
+        article{
+
+            .eltd-ls-single-header{
+                .eltd-ls-single-section-holder.top{
+                    .eltd-ls-single-section-inner{
+                        &.left,
+                        &.right{
+                            width: 100%;
+                            padding: 0;
+                        }
+                        &.right{
+                            position: relative;
+                            top: 0;
+                        }
+                    }
+                }
+            }
+
+            .eltd-ls-single-section-inner{
+                &.left,
+                &.right{
+                    width: 100%;
+                    padding: 0;
+                }
+                &.right{
+                    position: relative;
+                    top: 0;
+                }
+            }
+
+            #eltd-ls-single-map-holder{
+                max-width:100%;
+            }
+            .eltd-ls-single-related-posts-holder{
+                .eltd-no-slider{
+                    article{
+                        width: 50%;
+                        padding-bottom: 20px;
+                    }
+                }
+            }
+
+            .eltd-ls-contact-info-holder,
+            .eltd-ls-single-map-address-info,
+            .eltd-ls-single-social-network-holder{
+                padding: 0 23px;
+            }
+            .eltd-ls-single-social-network-holder{
+                .eltd-ls-single-social-net-title{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .eltd-ls-single-comments{
+        .eltd-comment-form{
+            #respond textarea {
+                & ~ input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    .eltd-listing-single-holder{
+        article .eltd-ls-content-part{
+            &.left,
+            &.right{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+    .eltd-ls-single-comments{
+        .eltd-comments-title{
+            .select2-container{
+                position: relative;
+            }
+        }
+    }
+
+    .eltd-listing-single-holder {
+        article {
+            .eltd-ls-single-related-posts-holder {
+                .eltd-no-slider {
+                    article {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include phone-portrait{
+    .eltd-listing-single-holder{
+        .eltd-lst-single-widget-bottom-area{
+            .textwidget{
+                width: 90%;
+            }
+        }
+        article{
+            .eltd-ls-single-header{
+                .eltd-ls-single-section-holder.top{
+                    .eltd-ls-single-section-inner.left{
+                        width: 100%;
+                        .eltd-ls-single-part-holder{
+                            &.left,
+                            &.right{
+                                display: block;
+                                width: 100%;
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Single Listing responsive style - end
+   ========================================================================== */

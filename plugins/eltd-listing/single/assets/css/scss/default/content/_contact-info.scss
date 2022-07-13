@@ -1,0 +1,31 @@
+.eltd-listing-single-holder{
+	article{
+		.eltd-ls-contact-info-holder{
+			margin-top: 35px;
+			padding: 0 23px;
+		}
+		.eltd-ls-contact-info{
+			margin-bottom: 5px;
+			.eltd-ls-contact-info-inner{
+				display: inline-block;
+				&.left{
+					margin-right: 10px;
+					font-size: 15px;
+					color: $first-main-color;
+				}
+				&.right{
+					font-size: 14px;
+					color: $default-text-color;
+
+					a{
+						color: $default-text-color;
+
+						&:hover{
+							color: $first-main-color;
+						}
+					}
+				}
+			}
+		}
+	}
+}
