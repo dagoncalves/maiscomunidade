@@ -803,6 +803,32 @@ if(!function_exists('findme_elated_is_wp_job_manager_installed')){
         return $flag;
     }
 
+    /**
+     * Removendo campos do formulário
+     */
+    function custom_submit_job_form_fields_dm( $fields ) {
+        unset($fields['job']['remote_position']);
+        unset($fields['job']['company_website']);
+        unset($fields['job']['application']);
+        unset($fields['job']['listing_price']);
+        unset($fields['job']['listing_disc_price']);
+        unset($fields['job']['listing_phone']);
+        unset($fields['job']['listing_mail']);
+        unset($fields['job']['listing_self_hosted_video']);
+        unset($fields['job']['listing_video']);
+        unset($fields['job']['short_description']);
+        unset($fields['job']['listing_feature_image']);
+        unset($fields['job']['listing_facebook_url']);
+        unset($fields['job']['open_table_id']);
+        unset($fields['job']['listing_twitter_url']);
+        unset($fields['job']['listing_instagram_url']);
+        unset($fields['job']['listing_soundcloud_url']);
+        unset($fields['job']['listing_vimeo_url']);
+        
+        return $fields;
+    }
+    add_filter( 'submit_job_form_fields', 'custom_submit_job_form_fields_dm' );
+
 }
 
 if(!function_exists('findme_elated_is_wc_paid_listings_installed')){

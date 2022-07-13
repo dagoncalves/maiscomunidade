@@ -44,6 +44,26 @@ $last_param = end($submit_action);
                 $limit  = count($job_fields);
                 $limiter = round($limit/2);
 
+                //Removendo campos
+
+                unset($job_fields['remote_position']);
+                unset($job_fields['company_website']);
+                unset($job_fields['application']);
+                unset($job_fields['listing_price']);
+                unset($job_fields['listing_disc_price']);
+                unset($job_fields['listing_phone']);
+                unset($job_fields['listing_mail']);
+                unset($job_fields['listing_self_hosted_video']);
+                unset($job_fields['listing_video']);
+                unset($job_fields['short_description']);
+                unset($job_fields['listing_feature_image']);
+                unset($job_fields['listing_facebook_url']);
+                unset($job_fields['open_table_id']);
+                unset($job_fields['listing_twitter_url']);
+                unset($job_fields['listing_instagram_url']);
+                unset($job_fields['listing_soundcloud_url']);
+                unset($job_fields['listing_vimeo_url']);
+
                 foreach ( $job_fields as $key => $field) {
                     $counter++;
                     ?>
