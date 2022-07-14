@@ -45,6 +45,8 @@ $last_param = end($submit_action);
                 $limiter = round($limit/2);
 
                 //Removendo campos
+                $job_fields['job_location']['description'] = 'Exemplo: Rua Primeiro de Maio, 1321 - Bela Vista, Teresina - PI, 78605-888, Brasil';
+                $job_fields['job_location']['placeholder'] = 'Digite a localização como no exemplo abaixo.';
 
                 unset($job_fields['remote_position']);
                 unset($job_fields['company_website']);
