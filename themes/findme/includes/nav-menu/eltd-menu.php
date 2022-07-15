@@ -67,3 +67,21 @@ include_once ELATED_ROOT_DIR.'/includes/nav-menu/mobile-navigation-walker.php';
 include_once ELATED_ROOT_DIR.'/includes/nav-menu/fullscreen-navigation-walker.php';
 include_once ELATED_ROOT_DIR.'/includes/nav-menu/sticky-navigation-walker.php';
 include_once ELATED_ROOT_DIR.'/includes/nav-menu/vertical-compact-navigation-walker.php';
+
+
+
+
+/**
+ * Removendo itens do menu quando logado
+ */
+add_action('wp_head','hide_menu');
+
+function hide_menu() { 
+	$output = '';
+    if ( is_user_logged_in() ) {
+        $output="<style> #nav-menu-item-3466 { display: none; } </style>";
+    }
+
+    echo $output;
+}
+
