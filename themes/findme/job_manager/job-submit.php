@@ -44,10 +44,14 @@ $last_param = end($submit_action);
                 $limit  = count($job_fields);
                 $limiter = round($limit/2);
 
-                //Removendo campos
+                //Alterando descricao de campos
                 $job_fields['job_location']['description'] = 'Exemplo: Rua Primeiro de Maio, 1321 - Bela Vista, Teresina - PI, 78605-888, Brasil';
                 $job_fields['job_location']['placeholder'] = 'Digite a localização como no exemplo abaixo.';
 
+                $job_fields['job_title']['label'] = 'Qual é o nome do seu projeto?';
+                $job_fields['job_title']['placeholder'] = 'Nome do projeto.';
+                
+                //Removendo campos
                 unset($job_fields['remote_position']);
                 unset($job_fields['company_website']);
                 unset($job_fields['application']);
@@ -65,6 +69,9 @@ $last_param = end($submit_action);
                 unset($job_fields['listing_instagram_url']);
                 unset($job_fields['listing_soundcloud_url']);
                 unset($job_fields['listing_vimeo_url']);
+                unset($job_fields['listing_pinterest_url']);
+                unset($job_fields['listing_youtube_url']);
+                unset($job_fields['listing_skype_url']);
 
                 foreach ( $job_fields as $key => $field) {
                     $counter++;

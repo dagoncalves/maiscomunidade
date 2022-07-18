@@ -824,10 +824,111 @@ if(!function_exists('findme_elated_is_wp_job_manager_installed')){
         unset($fields['job']['listing_instagram_url']);
         unset($fields['job']['listing_soundcloud_url']);
         unset($fields['job']['listing_vimeo_url']);
+        unset($fields['job']['listing_pinterest_url']);
+        unset($fields['job']['listing_youtube_url']);
+        unset($fields['job']['listing_skype_url']);
         
         return $fields;
     }
     add_filter( 'submit_job_form_fields', 'custom_submit_job_form_fields_dm' );
+
+    /**
+     * Adicionando campos novos
+     */
+    function frontend_add_motivacao_field( $fields ) {
+        $fields['job']['job_motivacao'] = array(
+          'label'       => __( 'O que motivou a comunidade a realizar o projeto?', 'job_manager' ),
+          'type'        => 'text',
+          'required'    => true,
+          'placeholder' => 'Qual foi a demanda?',
+          'priority'    => 9
+        );
+        return $fields;
+    }
+    add_filter( 'submit_job_form_fields', 'frontend_add_motivacao_field' );
+
+    function frontend_add_acoes_field( $fields ) {
+        $fields['job']['job_acoes'] = array(
+          'label'       => __( 'Quais ações foram desenvolvidas nesse projeto?', 'job_manager' ),
+          'type'        => 'textarea',
+          'required'    => true,
+          'placeholder' => 'Conte pra nós quais ações foram realizadas no projeto.',
+          'priority'    => 10
+        );
+        return $fields;
+    }
+    add_filter( 'submit_job_form_fields', 'frontend_add_acoes_field' );
+
+    function frontend_add_parcerias_field( $fields ) {
+        $fields['job']['job_parcerias'] = array(
+          'label'       => __( 'Houve parcerias no projeto?', 'job_manager' ),
+          'type'        => 'text',
+          'required'    => true,
+          'placeholder' => 'Parceiros do projeto.',
+          'priority'    => 10
+        );
+        return $fields;
+    }
+    add_filter( 'submit_job_form_fields', 'frontend_add_parcerias_field' );
+
+    function frontend_add_resultados_field( $fields ) {
+        $fields['job']['job_resultados'] = array(
+          'label'       => __( 'Quais foram os resultados deste projeto? E nos conte um pouco da avaliação dele!', 'job_manager' ),
+          'type'        => 'text',
+          'required'    => true,
+          'placeholder' => 'Resultados e Avaliação.',
+          'priority'    => 10
+        );
+        return $fields;
+    }
+    add_filter( 'submit_job_form_fields', 'frontend_add_resultados_field' );
+
+    /**
+     * Adicionando novos campos no admin
+     */
+    function admin_add_motivacao_field( $fields ) {
+        $fields['_job_motivacao'] = array(
+            'label'       => __( 'O que motivou a comunidade a realizar o projeto?', 'job_manager' ),
+            'type'        => 'text',
+            'placeholder' => 'Qual foi a demanda?',
+            'description' => ''
+        );
+        return $fields;
+    }
+    add_filter( 'job_manager_job_listing_data_fields', 'admin_add_motivacao_field' );
+
+    function admin_add_acoes_field( $fields ) {
+        $fields['_job_acoes'] = array(
+          'label'       => __( 'Quais ações foram desenvolvidas nesse projeto?', 'job_manager' ),
+          'type'        => 'textarea',
+          'placeholder' => 'Conte pra nós quais ações foram realizadas no projeto.',
+          'description' => ''
+        );
+        return $fields;
+    }
+    add_filter( 'job_manager_job_listing_data_fields', 'admin_add_acoes_field' );
+
+    function admin_add_parcerias_field( $fields ) {
+        $fields['_job_parcerias'] = array(
+          'label'       => __( 'Houve parcerias no projeto?', 'job_manager' ),
+          'type'        => 'text',
+          'placeholder' => 'Parceiros do projeto.',
+          'description' => ''
+        );
+        return $fields;
+    }
+    add_filter( 'job_manager_job_listing_data_fields', 'admin_add_parcerias_field' );
+
+    function admin_add_resultados_field( $fields ) {
+        $fields['_job_resultados'] = array(
+          'label'       => __( 'Quais foram os resultados deste projeto? E nos conte um pouco da avaliação dele!', 'job_manager' ),
+          'type'        => 'text',
+          'placeholder' => 'Resultados e Avaliação.',
+          'description' => ''
+        );
+        return $fields;
+    }
+    add_filter( 'job_manager_job_listing_data_fields', 'admin_add_resultados_field' );
 
 }
 
