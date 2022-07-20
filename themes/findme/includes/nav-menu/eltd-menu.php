@@ -79,7 +79,7 @@ add_action('wp_head','hide_menu');
 function hide_menu() { 
 	$output = '';
     if ( is_user_logged_in() ) {
-        $output="<style> #nav-menu-item-3466 { display: none; } </style>";
+        $output="<style> #nav-menu-item-3466, #mobile-menu-item-3466 { display: none; } </style>";
     }
 
     echo $output;
