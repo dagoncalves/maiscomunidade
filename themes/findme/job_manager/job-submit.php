@@ -17,7 +17,7 @@ $last_param = end($submit_action);
 			if( $last_param === 'add-new-listing'){
 				esc_html_e( 'Add new listing', 'findme' );
 			}else{
-				esc_html_e( 'Edit listing', 'findme' );
+				esc_html_e( 'Editar projeto', 'findme' );
 			}
 		}
 
