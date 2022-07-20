@@ -40,7 +40,7 @@ else {
 
 		if ( ! comments_open() ) { ?>
 			<p>
-				<?php esc_html_e('Sorry, the comment form is closed at this time.', 'findme'); ?>
+				<?php //esc_html_e('Sorry, the comment form is closed at this time.', 'findme'); ?>
 			</p>
 		<?php }
 	}
