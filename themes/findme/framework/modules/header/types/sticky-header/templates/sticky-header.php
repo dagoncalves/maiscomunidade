@@ -12,7 +12,7 @@
                         <?php if(!$hide_logo) {
                             findme_elated_get_logo('sticky');
                         } ?>
-                        <?php //findme_elated_get_sticky_menu('eltd-sticky-nav'); ?>
+                        <?php findme_elated_get_sticky_menu('eltd-sticky-nav'); ?>
                     </div>
                 </div>
                 <div class="eltd-position-right">
