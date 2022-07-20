@@ -29,10 +29,10 @@ switch ( $job->post_status ) :
 		) . '</div>';
 	break;
 	case 'pending' :
-		echo '<div class="job-manager-message">' . wp_kses_post(
+		echo '<div class="job-manager-message" style="padding-top:30px">' . wp_kses_post(
 			sprintf(
 				// translators: Placeholder %s is the job listing post type name.
-				esc_html__( '%s submitted successfully. Your listing will be visible once approved.', 'wp-job-manager' ),
+				esc_html__( 'Pronto, projeto enviado! Vamos analisá-lo direitinho e, assim que ele estiver on-line, você receberá um e-mail.', 'wp-job-manager' ),
 				esc_html( $wp_post_types['job_listing']->labels->singular_name )
 			)
 		);
