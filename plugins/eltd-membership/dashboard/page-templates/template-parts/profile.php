@@ -4,7 +4,26 @@
     </h2>
 	<div class="eltd-membership-dashboard-page-content">
         <div class="eltd-membership-dashboard-image-holder eltd-membership-left">
-			aaaa<?php echo eltd_membership_kses_img( $profile_image ); ?>
+			<?php //echo eltd_membership_kses_img( $profile_image ); ?>
+            <?php echo do_shortcode('[basic-user-avatars]');?>
+            <style>
+                p.description {
+                    display: none;
+                }
+
+                p:has(#basic-user-avatar-erase) {
+                    display: none;
+                }
+
+                #basic-user-avatar-erase, label[for=basic-user-avatar-erase] {
+                    display: none;
+                }
+
+                .avatar.avatar-96.photo {
+                    height: 170px;
+                    width: 170px;
+                }
+            </style>
             <p class="eltd-image-info"> <?php esc_html_e( 'You are currently signed in as', 'eltd-membership' ); ?> <span><?php echo esc_attr( $user_login ); ?></span></p>
 			<?php
 			echo findme_elated_get_button_html( array(
