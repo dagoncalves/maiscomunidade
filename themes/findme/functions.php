@@ -1032,3 +1032,17 @@ if ( ! function_exists( 'findme_elated_is_wp_gutenberg_installed' ) ) {
         return class_exists( 'WP_Block_Type' );
     }
 }
+
+add_filter('auth_cookie_expiration', 'my_expiration_filter', 99, 3);
+function my_expiration_filter($seconds, $user_id, $remember){
+    //if "remember me" is checked;
+    if ( $remember ) {
+        //WP defaults to 2 weeks;
+        $expiration = 14*24*60*60; //UPDATE HERE;
+    } else {
+        //WP defaults to 48 hrs/2 days;
+        $expiration = 2*24*60*60; //UPDATE HERE;
+    }
+
+    return $expiration;
+}
