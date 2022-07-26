@@ -156,8 +156,11 @@ if (facebookAppId) {
     function eltdUserRegister() {
 
         $('.eltd-register-form').on('submit', function (e) {
-
             e.preventDefault();
+
+            var modalLogin = $('#eltd-login-content');
+            var modalRegister = $('#eltd-register-content');
+
             var ajaxData = {
                 action: 'eltd_membership_register_user',
                 security: $(this).find('#eltd-register-security').val(),
@@ -174,7 +177,10 @@ if (facebookAppId) {
 
                     eltdRenderAjaxResponseMessage(response);
                     if (response.status == 'success') {
-                        window.location = response.redirect;
+                        modalRegister.css("display", "none");
+                        modalLogin.css("display", "block");
+                        //window.location = response.redirect;
+                        
                     }
                 }
             });
