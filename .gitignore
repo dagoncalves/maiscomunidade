@@ -10,6 +10,7 @@ plugins/*
 !plugins/wp-job-manager
 !plugins/eltd-listing
 !plugins/eltd-membership
+!plugins/maiscomunidade-user-avatars
 
 # ignore languages folder
 languages/
