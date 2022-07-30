@@ -1033,6 +1033,9 @@ if ( ! function_exists( 'findme_elated_is_wp_gutenberg_installed' ) ) {
     }
 }
 
+/**
+ * Expirando o login
+ */
 add_filter('auth_cookie_expiration', 'my_expiration_filter', 99, 3);
 function my_expiration_filter($seconds, $user_id, $remember){
     //if "remember me" is checked;
@@ -1045,4 +1048,129 @@ function my_expiration_filter($seconds, $user_id, $remember){
     }
 
     return $expiration;
+}
+
+/**
+ * Replicando um novo usuário para o Elated Team
+ */
+add_action( 'user_register', 'replica_usuario_elatedteam', 10, 1 );
+ 
+function replica_usuario_elatedteam( $user_id ) { 
+    $user_info = get_userdata($user_id);
+
+    $new_elatedteam = array(
+        'post_type'     => 'team-member',
+        'post_title'    => $user_info->nickname,
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+    );
+    $post_id = wp_insert_post( $new_elatedteam );
+
+    if ($post_id) {
+        add_post_meta($post_id, 'eltd_team_member_email', $user_info->user_email);
+
+        //$url = get_avatar_url($user_id);
+        //$desc = "Profile picture";
+        //$image = media_sideload_image( $url, $post_id, $desc, 'id');
+        //set_post_thumbnail( $post_id, $image );
+    }
+}
+
+add_action( 'profile_update', 'my_profile_update', 10, 2 );
+
+add_action('personal_options_update', 'update_extra_profile_fields');
+  
+function update_extra_profile_fields( $user_id ) {
+    $image_url        = 'http://s.wordpress.org/style/images/wp-header-logo.png'; // Define the image URL here
+    $image_name       = 'wp-header-logo.png';
+    $upload_dir       = wp_upload_dir(); // Set upload folder
+    $image_data       = file_get_contents($image_url); // Get image data
+    $unique_file_name = wp_unique_filename( $upload_dir['path'], $image_name ); // Generate unique name
+    $filename         = basename( $unique_file_name ); // Create image file name
+
+    // Check folder permission and define file location
+    if( wp_mkdir_p( $upload_dir['path'] ) ) {
+        $file = $upload_dir['path'] . '/' . $filename;
+    } else {
+        $file = $upload_dir['basedir'] . '/' . $filename;
+    }
+
+    // Create the image  file on the server
+    file_put_contents( $file, $image_data );
+
+    // Check image file type
+    $wp_filetype = wp_check_filetype( $filename, null );
+
+    // Set attachment data
+    $attachment = array(
+        'post_mime_type' => $wp_filetype['type'],
+        'post_title'     => sanitize_file_name( $filename ),
+        'post_content'   => '',
+        'post_status'    => 'inherit'
+    );
+
+    // Create the attachment
+    $attach_id = wp_insert_attachment( $attachment, $file, 4934 );
+
+    // Include image.php
+    require_once(ABSPATH . 'wp-admin/includes/image.php');
+
+    // Define attachment metadata
+    $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
+
+    // Assign metadata to attachment
+    wp_update_attachment_metadata( $attach_id, $attach_data );
+
+    // And finally assign featured image to post
+    set_post_thumbnail( 4934, $attach_id );
+}
+ 
+function my_profile_update( $user_id, $old_user_data ) {
+    // $url = get_avatar_url($user_id);
+    // $desc = "Profile picture";
+    // $image = media_sideload_image( $url, 4934, $desc);
+    // set_post_thumbnail( 4934, $image );
+    // Add Featured Image to Post
+    $image_url        = 'http://s.wordpress.org/style/images/wp-header-logo.png'; // Define the image URL here
+    $image_name       = 'wp-header-logo.png';
+    $upload_dir       = wp_upload_dir(); // Set upload folder
+    $image_data       = file_get_contents($image_url); // Get image data
+    $unique_file_name = wp_unique_filename( $upload_dir['path'], $image_name ); // Generate unique name
+    $filename         = basename( $unique_file_name ); // Create image file name
+
+    // Check folder permission and define file location
+    if( wp_mkdir_p( $upload_dir['path'] ) ) {
+        $file = $upload_dir['path'] . '/' . $filename;
+    } else {
+        $file = $upload_dir['basedir'] . '/' . $filename;
+    }
+
+    // Create the image  file on the server
+    file_put_contents( $file, $image_data );
+
+    // Check image file type
+    $wp_filetype = wp_check_filetype( $filename, null );
+
+    // Set attachment data
+    $attachment = array(
+        'post_mime_type' => $wp_filetype['type'],
+        'post_title'     => sanitize_file_name( $filename ),
+        'post_content'   => '',
+        'post_status'    => 'inherit'
+    );
+
+    // Create the attachment
+    $attach_id = wp_insert_attachment( $attachment, $file, 4934 );
+
+    // Include image.php
+    require_once(ABSPATH . 'wp-admin/includes/image.php');
+
+    // Define attachment metadata
+    $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
+
+    // Assign metadata to attachment
+    wp_update_attachment_metadata( $attach_id, $attach_data );
+
+    // And finally assign featured image to post
+    set_post_thumbnail( 4934, $attach_id );
 }

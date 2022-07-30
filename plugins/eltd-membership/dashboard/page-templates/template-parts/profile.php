@@ -5,7 +5,7 @@
 	<div class="eltd-membership-dashboard-page-content">
         <div class="eltd-membership-dashboard-image-holder eltd-membership-left">
 			<?php //echo eltd_membership_kses_img( $profile_image ); ?>
-            <?php echo do_shortcode('[basic-user-avatars]');?>
+            <?php echo do_shortcode('[maiscomunidade-user-avatars]');?>
             <style>
                 p.description {
                     display: none;
