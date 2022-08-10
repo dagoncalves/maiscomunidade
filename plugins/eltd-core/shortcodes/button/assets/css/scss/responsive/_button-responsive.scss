@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Button shortcode responsive style - begin
+   ========================================================================== */
+
+@media only screen and (max-width: $laptop-landscape) {
+
+	.eltd-btn {
+
+		&.eltd-btn-medium{
+			padding: 16px 40px;
+
+			&.eltd-btn-icon{
+				padding: 16px 40px;
+			}
+		}
+
+		&.eltd-btn-large,
+		&.eltd-btn-huge {
+			@include eltdButtonLargeParams();
+		}
+
+		&.eltd-btn-large,
+		&.eltd-btn-huge{
+			&.eltd-btn-icon{
+				@include eltdButtonLargeParams();
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Button shortcode responsive style - end
+   ========================================================================== */

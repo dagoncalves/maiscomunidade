@@ -1,0 +1,71 @@
+@include laptop-landscape {
+  .eltd-processes-holder {
+    &.eltd-six-columns,
+    &.eltd-five-columns{
+      .eltd-process {
+        width: 33.3333%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        &:nth-child(3n){
+          .eltd-process-arrow-right{
+            display: none;
+          }
+        }
+      }
+    }
+    &.eltd-four-columns{
+      .eltd-process{
+        width: 50%;
+      }
+    }
+  }
+}
+@include ipad-portrait {
+
+  .eltd-processes-holder {
+
+    &.eltd-three-columns,
+    &.eltd-four-columns,
+    &.eltd-six-columns,
+    &.eltd-five-columns{
+      .eltd-process{
+        width: 100%;
+        margin:  69px auto 5px;
+
+        &:nth-child(even){
+          .eltd-process-arrow-right{
+            display: none;
+          }
+        }
+        &:nth-child(3n){
+          .eltd-process-arrow-right{
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .eltd-process-number{
+      left: 20%;
+    }
+  }
+
+}
+@include phone-portrait{
+
+  .eltd-processes-holder {
+
+    .eltd-process{
+      width: 100% !important; //important in order to override all other styles on small devices
+      margin: 0 0 20px !important;
+
+      .eltd-process-arrow-right{
+        display: none !important;
+      }
+    }
+
+    .eltd-process-number{
+      left: 0;
+    }
+  }
+}

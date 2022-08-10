@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Testimonials shortcode style - begin
+   ========================================================================== */
+
+.eltd-testimonials-holder {
+    @include eltdRelativeHolderLayout();
+    
+    .eltd-testimonials,
+    .eltd-testimonial-content,
+    .eltd-testimonial-text-holder {
+        @include eltdRelativeHolderLayout();
+    }
+
+    .eltd-testimonials {
+        padding: 0 50px;
+        box-sizing: border-box;
+    }
+
+    .eltd-testimonial-image {
+
+        img {
+            width: 100%;
+            border-radius: 5em;
+        }
+    }
+
+    .eltd-owl-slider{
+        .owl-dots{
+            position: relative;
+            top: -10px;
+            .owl-dot{
+                margin: 0;
+                span{
+                    background-color: $first-main-color;
+                    border: 0;
+                    border-radius: 50%;
+                    box-shadow: none;
+                    @include eltdTransform(scale(0.6));
+                    opacity: 0.5;
+                    margin:  0 4px;
+                    @include eltdTransition(all .35s cubic-bezier(.38,1.33,.57,1.1));  
+                }
+                &.active{
+                    span{
+                        @include eltdTransform(scale(1));
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   Testimonials shortcode style - end
+   ========================================================================== */

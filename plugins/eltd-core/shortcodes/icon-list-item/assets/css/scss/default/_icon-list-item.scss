@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Icon List Item shortcode style - begin
+   ========================================================================== */
+
+.eltd-icon-list-holder {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    height: auto;
+    width: 100%;
+    margin-bottom: 7px;
+	
+	.eltd-il-icon-holder,
+	.eltd-il-text {
+		position: relative;
+		display: table-cell;
+	}
+
+    .eltd-il-icon-holder {
+	    width: 1%;
+	    
+	    > * {
+		    position: relative;
+		    display: inline-block;
+		    vertical-align: middle;
+		    color: $default-text-color;
+		    font-size: 15px;
+		    line-height: inherit;
+		
+		    &:before {
+			    display: block;
+			    line-height: inherit;
+		    }
+	    }
+    }
+
+    .eltd-il-text {
+	    width: 99%;
+	    padding: 0 0 0 13px;
+	    box-sizing: border-box;
+    }
+}
+/* ==========================================================================
+   Icon List Item shortcode style - end
+   ========================================================================== */

@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Section Title shortcode styles - begin
+   ========================================================================== */
+
+.eltd-section-title-holder {
+    @include eltdRelativeHolderLayout();
+	box-sizing: border-box;
+	
+	@include phone-landscape {
+		padding: 0 !important; // it can be set inline in shortcode options
+	}
+	
+    .eltd-st-title {
+	    display: block;
+        margin: 0;
+    }
+
+    .eltd-section-title-inner-wrapper{
+        position: relative;
+    }
+
+    .eltd-section-title-number{
+        color: #e1e1e1;
+        position: absolute;
+        top: 5px;
+        left: -8%;
+        font-size: 138px;
+        font-family: $extra-font;
+        z-index: -10;
+    }
+    
+    .eltd-st-text {
+	    display: block;
+        margin: 13px 0 0;
+    }
+}
+/* ==========================================================================
+   Section Title shortcode styles - end
+   ========================================================================== */
+
+

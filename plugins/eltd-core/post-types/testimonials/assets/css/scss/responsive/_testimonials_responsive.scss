@@ -1,0 +1,71 @@
+/* ==========================================================================
+   Testimonials shortcode responsive style - begin
+   ========================================================================== */
+
+.eltd-testimonials-holder{
+    &.eltd-testimonials-boxed {
+
+        @include ipad-landscape{
+            .eltd-testimonial-content{
+                width: 100%;
+            }
+        }
+        .eltd-testimonial-content:nth-child(n){
+            @include ipad-portrait{
+                width: 100%;
+                padding: 10px 0 10px 10px;
+            }
+        }
+        
+        .eltd-testimonials{
+            margin: 0;
+            padding: 0 10px;
+        }
+
+        @include phone-portrait{
+            .eltd-testimonial-content{
+                .eltd-testimonials-author-holder,
+                .eltd-testimonial-text-holder{
+                    display: block;
+                    text-align: center;
+                    margin: 20px auto;
+                }
+            }
+        }
+    }
+    
+    &.eltd-testimonials-standard{
+        .eltd-testimonial-text-holder{
+            width: 100%;
+
+            @include phone-landscape{
+                padding-bottom: 20px;
+
+                .eltd-testimonials-separator{
+                    width: 90%;
+                }
+            }
+        }
+        
+        .eltd-testimonials.eltd-owl-slider{
+
+            .owl-dots .owl-dot{
+                @include ipad-landscape {
+                    margin-bottom: -20px;
+
+                    span {
+                        position: relative;
+                        padding: 10px;
+
+                        &:after{
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
+/* ==========================================================================
+   Testimonials shortcode responsive style - end
+   ========================================================================== */

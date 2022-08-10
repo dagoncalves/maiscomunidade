@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Tabs shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape-medium{
+	.eltd-tabs {
+
+		&.eltd-tabs-standard {
+
+			.eltd-tabs-nav {
+
+				li {
+					margin: 0 1px 0 0;
+
+					a {
+						padding: 7px 15px;
+					}
+				}
+			}
+		}
+
+		&.eltd-tabs-boxed {
+
+			.eltd-tabs-nav {
+
+				li {
+					margin: 0 1px 0 0;
+
+					a {
+						padding: 7px 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include ipad-landscape {
+	
+	.eltd-tabs {
+		
+		&.eltd-tabs-standard {
+			
+			.eltd-tabs-nav {
+				
+				li {
+
+					a {
+						padding: 7px 6px;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+		
+		&.eltd-tabs-boxed {
+			
+			.eltd-tabs-nav {
+				
+				li {
+					
+					a {
+						padding: 7px 6px;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+		
+		&.eltd-tabs-simple {
+			
+			.eltd-tabs-nav {
+				
+				li {
+					margin: 0 10px 0 0;
+				}
+			}
+		}
+		
+		&.eltd-tabs-vertical {
+			
+			.eltd-tabs-nav {
+				width: 150px;
+			}
+			
+			.eltd-tab-container {
+				width: calc(100% - 155px);
+				padding: 0 0 0 30px;
+			}
+		}
+	}
+}
+
+@include ipad-portrait {
+	
+	.eltd-tabs {
+		
+		&.eltd-tabs-standard {
+			
+			.eltd-tabs-nav {
+				
+				li {
+					display: block;
+					float: none;
+					
+					a {
+						width: 100%;
+					}
+				}
+			}
+		}
+		
+		&.eltd-tabs-boxed {
+			
+			.eltd-tabs-nav {
+				
+				li {
+					display: block;
+					float: none;
+					
+					a {
+						width: 100%;
+					}
+				}
+			}
+		}
+		
+		&.eltd-tabs-simple {
+			
+			.eltd-tabs-nav {
+				
+				li {
+					width: 100%;
+				}
+			}
+
+			.eltd-tabs.eltd-tabs-simpl{
+				padding: 8px 0 20px;
+			}
+		}
+		
+		&.eltd-tabs-vertical {
+			
+			.eltd-tabs-nav,
+			.eltd-tab-container {
+				display: inline-block;
+				width: 100%;
+				height: auto;
+			}
+			
+			.eltd-tabs-nav {
+				border-right: 0;
+				
+				li {
+					float: left;
+					width: 100%;
+				}
+			}
+			
+			.eltd-tab-container {
+				padding: 31px 0 0;
+			}
+		}
+	}
+}
+
+@include phone-landscape {
+	
+	.eltd-tabs {
+		
+		&.eltd-tabs-simple {
+			
+			.eltd-tabs-nav {
+				padding: 0 0 20px;
+				
+				li {
+					display: block;
+					float: none;
+					margin: 0 0 20px;
+					
+					a {
+						padding: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+		
+		&.eltd-tabs-vertical {
+			
+			.eltd-tabs-nav {
+				
+				li {
+					display: block;
+					float: none;
+					margin: 0 0 20px;
+					
+					a {
+						padding: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Tabs shortcode responsive style - end
+   ========================================================================== */

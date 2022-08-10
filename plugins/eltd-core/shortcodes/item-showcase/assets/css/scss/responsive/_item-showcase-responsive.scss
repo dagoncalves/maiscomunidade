@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Item Showcase shortcode responsive style - begin
+   ========================================================================== */
+
+@include laptop-landscape {
+	
+	.eltd-item-showcase-holder {
+		
+		.eltd-is-image {
+			position: absolute;
+			left:0;
+			width: 50%;
+			height: 100%;
+			margin-top: 0 !important; //override inline margin if set by user
+			
+			img {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				@include eltdTransform(translate(-50%,-50%));
+			}
+		}
+		
+		.eltd-is-item-holder {
+			
+			&.eltd-is-left-holder,
+			&.eltd-is-right-holder {
+				float: right;
+				width: 50%;
+				padding: 0 0 0 50%;
+			}
+			
+			&.eltd-is-right-holder {
+				margin: 36px 0 0;
+			}
+		}
+
+	  	.eltd-is-item {
+		    margin: 36px 0 0;
+		    
+		    &.eltd-is-left {
+			    text-align: left;
+			
+			    .eltd-is-content {
+				    padding: 0 0 0 20px;
+			    }
+		    }
+		    
+		    &:not(.eltd-appeared) {
+			    @include eltdTransform(translateX(-40px));
+		    }
+	  	}
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	
+	.eltd-item-showcase-holder {
+		
+		.eltd-is-image {
+			display: none;
+		}
+		
+		.eltd-is-item-holder {
+			
+			&.eltd-is-left-holder,
+			&.eltd-is-right-holder {
+				float: none;
+				width: 100%;
+				padding: 0;
+			}
+		}
+		
+		.eltd-is-item {
+			opacity: 1;
+			-webkit-transform: translateX(0) translateY(0) !important;
+			-moz-transform: translateX(0) translateY(0) !important;
+			transform: translateX(0) translateY(0) !important;
+			
+			&.eltd-is-left,
+			&.eltd-is-right {
+				
+				.eltd-is-content {
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+/* ==========================================================================
+   Item Showcase shortcode responsive style - end
+   ========================================================================== */

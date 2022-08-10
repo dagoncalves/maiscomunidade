@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Testimonials standard style - begin
+   ========================================================================== */
+.eltd-testimonials-holder {
+    
+    &.eltd-testimonials-standard {
+        text-align: center;
+        
+        .eltd-testimonials{
+            padding: 0;
+            position: relative;
+            
+            &.eltd-owl-slider{
+                .owl-dots {
+                    counter-reset: dots;
+                    position: relative;
+                    bottom: 0px;
+                    margin: 0;
+                    z-index: 99;
+                    text-align: left;
+                    
+            
+                    .owl-dot {
+
+                        &.active, 
+                        &:hover{
+                            span{
+                                background-color: $first-main-color;
+                                color: $default-background-color;
+                            }
+                        }
+
+                        span{
+                            background-color: $default-background-color;
+                            color: $dark-color;
+                            padding: 10px;
+                            box-sizing: unset;
+                            margin: 0 5px 0 0;
+                            display: inline;
+
+                            &:after {
+                                counter-increment:dots;
+                                content: counter(dots);
+                                font-size: 14px;
+                                position: relative;
+                                padding: 8px 6px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .eltd-testimonial-image {
+            @include eltdRelativeHolderLayout();
+            width: 50%;
+            float: right;
+
+            img {
+                display: block;
+                margin: 0 auto;
+                height: 100%;
+                border-radius: 0;
+            }
+        }
+        
+        .eltd-testimonial-text-holder{
+            width: 50%;
+            text-align: left;
+            float: left;
+            padding: 70px 0 30px;
+            
+            .eltd-testimonial-title {
+                margin: 0;
+                position: relative;
+                padding: 50px 15px 0 0;
+                line-height: 1.3em;
+                letter-spacing: -2px;
+                
+                &:before{
+                    content: ",,";
+                    font-family: "Montserrat",sans-serif;
+                    font-size: 120px;
+                    color: $first-main-color;
+                    letter-spacing: -10px;
+                    position: absolute;
+                    top: -55px;
+                }
+            }
+            
+            .eltd-testimonials-separator {
+                background: $grey-color;
+                content: "";
+                height: 1px;
+                margin: 25px 0 30px;
+                width: 275px;
+            }
+
+            .eltd-testimonial-author {
+                margin: 24px 0 0;
+            }
+
+            .eltd-testimonial-text {
+                margin: 19px 0 0;
+                color: #a7a9ac;
+            }
+            
+            .eltd-testimonial-address{
+                color: $blue-color;
+                display: block;
+                margin: 2px 0 5px;
+            }
+        }
+
+        /* Light/Dark styles */
+        &.eltd-testimonials-light {
+            
+            .eltd-testimonial-title,
+            .eltd-testimonial-text,
+            .eltd-testimonial-author {
+                color: #fff;
+            }
+
+            .owl-dots {
+                
+                .owl-dot {
+                    
+                    span {
+                        border: 2px solid rgba(#fff, .5);
+                    }
+                    
+                    &:hover,
+                    &.active {
+
+                        span {
+                            background-color: #fff;
+                            border-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Testimonials standard style - end
+   ========================================================================== */
+

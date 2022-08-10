@@ -1,0 +1,51 @@
+.eltd-team-single-holder {
+    @include eltdRelativeHolderLayout();
+	
+    .eltd-name {
+        margin: 0 0 20px;
+    }
+
+    .eltd-position {
+	    margin: 0;
+        color: #ababab;
+
+        .eltd-icon-shortcode {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 5px;
+
+            a, span, i {
+                color: #999;
+            }
+        }
+    }
+
+    .eltd-ts-info-row {
+	    padding: 10px 0;
+	    border-bottom: 1px solid #dadada;
+	    color: #ababab;
+	    font-size: 12px;
+
+        &:last-child{
+            border: 0;
+        }
+
+        .eltd-ts-bio-icon {
+	        display: inline-block;
+	        vertical-align: middle;
+	        margin: 0 10px 0 0;
+	        font-size: 18px;
+        }
+
+        .eltd-ts-bio-info {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .eltd-team-single-content {
+	    @include eltdRelativeHolderLayout();
+	    margin: 30px 0 0;
+    }
+}

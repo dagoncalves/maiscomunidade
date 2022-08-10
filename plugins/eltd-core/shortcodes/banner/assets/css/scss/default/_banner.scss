@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Banner shortcode style - begin
+   ========================================================================== */
+
+.eltd-banner-holder {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+	
+	.eltd-banner-image {
+		@include eltdRelativeHolderLayout();
+		-webkit-transition: -webkit-transform .4s cubic-bezier(.15,.7,.54,.99);
+		transition: transform .4s cubic-bezier(.15,.7,.54,.99);
+		will-change: transform;
+		@include eltdTransform(scale(1.001));
+
+		img {
+			display: block;
+			margin: auto;
+		}
+	}
+
+	&:hover {
+		.eltd-banner-image {
+			@include eltdTransform(scale(1.06));
+		}
+	}
+
+	.eltd-banner-front-image {
+		@include eltdAbsoluteHolderLayout();
+		z-index: 10;
+
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include eltdTransform(translate(-50%, -50%));
+		}
+	}
+	
+	.eltd-banner-text-holder {
+		@include eltdAbsoluteHolderLayout();
+	}
+	
+	.eltd-banner-text-inner {
+		@include eltdRelativeHolderLayout();
+		height: 100%;
+		padding: 7% 6% 5% 8%;
+		box-sizing: border-box;
+		
+		@include laptop-landscape {
+			padding: 6% 4% 4% 7%;
+		}
+		
+		@include ipad-portrait {
+			padding: 25px 30px;
+		}
+	}
+	
+	.eltd-banner-subtitle {
+		margin: 0;
+	}
+	
+	.eltd-banner-title {
+		margin: 4px 0 0;
+	}
+	
+	.eltd-banner-text {
+		margin: 14px 0 0;
+		line-height: 1em;
+	}
+
+	.eltd-banner-link {
+		@include eltdAbsoluteHolderLayout();
+		z-index: 100;
+	}
+}
+/* ==========================================================================
+   Banner shortcode style - end
+   ========================================================================== */

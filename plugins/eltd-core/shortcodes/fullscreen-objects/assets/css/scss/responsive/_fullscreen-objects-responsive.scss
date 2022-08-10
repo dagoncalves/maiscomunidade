@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Fullscreen Objects shortcode responsive style - begin
+   ========================================================================== */
+@include laptop-landscape-large-plus-pixel{
+	.swiper-container.eltd-fullscreen-objects.full-page{
+		.swiper-wrapper .swiper-slide{
+			.eltd-slide-title-holder{
+				bottom: 0;
+			}
+		}
+	}
+}
+@include laptop-landscape-medium{
+	.swiper-container.eltd-fullscreen-objects.full-page{
+		.swiper-wrapper .swiper-slide{
+			background-position: 120px 35%;
+		}
+	}
+	.swiper-navigation{
+		.eltd-swiper-button{
+			top: 55%;
+		}
+	}
+}
+@include ipad-portrait {
+	.swiper-container.eltd-fullscreen-objects.full-page {
+		.swiper-wrapper .swiper-slide{
+			background-position: top;
+
+			.eltd-slide-title-holder{
+				width: 100%;
+				bottom: 4%;
+
+				.eltd-slide-title{
+					font-size: 20px;
+					line-height: 40px;
+				}
+			}
+			.eltd-slide-parallax-image-holder {
+				left: 30%;
+				@include eltdTransform(translate(-30%, -45%))
+			}
+		}
+
+		.swiper-navigation {
+			right: 5%;
+		}
+	}
+}
+@include phone-portrait {
+	.swiper-container.eltd-fullscreen-objects.full-page {
+		.swiper-wrapper .swiper-slide {
+			background-position: center 10%;
+			background-size: 100%;
+
+			.eltd-slide-title-holder{
+				text-align: center;
+			}
+			
+			.eltd-slide-parallax-image-holder{
+				display: none;
+			}
+		}
+	}
+
+	.swiper-navigation{
+		display: none;
+	}
+}
+
+/* ==========================================================================
+   Fullscreen Objects shortcode responsive style - end
+   ========================================================================== */

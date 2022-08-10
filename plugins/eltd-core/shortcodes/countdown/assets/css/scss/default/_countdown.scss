@@ -1,0 +1,87 @@
+/* ==========================================================================
+   Countdown shortcode style - begin
+   ========================================================================== */
+
+.eltd-countdown {
+	@include eltdRelativeHolderLayout();
+	
+	.countdown-rtl {
+		direction: rtl;
+	}
+	
+	.countdown-row {
+		@include eltdRelativeHolderLayout();
+		text-align: center;
+		clear: both;
+		
+		&.countdown-show1 .countdown-section {
+			width: 100%;
+		}
+		&.countdown-show2 .countdown-section {
+			width: 50%;
+		}
+		&.countdown-show3 .countdown-section {
+			width: 33.33333333333333%;
+		}
+		&.countdown-show4 .countdown-section {
+			width: 25%;
+		}
+		&.countdown-show5 .countdown-section {
+			width: 20%;
+		}
+		
+		.countdown-section {
+			@include eltdRelativeHolderLayout();
+			padding: 0 5px;
+			box-sizing: border-box;
+			
+			.countdown-amount {
+				position: relative;
+				display: block;
+				color: $default-heading-color;
+				line-height: 1em;
+				font-weight: 400;
+				font-family: $default-text-font;
+			}
+			
+			.countdown-period {
+				display: block;
+				font-weight: 400;
+				font-family: $default-text-font;
+				color: $dark-color;
+			}
+		}
+	}
+	
+	&.eltd-dark-skin {
+		
+		.countdown-row {
+			
+			.countdown-section {
+				
+				.countdown-amount,
+				.countdown-period {
+					color: $default-heading-color;
+				}
+			}
+		}
+	}
+	
+	&.eltd-light-skin {
+		
+		.countdown-row {
+			
+			.countdown-section {
+				
+				.countdown-amount,
+				.countdown-period {
+					color: #fff;
+				}
+			}
+
+		}
+	}
+}
+/* ==========================================================================
+   Countdown shortcode style - end
+   ========================================================================== */

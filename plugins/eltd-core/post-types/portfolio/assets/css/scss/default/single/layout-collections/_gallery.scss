@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Portfolio Single - Gallery layout style - begin
+   ========================================================================== */
+
+.eltd-portfolio-single-holder {
+    
+    &.eltd-ps-gallery-layout {
+        
+        .eltd-ps-image-holder {
+	        width: 100%;
+            margin: 0 0 40px;
+	
+	        .eltd-ps-image {
+		        float: left;
+		        
+		        a {
+			        
+			        &:before {
+				        position: absolute;
+				        top: 50%;
+				        left: 50%;
+				        margin: -19px 0 0 -19px;
+				        content: '\4c';
+				        font-family: 'ElegantIcons';
+				        speak: none;
+				        color: #fff;
+				        font-size: 38px;
+				        line-height: 1;
+				        font-style: normal;
+				        font-weight: normal;
+				        font-variant: normal;
+				        -webkit-font-smoothing: antialiased;
+				        z-index: 2;
+				        opacity: 0;
+				        @include eltdTransition(opacity .2s ease-in-out);
+			        }
+			        
+			        &:after {
+				        @include eltdAbsoluteHolderLayout();
+				        content: '';
+				        background-color: rgba($first-main-color, 0.7);
+				        opacity: 0;
+				        @include eltdTransition(opacity .2s ease-in-out);
+			        }
+			        
+			        &:hover {
+				
+				        &:before,
+				        &:after {
+					        opacity: 1;
+				        }
+			        }
+		        }
+	        }
+        }
+    }
+}
+/* ==========================================================================
+   Portfolio Single - Gallery layout style - end
+   ========================================================================== */

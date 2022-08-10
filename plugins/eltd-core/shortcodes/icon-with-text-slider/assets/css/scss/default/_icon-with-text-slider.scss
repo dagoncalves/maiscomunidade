@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Icon With Text Slider shortcode style - begin
+   ========================================================================== */
+.eltd-iwt-slider-holder{
+    &.eltd-owl-slider{
+        .owl-item{
+            border-right: 2px solid transparent;
+            box-sizing: border-box;
+            
+            .eltd-iwt-icon-top{
+                background-color: $default-background-color;
+                padding: 55px 0 0;
+                
+                .eltd-iwt-content{
+                    padding: 25px 0 0;
+
+                    .eltd-iwt-title{
+                        font-size: 40px;
+                    }
+                    .eltd-iwt-text{
+                        color: $dark-color;
+                        font-size: 20px;
+                        font-family: $first-main-font;
+                    }
+                }
+
+                .eltd-iwt-link{
+                    bottom: 0;
+                }
+            }
+        }
+
+        .owl-nav{
+            .eltd-prev-icon,
+            .eltd-next-icon{
+                background-color: transparent;
+            }
+
+            .owl-next{
+                right: -45px;
+            }
+            .owl-prev{
+                left: -45px;
+            }
+        }
+
+        .owl-dots .owl-dot span {
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+}
+
+
+/* ==========================================================================
+   Icon With Text Slider shortcode style - end
+   ========================================================================== */

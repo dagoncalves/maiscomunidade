@@ -11,6 +11,7 @@ plugins/*
 !plugins/eltd-listing
 !plugins/eltd-membership
 !plugins/maiscomunidade-user-avatars
+!plugins/eltd-core
 
 # ignore languages folder
 languages/

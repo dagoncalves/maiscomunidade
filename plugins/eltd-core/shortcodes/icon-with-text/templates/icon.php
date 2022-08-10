@@ -1,0 +1,1 @@
+<?php echo findme_elated_execute_shortcode('eltd_icon', $icon_parameters); ?>

@@ -1,0 +1,73 @@
+/*==========================================================================
+# Scrolling Image style - begin
+========================================================================== */
+.eltd-scrolling-image {
+	@include eltdRelativeHolderLayout();
+
+	.eltd-image-holder {
+		position: relative;
+		box-shadow: 0px 5px 21px rgba(0, 0, 0, 0.09);
+		@include eltdTransition(box-shadow .4s);
+
+		.eltd-image-holder-inner {
+			@include eltdAbsoluteHolderLayout();
+			overflow: hidden;
+			
+			&:after {
+				content:'';
+				@include eltdAbsoluteHolderLayout();
+				background-color: rgba(255,255,255,.03);
+				opacity: 0;
+				@include eltdTransition(opacity .3s);
+			}
+		}
+
+		.eltd-image-frame{
+			vertical-align: middle;
+		}
+	}
+
+	&:hover {
+		.eltd-image-holder {
+			box-shadow: 0px 7px 30px rgba(0, 0, 0, 0.2);
+		}
+
+		.eltd-image-holder-inner:after {
+			opacity:1;
+		}
+	}
+
+	.eltd-text-holder {
+		text-align: center;
+
+		.eltd-image-title {
+			margin-top: 35px;
+			color: $additional-heading-color;
+			font-family: $first-main-font;
+			font-size: 20px;
+			line-height: 27px;
+			font-weight: 400;
+		}
+
+		.eltd-image-subtitle{
+			margin-top: 14px;
+		}
+	}
+
+	.eltd-scrolling-img {
+		display: block;
+		@include eltdTransform(translate3d(0,0,0));
+		-webkit-filter: blur(); //crisp edges fix in chrome
+		min-height: 100%; //in case height is lower
+		-webkit-transition-timing-function: cubic-bezier(0.19, 0.2, 0.22, 1);
+		transition-timing-function: cubic-bezier(0.19, 0.2, 0.22, 1);
+	}
+
+	.eltd-scrolling-image-link {
+		@include eltdAbsoluteHolderLayout();
+		z-index: 100;
+	}
+}
+/*==========================================================================
+# Device Presentation style - end
+========================================================================== */

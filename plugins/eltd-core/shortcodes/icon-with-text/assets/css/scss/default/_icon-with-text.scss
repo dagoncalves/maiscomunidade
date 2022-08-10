@@ -1,0 +1,200 @@
+/* ==========================================================================
+   Icon With Text shortcode style - begin
+   ========================================================================== */
+
+.eltd-iwt {
+	@include eltdRelativeHolderLayout();
+	width: auto;
+	
+	.eltd-iwt-icon {
+		
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		.eltd-icon-shortcode {
+			line-height: 1;
+			
+			&.eltd-circle,
+			&.eltd-square {
+				line-height: 2;
+			}
+		}
+
+		&.icon-hover{
+			img {
+				&:last-child {
+					position: absolute;
+					top: 0;
+					left: 50%;
+					opacity: 0;
+					@include eltdTransform(translateX(-50%));
+					@include eltdTransition(opacity ease-out 0.2s);
+				}
+
+				&:hover {
+					&:last-child {
+						opacity: 1;
+						@include eltdTransition(opacity ease-in 0.3s);
+					}
+				}
+			}
+
+			.eltd-icon-shortcode{
+				&:hover{
+					color: $first-main-color;
+				}
+			}
+		}
+	}
+	
+	.eltd-iwt-title {
+		margin: 0;
+		line-height: 1.2em;
+		
+		a {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+	
+	.eltd-iwt-title-text {
+		display: block;
+	}
+	
+	.eltd-iwt-text {
+		margin: 10px 0 0;
+	}
+	
+	&.eltd-iwt-icon-left {
+		width: auto;
+		
+		.eltd-iwt-icon,
+		.eltd-iwt-content {
+			display: table-cell;
+			vertical-align: top;
+		}
+		
+		.eltd-iwt-icon {
+			position: relative;
+			top: 1px;
+			
+			img {
+				max-width: none;
+			}
+		}
+		
+		.eltd-iwt-content {
+			padding: 0 0 0 13px;
+		}
+	}
+	
+	&.eltd-iwt-icon-left-from-title {
+		
+		.eltd-iwt-icon,
+		.eltd-iwt-title-text {
+			position: relative;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+		.eltd-iwt-icon {
+			
+			.eltd-icon-element {
+				@include eltdTransition(none);
+			}
+			
+			img {
+				max-width: none;
+			}
+		}
+		
+		.eltd-iwt-title-text {
+			padding: 0 0 0 17px;
+		}
+	}
+	
+	&.eltd-iwt-icon-top,
+	&.eltd-iwt-icon-top-hover{
+		text-align: center;
+        
+        .eltd-iwt-icon{
+            margin-top: 10px;
+			position: relative;
+        }
+		
+		.eltd-iwt-content {
+			padding: 25px 0;
+            
+            .eltd-iwt-text{
+                padding:0 10px 20px;
+            }
+		}
+        
+        .eltd-iwt-link{
+            background-color: $first-main-color;
+            color: $default-background-color;
+            display: block;
+            padding: 10px 0;
+            position: relative;
+            left:0;
+            bottom: -5px;
+            width: 100%;
+			font-size: 14px;
+
+			span{
+				padding-left: 6px;
+			}
+            
+            &:hover{
+                background-color: $green-hover-color;
+            }
+        }
+	}
+
+	&.eltd-iwt-icon-top-hover{
+		border: 1px solid #ebebeb;
+		padding: 35px 15px 15px;
+		-webkit-transition: -webkit-transform .35s cubic-bezier(.38,3,.57,1.6), box-shadow .3s;
+		transition: transform .35s cubic-bezier(.38,3,.57,1.6), box-shadow .3s;
+
+		.eltd-iwt-content{
+			padding-top: 30px;
+
+			.eltd-iwt-text{
+				padding: 0;
+				line-height: 30px;
+			}
+		}
+
+		.eltd-iwt-text{
+			font-weight: 300;
+			font-size: 18px;
+		}
+
+		.icon-hover img:first-child {
+		    @include eltdTransition(opacity .2s ease-out);
+		}
+
+		&:hover {
+		    @include eltdTransform(translateY(-4px));
+		    box-shadow: 0px 0px 4px 1px rgba(0,0,0,.05);
+
+		     .icon-hover img {
+		     	&:first-child {
+				    opacity: 0;
+				}
+				
+		     	&:last-child {
+			        opacity: 1;
+		    	}
+		    }
+		}
+	}
+}
+/* ==========================================================================
+   Icon With Text shortcode style - end
+   ========================================================================== */

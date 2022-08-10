@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Elements Holder shortcode style - begin
+   ========================================================================== */
+
+.eltd-elements-holder {
+	width: 100%;
+	display: table;
+	table-layout: fixed;
+
+	&.eltd-two-columns {
+
+		.eltd-eh-item {
+			width: 50%;
+		}
+	}
+
+	&.eltd-three-columns {
+
+		.eltd-eh-item {
+			width: 33%;
+		}
+	}
+
+	&.eltd-four-columns {
+
+		.eltd-eh-item {
+			width: 25%;
+		}
+	}
+
+	&.eltd-five-columns {
+
+		.eltd-eh-item {
+			width: 20%;
+		}
+	}
+
+	&.eltd-six-columns {
+
+		.eltd-eh-item {
+			width: 16%;
+		}
+	}
+
+	.eltd-eh-item {
+		display: table-cell;
+		vertical-align: middle;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+
+		&.eltd-vertical-alignment-top {
+			vertical-align: top;
+		}
+
+		&.eltd-vertical-alignment-bottom {
+			vertical-align: bottom;
+		}
+
+		&.eltd-horizontal-alignment-center {
+			text-align: center;
+		}
+
+		&.eltd-horizontal-alignment-right {
+			text-align: right;
+		}
+
+		.eltd-elements-holder-item-inner {
+			width: 100%;
+		}
+	}
+
+	&.eltd-ehi-float {
+
+		&.eltd-three-columns {
+
+			.eltd-eh-item {
+				width: 33.33333333333333%;
+			}
+		}
+
+		&.eltd-six-columns {
+
+			.eltd-eh-item {
+				width: 16.66666666666667%;
+			}
+		}
+
+		.eltd-eh-item {
+			float:left;
+		}
+	}
+
+	.eltd-ehi-content {
+		padding: 0 20px;
+	}
+}
+/* ==========================================================================
+   Elements Holder shortcode style - end
+   ========================================================================== */

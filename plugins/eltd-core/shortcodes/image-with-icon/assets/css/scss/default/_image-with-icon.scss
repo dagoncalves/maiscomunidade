@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Image With Icon shortcode style - begin
+   ========================================================================== */
+
+.eltd-image-with-icon-holder {
+    @include eltdRelativeHolderLayout();
+	width: auto;
+	
+	.eltd-iwc-image {
+		@include eltdRelativeHolderLayout();
+		
+		img {
+			display: block;
+			border-radius: 50%;
+		}
+	}
+
+	.eltd-iwc-icon-holder {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		color: $light-color;
+		font-size: 50px;
+	}
+	
+	.eltd-iwc-title {
+		margin: 35px 0 0;
+	}
+	
+	.eltd-iwc-text {
+		margin: 14px 0 0;
+	}
+}
+/* ==========================================================================
+   Image With Text shortcode style - end
+   ========================================================================== */

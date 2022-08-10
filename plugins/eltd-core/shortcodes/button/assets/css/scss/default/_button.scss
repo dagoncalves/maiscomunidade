@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Button shortcode style - begin
+   ========================================================================== */
+
+.eltd-btn {
+    @include eltdButtonDefaultStyle();
+    @include eltdButtonMediumParams();
+
+    &.eltd-btn-simple {
+        padding: 0 !important;
+        color: $default-text-color;
+        background-color: transparent;
+        border: 0;
+        vertical-align: middle;
+
+        .eltd-btn-text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &:not(.eltd-btn-custom-hover-color):not(.eltd-blog-list-button):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: $default-heading-color !important;
+        }
+
+        &:not(.eltd-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: transparent !important;
+        }
+
+        &:not(.eltd-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: transparent !important;
+        }
+
+        &.eltd-btn-icon{
+            .eltd-btn-text{
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &.eltd-btn-solid {
+        @include eltdButtonSolidColor();
+
+        &:not(.eltd-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: $first-main-color !important;
+        }
+
+        &:not(.eltd-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: transparent !important;
+            border-color: $first-main-color;
+            &.eltd-btn-icon{
+                .eltd-btn-icon-html{
+                    color: $first-main-color;
+                }
+            }
+        }
+    }
+
+    &.eltd-btn-outline {
+	    @include eltdButtonOutlineColor();
+
+        &:not(.eltd-btn-custom-hover-color):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            color: $light-color !important;
+        }
+
+        &:not(.eltd-btn-custom-hover-bg):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            background-color: $first-main-color !important;
+        }
+
+        &:not(.eltd-btn-custom-border-hover):hover {
+            //important because of inline color attribute. :not is used so we don't have to use important in JS
+            border-color: $first-main-color !important;
+        }
+    }
+
+    &.eltd-btn-small {
+        @include eltdButtonSmallParams();
+
+        &.eltd-btn-icon{
+            padding-right: 38px;
+        }
+    }
+
+    &.eltd-btn-medium {
+        //same as default
+
+        &.eltd-btn-icon{
+            padding-right: 46px;
+        }
+    }
+
+    &.eltd-btn-large {
+        @include eltdButtonLargeParams();
+
+        &.eltd-btn-icon{
+            padding-right: 49px;
+        }
+    }
+
+    &.eltd-btn-huge {
+        @include eltdButtonHugeParams();
+
+        &.eltd-btn-icon{
+            .icon_plus{
+                font-size: 20px;
+            }
+        }
+    }
+
+    &.eltd-btn-icon {
+
+        .eltd-btn-text{
+            display: inline-block;
+        }
+
+        .eltd-btn-icon-html{
+            display: inline-block;
+            position: relative;
+            left: 0;
+            top: 1px;
+            height: 100%;
+            text-align: center;
+            -webkit-transition: -webkit-transform .2s;
+            transition: transform .3s;
+
+            > i,
+            > span{
+
+                position: relative;
+                line-height: inherit;
+                font-size: inherit;
+
+                &:before {
+                    position: relative;
+                }
+            }
+
+        }
+
+        &:hover {
+            .eltd-btn-icon-html {
+                @include eltdTransform(translate3d(7px,0,0));
+            }
+        }
+    }
+    &.eltd-btn-fullwidth{
+        width: 100%;
+    }
+}
+
+input[type=submit].eltd-btn,
+button.eltd-btn {
+    cursor: pointer;
+}
+/* ==========================================================================
+   Button shortcode style - end
+   ========================================================================== */

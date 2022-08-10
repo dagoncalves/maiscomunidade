@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Stacked Images responsive style - begin
+   ========================================================================== */
+@include laptop-landscape{
+	.eltd-si-clicke-here{
+		display: none;
+	}
+}
+@include phone-landscape {
+	.eltd-stacked-images-holder {
+		.eltd-si-switch-images {
+			width: 70%;
+		}
+	}
+}
+/* ==========================================================================
+   Stacked Images responsive style - end
+   ========================================================================== */

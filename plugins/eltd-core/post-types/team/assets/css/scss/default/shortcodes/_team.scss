@@ -1,0 +1,199 @@
+/* ==========================================================================
+# Team style - begin
+	========================================================================== */
+
+/* Team type simple - begin
+========================================================================== */
+
+.eltd-team {
+	@include eltdRelativeHolderLayout();
+
+	.eltd-icon-shortcode {
+		color: #999;
+
+		a, span, i {
+			color: #999;
+		}
+	}
+
+	&.info-bellow {
+		
+		.eltd-team-inner {
+			text-align: left;
+			width: 100%;
+		}
+
+		.eltd-team-image {
+			position: relative;
+			overflow: hidden;
+			display: block;
+			margin: 0 auto;
+
+            a {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+	
+	            &:hover {
+		            
+		            &:after {
+			            opacity: 0.3;
+		            }
+	            }
+	            
+	            &:after {
+		            content: '';
+		            position: absolute;
+		            height: 100%;
+		            width: 100%;
+		            top: 0;
+		            left: 0;
+		            background-color: #fff;
+		            opacity: 0;
+		
+		            @include eltdTransition(opacity 0.3s ease);
+	            }
+            }
+
+			img {
+				display: block;
+			}
+		}
+        
+        .team-info{
+            text-align: left;
+        }
+
+		.eltd-team-title-holder {
+			margin-top: 40px;
+			margin-bottom: 23px;
+            
+            .eltd-team-name{
+                margin-bottom: 5px;
+            }
+            
+            .eltd-team-position{
+                font-size: 16px;
+                margin-top: 5px;
+                color: $additional-heading-color;
+            }
+		}
+        
+        .eltd-team-text {
+			margin-bottom: 33px;
+		}
+
+		.eltd-icon-shortcode {
+			font-size: 20px;
+            width: 55px;
+            height:55px;
+            line-height: 55px;
+            background-color: $default-background-color;
+            border-radius: 2px;
+            text-align: center;
+            
+            &:hover i{
+                color: $additional-heading-color;
+            }
+		}
+	}
+
+	&.info-hover {
+		
+		.eltd-team-inner {
+			position: relative;
+			
+			&:hover {
+				
+				.eltd-team-info {
+					opacity: 1;
+				}
+			}
+		}
+
+		.eltd-team-image img {
+			display: block;
+		}
+
+		.eltd-team-name,
+		.eltd-team-position,
+		.eltd-team-text,
+		.eltd-icon-shortcode,
+		.eltd-icon-shortcode > * {
+			color: #fff;
+
+			a, span, i{
+				color: $default-background-color;
+			}
+		}
+
+		.eltd-team-name{
+			margin-bottom: 2px;
+		}
+
+		.eltd-team-position{
+			font-size: 16px;
+			margin-top: 0;
+		}
+
+		.eltd-team-info-tb {
+			display: table-cell;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+            opacity: 0;
+			@include eltdTransition(opacity 0.2s ease-out);
+
+			&:after {
+                content: "";
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                height: 100%;
+				background: -moz-linear-gradient(top, rgba(69, 78, 92, 0) 1%, rgba(69, 78, 92, 1) 100%);
+				background: -webkit-linear-gradient(top, rgba(69, 78, 92, 0) 1%, rgba(69, 78, 92, 1) 100%);
+				background: linear-gradient(to bottom, rgba(69, 78, 92, 0) 1%, rgba(69, 78, 92, 1) 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00454e5c', endColorstr='#454e5c', GradientType=0);
+			}
+
+            &:hover{
+                opacity: 1;
+            }
+		}
+
+		.eltd-team-info-tc {
+            width: 100%;
+			position: absolute;
+			bottom: 22px;
+			left: 50%;
+            padding: 0px 10px;
+            box-sizing: border-box;
+            z-index: 10;
+
+			@include eltdTransform(translateX(-50%));
+		}
+
+		.eltd-icon-shortcode {
+			margin: 0 8px;
+			font-size: 20px;
+
+			&:hover{
+				i{
+					color: $additional-heading-color;
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+# Team style - end
+========================================================================== */

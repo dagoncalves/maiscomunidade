@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Image With Text shortcode style - begin
+   ========================================================================== */
+
+.eltd-image-with-text-holder {
+    @include eltdRelativeHolderLayout();
+	
+	.eltd-iwt-image {
+		@include eltdRelativeHolderLayout();
+		width: auto;
+		box-shadow: 0 4px 12px rgba(0,0,0,.08);
+		-webkit-transition: -webkit-transform .45s cubic-bezier(.38,3,.57,1.6), box-shadow .3s;
+		transition: transform .45s cubic-bezier(.38,3,.57,1.6), box-shadow .3s;
+
+		&:hover{
+			box-shadow: 5px 8.66px 20px 0 rgba(0,0,0,.1);
+			@include eltdTransform(translate3d(0px, -5px, 0px));
+		}
+		
+		a, img {
+			display: block;
+		}
+	}
+	
+	.eltd-iwt-text-holder {
+		@include eltdRelativeHolderLayout();
+	}
+	
+	.eltd-iwt-title {
+		margin: 30px 0 0;
+	}
+	
+	.eltd-iwt-text {
+		margin: 4px 0 0;
+	}
+}
+/* ==========================================================================
+   Image With Text shortcode style - end
+   ========================================================================== */

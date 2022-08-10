@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Testimonials boxed style - begin
+   ========================================================================== */
+.eltd-testimonials-holder {
+    &.eltd-testimonials-boxed {
+
+        .eltd-testimonials {
+            margin: 0 -50px;
+        }
+
+        .eltd-testimonial-content {
+            box-sizing: border-box;
+            width: 33%;
+            vertical-align: top;
+            padding: 30px 5px;
+
+
+            .eltd-testimonials-author-holder {
+                @include eltdRelativeHolderLayout();
+                width: 100px;
+                box-sizing: border-box;
+                display: table-cell;
+                vertical-align: top;
+
+                .eltd-testimonial-image {
+                    width: 100px;
+                    position: relative;
+                    
+                    .fa-quote-right{
+                        position: absolute;
+                        background-color: $first-main-color;
+                        color: $default-background-color;
+                        padding: 9px;
+                        border-radius: 50%;
+                        bottom: 0;
+                        right: 10px;
+                        font-size: 10px;
+                        border: 2px solid $default-background-color;
+                    }
+                    img{
+                        border-radius: 50%;
+                        width: 91px;
+                    }
+                }
+                .eltd-testimonial-author {
+                    font-family: $default-text-font;
+                    margin-bottom: 0;
+                }
+                
+                .eltd-testimonials-website{
+                    color: $light-green-color;
+                    margin: 0;
+                    text-overflow: ellipsis;
+                    width: 100px;
+                    overflow: hidden;
+                }
+            }
+            
+            .eltd-testimonial-text-holder{
+                width: auto;
+                padding: 2px 5px 10px;
+                box-sizing: border-box;
+                display: table-cell;
+                
+                .eltd-testimonial-title{
+                    font-weight: 300;
+                    color: $first-main-color;
+                    margin-bottom: 2px;
+                }
+
+                .eltd-testimonial-author{
+                    margin-top: 2px;
+                }
+
+                .eltd-testimonial-text{
+                    font-weight: 300;
+                    padding-top: 2px;
+                }
+            }
+        }
+
+        /* Light/Dark styles */
+        &.eltd-testimonials-light {
+            
+            .eltd-testimonial-title,
+            .eltd-testimonial-text,
+            .eltd-testimonial-author {
+                color: #fff;
+            }
+
+            .owl-dots {
+                
+                .owl-dot {
+                    
+                    span {
+                        border: 2px solid rgba(#fff, .5);
+                    }
+                    
+                    &:hover,
+                    &.active {
+
+                        span {
+                            background-color: #fff;
+                            border-color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Testimonials boxed style - end
+   ========================================================================== */
+

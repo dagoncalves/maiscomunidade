@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Counter shortcode style - begin
+   ========================================================================== */
+
+.eltd-counter-holder {
+    @include eltdRelativeHolderLayout();
+    opacity: 0;
+    @include eltdTransition(opacity 0.2s ease-in);
+	
+	.eltd-counter-inner {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+    .eltd-counter {
+	    height: 1em;
+	    display: inline-block !important;
+	    vertical-align: middle;
+	    color: $default-heading-color;
+	    font-size: 48px;
+	    line-height: 1em;
+	    font-weight: 600;
+	    overflow: hidden;
+    }
+
+    .eltd-counter-title {
+	    margin: 5px 0 0;
+    }
+
+    .eltd-counter-text {
+	    margin: 14px 0 0;
+    }
+}
+/* ==========================================================================
+   Counter shortcode style - end
+   ========================================================================== */

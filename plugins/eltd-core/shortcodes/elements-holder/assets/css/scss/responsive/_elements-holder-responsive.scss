@@ -1,0 +1,150 @@
+/* ==========================================================================
+   Elements Holder shortcode responsive style - begin
+   ========================================================================== */
+
+.eltd-elements-holder {
+
+	&.eltd-responsive-mode-1280.eltd-two-columns,
+	&.eltd-responsive-mode-1280.eltd-three-columns,
+	&.eltd-responsive-mode-1280.eltd-four-columns,
+	&.eltd-responsive-mode-1280.eltd-five-columns,
+	&.eltd-responsive-mode-1280.eltd-six-columns {
+
+		.eltd-eh-item {
+			@media only screen and (max-width: 1280px) {
+				width: 100%;
+				display: inline-block;
+				height: auto;
+			}
+		}
+	}
+
+	&.eltd-responsive-mode-1024.eltd-two-columns,
+	&.eltd-responsive-mode-1024.eltd-three-columns,
+	&.eltd-responsive-mode-1024.eltd-four-columns,
+	&.eltd-responsive-mode-1024.eltd-five-columns,
+	&.eltd-responsive-mode-1024.eltd-six-columns {
+
+		.eltd-eh-item {
+			@media only screen and (max-width: 1024px) {
+				width: 100%;
+				display: inline-block;
+				height: auto;
+			}
+		}
+	}
+
+	&.eltd-responsive-mode-768.eltd-two-columns,
+	&.eltd-responsive-mode-768.eltd-three-columns,
+	&.eltd-responsive-mode-768.eltd-four-columns,
+	&.eltd-responsive-mode-768.eltd-five-columns,
+	&.eltd-responsive-mode-768.eltd-six-columns {
+
+		.eltd-eh-item {
+			@media only screen and (max-width: 768px) {
+				width: 100%;
+				display: inline-block;
+				height: auto;
+			}
+		}
+	}
+
+	&.eltd-responsive-mode-600.eltd-two-columns,
+	&.eltd-responsive-mode-600.eltd-three-columns,
+	&.eltd-responsive-mode-600.eltd-four-columns,
+	&.eltd-responsive-mode-600.eltd-five-columns,
+	&.eltd-responsive-mode-600.eltd-six-columns {
+
+		.eltd-eh-item {
+			@media only screen and (max-width: 600px) {
+				width: 100%;
+				display: inline-block;
+				height: auto;
+			}
+		}
+	}
+
+	&.eltd-responsive-mode-480.eltd-two-columns,
+	&.eltd-responsive-mode-480.eltd-three-columns,
+	&.eltd-responsive-mode-480.eltd-four-columns,
+	&.eltd-responsive-mode-480.eltd-five-columns,
+	&.eltd-responsive-mode-480.eltd-six-columns {
+
+		.eltd-eh-item {
+			@media only screen and (max-width: 480px) {
+				width: 100%;
+				display: inline-block;
+				height: auto;
+			}
+		}
+
+	}
+
+	.eltd-eh-item-content{
+		@media only screen and (max-width: 480px) {
+			padding: 0 10px;
+		}
+	}
+
+}
+@media only screen and (max-width: 1280px) {
+	.eltd-elements-holder.eltd-responsive-mode-1280.eltd-one-column-alignment-left .eltd-eh-item .eltd-eh-item-content {
+		text-align: left;
+	}
+	.eltd-elements-holder.eltd-responsive-mode-1280.eltd-one-column-alignment-right .eltd-eh-item .eltd-eh-item-content {
+		text-align: right;
+	}
+	.eltd-elements-holder.eltd-responsive-mode-1280.eltd-one-column-alignment-center .eltd-eh-item .eltd-eh-item-content {
+		text-align: center;
+	}
+}
+@include ipad-landscape {
+	.eltd-elements-holder.eltd-responsive-mode-1024.eltd-one-column-alignment-left .eltd-eh-item .eltd-eh-item-content {
+		text-align: left;
+	}
+	.eltd-elements-holder.eltd-responsive-mode-1024.eltd-one-column-alignment-right .eltd-eh-item .eltd-eh-item-content {
+		text-align: right;
+	}
+	.eltd-elements-holder.eltd-responsive-mode-1024.eltd-one-column-alignment-center .eltd-eh-item .eltd-eh-item-content {
+		text-align: center;
+	}
+}
+
+@include ipad-portrait {
+	.eltd-elements-holder.eltd-responsive-mode-768.eltd-one-column-alignment-left .eltd-eh-item .eltd-eh-item-content {
+		text-align: left;
+	}
+	.eltd-elements-holder.eltd-responsive-mode-768.eltd-one-column-alignment-right .eltd-eh-item .eltd-eh-item-content {
+		text-align: right;
+	}
+	.eltd-elements-holder.eltd-responsive-mode-768.eltd-one-column-alignment-center .eltd-eh-item .eltd-eh-item-content {
+		text-align: center;
+	}
+}
+
+@include phone-landscape {
+	.eltd-elements-holder.eltd-responsive-mode-600.eltd-one-column-alignment-left .eltd-eh-item .eltd-eh-item-content {
+		text-align: left;
+	}
+	.eltd-elements-holder.eltd-responsive-mode-600.eltd-one-column-alignment-right .eltd-eh-item .eltd-eh-item-content {
+		text-align: right;
+	}
+	.eltd-elements-holder.eltd-responsive-mode-600.eltd-one-column-alignment-center .eltd-eh-item .eltd-eh-item-content {
+		text-align: center;
+	}
+}
+
+@include phone-portrait {
+	.eltd-elements-holder.eltd-responsive-mode-480.eltd-one-column-alignment-left .eltd-eh-item .eltd-eh-item-content {
+		text-align: left;
+	}
+	.eltd-elements-holder.eltd-responsive-mode-480.eltd-one-column-alignment-right .eltd-eh-item .eltd-eh-item-content {
+		text-align: right;
+	}
+	.eltd-elements-holder.eltd-responsive-mode-480.eltd-one-column-alignment-center .eltd-eh-item .eltd-eh-item-content {
+		text-align: center;
+	}
+}
+/* ==========================================================================
+   Elements Holder shortcode responsive style - end
+   ========================================================================== */

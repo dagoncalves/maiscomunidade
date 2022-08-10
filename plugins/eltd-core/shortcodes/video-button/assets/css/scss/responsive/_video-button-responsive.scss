@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Video Button shortcode responsive style - begin
+   ========================================================================== */
+@include phone-portrait{
+    .eltd-video-button-holder {
+        .eltd-video-button-play {
+            span {
+                &:before {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Video Button shortcode responsive style - begin
+   ========================================================================== */

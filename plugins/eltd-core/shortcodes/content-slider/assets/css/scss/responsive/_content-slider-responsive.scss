@@ -1,0 +1,42 @@
+@include laptop-landscape-large-plus-pixel{
+	.eltd-content-slider{
+		.eltd-content-slider-item{
+			.eltd-content-slider-content{
+				padding: 0 ;
+			}
+		}
+	}
+}
+
+@include laptop-landscape {
+	.eltd-content-slider {
+		.eltd-custom-font-holder {
+			display: none;
+		}
+
+		.eltd-separator-holder {
+			display: none;
+		}
+	}
+}
+
+// 1024
+@include ipad-landscape {
+	.eltd-content-slider {
+		margin: 0;
+
+		.eltd-content-slider-item {
+			display: block;
+
+			.eltd-content-slider-image,
+			.eltd-content-slider-content {
+				display: block;
+				width: 100%;
+			}
+
+			.eltd-content-slider-content {
+				padding: 40px 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,174 @@
+.eltd-processes-holder {
+
+  .eltd-process {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    background-position: center;
+    background-size: cover;
+    padding: 0 18px;
+
+      &:first-child .eltd-process-wrapper{
+          margin-left: 0;
+      }
+      &:last-child .eltd-process-wrapper{
+          margin-right:0;
+      }
+
+      img {
+          -webkit-transition: -webkit-transform .35s cubic-bezier(.38,3,.57,1.6);    
+          transition: transform .35s cubic-bezier(.38,3,.57,1.6);    
+      }
+
+      .eltd-process-number {
+        @include eltdTransition(color .3s);   
+      }
+
+      &:hover {
+        img {
+          @include eltdTransform(translateY(-6px));    
+        }
+
+        .eltd-process-number {
+          color: $first-main-color;  
+        }
+      }
+  }
+
+  .eltd-process-wrapper{
+      display: inline-block;
+      border: 1px solid #ebebeb;
+      padding: 0 40px;
+  }
+
+  .eltd-process-number{
+        color: $default-border-color;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        font-size: 110px;
+        font-family: $extra-font;
+        z-index: -10
+  }
+
+  .eltd-process-content-wrapper{
+      margin: 69px auto 5px;
+  }
+
+  .eltd-process-content-holder {
+      border-radius: 50%;
+      @include eltdTableLayout();
+      position: relative;
+
+    .eltd-process-content-holder-inner {
+        @include eltdTableCellLayout();
+    }
+
+  }
+
+  .eltd-process-link {
+      position: absolute;
+      top:0;
+      left:0;
+      height: 100%;
+      width: 100%;
+      z-index: 100;
+      font-size: 20px;
+  }
+
+  .eltd-process-inner-text{
+      font-family: $default-text-font;
+      font-size: 48px;
+      line-height: 1em;
+      font-weight: 500;
+      color: $default-text-color;
+      display: inline-block;
+      vertical-align: middle;
+  } 
+    
+    .eltd-process-text-holder{
+        position: relative;
+    }
+
+  .eltd-process-title {
+      text-transform: capitalize;
+      margin: 25px 0 0 0;
+      color: $default-heading-color;
+  }
+  .eltd-process-text{
+      font-size: 15px;
+      color: $default-text-color;
+      margin: 18px 0 60px;
+      font-family: $default-text-font;
+      font-weight: 300;
+  }
+
+    &.eltd-three-columns {
+
+        .eltd-process {
+            width: 33%;
+
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+        }
+    }
+
+  &.eltd-four-columns {
+
+    .eltd-process {
+      width: 25%; //58px is margin between items
+
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+  }
+
+  &.eltd-five-columns {
+
+    .eltd-process {
+      width: 19.4%; //65px is margin between items
+
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+
+  }
+
+  &.eltd-six-columns {
+
+    .eltd-process {
+      width: 16.66667%; //65px is margin between items
+
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+
+  }
+
+  &.eltd-process-light-skin{
+    .eltd-process{
+      .eltd-process-inner-text,
+      .eltd-process-title,
+      .eltd-process-text{
+        color:$light-color;
+      }
+    }
+
+  }
+
+}
+
