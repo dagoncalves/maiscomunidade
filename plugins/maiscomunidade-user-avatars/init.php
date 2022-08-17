@@ -440,7 +440,11 @@ class maiscomunidade_user_avatars {
 		<form id="maiscomunidade-user-avatar-form" name="maiscomunidade-user-avatar-form" method="post" enctype="multipart/form-data">
 			<div class="image-upload">
 				<label for="maiscomunidade-local-avatar">
-					<img title="Alterar minha foto" src="<?php print get_avatar_url($profileuser->ID, ['size' => '170']); ?>" id="maiscomunidade-img" style="cursor:pointer" />
+					<img title="Alterar foto" src="<?php print get_avatar_url($profileuser->ID, ['size' => '170']); ?>" id="maiscomunidade-img" style="cursor:pointer" /><br>
+					<div style="display: flex; flex-direction:row; align-items: center; justify-content: center; cursor:pointer">
+						<svg style="width: 32px" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path></svg> 
+						<span style="font-size: 11px; padding-left: 5px">Alterar foto</span>
+					</div>
 				</label>
 			</div>
 			<?php
