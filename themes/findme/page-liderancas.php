@@ -57,7 +57,13 @@ $lideres_MG = array();
                                 //$image = strpos($image_avatar,'gravatar.com') === false  ? $image_avatar : $image_elatedteam[0];
                                 $image = $image_elatedteam[0] ?? '';
                                 
-                                if($image && !empty($uf)):
+                                if(!empty($uf)):
+                                    if($image==='' && $uf==='ES') {
+                                        $image = get_template_directory_uri() . "/assets/img/avatar_laranja.png";
+                                    } else if($image==='' && $uf==='MG') {
+                                        $image = get_template_directory_uri() . "/assets/img/avatar_verde.png";
+                                    }
+
                                     $lider = array(
                                         "nome" => $title,
                                         "email" => $email,
