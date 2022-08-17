@@ -9,19 +9,20 @@ if(!function_exists('eltd_core_map_team_single_meta')) {
             'name'  => 'team_meta'
         ));
 
-        $ufs = array();
-        $ufs[''] = esc_html__( 'Default', 'findme' );
-		$ufs['es']  = esc_html__( 'Espírito Santo', 'findme' );
-		$ufs['mg'] = esc_html__( 'Minas Gerais', 'findme' );
+        $participacoes = array();
+        $participacoes[0] = esc_html__( 'Nenhuma participação', 'findme' );
+		$participacoes[1] = esc_html__( '1 Participação', 'findme' );
+		$participacoes[2] = esc_html__( '2 Participações', 'findme' );
+        $participacoes[3] = esc_html__( '3 Participações', 'findme' );
 
         findme_elated_create_meta_box_field(
             array(
-                'name' => 'eltd_team_member_uf',
+                'name' => 'eltd_team_member_participacoes',
                 'type' => 'select',
                 'default_value' => '',
-                'label' => esc_html__('UF', 'eltd-core'),
+                'label' => esc_html__('Participações', 'eltd-core'),
                 'parent' => $meta_box,
-                'options' => $ufs
+                'options' => $participacoes
             )
         );
 

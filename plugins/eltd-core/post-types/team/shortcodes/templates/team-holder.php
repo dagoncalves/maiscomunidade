@@ -14,6 +14,7 @@
 					$params['social'] = get_post_meta($params['member_id'], 'eltd_team_member_social', true);
 					$params['resume'] = get_post_meta($params['member_id'], 'eltd_team_member_resume', true);
 					$params['excerpt'] = get_the_excerpt($params['member_id']);
+					$params['participacoes'] = get_post_meta($params['member_id'], 'eltd_team_member_participacoes', true);
 					$params['team_social_icons'] = $this_object->getTeamSocialIcons($params['member_id']);
 					echo eltd_core_get_cpt_shortcode_module_template_part('team', 'team-template', $team_member_layout, $params);
 				endwhile;
