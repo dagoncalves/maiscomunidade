@@ -30,6 +30,11 @@
                     <input class="eltd-membership-input" type="text" name="description" id="description"
                            value="<?php echo esc_attr($description); ?>" placeholder="<?php esc_html_e( 'Description', 'eltd-membership' ); ?>">
                 </div>
+                <div class="eltd-membership-input-holder">
+                    <label for="uf"><?php esc_html_e( 'UF', 'eltd-membership' ); ?></label>
+                    <input readonly class="eltd-membership-input" type="text" name="uf" id="uf"
+                           value="<?php echo esc_attr($uf); ?>" placeholder="<?php esc_html_e( 'UF', 'eltd-membership' ); ?>">
+                </div>
             </div>
             <div class="eltd-membership-password-input-holder">
                 <h4 class="eltd-membership-dashboard-page-title">

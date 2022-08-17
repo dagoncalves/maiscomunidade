@@ -13,6 +13,13 @@
                     <input type="email" name="user_register_email" id="user_register_email"
                            placeholder="<?php esc_html_e( 'Your E-mail Address*', 'eltd-membership' ) ?>" value="" required/>
                 </div>
+				<div>
+					<select name="user_register_uf" id="user_register_uf" style="margin: 0 0 15px; padding: 21px 24px; color: #ababab; border: 1px solid #ececec; background-color: #fff; font-family: inherit; font-size: 15px" required>
+                		<option value="">Estado</option>
+                		<option value="ES">Espírito Santo</option>
+                		<option value="MG">Minas Gerais</option>
+            		</select>
+				</div>
                 <div>
                     <input type="password" name="user_register_password" id="user_register_password" placeholder="<?php esc_html_e('Escolha uma senha segura*','eltd_membership') ?>" value="" required />
                 </div>

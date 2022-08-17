@@ -67,6 +67,7 @@ if ( ! function_exists( 'eltd_membership_register_user' ) ) {
 			$credentials['user_email']       = $register_data['user_register_email'];
 			$credentials['password']         = $register_data['user_register_password'];
 			$credentials['confirm_password'] = $register_data['user_register_confirm_password'];
+			$credentials['uf']      		 = $register_data['user_register_uf'];
 
 			$user_id    = username_exists( $credentials['user_login'] );
 			$user_email = email_exists( $credentials['user_email'] );
@@ -80,6 +81,9 @@ if ( ! function_exists( 'eltd_membership_register_user' ) ) {
 					} else {
 
 						wp_update_user( array( 'ID' => $user_save_flag, 'role' => get_option( 'default_role' ) ) );
+						wp_update_user( array( 'ID' => $user_save_flag, 'user_url' => $credentials['uf'] ) );
+						update_user_meta( $user_save_flag, 'uf', $credentials['uf'] );
+
 						$mail_to = $credentials['user_email'];
 
 						$subject = esc_html__( 'User Registration', 'eltd_membership' ); //Subject

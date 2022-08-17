@@ -1054,7 +1054,7 @@ function my_expiration_filter($seconds, $user_id, $remember){
  * Replicando um novo usuário para o Elated Team
  */
 add_action( 'user_register', 'replica_usuario_elatedteam', 10, 1 );
- 
+
 function replica_usuario_elatedteam( $user_id ) { 
     $user_info = get_userdata($user_id);
 
@@ -1068,109 +1068,43 @@ function replica_usuario_elatedteam( $user_id ) {
 
     if ($post_id) {
         add_post_meta($post_id, 'eltd_team_member_email', $user_info->user_email);
-
-        //$url = get_avatar_url($user_id);
-        //$desc = "Profile picture";
-        //$image = media_sideload_image( $url, $post_id, $desc, 'id');
-        //set_post_thumbnail( $post_id, $image );
     }
 }
 
-add_action( 'profile_update', 'my_profile_update', 10, 2 );
+/* UF na pagina do usuario no admin */
+add_action( 'personal_options_update', 'save_user_fields' );
+add_action( 'edit_user_profile_update', 'save_user_fields' );
 
-add_action('personal_options_update', 'update_extra_profile_fields');
-  
-function update_extra_profile_fields( $user_id ) {
-    $image_url        = 'http://s.wordpress.org/style/images/wp-header-logo.png'; // Define the image URL here
-    $image_name       = 'wp-header-logo.png';
-    $upload_dir       = wp_upload_dir(); // Set upload folder
-    $image_data       = file_get_contents($image_url); // Get image data
-    $unique_file_name = wp_unique_filename( $upload_dir['path'], $image_name ); // Generate unique name
-    $filename         = basename( $unique_file_name ); // Create image file name
+function save_user_fields( $user_id ) {
+    if ( !current_user_can( 'edit_user', $user_id ) )
+        return false;
 
-    // Check folder permission and define file location
-    if( wp_mkdir_p( $upload_dir['path'] ) ) {
-        $file = $upload_dir['path'] . '/' . $filename;
-    } else {
-        $file = $upload_dir['basedir'] . '/' . $filename;
-    }
-
-    // Create the image  file on the server
-    file_put_contents( $file, $image_data );
-
-    // Check image file type
-    $wp_filetype = wp_check_filetype( $filename, null );
-
-    // Set attachment data
-    $attachment = array(
-        'post_mime_type' => $wp_filetype['type'],
-        'post_title'     => sanitize_file_name( $filename ),
-        'post_content'   => '',
-        'post_status'    => 'inherit'
-    );
-
-    // Create the attachment
-    $attach_id = wp_insert_attachment( $attachment, $file, 4934 );
-
-    // Include image.php
-    require_once(ABSPATH . 'wp-admin/includes/image.php');
-
-    // Define attachment metadata
-    $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
-
-    // Assign metadata to attachment
-    wp_update_attachment_metadata( $attach_id, $attach_data );
-
-    // And finally assign featured image to post
-    set_post_thumbnail( 4934, $attach_id );
+    update_usermeta( $user_id, 'uf', $_POST['uf'] );
 }
- 
-function my_profile_update( $user_id, $old_user_data ) {
-    // $url = get_avatar_url($user_id);
-    // $desc = "Profile picture";
-    // $image = media_sideload_image( $url, 4934, $desc);
-    // set_post_thumbnail( 4934, $image );
-    // Add Featured Image to Post
-    $image_url        = 'http://s.wordpress.org/style/images/wp-header-logo.png'; // Define the image URL here
-    $image_name       = 'wp-header-logo.png';
-    $upload_dir       = wp_upload_dir(); // Set upload folder
-    $image_data       = file_get_contents($image_url); // Get image data
-    $unique_file_name = wp_unique_filename( $upload_dir['path'], $image_name ); // Generate unique name
-    $filename         = basename( $unique_file_name ); // Create image file name
 
-    // Check folder permission and define file location
-    if( wp_mkdir_p( $upload_dir['path'] ) ) {
-        $file = $upload_dir['path'] . '/' . $filename;
-    } else {
-        $file = $upload_dir['basedir'] . '/' . $filename;
-    }
+add_action( 'show_user_profile', 'Add_user_fields' );
+add_action( 'edit_user_profile', 'Add_user_fields' );
 
-    // Create the image  file on the server
-    file_put_contents( $file, $image_data );
+function Add_user_fields( $user ) {
+?>
 
-    // Check image file type
-    $wp_filetype = wp_check_filetype( $filename, null );
+<h3>Localização do Usuário</h3>
+<table class="form-table">       
 
-    // Set attachment data
-    $attachment = array(
-        'post_mime_type' => $wp_filetype['type'],
-        'post_title'     => sanitize_file_name( $filename ),
-        'post_content'   => '',
-        'post_status'    => 'inherit'
-    );
-
-    // Create the attachment
-    $attach_id = wp_insert_attachment( $attachment, $file, 4934 );
-
-    // Include image.php
-    require_once(ABSPATH . 'wp-admin/includes/image.php');
-
-    // Define attachment metadata
-    $attach_data = wp_generate_attachment_metadata( $attach_id, $file );
-
-    // Assign metadata to attachment
-    wp_update_attachment_metadata( $attach_id, $attach_data );
-
-    // And finally assign featured image to post
-    set_post_thumbnail( 4934, $attach_id );
+    <tr>
+        <th><label for="dropdown">UF</label></th>
+        <td>
+            <?php 
+            //get dropdown saved value
+            $selected = get_the_author_meta( 'uf', $user->ID ); 
+            ?>
+            <select name="uf" id="uf">
+                <option value=""></option>
+                <option value="ES" <?php echo ($selected == "ES")?  'selected="selected"' : ''; ?>>Espírito Santo</option>
+                <option value="MG" <?php echo ($selected == "MG")?  'selected="selected"' : ''; ?>>Minas Gerais</option>
+            </select>
+        </td>
+    </tr>
+</table>
+<?php 
 }

@@ -65,6 +65,12 @@
                     <?php echo esc_attr($description); ?>
                 </p>
             <?php } ?>
+            <?php if ($uf !== ''){ ?>
+                <p class="eltd-membership-uf">
+                    <span><?php esc_html_e( 'UF', 'eltd-membership' ); ?></span>
+                    <?php echo esc_attr($uf); ?>
+                </p>
+            <?php } ?>
         </div>
 	</div>
 </div>

@@ -92,11 +92,12 @@ if ( ! function_exists( 'eltd_membership_get_dashboard_pages' ) ) {
 			$params['email']       = get_the_author_meta( 'email', $user_id );
 			$params['website']     = get_the_author_meta( 'url', $user_id );
 			$params['description'] = get_the_author_meta( 'description', $user_id );
+			$params['uf'] 		   = get_the_author_meta( 'uf', $user_id );
 			$profile_image         = get_user_meta( $user_id, 'social_profile_image', true );
 			if ( $profile_image == '' ) {
 				$profile_image = get_avatar( $user_id, 170 );
 			} else {
-				$profile_image = '111111<img src="' . esc_url( $profile_image ) . '">';
+				$profile_image = '<img src="' . esc_url( $profile_image ) . '">';
 			}
 			$params['profile_image'] = $profile_image;
 		}
@@ -193,6 +194,7 @@ if ( ! function_exists( 'eltd_membership_update_user_profile' ) ) {
 					update_user_meta( $user_id, 'first_name', $update_data['first_name'] );
 					update_user_meta( $user_id, 'last_name', $update_data['last_name'] );
 					update_user_meta( $user_id, 'description', $update_data['description'] );
+					update_user_meta( $user_id, 'uf', $update_data['uf'] );
 
 					eltd_membership_ajax_response( 'success', esc_html__( 'Your profile is updated', 'eltd-membership' ), $dashboard_url );
 
