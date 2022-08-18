@@ -85,14 +85,59 @@ $lideres_MG = array();
                         endforeach;
                     endif;
                     ?>
+                    <style>
+                        @media (max-width:960px) {  
+                            .container-uf {
+                                display: flex; 
+                                flex-direction: column;
+                                justify-items: center;
+                                align-content: center;
+                                padding: 10px 10px;
+                            }
+
+                            .titulo-uf {
+                                text-align: center; 
+                                width: 100%;
+                                color: #ffffff; 
+                                margin-top: 30px
+                            }
+
+                            .conteudo-uf {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                width: 100%;
+                            }
+                        }
+
+                        @media (min-width:960px) {
+                            .container-uf {
+                                display: flex; 
+                                flex-direction: row;
+                                padding: 60px 20px;
+                            }
+                            .titulo-uf {
+                                text-align: center; 
+                                width: 25%;
+                                color: #ffffff; 
+                                margin-top: 100px
+                            }
+
+                            .conteudo-uf {
+                                display: flex; 
+                                flex-wrap: wrap; 
+                                width: 75%;
+                            }
+                        }
+                    </style>
                     <!-- MG -->
-                    <div class="" style="background-color: #e37222; display: flex; flex-direction: row; padding: 40px 20px">
-                        <div class="eltd-section-title-holder" style="text-align: center; width: 25%">
-                            <h1 class="eltd-st-title" style="color: #ffffff; margin-top: 100px">
+                    <div class="container-uf" style="background-color: #e37222;">
+                        <div class="eltd-section-title-holder titulo-uf">
+                            <h1 class="eltd-st-title" style="color: #fff;">
                                 <span class="eltd-section-title-inner-wrapper">Minas Gerais</span>
                             </h1>
                         </div>
-                        <div style="display: flex; flex-wrap: wrap; width: 75%">
+                        <div class="conteudo-uf">
                         <?php 
                         foreach ($lideres_MG as $lider) :
                             ?>
@@ -131,13 +176,13 @@ $lideres_MG = array();
                     </div>
 
                     <!-- ES -->
-                    <div class="" style="background-color: #178272; display: flex; flex-direction: row; padding: 40px 20px">
-                        <div class="eltd-section-title-holder" style="text-align: center; width: 25%">
-                            <h1 class="eltd-st-title" style="color: #ffffff; margin-top: 100px">
+                    <div class="container-uf" style="background-color: #178272;">
+                        <div class="eltd-section-title-holder titulo-uf">
+                            <h1 class="eltd-st-title" style="color: #fff;">
                                 <span class="eltd-section-title-inner-wrapper">Espírito Santo</span>
                             </h1>
                         </div>
-                        <div style="display: flex; flex-wrap: wrap; width: 75%">
+                        <div class="conteudo-uf">
                         <?php 
                         foreach ($lideres_ES as $lider) :
                             ?>
