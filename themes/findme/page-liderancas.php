@@ -59,9 +59,9 @@ $lideres_MG = array();
                                 
                                 if(!empty($uf)):
                                     if($image==='' && $uf==='ES') {
-                                        $image = get_template_directory_uri() . "/assets/img/avatar_laranja.png";
-                                    } else if($image==='' && $uf==='MG') {
                                         $image = get_template_directory_uri() . "/assets/img/avatar_verde.png";
+                                    } else if($image==='' && $uf==='MG') {
+                                        $image = get_template_directory_uri() . "/assets/img/avatar_laranja.png";
                                     }
 
                                     $lider = array(
